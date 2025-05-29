@@ -3421,6 +3421,1947 @@
             }
         ],
 
- 
-    }
+
+           
+
+        "PHY 101: Quantities, Units and Dimensions - 1": [
+            {
+                "No": 1,
+                "question": "Which of the following is a fundamental quantity?",
+                "options": [
+                    "I. Force",
+                    "II. Energy",
+                    "III. Mass",
+                    "IV. Velocity"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 2,
+                "question": "The SI unit of luminous intensity is:",
+                "options": [
+                    "I. Candela",
+                    "II. Kelvin",
+                    "III. Ampere",
+                    "IV. Mole"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 3,
+                "question": "The dimension of force is:",
+                "options": [
+                    "I. MLT⁻²",
+                    "II. ML²T⁻²",
+                    "III. ML⁻¹T⁻²",
+                    "IV. MLT⁻¹"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 4,
+                "question": "Which of the following is a derived unit?",
+                "options": [
+                    "I. Kilogram",
+                    "II. Second",
+                    "III. Newton",
+                    "IV. Kelvin"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 5,
+                "question": "The prefix 'micro' represents:",
+                "options": [
+                    "I. 10⁻³",
+                    "II. 10⁻⁶",
+                    "III. 10⁻⁹",
+                    "IV. 10⁻¹²"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 6,
+                "question": "The dimension of energy is:",
+                "options": [
+                    "I. MLT⁻²",
+                    "II. ML²T⁻²",
+                    "III. ML⁻¹T⁻²",
+                    "IV. MLT⁻¹"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 7,
+                "question": "Which of the following quantities is dimensionless?",
+                "options": [
+                    "I. Angle",
+                    "II. Force",
+                    "III. Velocity",
+                    "IV. Acceleration"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 8,
+                "question": "The dimension of pressure is:",
+                "options": [
+                    "I. MLT⁻²",
+                    "II. ML²T⁻²",
+                    "III. ML⁻¹T⁻²",
+                    "IV. MLT⁻¹"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 9,
+                "question": "The SI unit of electric current is:",
+                "options": [
+                    "I. Volt",
+                    "II. Ampere",
+                    "III. Ohm",
+                    "IV. Watt"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 10,
+                "question": "The dimension of power is:",
+                "options": [
+                    "I. MLT⁻²",
+                    "II. ML²T⁻²",
+                    "III. ML⁻¹T⁻²",
+                    "IV. ML²T⁻³"
+                ],
+                "answers": ["IV"]
+            },
+            {
+                "No": 11,
+                "question": "Which of the following is a fundamental unit?",
+                "options": [
+                    "I. Joule",
+                    "II. Watt",
+                    "III. Meter",
+                    "IV. Newton"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 12,
+                "question": "The dimension of angular velocity is:",
+                "options": [
+                    "I. T⁻¹",
+                    "II. LT⁻¹",
+                    "III. MLT⁻²",
+                    "IV. ML²T⁻²"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 13,
+                "question": "The prefix 'giga' represents:",
+                "options": [
+                    "I. 10⁶",
+                    "II. 10⁹",
+                    "III. 10¹²",
+                    "IV. 10¹⁵"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 14,
+                "question": "The dimension of torque is:",
+                "options": [
+                    "I. MLT⁻²",
+                    "II. ML²T⁻²",
+                    "III. ML⁻¹T⁻²",
+                    "IV. MLT⁻¹"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 15,
+                "question": "The SI unit of amount of substance is:",
+                "options": [
+                    "I. Kilogram",
+                    "II. Mole",
+                    "III. Ampere",
+                    "IV. Candela"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 16,
+                "question": "The dimension of viscosity is:",
+                "options": [
+                    "I. ML⁻¹T⁻¹",
+                    "II. MLT⁻²",
+                    "III. ML⁻¹T⁻²",
+                    "IV. ML²T⁻²"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 17,
+                "question": "Which of the following is a derived quantity?",
+                "options": [
+                    "I. Time",
+                    "II. Length",
+                    "III. Density",
+                    "IV. Mass"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 18,
+                "question": "The dimension of momentum is:",
+                "options": [
+                    "I. MLT⁻²",
+                    "II. ML²T⁻²",
+                    "III. ML⁻¹T⁻²",
+                    "IV. MLT⁻¹"
+                ],
+                "answers": ["IV"]
+            },
+            {
+                "No": 19,
+                "question": "The SI unit of thermodynamic temperature is:",
+                "options": [
+                    "I. Celsius",
+                    "II. Fahrenheit",
+                    "III. Kelvin",
+                    "IV. Joule"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 20,
+                "question": "The dimension of angular momentum is:",
+                "options": [
+                    "I. MLT⁻¹",
+                    "II. ML²T⁻¹",
+                    "III. ML⁻¹T⁻²",
+                    "IV. ML²T⁻²"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 21,
+                "question": "The prefix 'pico' represents:",
+                "options": [
+                    "I. 10⁻⁹",
+                    "II. 10⁻¹²",
+                    "III. 10⁻¹⁵",
+                    "IV. 10⁻¹⁸"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 22,
+                "question": "The dimension of surface tension is:",
+                "options": [
+                    "I. MT⁻²",
+                    "II. MLT⁻²",
+                    "III. ML⁻¹T⁻²",
+                    "IV. ML²T⁻²"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 23,
+                "question": "Which of the following is a fundamental dimension?",
+                "options": [
+                    "I. Energy",
+                    "II. Power",
+                    "III. Length",
+                    "IV. Force"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 24,
+                "question": "The dimension of frequency is:",
+                "options": [
+                    "I. T⁻¹",
+                    "II. LT⁻¹",
+                    "III. MLT⁻²",
+                    "IV. ML²T⁻²"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 25,
+                "question": "The SI unit of frequency is:",
+                "options": [
+                    "I. Hertz",
+                    "II. Watt",
+                    "III. Newton",
+                    "IV. Joule"
+                ],
+                "answers": ["I"]
+            }
+        ],
+        "PHY 101: Introduction to Vectors - 2": [
+            {
+                "No": 1,
+                "question": "Which of the following is a vector quantity?",
+                "options": [
+                    "I. Mass",
+                    "II. Time",
+                    "III. Velocity",
+                    "IV. Energy"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 2,
+                "question": "The resultant of two vectors A and B inclined at 90° to each other is given by:",
+                "options": [
+                    "I. A + B",
+                    "II. A - B",
+                    "III. √(A² + B²)",
+                    "IV. A² + B²"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 3,
+                "question": "If A = 3i + 4j and B = 2i - j, then A + B is:",
+                "options": [
+                    "I. 5i + 3j",
+                    "II. i + 5j",
+                    "III. 5i + 5j",
+                    "IV. 6i - 4j"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 4,
+                "question": "The dot product of two perpendicular vectors is:",
+                "options": [
+                    "I. Maximum",
+                    "II. Minimum",
+                    "III. Zero",
+                    "IV. Undefined"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 5,
+                "question": "The cross product of two parallel vectors is:",
+                "options": [
+                    "I. Maximum",
+                    "II. Minimum",
+                    "III. Zero",
+                    "IV. Undefined"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 6,
+                "question": "If A = 2i - 3j + k and B = i + 2j - 4k, then A · B is:",
+                "options": [
+                    "I. -8",
+                    "II. 8",
+                    "III. -12",
+                    "IV. 12"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 7,
+                "question": "The magnitude of the vector A = 3i - 4j is:",
+                "options": [
+                    "I. 5",
+                    "II. 7",
+                    "III. 1",
+                    "IV. 25"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 8,
+                "question": "The angle between the vectors A = i + j and B = i - j is:",
+                "options": [
+                    "I. 0°",
+                    "II. 45°",
+                    "III. 90°",
+                    "IV. 180°"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 9,
+                "question": "If A × B = 0, then the angle between A and B is:",
+                "options": [
+                    "I. 0°",
+                    "II. 45°",
+                    "III. 90°",
+                    "IV. 180°"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 10,
+                "question": "The direction of the cross product A × B is given by:",
+                "options": [
+                    "I. Right-hand rule",
+                    "II. Left-hand rule",
+                    "III. Parallelogram law",
+                    "IV. Triangle law"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 11,
+                "question": "If A = 4i - 3j + 2k and B = i + 2j - k, then A × B is:",
+                "options": [
+                    "I. -i + 6j + 11k",
+                    "II. i - 6j - 11k",
+                    "III. -i - 6j + 11k",
+                    "IV. i + 6j + 11k"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 12,
+                "question": "The scalar triple product of vectors A, B, and C represents:",
+                "options": [
+                    "I. Area of parallelogram",
+                    "II. Volume of parallelepiped",
+                    "III. Magnitude of resultant vector",
+                    "IV. Angle between vectors"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 13,
+                "question": "If |A + B| = |A - B|, then the angle between A and B is:",
+                "options": [
+                    "I. 0°",
+                    "II. 45°",
+                    "III. 90°",
+                    "IV. 180°"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 14,
+                "question": "The unit vector in the direction of A = 2i - 2j + k is:",
+                "options": [
+                    "I. (2i - 2j + k)/3",
+                    "II. (2i - 2j + k)/√9",
+                    "III. (2i - 2j + k)/√5",
+                    "IV. (2i - 2j + k)/√3"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 15,
+                "question": "The projection of vector A = 3i + 4j on the x-axis is:",
+                "options": [
+                    "I. 3",
+                    "II. 4",
+                    "III. 5",
+                    "IV. 0"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 16,
+                "question": "If A = 2i + 3j - k and B = i - j + 2k, then the angle between A and B is:",
+                "options": [
+                    "I. 0°",
+                    "II. 45°",
+                    "III. 90°",
+                    "IV. 180°"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 17,
+                "question": "The vector triple product A × (B × C) is equal to:",
+                "options": [
+                    "I. (A · C)B - (A · B)C",
+                    "II. (A · B)C - (A · C)B",
+                    "III. (B · C)A - (A · B)C",
+                    "IV. (A · C)B + (A · B)C"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 18,
+                "question": "If three vectors A, B, and C satisfy A + B + C = 0, then:",
+                "options": [
+                    "I. They are collinear",
+                    "II. They form a right triangle",
+                    "III. They lie in the same plane",
+                    "IV. They are mutually perpendicular"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 19,
+                "question": "The work done by a force F = 3i + 4j acting through a displacement d = 2i - j is:",
+                "options": [
+                    "I. 2 J",
+                    "II. 5 J",
+                    "III. 10 J",
+                    "IV. 14 J"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 20,
+                "question": "The torque of a force F = 2i - 3j + k acting at a point r = 3i + 2j - 4k is:",
+                "options": [
+                    "I. 10i + 14j + 13k",
+                    "II. -10i - 14j - 13k",
+                    "III. 10i - 14j + 13k",
+                    "IV. -10i + 14j - 13k"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 21,
+                "question": "The area of the parallelogram formed by vectors A = 2i + j and B = i - 3j is:",
+                "options": [
+                    "I. 5",
+                    "II. 7",
+                    "III. √14",
+                    "IV. 7√2"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 22,
+                "question": "If A = i + 2j + 3k and B = 2i + 4j + 6k, then A and B are:",
+                "options": [
+                    "I. Parallel",
+                    "II. Perpendicular",
+                    "III. At 45° to each other",
+                    "IV. Antiparallel"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 23,
+                "question": "The component of vector A = 5i + 12j along the direction of B = i + j is:",
+                "options": [
+                    "I. 17/√2",
+                    "II. 7/√2",
+                    "III. 17",
+                    "IV. 7"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 24,
+                "question": "If |A| = 3, |B| = 4, and the angle between A and B is 60°, then |A × B| is:",
+                "options": [
+                    "I. 6",
+                    "II. 6√3",
+                    "III. 12",
+                    "IV. 12√3"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 25,
+                "question": "The vector equation of a line passing through point A with position vector a and parallel to vector b is:",
+                "options": [
+                    "I. r = a + tb",
+                    "II. r = a · b",
+                    "III. r = a × b",
+                    "IV. r = a - b"
+                ],
+                "answers": ["I"]
+            }
+        ],
+        "PHY 101: Kinematics - 3": [
+            {
+                "No": 1,
+                "question": "Which of the following quantities is not a vector?",
+                "options": [
+                    "I. Displacement",
+                    "II. Velocity",
+                    "III. Speed",
+                    "IV. Acceleration"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 2,
+                "question": "The slope of the displacement-time graph gives:",
+                "options": [
+                    "I. Acceleration",
+                    "II. Velocity",
+                    "III. Force",
+                    "IV. Momentum"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 3,
+                "question": "A body moving with constant velocity has:",
+                "options": [
+                    "I. Zero acceleration",
+                    "II. Constant acceleration",
+                    "III. Increasing acceleration",
+                    "IV. Decreasing acceleration"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 4,
+                "question": "The area under the velocity-time graph represents:",
+                "options": [
+                    "I. Acceleration",
+                    "II. Displacement",
+                    "III. Force",
+                    "IV. Momentum"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 5,
+                "question": "A particle moves along the x-axis according to the equation x = 2 + 3t - t², where x is in meters and t is in seconds. At t = 2 s, its velocity is:",
+                "options": [
+                    "I. -1 m/s",
+                    "II. 1 m/s",
+                    "III. 3 m/s",
+                    "IV. 5 m/s"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 6,
+                "question": "A car accelerates uniformly from rest to a speed of 20 m/s in 5 s. The distance covered is:",
+                "options": [
+                    "I. 50 m",
+                    "II. 100 m",
+                    "III. 150 m",
+                    "IV. 200 m"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 7,
+                "question": "A ball is thrown vertically upward with a velocity of 20 m/s. The time taken to reach the maximum height is: (g = 10 m/s²)",
+                "options": [
+                    "I. 1 s",
+                    "II. 2 s",
+                    "III. 3 s",
+                    "IV. 4 s"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 8,
+                "question": "The equations of motion are valid only when:",
+                "options": [
+                    "I. Acceleration is zero",
+                    "II. Acceleration is constant",
+                    "III. Velocity is constant",
+                    "IV. Displacement is zero"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 9,
+                "question": "A particle moves in the xy-plane with position vector r = (2t²)i + (3t)j. Its acceleration at t = 1 s is:",
+                "options": [
+                    "I. 2i + 3j",
+                    "II. 4i + 3j",
+                    "III. 4i",
+                    "IV. 3j"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 10,
+                "question": "A body is projected horizontally with a velocity of 10 m/s from a height of 20 m. The time taken to reach the ground is: (g = 10 m/s²)",
+                "options": [
+                    "I. 1 s",
+                    "II. 2 s",
+                    "III. 3 s",
+                    "IV. 4 s"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 11,
+                "question": "The range of a projectile is maximum when the angle of projection is:",
+                "options": [
+                    "I. 30°",
+                    "II. 45°",
+                    "III. 60°",
+                    "IV. 90°"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 12,
+                "question": "A particle moves along a circle of radius 2 m with a constant speed of 4 m/s. Its angular velocity is:",
+                "options": [
+                    "I. 1 rad/s",
+                    "II. 2 rad/s",
+                    "III. 4 rad/s",
+                    "IV. 8 rad/s"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 13,
+                "question": "The centripetal acceleration of a body moving in a circular path depends on:",
+                "options": [
+                    "I. Mass of the body",
+                    "II. Velocity and radius",
+                    "III. Velocity only",
+                    "IV. Radius only"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 14,
+                "question": "A car moving with a speed of 36 km/h takes a turn on a circular road of radius 50 m. The centripetal acceleration is:",
+                "options": [
+                    "I. 0.2 m/s²",
+                    "II. 2 m/s²",
+                    "III. 20 m/s²",
+                    "IV. 200 m/s²"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 15,
+                "question": "The time period of a particle moving in a circular path with constant speed is 2 s. Its angular velocity is:",
+                "options": [
+                    "I. π rad/s",
+                    "II. 2π rad/s",
+                    "III. π/2 rad/s",
+                    "IV. 4π rad/s"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 16,
+                "question": "A projectile is fired with a velocity u at an angle θ to the horizontal. The maximum height reached is:",
+                "options": [
+                    "I. u²sin²θ/g",
+                    "II. u²sinθ/g",
+                    "III. u²sin2θ/g",
+                    "IV. u²/g"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 17,
+                "question": "The velocity of a particle moving along the x-axis is given by v = 3t² - 6t. The acceleration at t = 2 s is:",
+                "options": [
+                    "I. 0 m/s²",
+                    "II. 6 m/s²",
+                    "III. 12 m/s²",
+                    "IV. 18 m/s²"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 18,
+                "question": "A particle moves with a constant speed in a circular path. Which of the following is true?",
+                "options": [
+                    "I. Its velocity is constant",
+                    "II. Its acceleration is zero",
+                    "III. Its acceleration is directed towards the center",
+                    "IV. Its velocity is directed towards the center"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 19,
+                "question": "A ball is thrown at an angle of 30° to the horizontal with a velocity of 20 m/s. The horizontal range is: (g = 10 m/s²)",
+                "options": [
+                    "I. 20√3 m",
+                    "II. 40√3 m",
+                    "III. 20/√3 m",
+                    "IV. 40/√3 m"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 20,
+                "question": "A particle moves along a straight line such that its displacement x = t³ - 6t² + 3t + 4. The acceleration when velocity is zero is:",
+                "options": [
+                    "I. 6 m/s²",
+                    "II. -6 m/s²",
+                    "III. 12 m/s²",
+                    "IV. -12 m/s²"
+                ],
+                "answers": ["IV"]
+            },
+            {
+                "No": 21,
+                "question": "The relative velocity of a car A moving east at 60 km/h with respect to another car B moving west at 40 km/h is:",
+                "options": [
+                    "I. 20 km/h east",
+                    "II. 20 km/h west",
+                    "III. 100 km/h east",
+                    "IV. 100 km/h west"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 22,
+                "question": "A river flows at 3 m/s and a boat can move at 5 m/s in still water. The time taken to cross the river along the shortest path is minimum when the boat moves at an angle θ to the perpendicular given by:",
+                "options": [
+                    "I. θ = 0°",
+                    "II. θ = sin⁻¹(3/5)",
+                    "III. θ = cos⁻¹(3/5)",
+                    "IV. θ = 90°"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 23,
+                "question": "A particle moves in the xy-plane with position vector r = (3t²)i + (4t)j. The magnitude of its velocity at t = 1 s is:",
+                "options": [
+                    "I. 5 m/s",
+                    "II. 7 m/s",
+                    "III. 10 m/s",
+                    "IV. 12 m/s"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 24,
+                "question": "A projectile has the same range for two angles of projection. If the times of flight are t₁ and t₂, then the range is:",
+                "options": [
+                    "I. gt₁t₂/2",
+                    "II. gt₁t₂/4",
+                    "III. gt₁t₂",
+                    "IV. 2gt₁t₂"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 25,
+                "question": "A particle moves along a circle of radius R with constant angular velocity ω. The magnitude of its acceleration is:",
+                "options": [
+                    "I. ωR",
+                    "II. ω²R",
+                    "III. ω/R",
+                    "IV. ω²/R"
+                ],
+                "answers": ["II"]
+            }
+        ],
+        "PHY 101: Newton's Laws of Motion - 4": [
+            {
+                "No": 1,
+                "question": "Newton's first law of motion is also called:",
+                "options": [
+                    "I. Law of inertia",
+                    "II. Law of acceleration",
+                    "III. Law of action and reaction",
+                    "IV. Law of gravitation"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 2,
+                "question": "The tendency of a body to resist a change in its state of motion is called:",
+                "options": [
+                    "I. Force",
+                    "II. Inertia",
+                    "III. Momentum",
+                    "IV. Acceleration"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 3,
+                "question": "Newton's second law of motion relates:",
+                "options": [
+                    "I. Force and inertia",
+                    "II. Force and acceleration",
+                    "III. Action and reaction",
+                    "IV. Mass and weight"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 4,
+                "question": "The SI unit of force is:",
+                "options": [
+                    "I. Joule",
+                    "II. Watt",
+                    "III. Newton",
+                    "IV. Pascal"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 5,
+                "question": "A force of 10 N acts on a mass of 2 kg. The acceleration produced is:",
+                "options": [
+                    "I. 5 m/s²",
+                    "II. 10 m/s²",
+                    "III. 20 m/s²",
+                    "IV. 0.2 m/s²"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 6,
+                "question": "Newton's third law of motion states that:",
+                "options": [
+                    "I. F = ma",
+                    "II. Action and reaction are equal and opposite",
+                    "III. A body at rest remains at rest",
+                    "IV. Momentum is conserved"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 7,
+                "question": "The momentum of a body is defined as:",
+                "options": [
+                    "I. Mass × velocity",
+                    "II. Force × time",
+                    "III. Mass × acceleration",
+                    "IV. Force × distance"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 8,
+                "question": "A man of mass 80 kg stands on a weighing machine in a lift. If the lift accelerates upward at 2 m/s², the reading on the machine is: (g = 10 m/s²)",
+                "options": [
+                    "I. 640 N",
+                    "II. 800 N",
+                    "III. 960 N",
+                    "IV. 160 N"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 9,
+                "question": "The impulse of a force is equal to:",
+                "options": [
+                    "I. Change in momentum",
+                    "II. Change in kinetic energy",
+                    "III. Change in potential energy",
+                    "IV. Change in velocity"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 10,
+                "question": "A bullet of mass 0.02 kg is fired from a gun of mass 5 kg with a velocity of 400 m/s. The recoil velocity of the gun is:",
+                "options": [
+                    "I. 0.8 m/s",
+                    "II. 1.6 m/s",
+                    "III. 2.4 m/s",
+                    "IV. 3.2 m/s"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 11,
+                "question": "Two masses m₁ and m₂ are connected by a string passing over a frictionless pulley. The acceleration of the system is:",
+                "options": [
+                    "I. g",
+                    "II. (m₁ - m₂)g/(m₁ + m₂)",
+                    "III. (m₁ + m₂)g/(m₁ - m₂)",
+                    "IV. (m₁m₂)g/(m₁ + m₂)"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 12,
+                "question": "A force of 50 N acts on a body for 0.2 s. The impulse imparted is:",
+                "options": [
+                    "I. 10 Ns",
+                    "II. 25 Ns",
+                    "III. 50 Ns",
+                    "IV. 100 Ns"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 13,
+                "question": "A body of mass 5 kg moving with a velocity of 10 m/s collides with a stationary body of mass 10 kg. After the collision, both bodies stick together. The common velocity is:",
+                "options": [
+                    "I. 2 m/s",
+                    "II. 3.33 m/s",
+                    "III. 5 m/s",
+                    "IV. 10 m/s"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 14,
+                "question": "The law of conservation of momentum is a consequence of:",
+                "options": [
+                    "I. Newton's first law",
+                    "II. Newton's second law",
+                    "III. Newton's third law",
+                    "IV. All of the above"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 15,
+                "question": "A rocket works on the principle of:",
+                "options": [
+                    "I. Conservation of energy",
+                    "II. Conservation of momentum",
+                    "III. Newton's first law",
+                    "IV. Newton's second law"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 16,
+                "question": "A block of mass 2 kg is pulled along a horizontal surface with a force of 10 N. If the coefficient of friction is 0.2, the acceleration is: (g = 10 m/s²)",
+                "options": [
+                    "I. 1 m/s²",
+                    "II. 2 m/s²",
+                    "III. 3 m/s²",
+                    "IV. 4 m/s²"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 17,
+                "question": "A man pushes a wall but fails to displace it. The work done is:",
+                "options": [
+                    "I. Positive",
+                    "II. Negative",
+                    "III. Zero",
+                    "IV. Infinite"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 18,
+                "question": "A body is moving with uniform velocity. The net force acting on it is:",
+                "options": [
+                    "I. Zero",
+                    "II. Equal to its weight",
+                    "III. Equal to its mass",
+                    "IV. Equal to its momentum"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 19,
+                "question": "A force of 100 N acts on a body of mass 20 kg initially at rest. The distance covered in 5 s is:",
+                "options": [
+                    "I. 25 m",
+                    "II. 50 m",
+                    "III. 62.5 m",
+                    "IV. 125 m"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 20,
+                "question": "Two bodies of masses 1 kg and 4 kg have equal kinetic energies. The ratio of their momenta is:",
+                "options": [
+                    "I. 1:2",
+                    "II. 1:4",
+                    "III. 2:1",
+                    "IV. 1:1"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 21,
+                "question": "A bullet of mass 0.01 kg is fired with a velocity of 500 m/s. If it penetrates 10 cm into a target, the average force exerted is:",
+                "options": [
+                    "I. 1250 N",
+                    "II. 12500 N",
+                    "III. 2500 N",
+                    "IV. 25000 N"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 22,
+                "question": "A body of mass 2 kg is moving with a velocity of 3 m/s. A force of 6 N acts on it in the direction of motion for 4 s. The final velocity is:",
+                "options": [
+                    "I. 6 m/s",
+                    "II. 9 m/s",
+                    "III. 12 m/s",
+                    "IV. 15 m/s"
+                ],
+                "answers": ["IV"]
+            },
+            {
+                "No": 23,
+                "question": "A body of mass 5 kg is acted upon by two perpendicular forces of 12 N and 16 N. The acceleration produced is:",
+                "options": [
+                    "I. 2 m/s²",
+                    "II. 4 m/s²",
+                    "III. 5 m/s²",
+                    "IV. 10 m/s²"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 24,
+                "question": "A man of mass 60 kg is standing on a weighing machine in a lift. If the lift moves downward with an acceleration of 2 m/s², the reading on the machine is: (g = 10 m/s²)",
+                "options": [
+                    "I. 480 N",
+                    "II. 600 N",
+                    "III. 720 N",
+                    "IV. 800 N"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 25,
+                "question": "A body of mass 10 kg is moving with a velocity of 5 m/s. A constant force acts on it for 2 s and increases its velocity to 15 m/s. The magnitude of the force is:",
+                "options": [
+                    "I. 25 N",
+                    "II. 50 N",
+                    "III. 75 N",
+                    "IV. 100 N"
+                ],
+                "answers": ["II"]
+            }
+        ],
+        "PHY 101: Gravitational Force of Attraction - 5": [
+            {
+                "No": 1,
+                "question": "The gravitational force between two masses is:",
+                "options": [
+                    "I. Always attractive",
+                    "II. Always repulsive",
+                    "III. Sometimes attractive",
+                    "IV. Zero in free space"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 2,
+                "question": "Newton's law of gravitation states that the force between two masses is:",
+                "options": [
+                    "I. Proportional to the product of masses",
+                    "II. Inversely proportional to the distance between them",
+                    "III. Inversely proportional to the square of the distance",
+                    "IV. All of the above"
+                ],
+                "answers": ["IV"]
+            },
+            {
+                "No": 3,
+                "question": "The value of the universal gravitational constant G is approximately:",
+                "options": [
+                    "I. 6.67 × 10⁻¹¹ Nm²/kg²",
+                    "II. 6.67 × 10⁻⁹ Nm²/kg²",
+                    "III. 6.67 × 10⁻⁷ Nm²/kg²",
+                    "IV. 6.67 × 10⁻⁵ Nm²/kg²"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 4,
+                "question": "The acceleration due to gravity on the surface of the Earth is approximately:",
+                "options": [
+                    "I. 1.6 m/s²",
+                    "II. 4.9 m/s²",
+                    "III. 9.8 m/s²",
+                    "IV. 19.6 m/s²"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 5,
+                "question": "The weight of an object is:",
+                "options": [
+                    "I. The same everywhere",
+                    "II. Maximum at the poles",
+                    "III. Maximum at the equator",
+                    "IV. Zero in space"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 6,
+                "question": "If the distance between two masses is doubled, the gravitational force becomes:",
+                "options": [
+                    "I. Half",
+                    "II. One-fourth",
+                    "III. Double",
+                    "IV. Four times"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 7,
+                "question": "The gravitational force between two 1 kg masses separated by 1 m is:",
+                "options": [
+                    "I. 6.67 × 10⁻¹¹ N",
+                    "II. 6.67 × 10⁻⁹ N",
+                    "III. 6.67 × 10⁻⁷ N",
+                    "IV. 6.67 × 10⁻⁵ N"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 8,
+                "question": "The acceleration due to gravity at a height h above the Earth's surface is given by: (R is Earth's radius)",
+                "options": [
+                    "I. g' = g(1 - h/R)",
+                    "II. g' = g(1 - 2h/R)",
+                    "III. g' = g(R/(R + h))²",
+                    "IV. g' = g(R/(R + h))"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 9,
+                "question": "The value of g at the center of the Earth is:",
+                "options": [
+                    "I. Zero",
+                    "II. Maximum",
+                    "III. Same as at the surface",
+                    "IV. Half of its surface value"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 10,
+                "question": "The gravitational potential energy of a mass m at a distance r from the center of the Earth is:",
+                "options": [
+                    "I. -GMm/r",
+                    "II. GMm/r",
+                    "III. -GMm/r²",
+                    "IV. GMm/r²"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 11,
+                "question": "The escape velocity from the Earth's surface is approximately:",
+                "options": [
+                    "I. 7.9 km/s",
+                    "II. 11.2 km/s",
+                    "III. 15.6 km/s",
+                    "IV. 22.4 km/s"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 12,
+                "question": "The time period of a satellite in a circular orbit very close to the Earth's surface is approximately: (R = 6400 km, g = 9.8 m/s²)",
+                "options": [
+                    "I. 84 minutes",
+                    "II. 90 minutes",
+                    "III. 96 minutes",
+                    "IV. 120 minutes"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 13,
+                "question": "The orbital velocity of a satellite at a height h above the Earth's surface is:",
+                "options": [
+                    "I. √(gR)",
+                    "II. √(g(R + h))",
+                    "III. √(GM/(R + h))",
+                    "IV. √(2GM/(R + h))"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 14,
+                "question": "The weight of an astronaut in an orbiting satellite is:",
+                "options": [
+                    "I. Zero",
+                    "II. Same as on Earth",
+                    "III. More than on Earth",
+                    "IV. Less than on Earth but not zero"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 15,
+                "question": "The gravitational field intensity at a point is defined as:",
+                "options": [
+                    "I. Force per unit mass",
+                    "II. Force per unit charge",
+                    "III. Work done per unit mass",
+                    "IV. Potential energy per unit mass"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 16,
+                "question": "If the Earth's mass were doubled while its radius remained the same, the acceleration due to gravity would:",
+                "options": [
+                    "I. Remain the same",
+                    "II. Be halved",
+                    "III. Be doubled",
+                    "IV. Be quadrupled"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 17,
+                "question": "The gravitational potential at a point due to a mass M is:",
+                "options": [
+                    "I. -GM/r",
+                    "II. GM/r",
+                    "III. -GM/r²",
+                    "IV. GM/r²"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 18,
+                "question": "The gravitational force between the Earth and the Moon is responsible for:",
+                "options": [
+                    "I. Tides",
+                    "II. Seasons",
+                    "III. Day and night",
+                    "IV. Earth's rotation"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 19,
+                "question": "A geostationary satellite orbits the Earth with a period of:",
+                "options": [
+                    "I. 1 hour",
+                    "II. 12 hours",
+                    "III. 24 hours",
+                    "IV. 48 hours"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 20,
+                "question": "The height of a geostationary satellite above the Earth's surface is approximately:",
+                "options": [
+                    "I. 36,000 km",
+                    "II. 42,000 km",
+                    "III. 56,000 km",
+                    "IV. 72,000 km"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 21,
+                "question": "The gravitational potential energy of a satellite of mass m in orbit around the Earth is:",
+                "options": [
+                    "I. -GMm/r",
+                    "II. -GMm/2r",
+                    "III. GMm/r",
+                    "IV. GMm/2r"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 22,
+                "question": "The kinetic energy of a satellite of mass m moving in a circular orbit of radius r is:",
+                "options": [
+                    "I. -GMm/2r",
+                    "II. GMm/2r",
+                    "III. -GMm/r",
+                    "IV. GMm/r"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 23,
+                "question": "The total energy of a satellite in a circular orbit is:",
+                "options": [
+                    "I. Positive",
+                    "II. Negative",
+                    "III. Zero",
+                    "IV. Infinite"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 24,
+                "question": "If the radius of the Earth were reduced to half its present value while keeping its mass the same, the acceleration due to gravity would:",
+                "options": [
+                    "I. Be halved",
+                    "II. Be doubled",
+                    "III. Be quadrupled",
+                    "IV. Remain the same"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 25,
+                "question": "The gravitational force inside a uniform spherical shell is:",
+                "options": [
+                    "I. Zero",
+                    "II. Constant",
+                    "III. Proportional to distance from center",
+                    "IV. Inversely proportional to distance from center"
+                ],
+                "answers": ["I"]
+            }
+        ],
+        "PHY 101: Work and Energy - 6": [
+            {
+                "No": 1,
+                "question": "Work is said to be done when:",
+                "options": [
+                    "I. A force is applied",
+                    "II. A body is displaced",
+                    "III. A force is applied and the point of application moves",
+                    "IV. A body has energy"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 2,
+                "question": "The SI unit of work is:",
+                "options": [
+                    "I. Newton",
+                    "II. Joule",
+                    "III. Watt",
+                    "IV. Pascal"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 3,
+                "question": "The work done by a force F = 3i + 4j acting through a displacement d = 5i + 2j is:",
+                "options": [
+                    "I. 15 J",
+                    "II. 8 J",
+                    "III. 23 J",
+                    "IV. 30 J"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 4,
+                "question": "The work done by a conservative force around a closed path is:",
+                "options": [
+                    "I. Positive",
+                    "II. Negative",
+                    "III. Zero",
+                    "IV. Infinite"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 5,
+                "question": "The kinetic energy of a body of mass m moving with velocity v is:",
+                "options": [
+                    "I. mv",
+                    "II. ½mv",
+                    "III. mv²",
+                    "IV. ½mv²"
+                ],
+                "answers": ["IV"]
+            },
+            {
+                "No": 6,
+                "question": "The potential energy of a mass m at height h above the ground is:",
+                "options": [
+                    "I. mgh",
+                    "II. ½mgh",
+                    "III. mg/h",
+                    "IV. mgh²"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 7,
+                "question": "The work-energy theorem states that:",
+                "options": [
+                    "I. Work done equals force times distance",
+                    "II. Work done equals change in kinetic energy",
+                    "III. Energy is conserved",
+                    "IV. Power is work per unit time"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 8,
+                "question": "A force F = (4x)i + (3y)j acts on an object as it moves from (0,0) to (2,3). The work done is:",
+                "options": [
+                    "I. 6 J",
+                    "II. 12 J",
+                    "III. 17 J",
+                    "IV. 24 J"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 9,
+                "question": "Power is defined as:",
+                "options": [
+                    "I. Force × velocity",
+                    "II. Work × time",
+                    "III. Work/time",
+                    "IV. Energy × distance"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 10,
+                "question": "The SI unit of power is:",
+                "options": [
+                    "I. Joule",
+                    "II. Watt",
+                    "III. Newton",
+                    "IV. Pascal"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 11,
+                "question": "A machine delivers 1000 J of work in 5 s. Its power is:",
+                "options": [
+                    "I. 200 W",
+                    "II. 500 W",
+                    "III. 1000 W",
+                    "IV. 5000 W"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 12,
+                "question": "The principle of conservation of mechanical energy applies when:",
+                "options": [
+                    "I. Only conservative forces act",
+                    "II. Non-conservative forces act",
+                    "III. External forces act",
+                    "IV. Frictional forces act"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 13,
+                "question": "A body of mass 2 kg falls freely from rest through a height of 5 m. Its kinetic energy just before hitting the ground is: (g = 10 m/s²)",
+                "options": [
+                    "I. 10 J",
+                    "II. 50 J",
+                    "III. 100 J",
+                    "IV. 200 J"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 14,
+                "question": "The work done in stretching a spring by x from its natural length is: (k is spring constant)",
+                "options": [
+                    "I. kx",
+                    "II. ½kx",
+                    "III. kx²",
+                    "IV. ½kx²"
+                ],
+                "answers": ["IV"]
+            },
+            {
+                "No": 15,
+                "question": "A body of mass 5 kg is moving with a velocity of 10 m/s. Its kinetic energy is:",
+                "options": [
+                    "I. 50 J",
+                    "II. 100 J",
+                    "III. 250 J",
+                    "IV. 500 J"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 16,
+                "question": "The potential energy of a spring when stretched by 0.1 m is 2 J. The spring constant is:",
+                "options": [
+                    "I. 200 N/m",
+                    "II. 400 N/m",
+                    "III. 600 N/m",
+                    "IV. 800 N/m"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 17,
+                "question": "A force of 10 N acts on a body moving in the direction of the force. If the body moves 5 m, the work done is:",
+                "options": [
+                    "I. 2 J",
+                    "II. 5 J",
+                    "III. 50 J",
+                    "IV. 100 J"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 18,
+                "question": "The work done by gravity when a 10 kg mass falls freely through 2 m is: (g = 10 m/s²)",
+                "options": [
+                    "I. 20 J",
+                    "II. 50 J",
+                    "III. 100 J",
+                    "IV. 200 J"
+                ],
+                "answers": ["IV"]
+            },
+            {
+                "No": 19,
+                "question": "A body is projected vertically upward with a velocity of 20 m/s. The maximum height reached is: (g = 10 m/s²)",
+                "options": [
+                    "I. 10 m",
+                    "II. 20 m",
+                    "III. 30 m",
+                    "IV. 40 m"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 20,
+                "question": "The power delivered by a force F = 5i + 3j acting on a body moving with velocity v = 2i + j is:",
+                "options": [
+                    "I. 7 W",
+                    "II. 10 W",
+                    "III. 13 W",
+                    "IV. 16 W"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 21,
+                "question": "A pump lifts 100 kg of water to a height of 10 m in 20 s. Its power is: (g = 10 m/s²)",
+                "options": [
+                    "I. 50 W",
+                    "II. 100 W",
+                    "III. 500 W",
+                    "IV. 1000 W"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 22,
+                "question": "A body of mass 2 kg is thrown vertically upward with a kinetic energy of 100 J. The maximum height reached is: (g = 10 m/s²)",
+                "options": [
+                    "I. 2 m",
+                    "II. 5 m",
+                    "III. 10 m",
+                    "IV. 20 m"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 23,
+                "question": "A spring of constant 200 N/m is stretched by 0.5 m. The potential energy stored is:",
+                "options": [
+                    "I. 25 J",
+                    "II. 50 J",
+                    "III. 100 J",
+                    "IV. 200 J"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 24,
+                "question": "A body moves under the action of a conservative force. Which of the following remains constant?",
+                "options": [
+                    "I. Kinetic energy",
+                    "II. Potential energy",
+                    "III. Total mechanical energy",
+                    "IV. Momentum"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 25,
+                "question": "A car of mass 1000 kg accelerates uniformly from rest to 20 m/s in 10 s. The average power developed is:",
+                "options": [
+                    "I. 10 kW",
+                    "II. 20 kW",
+                    "III. 30 kW",
+                    "IV. 40 kW"
+                ],
+                "answers": ["II"]
+            }
+        ],
+        "PHY 101: Dynamics of Rotating Rigid Bodies - 7": [
+            {
+                "No": 1,
+                "question": "The moment of inertia of a particle of mass m at a distance r from the axis of rotation is:",
+                "options": [
+                    "I. mr",
+                    "II. mr²",
+                    "III. ½mr²",
+                    "IV. 2mr²"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 2,
+                "question": "The SI unit of moment of inertia is:",
+                "options": [
+                    "I. kg m",
+                    "II. kg m²",
+                    "III. kg/m",
+                    "IV. kg/m²"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 3,
+                "question": "The moment of inertia of a thin rod of mass M and length L about an axis through its center is:",
+                "options": [
+                    "I. ML²/12",
+                    "II. ML²/6",
+                    "III. ML²/3",
+                    "IV. ML²"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 4,
+                "question": "The moment of inertia of a solid sphere of mass M and radius R about its diameter is:",
+                "options": [
+                    "I. 2MR²/5",
+                    "II. MR²/2",
+                    "III. 2MR²/3",
+                    "IV. MR²"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 5,
+                "question": "The parallel axis theorem relates:",
+                "options": [
+                    "I. Moment of inertia about two parallel axes",
+                    "II. Moment of inertia about two perpendicular axes",
+                    "III. Angular momentum and torque",
+                    "IV. Kinetic energy and potential energy"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 6,
+                "question": "The torque acting on a body is given by:",
+                "options": [
+                    "I. Force × distance",
+                    "II. Force × velocity",
+                    "III. Moment of inertia × angular velocity",
+                    "IV. Moment of inertia × angular acceleration"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 7,
+                "question": "The angular momentum of a rotating body is:",
+                "options": [
+                    "I. Moment of inertia × angular velocity",
+                    "II. Moment of inertia × angular acceleration",
+                    "III. Torque × time",
+                    "IV. Force × distance"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 8,
+                "question": "The law of conservation of angular momentum states that:",
+                "options": [
+                    "I. Angular momentum is constant",
+                    "II. Angular momentum is zero",
+                    "III. Angular momentum changes with torque",
+                    "IV. Angular momentum equals moment of inertia"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 9,
+                "question": "A torque of 10 Nm acts on a wheel with moment of inertia 2 kg m². The angular acceleration produced is:",
+                "options": [
+                    "I. 5 rad/s²",
+                    "II. 10 rad/s²",
+                    "III. 20 rad/s²",
+                    "IV. 40 rad/s²"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 10,
+                "question": "The kinetic energy of a rotating body is:",
+                "options": [
+                    "I. ½Iω",
+                    "II. Iω",
+                    "III. ½Iω²",
+                    "IV. Iω²"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 11,
+                "question": "A solid cylinder and a hollow cylinder of the same mass and radius roll down an inclined plane. Which reaches the bottom first?",
+                "options": [
+                    "I. Solid cylinder",
+                    "II. Hollow cylinder",
+                    "III. Both reach at the same time",
+                    "IV. Depends on the angle of inclination"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 12,
+                "question": "The moment of inertia of a circular disc of mass M and radius R about an axis perpendicular to its plane and passing through its center is:",
+                "options": [
+                    "I. MR²/2",
+                    "II. MR²",
+                    "III. 2MR²/3",
+                    "IV. 2MR²/5"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 13,
+                "question": "A particle moves in a circular path of radius r with angular velocity ω. Its linear velocity is:",
+                "options": [
+                    "I. ω/r",
+                    "II. ωr",
+                    "III. ω²r",
+                    "IV. ω/r²"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 14,
+                "question": "The centripetal force required to keep a body in circular motion is:",
+                "options": [
+                    "I. mv/r",
+                    "II. mv²/r",
+                    "III. mω/r",
+                    "IV. mω²/r"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 15,
+                "question": "A flywheel of moment of inertia 5 kg m² is rotating at 10 rad/s. Its angular momentum is:",
+                "options": [
+                    "I. 0.5 kg m²/s",
+                    "II. 2 kg m²/s",
+                    "III. 50 kg m²/s",
+                    "IV. 500 kg m²/s"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 16,
+                "question": "A torque of 20 Nm is applied to a wheel initially at rest for 5 s. If the moment of inertia is 4 kg m², the final angular velocity is:",
+                "options": [
+                    "I. 5 rad/s",
+                    "II. 10 rad/s",
+                    "III. 20 rad/s",
+                    "IV. 25 rad/s"
+                ],
+                "answers": ["IV"]
+            },
+            {
+                "No": 17,
+                "question": "The radius of gyration k of a body is related to its moment of inertia I and mass M by:",
+                "options": [
+                    "I. I = Mk",
+                    "II. I = Mk²",
+                    "III. I = M/k",
+                    "IV. I = M/k²"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 18,
+                "question": "A body is rotating about an axis with angular velocity ω. If its moment of inertia is doubled while keeping the angular momentum constant, its new angular velocity will be:",
+                "options": [
+                    "I. ω/2",
+                    "II. ω",
+                    "III. 2ω",
+                    "IV. 4ω"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 19,
+                "question": "A disc of mass M and radius R rolls without slipping on a horizontal surface. The ratio of its translational to rotational kinetic energy is:",
+                "options": [
+                    "I. 1:1",
+                    "II. 2:1",
+                    "III. 1:2",
+                    "IV. 3:1"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 20,
+                "question": "A particle moves in a circular path of radius 2 m with a constant speed of 4 m/s. The magnitude of its centripetal acceleration is:",
+                "options": [
+                    "I. 2 m/s²",
+                    "II. 4 m/s²",
+                    "III. 8 m/s²",
+                    "IV. 16 m/s²"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 21,
+                "question": "A solid sphere and a hollow sphere of the same mass and radius are released from rest on an inclined plane. Which reaches the bottom first?",
+                "options": [
+                    "I. Solid sphere",
+                    "II. Hollow sphere",
+                    "III. Both reach at the same time",
+                    "IV. Depends on the angle of inclination"
+                ],
+                "answers": ["I"]
+            },
+            {
+                "No": 22,
+                "question": "A wheel of moment of inertia 2 kg m² is rotating at 60 rad/s. The torque required to stop it in 10 s is:",
+                "options": [
+                    "I. 6 Nm",
+                    "II. 12 Nm",
+                    "III. 60 Nm",
+                    "IV. 120 Nm"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 23,
+                "question": "The moment of inertia of a thin ring of mass M and radius R about an axis through its center and perpendicular to its plane is:",
+                "options": [
+                    "I. MR²/2",
+                    "II. MR²",
+                    "III. 2MR²/3",
+                    "IV. 2MR²/5"
+                ],
+                "answers": ["II"]
+            },
+            {
+                "No": 24,
+                "question": "A body is rotating with angular velocity ω. If its moment of inertia is halved while keeping the kinetic energy constant, its new angular velocity will be:",
+                "options": [
+                    "I. ω/√2",
+                    "II. ω",
+                    "III. √2ω",
+                    "IV. 2ω"
+                ],
+                "answers": ["III"]
+            },
+            {
+                "No": 25,
+                "question": "A uniform rod of length L and mass M is pivoted at one end. Its moment of inertia about the pivot is:",
+                "options": [
+                    "I. ML²/12",
+                    "II. ML²/6",
+                    "III. ML²/3",
+                    "IV. ML²"
+                ],
+                "answers": ["III"]
+            }
+        ],
+}
 }
