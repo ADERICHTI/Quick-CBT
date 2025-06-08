@@ -430,6 +430,42 @@
     background-color: #d33426;
 }
 
+          /* Add these styles to your existing CSS */
+  
+  .profile-card {
+    transition: all 0.3s ease;
+    overflow: hidden;
+    width: 40px; /* Collapsed width */
+    height: 40px; /* Collapsed height */
+    cursor: pointer;
+  }
+  
+  .profile-card.expanded {
+    width: auto; /* Let content determine width */
+    height: auto;
+    padding: 15px;
+  }
+  
+  .profile-info, .btn-signout {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+  }
+  
+  .profile-card.expanded .profile-info,
+  .profile-card.expanded .btn-signout {
+    opacity: 1;
+    transition-delay: 0.1s;
+  }
+  
+  .profile-avatar {
+    position: absolute;
+    transition: all 0.3s ease;
+  }
+  
+  .profile-card.expanded .profile-avatar {
+    position: relative;
+  }
     </style>
 </head>
 <body>
@@ -897,6 +933,47 @@ helpDialog.addEventListener('click', (e) => {
     document.body.style.overflow = 'auto';
   }
 });
+
+          // Get profile elements
+  const profileCard = document.querySelector('.profile-card');
+  const profileAvatar = document.getElementById('userAvatar');
+  const profileName = document.getElementById('userName');
+  const profileEmail = document.getElementById('userEmail');
+  const signOutBtn = document.getElementById('signOutButton');
+  
+  // Collapse timer variable
+  let collapseTimer;
+  
+  // Toggle profile expansion
+  function toggleProfile() {
+    // Clear any existing timer
+    clearTimeout(collapseTimer);
+    
+    if (profileCard.classList.contains('expanded')) {
+      // If already expanded, collapse immediately
+      profileCard.classList.remove('expanded');
+    } else {
+      // Expand the profile
+      profileCard.classList.add('expanded');
+      
+      // Set timer to collapse after 5 seconds
+      collapseTimer = setTimeout(() => {
+        profileCard.classList.remove('expanded');
+      }, 5000);
+    }
+  }
+  
+  // Initialize profile in collapsed state
+  function initProfile() {
+    profileCard.classList.remove('expanded');
+    profileCard.addEventListener('click', toggleProfile);
+  }
+  
+  // Call this when user signs in
+  function showUserProfile(user) {
+    // ... your existing profile code ...
+    initProfile(); // Initialize collapsed state
+  }
     </script>
 </body>
 </html>
