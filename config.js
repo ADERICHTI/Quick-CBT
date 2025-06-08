@@ -1,6 +1,5 @@
 
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-analytics.js";
+  
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -16,6 +15,6 @@
     measurementId: "G-JTDXD1SRPH"
   };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
   // const analytics = getAnalytics(app);
