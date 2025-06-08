@@ -1,0 +1,16 @@
+# Ignore Firebase config
+auth.js
+config.js
+firebase-messaging-sw.js
+firebase-config.json
+
+# Ignore node modules
+node_modules/
+
+# Ignore IDE files
+.vscode/
+.idea/
+
+# Ignore environment files
+.env
+.env.local
