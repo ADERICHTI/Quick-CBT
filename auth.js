@@ -65,6 +65,7 @@ function showSignInScreen() {
     userProfile.style.display = 'none';
     authLoader.style.display = 'none';
     signInButton.disabled = false;
+    document.querySelector('.container').style.display = "none";
 }
 
 function showAppContent() {
