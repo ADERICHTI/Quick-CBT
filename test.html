@@ -12,66 +12,34 @@
             --card-bg: #ffffff;
             --text-color: #202124;
             --secondary-text: #5f6368;
-            --glass-bg: rgba(255, 255, 255, 0.85);
-            --glass-border: 1px solid rgba(255, 255, 255, 0.3);
-            --blur: blur(8px);
+                    /* These variables are used but not defined in your CSS */
+--glass-bg: rgba(255, 255, 255, 0.85);
+--glass-border: 1px solid rgba(255, 255, 255, 0.3);
+--blur: blur(8px);
+--glass-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+--light-gray: #f8f9fa; /* Used in help dialog */
+--medium-gray: #dadce0; /* Used in help dialog */
+--dark-gray: #5f6368; /* Used in help dialog */
+
         }
 
         body {
             font-family: 'Roboto', Arial, sans-serif;
-            background: linear-gradient(
-                135deg,
-                #fff5f5 0%,
-                #fff9f9 50%,
-                #fff 100%
-            );
-            background-attachment: fixed;
-            background-size: 200% 200%;
-            animation: gradient 15s ease infinite;
+            background-color: var(--background);
             color: var(--text-color);
             margin: 0;
-            padding: 0;
+            padding: 20px;
             line-height: 1.6;
-            min-height: 100vh;
-        }
-
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        header {
-            background-color: var(--glass-bg);
-            backdrop-filter: var(--blur);
-            -webkit-backdrop-filter: var(--blur);
-            padding: 15px 20px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 
-                        0 1px 3px rgba(0, 0, 0, 0.08);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: var(--glass-border);
-        }
-
-        .header-title {
-            font-size: 24px;
-            font-weight: 900;
-            color: var(--primary-color);
-            text-align: center;
-            letter-spacing: 0.5px;
         }
 
         .container {
             max-width: 1000px;
-            margin: 20px auto;
+            margin: 0 auto;
             padding: 20px;
-            background-color: var(--glass-bg);
-            backdrop-filter: var(--blur);
-            -webkit-backdrop-filter: var(--blur);
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            border: var(--glass-border);
+            display: none;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
@@ -107,9 +75,6 @@
             border: 1px solid #dfe1e5;
             font-size: 14px;
             transition: all 0.3s;
-            background-color: var(--glass-bg);
-            backdrop-filter: var(--blur);
-            -webkit-backdrop-filter: var(--blur);
         }
 
         select:focus, input:focus {
@@ -133,13 +98,11 @@
         button:hover {
             background-color: var(--hover-color);
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-            transform: translateY(-1px);
         }
 
         button:disabled {
             background-color: #cccccc;
             cursor: not-allowed;
-            transform: none;
         }
 
         .numbers-grid {
@@ -152,23 +115,20 @@
         .number-card {
             padding: 12px;
             border-radius: 4px;
-            background-color: var(--glass-bg);
-            backdrop-filter: var(--blur);
-            -webkit-backdrop-filter: var(--blur);
+            background-color: var(--background);
             text-align: center;
             transition: all 0.2s;
             cursor: pointer;
             border: 1px solid transparent;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         .number-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(66, 133, 244, 0.15);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .number-card.active {
-            background-color: rgba(66, 133, 244, 0.15);
+            background-color: #e8f0fe;
             border-color: var(--primary-color);
         }
 
@@ -187,9 +147,9 @@
         }
 
         @keyframes pulse {
-            0% { background-color: rgba(66, 133, 244, 0.15); }
-            50% { background-color: rgba(66, 133, 244, 0.25); }
-            100% { background-color: rgba(66, 133, 244, 0.15); }
+            0% { background-color: #e8f0fe; }
+            50% { background-color: #d2e3fc; }
+            100% { background-color: #e8f0fe; }
         }
 
         .status {
@@ -215,90 +175,162 @@
             border-bottom: 1px solid #dfe1e5;
         }
 
-        footer {
+            footer {
             width: 100%;
             text-align: center;
             color: #999;
-            padding: 20px;
+            
         }
 
-        /* Auth Styles */
-        .auth-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(5px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
+        .help-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
 
-        .auth-card {
-            background-color: white;
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 400px;
-            width: 90%;
-        }
+.help-button:hover {
+  transform: scale(1.1);
+  background-color: #3367d6;
+}
 
-        .auth-header {
-            margin-bottom: 30px;
-        }
+.help-button svg {
+  width: 24px;
+  height: 24px;
+}
 
-        .auth-header h2 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
+/* Help Dialog Styles */
+.help-dialog {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
 
-        .auth-header p {
-            color: var(--secondary-text);
-        }
+.help-dialog-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
 
-        .btn-google {
-            background-color: white;
-            color: var(--text-color);
-            border: 1px solid #dfe1e5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 12px 20px;
-            margin: 0 auto;
-        }
+.help-dialog h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
 
-        .btn-google:hover {
-            background-color: #f8f9fa;
-        }
+.developer-info {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: var(--light-gray);
+  border-radius: 8px;
+}
 
-        .google-icon {
-            margin-right: 10px;
-        }
+.developer-info a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
 
-        .auth-loader {
-            margin-bottom: 20px;
-        }
+.developer-info a:hover {
+  text-decoration: underline;
+}
 
-        .loader-spinner {
-            border: 4px solid rgba(0, 0, 0, 0.1);
-            border-radius: 50%;
-            border-top: 4px solid var(--primary-color);
-            width: 30px;
-            height: 30px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 10px;
-        }
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--medium-gray);
+  border-radius: 6px;
+  margin-bottom: 15px;
+  min-height: 100px;
+  resize: vertical;
+}
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+.close-help {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--dark-gray);
+}
+.auth-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
 
+.auth-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.auth-header {
+    margin-bottom: 30px;
+}
+
+.auth-body {
+    margin-top: 20px;
+}
+
+.auth-loader {
+    margin-bottom: 20px;
+    display: none;
+}
+
+.loader-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid var(--primary-color);
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+        
         /* User Profile Styles */
         .user-profile {
             position: fixed;
@@ -358,88 +390,10 @@
             background-color: #d33426;
         }
 
-        /* Help Button Styles */
-        .help-button {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        .help-button:hover {
-            transform: scale(1.1);
-            background-color: var(--hover-color);
-        }
-
-        .help-dialog {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(5px);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .help-dialog-content {
-            background-color: white;
-            padding: 30px;
-            border-radius: 12px;
-            max-width: 500px;
-            width: 90%;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            position: relative;
-        }
-
-        .close-help {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: var(--secondary-text);
-        }
-
-        @media (max-width: 768px) {
-            .controls {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            
-            .control-group {
-                width: 100%;
-            }
-            
-            .numbers-grid {
-                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-            }
-        }
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-title">French Number Pronunciation</div>
-    </header>
-
-    <!-- Auth Interface -->
+        <!-- Auth Interface -->
     <div id="authContainer" class="auth-container">
         <div class="auth-card">
             <div class="auth-header">
@@ -476,7 +430,7 @@
         </div>
     </div>
 
-    <div class="container" style="display: none;">
+    <div class="container">
         <h1>French Number Pronunciation</h1>
         
         <div class="controls">
@@ -520,27 +474,28 @@
     </div>
 
     <button id="helpButton" class="help-button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-            <line x1="12" y1="17" x2="12" y2="17"></line>
-        </svg>
-    </button>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"></circle>
+    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+    <line x1="12" y1="17" x2="12" y2="17"></line>
+  </svg>
+</button>
 
-    <!-- Help Dialog -->
-    <div id="helpDialog" class="help-dialog">
-        <div class="help-dialog-content">
-            <button class="close-help">&times;</button>
-            <h3>Need Help or Have Feedback?</h3>
-            <p>For any inquiries or suggestions about the application, please reach out to the developer:</p>
-            <div class="developer-info">
-                <p><strong>Iyiola Adedamola Richard</strong></p>
-                <a href="https://iar-portfolio.netlify.app/" target="_blank">Visit Developer Portfolio</a>
-            </div>
-        </div>
+<!-- Help Dialog -->
+<div id="helpDialog" class="help-dialog">
+  <div class="help-dialog-content">
+    <button class="close-help">&times;</button>
+    <h3>Need Help or Have Feedback?</h3>
+    <p>For any inquiries or suggestions about the application, please reach out to the developer:</p>
+    <div class="developer-info">
+      <p><strong>Iyiola Adedamola Richard</strong></p>
+      <a href="https://iar-portfolio.netlify.app/" target="_blank">Visit Developer Portfolio</a>
     </div>
+ 
+  </div>
+</div>
 
-    <footer>
+       <footer>
         By: Iyiola Adedamola Richard @QuickCBT&copy;2025
     </footer>
 
@@ -552,9 +507,10 @@
     <!-- Load config and auth -->
     <script src="config.js"></script>
     <script src="auth.js"></script>
+    
 
     <script>
-        
+        // French numbers data (0-50)
         const frenchNumbers = [
             { french: "Zéro", digit: "0" },
             { french: "Un", digit: "1" },
@@ -676,6 +632,8 @@
         const stopBtn = document.getElementById('stop-btn');
         const speedSelect = document.getElementById('speed');
         const statusElement = document.getElementById('status');
+        
+const containerElement = document.querySelector('.container');
 
         // Speech synthesis
         const synth = window.speechSynthesis;
@@ -690,6 +648,7 @@
             numbersGrid.innerHTML = '';
             startNumberSelect.innerHTML = '';
             endNumberSelect.innerHTML = '';
+            containerElement.style.display = "block";
 
             // Add section for 0-69
             addSectionTitle("Numbers 0-69");
@@ -752,10 +711,12 @@
             }
         }
 
+        // Toggle number selection
         function toggleNumberSelection(index) {
             const card = document.querySelector(`.number-card[data-index="${index}"]`);
             card.classList.toggle('active');
             
+            // Update selected numbers array
             if (card.classList.contains('active')) {
                 selectedNumbers.push(index);
                 selectedNumbers.sort((a, b) => a - b);
@@ -764,17 +725,21 @@
             }
         }
 
+        // Play selected numbers
         function playSelectedNumbers() {
             if (isPlaying) return;
             
+            // Determine which numbers to play
             const startIdx = parseInt(startNumberSelect.value);
             let endIdx = parseInt(endNumberSelect.value);
             
+            // Ensure end is after start
             if (endIdx < startIdx) {
                 endIdx = startIdx;
                 endNumberSelect.value = endIdx;
             }
             
+            // Get the range of numbers
             selectedNumbers = [];
             for (let i = startIdx; i <= endIdx; i++) {
                 selectedNumbers.push(i);
@@ -794,6 +759,7 @@
             playNextNumber();
         }
 
+        // Play next number in sequence
         function playNextNumber() {
             if (currentIndex >= selectedNumbers.length || !isPlaying) {
                 stopPlayback();
@@ -803,16 +769,20 @@
             const numberIndex = selectedNumbers[currentIndex];
             const number = frenchNumbers[numberIndex];
             
+            // Update UI
             statusElement.textContent = `Playing: ${number.digit} - ${number.french}`;
             
+            // Highlight current number
             document.querySelectorAll('.number-card').forEach(card => {
                 card.classList.remove('playing');
             });
             const currentCard = document.querySelector(`.number-card[data-index="${numberIndex}"]`);
             currentCard.classList.add('playing');
             
+            // Scroll to the card if not fully visible
             currentCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             
+            // Speak the number
             if (currentUtterance) {
                 synth.cancel();
             }
@@ -825,12 +795,13 @@
                 setTimeout(() => {
                     currentIndex++;
                     playNextNumber();
-                }, 500);
+                }, 500); // Small pause between numbers
             };
             
             synth.speak(currentUtterance);
         }
 
+        // Stop playback
         function stopPlayback() {
             isPlaying = false;
             if (currentUtterance) {
@@ -846,7 +817,7 @@
             });
         }
 
-        // Initialize the app when DOM is loaded and user is authenticated
+          // Initialize the app when DOM is loaded and user is authenticated
         document.addEventListener('DOMContentLoaded', () => {
             // Initialize auth first
             initAuth();
@@ -861,26 +832,27 @@
         });
 
         // Help Button Functionality
-        const helpButton = document.getElementById('helpButton');
-        const helpDialog = document.getElementById('helpDialog');
-        const closeHelp = document.querySelector('.close-help');
+const helpButton = document.getElementById('helpButton');
+const helpDialog = document.getElementById('helpDialog');
+const closeHelp = document.querySelector('.close-help');
 
-        helpButton.addEventListener('click', () => {
-            helpDialog.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        });
+helpButton.addEventListener('click', () => {
+  helpDialog.style.display = 'flex';
+  document.body.style.overflow = 'hidden'; // Prevent scrolling
+});
 
-        closeHelp.addEventListener('click', () => {
-            helpDialog.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        });
+closeHelp.addEventListener('click', () => {
+  helpDialog.style.display = 'none';
+  document.body.style.overflow = 'auto'; // Re-enable scrolling
+});
 
-        helpDialog.addEventListener('click', (e) => {
-            if (e.target === helpDialog) {
-                helpDialog.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        });
+// Close dialog when clicking outside
+helpDialog.addEventListener('click', (e) => {
+  if (e.target === helpDialog) {
+    helpDialog.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+});
     </script>
 </body>
 </html>
