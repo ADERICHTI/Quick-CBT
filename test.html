@@ -278,6 +278,8 @@
   cursor: pointer;
   color: var(--dark-gray);
 }
+
+              /* Auth Styles */
 .auth-container {
     position: fixed;
     top: 0;
@@ -306,13 +308,37 @@
     margin-bottom: 30px;
 }
 
-.auth-body {
-    margin-top: 20px;
+.auth-header h2 {
+    color: #aeb6c2;
+    margin-bottom: 10px;
+}
+
+.auth-header p {
+    color: var(--dark-gray);
+}
+
+.btn-google {
+    background-color: white;
+    color: var(--dark-gray);
+    border: 1px solid var(--medium-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    margin: 0 auto;
+}
+
+.btn-google:hover {
+    background-color: #f8f9fa;
+}
+
+.google-icon {
+    margin-right: 10px;
 }
 
 .auth-loader {
     margin-bottom: 20px;
-    display: none;
 }
 
 .loader-spinner {
@@ -330,65 +356,66 @@
     100% { transform: rotate(360deg); }
 }
 
-        
-        /* User Profile Styles */
-        .user-profile {
-            position: fixed;
-            top: 70px;
-            right: 20px;
-            z-index: 100;
-        }
+/* User Profile Styles */
+.user-profile {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 100;
+}
 
-        .profile-card {
-            background-color: var(--glass-bg);
-            backdrop-filter: var(--blur);
-            -webkit-backdrop-filter: var(--blur);
-            border-radius: 8px;
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            box-shadow: var(--glass-shadow);
-            border: var(--glass-border);
-        }
+.profile-card {
+    background-color: var(--glass-bg);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: var(--glass-shadow);
+    border: var(--glass-border);
+}
 
-        .profile-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
-        .profile-info {
-            flex: 1;
-            text-align: left;
-        }
+.profile-info {
+    flex: 1;
+    text-align: left;
+}
 
-        .profile-info h3 {
-            font-size: 14px;
-            margin-bottom: 2px;
-            color: var(--text-color);
-        }
+.profile-info h3 {
+    font-size: 14px;
+    margin-bottom: 2px;
+    color: var(--dark-gray);
+}
 
-        .profile-info p {
-            font-size: 12px;
-            color: var(--secondary-text);
-        }
+.profile-info p {
+    font-size: 12px;
+    color: var(--dark-gray);
+    opacity: 0.8;
+}
 
-        .btn-signout {
-            background-color: #EA4335;
-            color: white;
-            border: none;
-            padding: 6px 12px;
-            border-radius: 4px;
-            font-size: 12px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
+.btn-signout {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: var(--transition);
+}
 
-        .btn-signout:hover {
-            background-color: #d33426;
-        }
+.btn-signout:hover {
+    background-color: #d33426;
+}
+
 
     </style>
 </head>
@@ -416,6 +443,9 @@
                 </button>
             </div>
         </div>
+           <footer>
+        By: Iyiola Adedamola Richard @QuickCBT&copy;2025
+    </footer>
     </div>
 
     <!-- User Profile (hidden by default) -->
