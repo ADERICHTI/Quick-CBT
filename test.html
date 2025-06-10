@@ -3,24 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>French Number Pronunciation</title>
+    <title>MTH 102 Revision</title>
     <style>
+        /* Glassy Paper Design System (from template) */
         :root {
-            --primary-color: #4285f4;
-            --hover-color: #3367d6;
-            --background: #f8f9fa;
-            --card-bg: #ffffff;
-            --text-color: #202124;
-            --secondary-text: #5f6368;
-                    /* These variables are used but not defined in your CSS */
---glass-bg: rgba(255, 255, 255, 0.85);
---glass-border: 1px solid rgba(255, 255, 255, 0.3);
---blur: blur(8px);
---glass-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
---light-gray: #f8f9fa; /* Used in help dialog */
---medium-gray: #dadce0; /* Used in help dialog */
---dark-gray: #5f6368; /* Used in help dialog */
- --primary-color: #4285F4;
+            --primary-color: #4285F4;
             --secondary-color: #34A853;
             --accent-color: #EA4335;
             --warning-color: #FBBC05;
@@ -35,417 +22,618 @@
             --blur: blur(8px);
         }
 
-        body {
-            font-family: 'Roboto', Arial, sans-serif;
-            background-color: var(--background);
-            color: var(--text-color);
+        * {
             margin: 0;
-            padding: 20px;
-            line-height: 1.6;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Google Sans', Roboto, Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(
+                135deg,
+                #fff5f5 0%,
+                #fff9f9 50%,
+                #fff 100%
+            );
+            background-attachment: fixed;
+            background-size: 200% 200%;
+            animation: gradient 15s ease infinite;
+            min-height: 100vh;
+            color: #202124;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
-            display: none;
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding-top: 35px;
+            flex: 1;
+            width: 100%;
         }
 
-        h1 {
+        /* Header Styles (from template) */
+        header {
+            background-color: var(--glass-bg);
+            backdrop-filter: var(--blur);
+            -webkit-backdrop-filter: var(--blur);
+            padding: 15px 20px;
+            box-shadow: var(--glass-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: var(--glass-border);
+        }
+
+        .header-title {
+            font-size: 24px;
+            font-weight: 900;
             color: var(--primary-color);
             text-align: center;
-            margin-bottom: 30px;
-            font-weight: 500;
+            letter-spacing: 0.5px;
         }
 
-        .h1header {
-            margin-top: 56px;
-            margin-bottom: 21px;
+        /* Interface Container */
+        .interface-container {
+            display: none;
+            background-color: var(--glass-bg);
+            backdrop-filter: var(--blur);
+            -webkit-backdrop-filter: var(--blur);
+            border-radius: 12px;
+            box-shadow: var(--glass-shadow);
+            border: var(--glass-border);
+            padding: 30px;
+            margin-top: 20px;
+            transition: var(--transition);
         }
 
-        .controls {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 25px;
-            align-items: center;
+        .interface-container.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
         }
 
-        .control-group {
-            display: flex;
-            flex-direction: column;
-            min-width: 150px;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        label {
-            margin-bottom: 5px;
-            font-size: 14px;
-            color: var(--secondary-text);
+        /* Home Interface */
+        .home-container {
+            text-align: center;
         }
 
-        select, input, button {
-            padding: 10px 15px;
-            border-radius: 4px;
-            border: 1px solid #dfe1e5;
-            font-size: 14px;
-            transition: all 0.3s;
+        .home-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
         }
 
-        select:focus, input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+        .home-subtitle {
+            font-size: 1.2rem;
+            color: var(--dark-gray);
+            margin-bottom: 2rem;
         }
 
-        button {
+        .btn {
             background-color: var(--primary-color);
             color: white;
             border: none;
-            cursor: pointer;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-size: 16px;
             font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-block;
+            margin: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(66, 133, 244, 0.1);
+        }
+
+        /* Course Outline Interface */
+        .outline-container {
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+
+        .outline-title {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .topic-card {
+            background-color: var(--glass-bg);
+            backdrop-filter: var(--blur);
+            -webkit-backdrop-filter: var(--blur);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: var(--glass-border);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .topic-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .topic-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        /* Revision Interface */
+        .revision-container {
+            position: relative;
+            min-height: 80vh;
+        }
+
+        .revision-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+
+        .revision-title {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .home-btn {
+            background-color: var(--light-gray);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 8px;
+            gap: 5px;
         }
 
-        button:hover {
-            background-color: var(--hover-color);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        .revision-content {
+            margin-bottom: 30px;
         }
 
-        button:disabled {
-            background-color: #cccccc;
-            cursor: not-allowed;
+        .subtopic {
+            margin-bottom: 30px;
         }
 
-        .numbers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 10px;
+        .subtopic-title {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .explanation {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .examples {
             margin-top: 20px;
         }
 
-        .number-card {
-            padding: 12px;
-            border-radius: 4px;
-            background-color: var(--background);
-            text-align: center;
-            transition: all 0.2s;
-            cursor: pointer;
-            border: 1px solid transparent;
+        .example {
+            background-color: var(--light-gray);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
         }
 
-        .number-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .number-card.active {
-            background-color: #e8f0fe;
-            border-color: var(--primary-color);
-        }
-
-        .number-card.playing {
-            animation: pulse 1.5s infinite;
-        }
-
-        .number {
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        .digit {
-            color: var(--secondary-text);
-            font-size: 14px;
-        }
-
-        @keyframes pulse {
-            0% { background-color: #e8f0fe; }
-            50% { background-color: #d2e3fc; }
-            100% { background-color: #e8f0fe; }
-        }
-
-        .status {
-            text-align: center;
-            margin: 20px 0;
-            font-size: 16px;
-            color: var(--primary-color);
-            min-height: 24px;
-        }
-
-        .icon {
-            width: 18px;
-            height: 18px;
-        }
-
-        .section-title {
-            grid-column: 1 / -1;
-            font-size: 18px;
+        .example-question {
             font-weight: 500;
-            color: var(--primary-color);
-            margin-top: 15px;
-            padding-bottom: 5px;
-            border-bottom: 1px solid #dfe1e5;
+            margin-bottom: 10px;
         }
 
-            footer {
+        .example-solution {
+            padding: 10px;
+            background-color: rgba(52, 168, 83, 0.1);
+            border-left: 3px solid var(--secondary-color);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .nav-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: var(--transition);
+        }
+
+        .nav-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .nav-btn:disabled {
+            background-color: var(--medium-gray);
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Footer (from template) */
+        footer {
             width: 100%;
             text-align: center;
             color: #999;
-            
+            padding: 20px;
         }
 
+        /* App Menu (from template) */
+        .app-menu {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .app-menu-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--glass-bg);
+            backdrop-filter: var(--blur);
+            -webkit-backdrop-filter: var(--blur);
+            border: var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--dark-gray);
+        }
+
+        .app-menu-button:hover {
+            background-color: rgba(66, 133, 244, 0.1);
+            transform: rotate(90deg);
+        }
+
+        .app-menu-dialog {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 2000;
+        }
+
+        .app-menu-dialog.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .app-menu-content {
+            background-color: var(--glass-bg);
+            backdrop-filter: var(--blur);
+            -webkit-backdrop-filter: var(--blur);
+            border-radius: 12px;
+            padding: 25px;
+            width: 90%;
+            max-width: 400px;
+            max-height: 80vh;
+            overflow-y: auto;
+            transform: translateY(20px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: var(--glass-border);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .app-menu-dialog.active .app-menu-content {
+            transform: translateY(0);
+        }
+
+        .app-menu-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .app-list {
+            list-style: none;
+        }
+
+        .app-list li {
+            margin-bottom: 10px;
+        }
+
+        .app-list a {
+            display: block;
+            padding: 12px 15px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 6px;
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .app-list a:hover {
+            background-color: rgba(66, 133, 244, 0.1);
+            transform: translateX(5px);
+            color: var(--primary-color);
+        }
+
+        /* Help Dialog (from template) */
         .help-button {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  transition: all 0.3s ease;
-}
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
 
-.help-button:hover {
-  transform: scale(1.1);
-  background-color: #3367d6;
-}
+        .help-button:hover {
+            transform: scale(1.1);
+            background-color: #3367d6;
+        }
 
-.help-button svg {
-  width: 24px;
-  height: 24px;
-}
+        .help-button svg {
+            width: 24px;
+            height: 24px;
+        }
 
-/* Help Dialog Styles */
-.help-dialog {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  z-index: 2000;
-  justify-content: center;
-  align-items: center;
-}
+        .help-dialog {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
 
-.help-dialog-content {
-  background-color: white;
-  padding: 30px;
-  border-radius: 12px;
-  max-width: 500px;
-  width: 90%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  position: relative;
-}
+        .help-dialog-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
 
-.help-dialog h3 {
-  color: var(--primary-color);
-  margin-bottom: 15px;
-}
+        .help-dialog h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
 
-.developer-info {
-  margin: 20px 0;
-  padding: 15px;
-  background-color: var(--light-gray);
-  border-radius: 8px;
-}
+        .developer-info {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: var(--light-gray);
+            border-radius: 8px;
+        }
 
-.developer-info a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 500;
-}
+        .developer-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
 
-.developer-info a:hover {
-  text-decoration: underline;
-}
+        .developer-info a:hover {
+            text-decoration: underline;
+        }
 
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid var(--medium-gray);
-  border-radius: 6px;
-  margin-bottom: 15px;
-  min-height: 100px;
-  resize: vertical;
-}
+        .close-help {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--dark-gray);
+        }
 
-.close-help {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: var(--dark-gray);
-}
+        /* Auth Styles (from template) */
+        .auth-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
 
-              /* Auth Styles */
-.auth-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(5px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
+        .auth-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
 
-.auth-card {
-    background-color: white;
-    border-radius: 12px;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 400px;
-    width: 90%;
-}
+        .auth-header {
+            margin-bottom: 30px;
+        }
 
-.auth-header {
-    margin-bottom: 30px;
-}
+        .auth-header h2 {
+            color: #aeb6c2;
+            margin-bottom: 10px;
+        }
 
-.auth-header h2 {
-    color: #aeb6c2;
-    margin-bottom: 10px;
-}
+        .auth-header p {
+            color: var(--dark-gray);
+        }
 
-.auth-header p {
-    color: var(--dark-gray);
-}
+        .btn-google {
+            background-color: white;
+            color: var(--dark-gray);
+            border: 1px solid var(--medium-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 20px;
+            margin: 0 auto;
+        }
 
-.btn-google {
-    background-color: white;
-    color: var(--dark-gray);
-    border: 1px solid var(--medium-gray);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 12px 20px;
-    margin: 0 auto;
-}
+        .btn-google:hover {
+            background-color: #f8f9fa;
+        }
 
-.btn-google:hover {
-    background-color: #f8f9fa;
-}
+        .google-icon {
+            margin-right: 10px;
+        }
 
-.google-icon {
-    margin-right: 10px;
-}
+        .auth-loader {
+            margin-bottom: 20px;
+        }
 
-.auth-loader {
-    margin-bottom: 20px;
-}
+        .loader-spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 4px solid var(--primary-color);
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
 
-.loader-spinner {
-    border: 4px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    border-top: 4px solid var(--primary-color);
-    width: 30px;
-    height: 30px;
-    animation: spin 1s linear infinite;
-    margin: 0 auto 10px;
-}
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-
-/* User Profile Styles */
-.user-profile {
-    position: fixed;
-    top: 3px;
-    right: 20px;
-    z-index: 100;
-}
-
-.profile-card {
-    background-color: var(--glass-bg);
-    backdrop-filter: var(--blur);
-    -webkit-backdrop-filter: var(--blur);
-    border-radius: 8px;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    box-shadow: var(--glass-shadow);
-    border: var(--glass-border);
-}
-
-.profile-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.profile-info {
-    flex: 1;
-    text-align: left;
-}
-
-.profile-info h3 {
-    font-size: 14px;
-    margin-bottom: 2px;
-    color: var(--dark-gray);
-}
-
-.profile-info p {
-    font-size: 12px;
-    color: var(--dark-gray);
-    opacity: 0.8;
-}
-
-.btn-signout {
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 12px;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.btn-signout:hover {
-    background-color: #d33426;
-}
-
-          
-
+        /* Responsive */
+        @media (max-width: 768px) {
+            .home-title {
+                font-size: 2rem;
+            }
+            
+            .home-subtitle {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            
+            .revision-title {
+                font-size: 1.2rem;
+            }
+            
+            .nav-buttons {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .nav-btn {
+                width: 45px;
+                height: 45px;
+            }
+        }
     </style>
 </head>
 <body>
-        <!-- Auth Interface -->
+    <header>
+        <div class="header-title">MTH 102 Revision</div>
+    </header>
+
+    <!-- App Menu (from template) -->
+    <div class="app-menu">
+        <button id="appMenuButton" class="app-menu-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="1"></circle>
+                <circle cx="12" cy="5" r="1"></circle>
+                <circle cx="12" cy="19" r="1"></circle>
+            </svg>
+        </button>
+        
+        <div id="appMenuDialog" class="app-menu-dialog">
+            <div id="appMenuContent" class="app-menu-content">
+                <h3>QuickCBT&copy;</h3>
+                <ul class="app-list">
+                    <li><a href="https://quickcbt.netlify.app/french-pro" target="_blank">French-Pro</a></li>
+                </ul>
+                <footer>
+                    By: Iyiola Adedamola Richard @QuickCBT&copy;2025
+                </footer>
+            </div>
+        </div>   
+    </div>
+
+    <!-- Auth Interface (from template) -->
     <div id="authContainer" class="auth-container">
         <div class="auth-card">
             <div class="auth-header">
-                <h2>Welcome to French-Pro</h2>
-                <p>Sign in to Get Started <br> French Number Pronunciation App</p>
+                <h2>Welcome to MTH 102 Revision</h2>
+                <p>Sign in to access your revision materials</p>
             </div>
             <div class="auth-body">
                 <div id="authLoader" class="auth-loader" style="display: none;">
@@ -462,14 +650,13 @@
                     Sign in with Google
                 </button>
             </div>
-                   <footer>
-        By: Iyiola Adedamola Richard @QuickCBT&copy;2025
-    </footer>
+            <footer>
+                By: Iyiola Adedamola Richard @QuickCBT&copy;2025
+            </footer>
         </div>
-    
     </div>
 
-    <!-- User Profile (hidden by default) -->
+    <!-- User Profile (from template) -->
     <div id="userProfile" class="user-profile" style="display: none;">
         <div class="profile-card">
             <img id="userAvatar" src="" alt="User Avatar" class="profile-avatar">
@@ -482,430 +669,302 @@
     </div>
 
     <div class="container">
-        <h1 class="h1header" style="color: #aeb6c2;">French-Pro</h1>
-        
-        <div class="controls">
-            <div class="control-group">
-                <label for="start-number">Start From</label>
-                <select id="start-number"></select>
+        <!-- Home Interface -->
+        <div class="interface-container active" id="homeInterface">
+            <div class="home-container">
+                <h1 class="home-title">MTH 102 Revision</h1>
+                <p class="home-subtitle">Comprehensive revision materials for Calculus</p>
+                
+                <button id="startRevisionBtn" class="btn">Start Revision</button>
+                <button id="viewOutlineBtn" class="btn btn-outline">View Course Outline</button>
             </div>
-            
-            <div class="control-group">
-                <label for="end-number">Stop At</label>
-                <select id="end-number"></select>
-            </div>
-            
-            <div class="control-group">
-                <label for="speed">Speed</label>
-                <select id="speed">
-                    <option value="0.7">Slow</option>
-                    <option value="1" selected>Normal</option>
-                    <option value="1.3">Fast</option>
-                </select>
-            </div>
-            
-            <button id="play-btn">
-                <svg class="icon" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
-                </svg>
-                Play
-            </button>
-            
-            <button id="stop-btn" disabled>
-                <svg class="icon" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M6,19H18V5H6V19Z" />
-                </svg>
-                Stop
-            </button>
         </div>
-        
-        <div class="status" id="status"></div>
-        
-        <div class="numbers-grid" id="numbers-grid"></div>
+
+        <!-- Course Outline Interface -->
+        <div class="interface-container" id="outlineInterface">
+            <div class="outline-container">
+                <h2 class="outline-title">Course Outline</h2>
+                <div id="topicList">
+                    <!-- Topics will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Revision Interface -->
+        <div class="interface-container" id="revisionInterface">
+            <div class="revision-container">
+                <div class="revision-header">
+                    <button id="homeBtn" class="home-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        Home
+                    </button>
+                    <h2 class="revision-title" id="currentTopicTitle">Topic Title</h2>
+                </div>
+                
+                <div class="revision-content" id="revisionContent">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+                
+                <div class="nav-buttons">
+                    <button id="prevBtn" class="nav-btn" disabled>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button id="nextBtn" class="nav-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <!-- Help Button (from template) -->
     <button id="helpButton" class="help-button">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="12" cy="12" r="10"></circle>
-    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-    <line x1="12" y1="17" x2="12" y2="17"></line>
-  </svg>
-</button>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12" y2="17"></line>
+        </svg>
+    </button>
 
-<!-- Help Dialog -->
-<div id="helpDialog" class="help-dialog">
-  <div class="help-dialog-content">
-    <button class="close-help">&times;</button>
-    <h3>Need Help or Have Feedback?</h3>
-    <p>For any inquiries or suggestions about the application, please reach out to the developer:</p>
-    <div class="developer-info">
-      <p><strong>Iyiola Adedamola Richard</strong></p>
-      <a href="https://iar-portfolio.netlify.app/" target="_blank">Visit Developer Portfolio</a>
+    <!-- Help Dialog (from template) -->
+    <div id="helpDialog" class="help-dialog">
+        <div class="help-dialog-content">
+            <button class="close-help">&times;</button>
+            <h3>Need Help or Have Feedback?</h3>
+            <p>For any inquiries or suggestions about the application, please reach out to the developer:</p>
+            <div class="developer-info">
+                <p><strong>Iyiola Adedamola Richard</strong></p>
+                <a href="https://iar-portfolio.netlify.app/" target="_blank">Visit Developer Portfolio</a>
+            </div>
+        </div>
     </div>
- 
-  </div>
-</div>
 
-       <footer>
+    <footer>
         By: Iyiola Adedamola Richard @QuickCBT&copy;2025
     </footer>
 
-    <!-- Load Firebase SDKs -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    
-    <!-- Load config and auth -->
-    <script src="config.js"></script>
-    <script src="auth.js"></script>
-    
-
+    <!-- Sample Data Structure -->
     <script>
-        // French numbers data (0-50)
-        const frenchNumbers = [
-            { french: "Zéro", digit: "0" },
-            { french: "Un", digit: "1" },
-            { french: "Deux", digit: "2" },
-            { french: "Trois", digit: "3" },
-            { french: "Quatre", digit: "4" },
-            { french: "Cinq", digit: "5" },
-            { french: "Six", digit: "6" },
-            { french: "Sept", digit: "7" },
-            { french: "Huit", digit: "8" },
-            { french: "Neuf", digit: "9" },
-            { french: "Dix", digit: "10" },
-            { french: "Onze", digit: "11" },
-            { french: "Douze", digit: "12" },
-            { french: "Treize", digit: "13" },
-            { french: "Quatorze", digit: "14" },
-            { french: "Quinze", digit: "15" },
-            { french: "Seize", digit: "16" },
-            { french: "Dix-sept", digit: "17" },
-            { french: "Dix-huit", digit: "18" },
-            { french: "Dix-neuf", digit: "19" },
-            { french: "Vingt", digit: "20" },
-            { french: "Vingt et un", digit: "21" },
-            { french: "Vingt-deux", digit: "22" },
-            { french: "Vingt-trois", digit: "23" },
-            { french: "Vingt-quatre", digit: "24" },
-            { french: "Vingt-cinq", digit: "25" },
-            { french: "Vingt-six", digit: "26" },
-            { french: "Vingt-sept", digit: "27" },
-            { french: "Vingt-huit", digit: "28" },
-            { french: "Vingt-neuf", digit: "29" },
-            { french: "Trente", digit: "30" },
-            { french: "Trente et un", digit: "31" },
-            { french: "Trente-deux", digit: "32" },
-            { french: "Trente-trois", digit: "33" },
-            { french: "Trente-quatre", digit: "34" },
-            { french: "Trente-cinq", digit: "35" },
-            { french: "Trente-six", digit: "36" },
-            { french: "Trente-sept", digit: "37" },
-            { french: "Trente-huit", digit: "38" },
-            { french: "Trente-neuf", digit: "39" },
-            { french: "Quarante", digit: "40" },
-            { french: "Quarante et un", digit: "41" },
-            { french: "Quarante-deux", digit: "42" },
-            { french: "Quarante-trois", digit: "43" },
-            { french: "Quarante-quatre", digit: "44" },
-            { french: "Quarante-cinq", digit: "45" },
-            { french: "Quarante-six", digit: "46" },
-            { french: "Quarante-sept", digit: "47" },
-            { french: "Quarante-huit", digit: "48" },
-            { french: "Quarante-neuf", digit: "49" },
-            { french: "Cinquante", digit: "50" },
-            { french: "Cinquante et un", digit: "51" },
-            { french: "Cinquante-deux", digit: "52" },
-            { french: "Cinquante-trois", digit: "53" },
-            { french: "Cinquante-quatre", digit: "54" },
-            { french: "Cinquante-cinq", digit: "55" },
-            { french: "Cinquante-six", digit: "56" },
-            { french: "Cinquante-sept", digit: "57" },
-            { french: "Cinquante-huit", digit: "58" },
-            { french: "Cinquante-neuf", digit: "59" },
-            { french: "Soixante", digit: "60" },
-            { french: "Soixante et un", digit: "61" },
-            { french: "Soixante-deux", digit: "62" },
-            { french: "Soixante-trois", digit: "63" },
-            { french: "Soixante-quatre", digit: "64" },
-            { french: "Soixante-cinq", digit: "65" },
-            { french: "Soixante-six", digit: "66" },
-            { french: "Soixante-sept", digit: "67" },
-            { french: "Soixante-huit", digit: "68" },
-            { french: "Soixante-neuf", digit: "69" },
-            { french: "Soixante-dix", digit: "70" },
-            { french: "Soixante et onze", digit: "71" },
-            { french: "Soixante-douze", digit: "72" },
-            { french: "Soixante-treize", digit: "73" },
-            { french: "Soixante-quatorze", digit: "74" },
-            { french: "Soixante-quinze", digit: "75" },
-            { french: "Soixante-seize", digit: "76" },
-            { french: "Soixante-dix-sept", digit: "77" },
-            { french: "Soixante-dix-huit", digit: "78" },
-            { french: "Soixante-dix-neuf", digit: "79" },
-            { french: "Quatre-vingts", digit: "80" },
-            { french: "Quatre-vingt-un", digit: "81" },
-            { french: "Quatre-vingt-deux", digit: "82" },
-            { french: "Quatre-vingt-trois", digit: "83" },
-            { french: "Quatre-vingt-quatre", digit: "84" },
-            { french: "Quatre-vingt-cinq", digit: "85" },
-            { french: "Quatre-vingt-six", digit: "86" },
-            { french: "Quatre-vingt-sept", digit: "87" },
-            { french: "Quatre-vingt-huit", digit: "88" },
-            { french: "Quatre-vingt-neuf", digit: "89" },
-            { french: "Quatre-vingt-dix", digit: "90" },
-            { french: "Quatre-vingt-onze", digit: "91" },
-            { french: "Quatre-vingt-douze", digit: "92" },
-            { french: "Quatre-vingt-treize", digit: "93" },
-            { french: "Quatre-vingt-quatorze", digit: "94" },
-            { french: "Quatre-vingt-quinze", digit: "95" },
-            { french: "Quatre-vingt-seize", digit: "96" },
-            { french: "Quatre-vingt-dix-sept", digit: "97" },
-            { french: "Quatre-vingt-dix-huit", digit: "98" },
-            { french: "Quatre-vingt-dix-neuf", digit: "99" },
-            { french: "Cent", digit: "100" },
-            { french: "Deux cents", digit: "200" },
-            { french: "Trois cents", digit: "300" },
-            { french: "Quatre cents", digit: "400" },
-            { french: "Cinq cents", digit: "500" },
-            { french: "Six cents", digit: "600" },
-            { french: "Sept cents", digit: "700" },
-            { french: "Huit cents", digit: "800" },
-            { french: "Neuf cents", digit: "900" },
-            { french: "Mille", digit: "1000" }
-        ];
+        // Sample MTH 102 revision data
+        const mth102Data = {
+            "Functions of Several Variables": {
+                "Main-explanation": {
+                    "Subtopics": {
+                        "1. Definition and Examples": {
+                            "Explanation": "A function of several variables is a rule that assigns to each ordered pair (x, y) in a set D a unique real number denoted by f(x, y). The set D is the domain of f and its range is the set of values that f takes on.",
+                            "Examples": {
+                                "1": {
+                                    "question": "Find the domain of f(x, y) = √(x + y - 1)",
+                                    "solution": "The expression under the square root must be non-negative, so x + y - 1 ≥ 0 ⇒ y ≥ -x + 1. The domain is all points (x, y) such that y ≥ -x + 1."
+                                },
+                                "2": {
+                                    "question": "Evaluate f(x, y) = x²y + 3xy⁴ at (2, -1)",
+                                    "solution": "f(2, -1) = (2)²(-1) + 3(2)(-1)⁴ = 4(-1) + 6(1) = -4 + 6 = 2"
+                                }
+                            }
+                        },
+                        "2. Partial Derivatives": {
+                            "Explanation": "The partial derivative of f with respect to x at (a, b) is the derivative of f with respect to x when y is held constant. Similarly for the partial derivative with respect to y.",
+                            "Examples": {
+                                "1": {
+                                    "question": "Find ∂f/∂x and ∂f/∂y for f(x, y) = x³ + x²y³ - 2y²",
+                                    "solution": "∂f/∂x = 3x² + 2xy³, ∂f/∂y = 3x²y² - 4y"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "Multiple Integrals": {
+                "Main-explanation": {
+                    "Subtopics": {
+                        "1. Double Integrals": {
+                            "Explanation": "The double integral of f over the rectangle R = [a, b] × [c, d] is the limit of the double Riemann sum as the number of subrectangles approaches infinity.",
+                            "Examples": {
+                                "1": {
+                                    "question": "Evaluate ∫∫_R (x - 3y²) dA where R = [0, 2] × [1, 2]",
+                                    "solution": "∫_1^2 ∫_0^2 (x - 3y²) dx dy = ∫_1^2 [x²/2 - 3xy²]_0^2 dy = ∫_1^2 (2 - 6y²) dy = [2y - 2y³]_1^2 = (4-16)-(2-2) = -12"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        };
 
-        // DOM elements
-        const numbersGrid = document.getElementById('numbers-grid');
-        const startNumberSelect = document.getElementById('start-number');
-        const endNumberSelect = document.getElementById('end-number');
-        const playBtn = document.getElementById('play-btn');
-        const stopBtn = document.getElementById('stop-btn');
-        const speedSelect = document.getElementById('speed');
-        const statusElement = document.getElementById('status');
-        
-const containerElement = document.querySelector('.container');
+        // Application State
+        const state = {
+            currentTopic: null,
+            currentSubtopicIndex: 0,
+            topics: Object.keys(mth102Data),
+            subtopics: []
+        };
 
-        // Speech synthesis
-        const synth = window.speechSynthesis;
-        let currentUtterance = null;
-        let isPlaying = false;
-        let currentIndex = 0;
-        let selectedNumbers = [];
+        // DOM Elements
+        const homeInterface = document.getElementById('homeInterface');
+        const outlineInterface = document.getElementById('outlineInterface');
+        const revisionInterface = document.getElementById('revisionInterface');
+        const startRevisionBtn = document.getElementById('startRevisionBtn');
+        const viewOutlineBtn = document.getElementById('viewOutlineBtn');
+        const topicList = document.getElementById('topicList');
+        const currentTopicTitle = document.getElementById('currentTopicTitle');
+        const revisionContent = document.getElementById('revisionContent');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const homeBtn = document.getElementById('homeBtn');
 
-        // Initialize the app
+        // Initialize the application
         function init() {
-            // Clear existing content
-            numbersGrid.innerHTML = '';
-            startNumberSelect.innerHTML = '';
-            endNumberSelect.innerHTML = '';
-            containerElement.style.display = "block";
-
-            // Add section for 0-69
-            addSectionTitle("Numbers 0-69");
-            addNumbersToGrid(0, 69);
-
-            // Add section for 70-79
-            addSectionTitle("Numbers 70-79");
-            addNumbersToGrid(70, 79);
-
-            // Add section for 80-99
-            addSectionTitle("Numbers 80-99");
-            addNumbersToGrid(80, 99);
-
-            // Add section for 100-1000
-            addSectionTitle("Hundreds and Thousands");
-            addNumbersToGrid(100, frenchNumbers.length - 1);
-
-            // Set default end number to last item
-            endNumberSelect.value = frenchNumbers.length - 1;
-
-            // Event listeners
-            playBtn.addEventListener('click', playSelectedNumbers);
-            stopBtn.addEventListener('click', stopPlayback);
-        }
-
-        function addSectionTitle(title) {
-            const titleElement = document.createElement('div');
-            titleElement.className = 'section-title';
-            titleElement.textContent = title;
-            numbersGrid.appendChild(titleElement);
-        }
-
-        function addNumbersToGrid(startIdx, endIdx) {
-            for (let i = startIdx; i <= endIdx; i++) {
-                const number = frenchNumbers[i];
-                
-                // Create card for grid
-                const card = document.createElement('div');
-                card.className = 'number-card';
-                card.dataset.index = i;
-                card.innerHTML = `
-                    <div class="number">${number.french}</div>
-                    <div class="digit">${number.digit}</div>
-                `;
-                card.addEventListener('click', () => toggleNumberSelection(i));
-                numbersGrid.appendChild(card);
-
-                // Create options for dropdowns
-                const option = document.createElement('option');
-                option.value = i;
-                option.textContent = `${number.digit} - ${number.french}`;
-                
-                // Only add to start select if it's not already there
-                if (!startNumberSelect.querySelector(`option[value="${i}"]`)) {
-                    startNumberSelect.appendChild(option.cloneNode(true));
-                }
-                
-                // Add to end select
-                endNumberSelect.appendChild(option);
-            }
-        }
-
-        // Toggle number selection
-        function toggleNumberSelection(index) {
-            const card = document.querySelector(`.number-card[data-index="${index}"]`);
-            card.classList.toggle('active');
+            setupEventListeners();
+            populateTopicList();
             
-            // Update selected numbers array
-            if (card.classList.contains('active')) {
-                selectedNumbers.push(index);
-                selectedNumbers.sort((a, b) => a - b);
-            } else {
-                selectedNumbers = selectedNumbers.filter(i => i !== index);
-            }
-        }
-
-        // Play selected numbers
-        function playSelectedNumbers() {
-            if (isPlaying) return;
-            
-            // Determine which numbers to play
-            const startIdx = parseInt(startNumberSelect.value);
-            let endIdx = parseInt(endNumberSelect.value);
-            
-            // Ensure end is after start
-            if (endIdx < startIdx) {
-                endIdx = startIdx;
-                endNumberSelect.value = endIdx;
-            }
-            
-            // Get the range of numbers
-            selectedNumbers = [];
-            for (let i = startIdx; i <= endIdx; i++) {
-                selectedNumbers.push(i);
-                document.querySelector(`.number-card[data-index="${i}"]`).classList.add('active');
-            }
-            
-            if (selectedNumbers.length === 0) {
-                statusElement.textContent = "Please select numbers to play";
-                return;
-            }
-            
-            isPlaying = true;
-            currentIndex = 0;
-            playBtn.disabled = true;
-            stopBtn.disabled = false;
-            
-            playNextNumber();
-        }
-
-        // Play next number in sequence
-        function playNextNumber() {
-            if (currentIndex >= selectedNumbers.length || !isPlaying) {
-                stopPlayback();
-                return;
-            }
-            
-            const numberIndex = selectedNumbers[currentIndex];
-            const number = frenchNumbers[numberIndex];
-            
-            // Update UI
-            statusElement.textContent = `Playing: ${number.digit} - ${number.french}`;
-            
-            // Highlight current number
-            document.querySelectorAll('.number-card').forEach(card => {
-                card.classList.remove('playing');
-            });
-            const currentCard = document.querySelector(`.number-card[data-index="${numberIndex}"]`);
-            currentCard.classList.add('playing');
-            
-            // Scroll to the card if not fully visible
-            currentCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            
-            // Speak the number
-            if (currentUtterance) {
-                synth.cancel();
-            }
-            
-            currentUtterance = new SpeechSynthesisUtterance(number.french);
-            currentUtterance.lang = 'fr-FR';
-            currentUtterance.rate = parseFloat(speedSelect.value);
-            
-            currentUtterance.onend = () => {
-                setTimeout(() => {
-                    currentIndex++;
-                    playNextNumber();
-                }, 500); // Small pause between numbers
-            };
-            
-            synth.speak(currentUtterance);
-        }
-
-        // Stop playback
-        function stopPlayback() {
-            isPlaying = false;
-            if (currentUtterance) {
-                synth.cancel();
-            }
-            
-            statusElement.textContent = "Ready";
-            playBtn.disabled = false;
-            stopBtn.disabled = true;
-            
-            document.querySelectorAll('.number-card').forEach(card => {
-                card.classList.remove('playing');
-            });
-        }
-
-          // Initialize the app when DOM is loaded and user is authenticated
-        document.addEventListener('DOMContentLoaded', () => {
-            // Initialize auth first
+            // Initialize Firebase Auth (from template)
             initAuth();
+        }
+
+        // Populate the topic list for course outline
+        function populateTopicList() {
+            topicList.innerHTML = '';
             
-            // Initialize app when user is authenticated
-            auth.onAuthStateChanged(user => {
-                if (user) {
-                    document.querySelector('.container').style.display = 'block';
-                    init();
+            state.topics.forEach(topic => {
+                const topicCard = document.createElement('div');
+                topicCard.className = 'topic-card';
+                topicCard.innerHTML = `<h3 class="topic-title">${topic}</h3>`;
+                topicCard.addEventListener('click', () => startTopicRevision(topic));
+                topicList.appendChild(topicCard);
+            });
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            startRevisionBtn.addEventListener('click', () => {
+                // Start with first topic by default
+                startTopicRevision(state.topics[0]);
+            });
+            
+            viewOutlineBtn.addEventListener('click', () => {
+                switchInterface('outlineInterface');
+            });
+            
+            prevBtn.addEventListener('click', goToPreviousSubtopic);
+            nextBtn.addEventListener('click', goToNextSubtopic);
+            homeBtn.addEventListener('click', goToHome);
+            
+            // Help dialog functionality (from template)
+            const helpButton = document.getElementById('helpButton');
+            const helpDialog = document.getElementById('helpDialog');
+            const closeHelp = document.querySelector('.close-help');
+            
+            helpButton.addEventListener('click', () => {
+                helpDialog.style.display = 'flex';
+            });
+            
+            closeHelp.addEventListener('click', () => {
+                helpDialog.style.display = 'none';
+            });
+            
+            helpDialog.addEventListener('click', (e) => {
+                if (e.target === helpDialog) {
+                    helpDialog.style.display = 'none';
                 }
             });
-        });
+        }
 
-        // Help Button Functionality
-const helpButton = document.getElementById('helpButton');
-const helpDialog = document.getElementById('helpDialog');
-const closeHelp = document.querySelector('.close-help');
+        // Start revision for a specific topic
+        function startTopicRevision(topic) {
+            state.currentTopic = topic;
+            state.subtopics = Object.keys(mth102Data[topic]["Main-explanation"]["Subtopics"]);
+            state.currentSubtopicIndex = 0;
+            
+            loadCurrentSubtopic();
+            switchInterface('revisionInterface');
+        }
 
-helpButton.addEventListener('click', () => {
-  helpDialog.style.display = 'flex';
-  document.body.style.overflow = 'hidden'; // Prevent scrolling
-});
+        // Load current subtopic content
+        function loadCurrentSubtopic() {
+            const subtopicKey = state.subtopics[state.currentSubtopicIndex];
+            const subtopicData = mth102Data[state.currentTopic]["Main-explanation"]["Subtopics"][subtopicKey];
+            
+            currentTopicTitle.textContent = `${state.currentTopic}: ${subtopicKey.split('. ')[1]}`;
+            
+            let contentHTML = `
+                <div class="subtopic">
+                    <h3 class="subtopic-title">${subtopicKey}</h3>
+                    <div class="explanation">${subtopicData.Explanation}</div>
+            `;
+            
+            if (subtopicData.Examples) {
+                contentHTML += `<div class="examples"><h4>Examples</h4>`;
+                
+                Object.entries(subtopicData.Examples).forEach(([num, example]) => {
+                    contentHTML += `
+                        <div class="example">
+                            <div class="example-question"><strong>Example ${num}:</strong> ${example.question}</div>
+                            <div class="example-solution"><strong>Solution:</strong> ${example.solution}</div>
+                        </div>
+                    `;
+                });
+                
+                contentHTML += `</div>`;
+            }
+            
+            contentHTML += `</div>`;
+            revisionContent.innerHTML = contentHTML;
+            
+            // Update navigation buttons
+            prevBtn.disabled = state.currentSubtopicIndex === 0;
+            nextBtn.disabled = state.currentSubtopicIndex === state.subtopics.length - 1;
+        }
 
-closeHelp.addEventListener('click', () => {
-  helpDialog.style.display = 'none';
-  document.body.style.overflow = 'auto'; // Re-enable scrolling
-});
+        // Navigation functions
+        function goToPreviousSubtopic() {
+            if (state.currentSubtopicIndex > 0) {
+                state.currentSubtopicIndex--;
+                loadCurrentSubtopic();
+            }
+        }
 
-// Close dialog when clicking outside
-helpDialog.addEventListener('click', (e) => {
-  if (e.target === helpDialog) {
-    helpDialog.style.display = 'none';
-    document.body.style.overflow = 'auto';
-  }
-});
+        function goToNextSubtopic() {
+            if (state.currentSubtopicIndex < state.subtopics.length - 1) {
+                state.currentSubtopicIndex++;
+                loadCurrentSubtopic();
+            }
+        }
 
+        function goToHome() {
+            switchInterface('homeInterface');
+        }
 
+        // Switch between interfaces
+        function switchInterface(interfaceId) {
+            // Hide all interfaces
+            homeInterface.classList.remove('active');
+            outlineInterface.classList.remove('active');
+            revisionInterface.classList.remove('active');
+            
+            // Show the selected interface
+            document.getElementById(interfaceId).classList.add('active');
+        }
+
+        // Initialize Firebase Auth (from template)
+        function initAuth() {
+            // Your Firebase initialization code here
+            // This would include the firebaseConfig and auth state handling
+            // For now we'll just hide the auth container after a delay for demo purposes
+            setTimeout(() => {
+                document.getElementById('authContainer').style.display = 'none';
+            }, 1000);
+        }
+
+        // Initialize the application when the DOM is loaded
+        document.addEventListener('DOMContentLoaded', init);
     </script>
 </body>
 </html>
