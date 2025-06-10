@@ -750,6 +750,15 @@
         By: Iyiola Adedamola Richard @QuickCBT&copy;2025
     </footer>
 
+       <!-- Load Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    
+    <!-- Load config and auth -->
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+
     <!-- Sample Data Structure -->
     <script>
         // Sample MTH 102 revision data
@@ -825,8 +834,6 @@
             setupEventListeners();
             populateTopicList();
             
-            // Initialize Firebase Auth (from template)
-            initAuth();
         }
 
         // Populate the topic list for course outline
@@ -953,18 +960,23 @@
             document.getElementById(interfaceId).classList.add('active');
         }
 
-        // Initialize Firebase Auth (from template)
-        function initAuth() {
-            // Your Firebase initialization code here
-            // This would include the firebaseConfig and auth state handling
-            // For now we'll just hide the auth container after a delay for demo purposes
-            setTimeout(() => {
-                document.getElementById('authContainer').style.display = 'none';
-            }, 1000);
-        }
+     
 
-        // Initialize the application when the DOM is loaded
-        document.addEventListener('DOMContentLoaded', init);
+    
+
+             // Initialize the app when DOM is loaded and user is authenticated
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize auth first
+            initAuth();
+            
+            // Initialize app when user is authenticated
+            auth.onAuthStateChanged(user => {
+                if (user) {
+                    document.querySelector('.container').style.display = 'block';
+                    init();
+                }
+            });
+        });
 
         // App Menu Functionality
 const appMenuButton = document.getElementById('appMenuButton');
