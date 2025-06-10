@@ -965,6 +965,32 @@
 
         // Initialize the application when the DOM is loaded
         document.addEventListener('DOMContentLoaded', init);
+
+        // App Menu Functionality
+const appMenuButton = document.getElementById('appMenuButton');
+const appMenuDialog = document.getElementById('appMenuDialog');
+const appMenuContent = document.getElementById('appMenuContent');
+
+        
+// Toggle menu
+appMenuButton.addEventListener('click', (e) => {
+  e.stopPropagation();
+  appMenuDialog.classList.toggle('active');
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (!appMenuContent.contains(e.target) && e.target !== appMenuButton) {
+    appMenuDialog.classList.remove('active');
+  }
+});
+
+// Close menu when clicking on a link
+document.querySelectorAll('.app-list a').forEach(link => {
+  link.addEventListener('click', () => {
+    appMenuDialog.classList.remove('active');
+  });
+});
     </script>
 </body>
 </html>
