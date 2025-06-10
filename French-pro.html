@@ -593,12 +593,11 @@
   </button>
   
   <div id="appMenuDialog" class="app-menu-dialog">
-    <div class="app-menu-content">
+    <div id="appMenuContent" class="app-menu-content">
       <h3>QuickCBT&copy;</h3>
       <ul class="app-list">
         <li><a href="https://quickcbt.netlify.app" target="_blank">QuickCBT</a></li>
 
-        <!-- Add more apps as needed -->
       </ul>
           <footer>
         By: Iyiola Adedamola Richard @QuickCBT&copy;2025
@@ -1036,7 +1035,9 @@ helpDialog.addEventListener('click', (e) => {
 // App Menu Functionality
 const appMenuButton = document.getElementById('appMenuButton');
 const appMenuDialog = document.getElementById('appMenuDialog');
+const appMenuContent = document.getElementById('appMenuContent');
 
+        
 // Toggle menu
 appMenuButton.addEventListener('click', (e) => {
   e.stopPropagation();
@@ -1045,7 +1046,7 @@ appMenuButton.addEventListener('click', (e) => {
 
 // Close menu when clicking outside
 document.addEventListener('click', (e) => {
-  if (!appMenuDialog.contains(e.target) && e.target !== appMenuButton) {
+  if (!appMenuContent.contains(e.target) && e.target !== appMenuButton) {
     appMenuDialog.classList.remove('active');
   }
 });
