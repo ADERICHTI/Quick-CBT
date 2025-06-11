@@ -355,7 +355,6 @@ const mth102Data = {
     }
   },
 
-          {
   "Introduction to Calculus": {
     "Main-explanation": "Calculus is the mathematical study of continuous change, divided into differential calculus (derivatives) and integral calculus (integrals). It provides tools to analyze motion, growth, and accumulation in mathematics, physics, engineering, and beyond.",
     "Subtopics": {
@@ -419,6 +418,6 @@ const mth102Data = {
       }
     }
   }
-}
+
 
         };
