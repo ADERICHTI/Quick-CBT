@@ -89,5 +89,95 @@ const mth102Data = {
                 }
               }
             }
+          },
+
+                            
+  "Continuity & Derivatives": {
+    "Main-explanation": "This guide covers the fundamentals of continuity and derivatives, essential concepts in calculus. Continuity describes unbroken functions, while derivatives measure instantaneous rates of change.",
+    "Subtopics": {
+      "1. Continuity Definition": {
+        "Explanation": "A function \\( f(x) \\) is continuous at \\( x = a \\) if: 1) \\( f(a) \\) exists, 2) \\( \\lim_{x \\to a} f(x) \\) exists, and 3) \\( \\lim_{x \\to a} f(x) = f(a) \\).",
+        "Examples": [
+          {
+            "question": "Is \\( f(x) = \\frac{x^2 - 1}{x - 1} \\) continuous at \\( x = 1 \\)?",
+            "solution": "No. The limit exists (\\( \\lim_{x \\to 1} f(x) = 2 \\)), but \\( f(1) \\) is undefined → removable discontinuity."
+          },
+          {
+            "question": "Is \\( f(x) = |x| \\) continuous everywhere?",
+            "solution": "Yes. The absolute value function has no breaks, jumps, or holes in its domain."
           }
+        ]
+      },
+      "2. Types of Discontinuities": {
+        "Explanation": "Three main types exist: 1) Removable (hole), 2) Jump, and 3) Infinite discontinuities.",
+        "Examples": [
+          {
+            "question": "Classify the discontinuity in \\( f(x) = \\begin{cases} x + 1 & \\text{if } x < 2 \\\\ x^2 & \\text{if } x \\geq 2 \\end{cases} \\) at \\( x = 2 \\).",
+            "solution": "Jump discontinuity. Left limit = 3, right limit = 4 → limits don't match."
+          },
+          {
+            "question": "What type of discontinuity does \\( f(x) = \\frac{1}{x} \\) have at \\( x = 0 \\)?",
+            "solution": "Infinite discontinuity. The function approaches \\( \\pm\\infty \\) as \\( x \\to 0 \\)."
+          }
+        ]
+      },
+      "3. Derivative Definition": {
+        "Explanation": "The derivative of \\( f(x) \\) at \\( x = a \\) is: \\( f'(a) = \\lim_{h \\to 0} \\frac{f(a + h) - f(a)}{h} \\). It represents the slope of the tangent line.",
+        "Examples": [
+          {
+            "question": "Find \\( f'(3) \\) for \\( f(x) = x^2 \\) using the limit definition.",
+            "solution": "\\( \\lim_{h \\to 0} \\frac{(3+h)^2 - 9}{h} = \\lim_{h \\to 0} (6 + h) = 6 \\)"
+          }
+        ]
+      },
+      "4. Basic Differentiation Rules": {
+        "Explanation": "Key rules include: Power, Sum/Difference, Product, Quotient, and Chain rules.",
+        "Examples": [
+          {
+            "question": "Find \\( \\frac{d}{dx}(3x^4 - 2x^2 + 5) \\)",
+            "solution": "Using Power and Sum Rules: \\( 12x^3 - 4x \\)"
+          },
+          {
+            "question": "Differentiate \\( f(x) = x^2 \\sin x \\)",
+            "solution": "Product Rule: \\( 2x \\sin x + x^2 \\cos x \\)"
+          },
+          {
+            "question": "Find \\( \\frac{dy}{dx} \\) for \\( y = \\frac{x + 1}{x - 1} \\)",
+            "solution": "Quotient Rule: \\( \\frac{(1)(x-1) - (x+1)(1)}{(x-1)^2} = \\frac{-2}{(x-1)^2} \\)"
+          }
+        ]
+      },
+      "5. Chain Rule Applications": {
+        "Explanation": "Used for composite functions: \\( \\frac{d}{dx} f(g(x)) = f'(g(x)) \\cdot g'(x) \\).",
+        "Examples": [
+          {
+            "question": "Differentiate \\( \\tan(3x) \\)",
+            "solution": "\\( \\sec^2(3x) \\cdot 3 = 3\\sec^2(3x) \\)"
+          },
+          {
+            "question": "Find \\( \\frac{d}{dx} \\cos(x^2) \\)",
+            "solution": "\\( -\\sin(x^2) \\cdot 2x = -2x \\sin(x^2) \\)"
+          }
+        ]
+      },
+      "6. Practice Problems": {
+        "Explanation": "Mixed problems testing continuity and derivative skills.",
+        "Examples": [
+          {
+            "question": "Find \\( k \\) so \\( f(x) = \\begin{cases} x^2 + k & x \\leq 1 \\\\ 2x - 1 & x > 1 \\end{cases} \\) is continuous at \\( x = 1 \\).",
+            "solution": "Set \\( 1^2 + k = 2(1) - 1 \\) → \\( k = 0 \\)"
+          },
+          {
+            "question": "Differentiate \\( f(x) = e^{2x} \\ln x \\)",
+            "solution": "Product Rule: \\( 2e^{2x} \\ln x + \\frac{e^{2x}}{x} \\)"
+          },
+          {
+            "question": "Find \\( \\frac{dy}{dx} \\) for \\( y = \\ln(\\sqrt{x}) \\)",
+            "solution": "Chain Rule: \\( \\frac{1}{\\sqrt{x}} \\cdot \\frac{1}{2\\sqrt{x}} = \\frac{1}{2x} \\)"
+          }
+        ]
+      }
+    }
+  }
+
         };
