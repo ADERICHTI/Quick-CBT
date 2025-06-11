@@ -91,89 +91,92 @@ const mth102Data = {
             }
           },
 
-                            
-  "Continuity & Derivatives": {
-    "Main-explanation": "This guide covers the fundamentals of continuity and derivatives, essential concepts in calculus. Continuity describes unbroken functions, while derivatives measure instantaneous rates of change.",
+  "Continuity and Derivatives": {
+    "Main-explanation": "A complete guide to understanding continuity (where functions have no breaks) and derivatives (measuring instantaneous rates of change). These fundamental calculus concepts are essential for analyzing functions and their behavior.",
     "Subtopics": {
-      "1. Continuity Definition": {
-        "Explanation": "A function \\( f(x) \\) is continuous at \\( x = a \\) if: 1) \\( f(a) \\) exists, 2) \\( \\lim_{x \\to a} f(x) \\) exists, and 3) \\( \\lim_{x \\to a} f(x) = f(a) \\).",
+      "1. Continuity Fundamentals": {
+        "Explanation": "A function is continuous at point \\( x = a \\) if three conditions are met: \n1. \\( f(a) \\) exists (point is defined)\n2. \\( \\lim_{x \\to a} f(x) \\) exists (limit exists)\n3. \\( \\lim_{x \\to a} f(x) = f(a) \\) (limit equals function value)\n\nContinuity means you can draw the function without lifting your pencil.",
         "Examples": [
           {
-            "question": "Is \\( f(x) = \\frac{x^2 - 1}{x - 1} \\) continuous at \\( x = 1 \\)?",
-            "solution": "No. The limit exists (\\( \\lim_{x \\to 1} f(x) = 2 \\)), but \\( f(1) \\) is undefined → removable discontinuity."
+            "question": "Check continuity of \\( f(x) = \\frac{x^2 - 9}{x - 3} \\) at \\( x = 3 \\)",
+            "solution": "1. \\( f(3) \\) is undefined → fails condition 1\n2. Limit exists: \\( \\lim_{x \\to 3} \\frac{(x-3)(x+3)}{x-3} = 6 \\)\nConclusion: Removable discontinuity at \\( x = 3 \\)"
           },
           {
-            "question": "Is \\( f(x) = |x| \\) continuous everywhere?",
-            "solution": "Yes. The absolute value function has no breaks, jumps, or holes in its domain."
+            "question": "Is \\( f(x) = \\begin{cases} x^2 & x \\leq 1 \\\\ 2x+1 & x > 1 \\end{cases} \\) continuous at \\( x = 1 \\)?",
+            "solution": "1. \\( f(1) = 1 \\) (exists)\n2. Left limit = 1, right limit = 3 → limit doesn't exist\nConclusion: Jump discontinuity at \\( x = 1 \\)"
           }
         ]
       },
       "2. Types of Discontinuities": {
-        "Explanation": "Three main types exist: 1) Removable (hole), 2) Jump, and 3) Infinite discontinuities.",
+        "Explanation": "Three main discontinuity types:\n1. **Removable**: Hole in graph (limit exists but function undefined/wrong value)\n2. **Jump**: Left and right limits differ\n3. **Infinite**: Function approaches ±∞\n\nEssential for analyzing piecewise functions and rational functions.",
         "Examples": [
           {
-            "question": "Classify the discontinuity in \\( f(x) = \\begin{cases} x + 1 & \\text{if } x < 2 \\\\ x^2 & \\text{if } x \\geq 2 \\end{cases} \\) at \\( x = 2 \\).",
-            "solution": "Jump discontinuity. Left limit = 3, right limit = 4 → limits don't match."
+            "question": "Classify discontinuities in \\( f(x) = \\frac{1}{(x-2)(x+5)} \\)",
+            "solution": "Infinite discontinuities at:\n- \\( x = 2 \\) (denominator → 0)\n- \\( x = -5 \\) (denominator → 0)"
           },
           {
-            "question": "What type of discontinuity does \\( f(x) = \\frac{1}{x} \\) have at \\( x = 0 \\)?",
-            "solution": "Infinite discontinuity. The function approaches \\( \\pm\\infty \\) as \\( x \\to 0 \\)."
+            "question": "Identify discontinuity in \\( f(x) = \\frac{\\sin x}{x} \\) at \\( x = 0 \\)",
+            "solution": "Removable discontinuity:\n1. \\( f(0) \\) undefined\n2. \\( \\lim_{x \\to 0} \\frac{\\sin x}{x} = 1 \\) exists\nCan be 'fixed' by defining \\( f(0) = 1 \\)"
           }
         ]
       },
       "3. Derivative Definition": {
-        "Explanation": "The derivative of \\( f(x) \\) at \\( x = a \\) is: \\( f'(a) = \\lim_{h \\to 0} \\frac{f(a + h) - f(a)}{h} \\). It represents the slope of the tangent line.",
+        "Explanation": "The derivative \\( f'(a) \\) represents:\n- Instantaneous rate of change at \\( x = a \\)\n- Slope of tangent line\n\nFormal definition:\n\\[ f'(a) = \\lim_{h \\to 0} \\frac{f(a+h) - f(a)}{h} \\]\nThis limit must exist for differentiability.",
         "Examples": [
           {
-            "question": "Find \\( f'(3) \\) for \\( f(x) = x^2 \\) using the limit definition.",
-            "solution": "\\( \\lim_{h \\to 0} \\frac{(3+h)^2 - 9}{h} = \\lim_{h \\to 0} (6 + h) = 6 \\)"
+            "question": "Use definition to find \\( f'(x) \\) for \\( f(x) = x^2 \\)",
+            "solution": "\\[ \\lim_{h \\to 0} \\frac{(x+h)^2 - x^2}{h} = \\lim_{h \\to 0} \\frac{2xh + h^2}{h} = \\lim_{h \\to 0} (2x + h) = 2x \\]"
+          },
+          {
+            "question": "Why is \\( f(x) = |x| \\) not differentiable at \\( x = 0 \\)?",
+            "solution": "Left derivative = -1, right derivative = 1 → sharp corner\nFormally: \\( \\lim_{h \\to 0^-} \\frac{|h|}{h} = -1 \\) ≠ \\( \\lim_{h \\to 0^+} \\frac{|h|}{h} = 1 \\)"
           }
         ]
       },
-      "4. Basic Differentiation Rules": {
-        "Explanation": "Key rules include: Power, Sum/Difference, Product, Quotient, and Chain rules.",
+      "4. Differentiation Rules": {
+        "Explanation": "Core rules for efficient differentiation:\n1. **Power Rule**: \\( \\frac{d}{dx}x^n = nx^{n-1} \\)\n2. **Sum/Difference**: \\( (f ± g)' = f' ± g' \\)\n3. **Product Rule**: \\( (fg)' = f'g + fg' \\)\n4. **Quotient Rule**: \\( (f/g)' = \\frac{f'g - fg'}{g^2} \\)\n5. **Chain Rule**: \\( \\frac{d}{dx}f(g(x)) = f'(g(x))g'(x) \\)",
         "Examples": [
           {
-            "question": "Find \\( \\frac{d}{dx}(3x^4 - 2x^2 + 5) \\)",
-            "solution": "Using Power and Sum Rules: \\( 12x^3 - 4x \\)"
+            "question": "Differentiate \\( y = 3x^4 - \\frac{2}{x} + \\sqrt{x} \\)",
+            "solution": "Using Power Rule:\n\\( \\frac{dy}{dx} = 12x^3 + \\frac{2}{x^2} + \\frac{1}{2\\sqrt{x}} \\)"
           },
           {
-            "question": "Differentiate \\( f(x) = x^2 \\sin x \\)",
-            "solution": "Product Rule: \\( 2x \\sin x + x^2 \\cos x \\)"
+            "question": "Find \\( f'(x) \\) for \\( f(x) = e^x \\sin x \\)",
+            "solution": "Product Rule:\n\\( f'(x) = e^x \\sin x + e^x \\cos x = e^x(\\sin x + \\cos x) \\)"
           },
           {
-            "question": "Find \\( \\frac{dy}{dx} \\) for \\( y = \\frac{x + 1}{x - 1} \\)",
-            "solution": "Quotient Rule: \\( \\frac{(1)(x-1) - (x+1)(1)}{(x-1)^2} = \\frac{-2}{(x-1)^2} \\)"
+            "question": "Differentiate \\( y = \\frac{x^2 + 1}{x^2 - 1} \\)",
+            "solution": "Quotient Rule:\n\\( y' = \\frac{2x(x^2-1) - (x^2+1)(2x)}{(x^2-1)^2} = \\frac{-4x}{(x^2-1)^2} \\)"
           }
         ]
       },
-      "5. Chain Rule Applications": {
-        "Explanation": "Used for composite functions: \\( \\frac{d}{dx} f(g(x)) = f'(g(x)) \\cdot g'(x) \\).",
+      "5. Special Derivatives": {
+        "Explanation": "Essential derivative formulas:\n1. **Trigonometric**:\n   - \\( \\frac{d}{dx}\\sin x = \\cos x \\)\n   - \\( \\frac{d}{dx}\\tan x = \\sec^2 x \\)\n2. **Exponential/Logarithmic**:\n   - \\( \\frac{d}{dx}e^x = e^x \\)\n   - \\( \\frac{d}{dx}\\ln x = \\frac{1}{x} \\)\n3. **Inverse Trig**:\n   - \\( \\frac{d}{dx}\\tan^{-1} x = \\frac{1}{1+x^2} \\)",
         "Examples": [
           {
-            "question": "Differentiate \\( \\tan(3x) \\)",
-            "solution": "\\( \\sec^2(3x) \\cdot 3 = 3\\sec^2(3x) \\)"
+            "question": "Find \\( \\frac{d}{dx}(\\tan(2x) + e^{3x}) \\)",
+            "solution": "Chain Rule + Exponential:\n\\( 2\\sec^2(2x) + 3e^{3x} \\)"
           },
           {
-            "question": "Find \\( \\frac{d}{dx} \\cos(x^2) \\)",
-            "solution": "\\( -\\sin(x^2) \\cdot 2x = -2x \\sin(x^2) \\)"
+            "question": "Differentiate \\( y = \\ln(\\sin x) \\)",
+            "solution": "Chain Rule:\n\\( y' = \\frac{1}{\\sin x} \\cdot \\cos x = \\cot x \\)"
           }
         ]
       },
       "6. Practice Problems": {
-        "Explanation": "Mixed problems testing continuity and derivative skills.",
+        "Explanation": "Mixed problems testing comprehensive understanding of continuity and differentiation concepts.",
         "Examples": [
           {
-            "question": "Find \\( k \\) so \\( f(x) = \\begin{cases} x^2 + k & x \\leq 1 \\\\ 2x - 1 & x > 1 \\end{cases} \\) is continuous at \\( x = 1 \\).",
-            "solution": "Set \\( 1^2 + k = 2(1) - 1 \\) → \\( k = 0 \\)"
+            "question": "Find \\( k \\) making \\( f(x) = \\begin{cases} kx^2 & x \\leq 2 \\\\ x + k & x > 2 \\end{cases} \\) continuous",
+            "solution": "Set \\( k(2)^2 = 2 + k \\) → \\( 4k = 2 + k \\) → \\( k = \\frac{2}{3} \\)"
           },
           {
-            "question": "Differentiate \\( f(x) = e^{2x} \\ln x \\)",
-            "solution": "Product Rule: \\( 2e^{2x} \\ln x + \\frac{e^{2x}}{x} \\)"
+            "question": "Differentiate \\( y = x^2 \\ln(\\cos x) \\)",
+            "solution": "Product + Chain Rules:\n\\( y' = 2x\\ln(\\cos x) + x^2 \\cdot \\frac{1}{\\cos x}(-\\sin x) = 2x\\ln(\\cos x) - x^2\\tan x \\)"
           },
           {
-            "question": "Find \\( \\frac{dy}{dx} \\) for \\( y = \\ln(\\sqrt{x}) \\)",
-            "solution": "Chain Rule: \\( \\frac{1}{\\sqrt{x}} \\cdot \\frac{1}{2\\sqrt{x}} = \\frac{1}{2x} \\)"
+            "question": "Find all points where \\( f(x) = x^3 - 3x^2 \\) has horizontal tangent",
+            "solution": "Horizontal tangent when \\( f'(x) = 0 \\):\n\\( 3x^2 - 6x = 0 \\) → \\( x = 0 \\) or \\( x = 2 \\)\nPoints: (0,0) and (2,-4)"
           }
         ]
       }
