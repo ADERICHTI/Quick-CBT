@@ -267,4 +267,92 @@ const mth102Data = {
     }
   },
 
+  "Applications of Derivatives": {
+    "Main-explanation": "Derivatives are powerful tools for analyzing functions and solving real-world problems. This guide covers tangent lines, optimization, concavity, and related rates with practical applications in physics, economics, and geometry.",
+    "Subtopics": {
+      "1. Tangent and Normal Lines": {
+        "Explanation": "The tangent line touches a curve at a point with slope equal to the derivative at that point. The normal line is perpendicular to the tangent.\n\n**Key Formulas**:\n- Tangent slope: \\( m_{\\text{tangent}} = f'(a) \\)\n- Normal slope: \\( m_{\\text{normal}} = -\\frac{1}{f'(a)} \\)\n- Tangent line equation: \\( y - f(a) = f'(a)(x - a) \\)",
+        "Examples": [
+          {
+            "question": "Find the tangent and normal lines to \\( f(x) = x^2 \\) at \\( x = 1 \\)",
+            "solution": "1. Compute \\( f(1) = 1 \\) and \\( f'(x) = 2x \\) → \\( f'(1) = 2 \\)\n2. **Tangent**: \\( y - 1 = 2(x - 1) \\) → \\( y = 2x - 1 \\)\n3. **Normal**: \\( y - 1 = -\\frac{1}{2}(x - 1) \\) → \\( y = -\\frac{1}{2}x + \\frac{3}{2} \\)"
+          },
+          {
+            "question": "Find where the tangent to \\( y = \\sqrt{x} \\) has slope \\( \\frac{1}{4} \\)",
+            "solution": "1. \\( \\frac{dy}{dx} = \\frac{1}{2\\sqrt{x}} \\)\n2. Set \\( \\frac{1}{2\\sqrt{x}} = \\frac{1}{4} \\) → \\( \\sqrt{x} = 2 \\) → \\( x = 4 \\)"
+          }
+        ]
+      },
+      "2. Increasing and Decreasing Functions": {
+        "Explanation": "A function is **increasing** where its derivative is positive and **decreasing** where its derivative is negative.\n\n**Procedure**:\n1. Find critical points (\\( f'(x) = 0 \\) or undefined)\n2. Test intervals between critical points",
+        "Examples": [
+          {
+            "question": "Determine where \\( f(x) = x^3 - 3x^2 \\) is increasing/decreasing",
+            "solution": "1. \\( f'(x) = 3x^2 - 6x \\)\n2. Critical points: \\( x = 0, 2 \\)\n3. Test intervals:\n   - \\( x < 0 \\): \\( f'(-1) = 9 > 0 \\) → **Increasing**\n   - \\( 0 < x < 2 \\): \\( f'(1) = -3 < 0 \\) → **Decreasing**\n   - \\( x > 2 \\): \\( f'(3) = 9 > 0 \\) → **Increasing**"
+          },
+          {
+            "question": "Show \\( f(x) = x + \\cos x \\) is always increasing",
+            "solution": "1. \\( f'(x) = 1 - \\sin x \\)\n2. Since \\( \\sin x \\in [-1, 1] \\), \\( f'(x) \\geq 0 \\) for all \\( x \\)"
+          }
+        ]
+      },
+      "3. Maxima and Minima (Optimization)": {
+        "Explanation": "Critical points occur where \\( f'(x) = 0 \\) or is undefined. Use the **First Derivative Test** to classify them:\n- \\( f' \\) changes + → −: **Local maximum**\n- \\( f' \\) changes − → +: **Local minimum**",
+        "Examples": [
+          {
+            "question": "Find extrema of \\( f(x) = x^3 - 6x^2 + 9x \\)",
+            "solution": "1. \\( f'(x) = 3x^2 - 12x + 9 = 0 \\) → \\( x = 1, 3 \\)\n2. **First Derivative Test**:\n   - \\( x = 1 \\): \\( f'(0) > 0 \\), \\( f'(2) < 0 \\) → **Local max**\n   - \\( x = 3 \\): \\( f'(2) < 0 \\), \\( f'(4) > 0 \\) → **Local min**"
+          },
+          {
+            "question": "Maximize the volume of a box with surface area 100 cm²",
+            "solution": "1. Let dimensions be \\( x, x, h \\). Surface area: \\( 2x^2 + 4xh = 100 \\)\n2. Express \\( h = \\frac{100 - 2x^2}{4x} \\)\n3. Volume \\( V = x^2 h = 25x - 0.5x^3 \\)\n4. Find critical point: \\( V' = 25 - 1.5x^2 = 0 \\) → \\( x = \\sqrt{\\frac{50}{3}} \\)\n5. Max volume: \\( V_{\\text{max}} = \\left( \\frac{50}{3} \\right)^{3/2} \\) cm³"
+          }
+        ]
+      },
+      "4. Concavity and Points of Inflection": {
+        "Explanation": "Concavity is determined by the second derivative:\n- **Concave up**: \\( f''(x) > 0 \\) (holds water)\n- **Concave down**: \\( f''(x) < 0 \\) (spills water)\n\n**Inflection points**: Where concavity changes (\\( f''(x) = 0 \\) and changes sign)",
+        "Examples": [
+          {
+            "question": "Analyze concavity of \\( f(x) = x^3 - 6x^2 \\)",
+            "solution": "1. \\( f''(x) = 6x - 12 \\)\n2. Concave up: \\( x > 2 \\) (\\( f''(3) > 0 \\))\n3. Concave down: \\( x < 2 \\) (\\( f''(1) < 0 \\))\n4. Inflection point at \\( x = 2 \\)"
+          },
+          {
+            "question": "Find inflection points of \\( f(x) = x^4 - 6x^2 \\)",
+            "solution": "1. \\( f''(x) = 12x^2 - 12 = 0 \\) → \\( x = \\pm 1 \\)\n2. Test concavity change:\n   - \\( x < -1 \\): \\( f''(-2) > 0 \\)\n   - \\( -1 < x < 1 \\): \\( f''(0) < 0 \\)\n   - \\( x > 1 \\): \\( f''(2) > 0 \\)\n3. Inflection points at \\( x = -1 \\) and \\( x = 1 \\)"
+          }
+        ]
+      },
+      "5. Related Rates": {
+        "Explanation": "Relate the rates of change of two or more variables using implicit differentiation and geometric relationships (Pythagorean theorem, volume formulas, etc.).\n\n**Strategy**:\n1. Identify given and required rates\n2. Find an equation relating variables\n3. Differentiate with respect to time\n4. Substitute known values and solve",
+        "Examples": [
+          {
+            "question": "A 5m ladder slides away from a wall at 0.5 m/s. How fast is the top falling when the base is 3m from the wall?",
+            "solution": "1. Given: \\( \\frac{dx}{dt} = 0.5 \\) m/s, find \\( \\frac{dy}{dt} \\) when \\( x = 3 \\)\n2. Relationship: \\( x^2 + y^2 = 25 \\)\n3. Differentiate: \\( 2x \\frac{dx}{dt} + 2y \\frac{dy}{dt} = 0 \\)\n4. At \\( x = 3 \\), \\( y = 4 \\) → \\( 2(3)(0.5) + 2(4)\\frac{dy}{dt} = 0 \\)\n5. Solve: \\( \\frac{dy}{dt} = -0.375 \\) m/s (falling)"
+          },
+          {
+            "question": "A spherical balloon’s radius increases at 2 cm/s. How fast is the volume increasing when \\( r = 5 \\) cm?",
+            "solution": "1. Given: \\( \\frac{dr}{dt} = 2 \\) cm/s, find \\( \\frac{dV}{dt} \\)\n2. Volume: \\( V = \\frac{4}{3}\\pi r^3 \\)\n3. Differentiate: \\( \\frac{dV}{dt} = 4\\pi r^2 \\frac{dr}{dt} \\)\n4. Substitute: \\( \\frac{dV}{dt} = 4\\pi (5)^2 (2) = 200\\pi \\) cm³/s"
+          }
+        ]
+      },
+      "6. Practice Problems": {
+        "Explanation": "Mixed problems to test comprehensive understanding of derivative applications.",
+        "Examples": [
+          {
+            "question": "Find the tangent line to \\( y = e^x \\) at \\( x = 0 \\)",
+            "solution": "1. \\( f(0) = 1 \\), \\( f'(x) = e^x \\) → \\( f'(0) = 1 \\)\n2. Tangent: \\( y - 1 = 1(x - 0) \\) → \\( y = x + 1 \\)"
+          },
+          {
+            "question": "Find the maximum of \\( f(x) = -x^2 + 4x \\)",
+            "solution": "1. \\( f'(x) = -2x + 4 = 0 \\) → \\( x = 2 \\)\n2. Second derivative: \\( f''(x) = -2 < 0 \\) → **Maximum at \\( x = 2 \\)**\n3. \\( f(2) = 4 \\)"
+          },
+          {
+            "question": "A circular puddle expands so its area increases at 3 cm²/s. Find the rate of radius increase when \\( r = 4 \\) cm",
+            "solution": "1. Given: \\( \\frac{dA}{dt} = 3 \\), find \\( \\frac{dr}{dt} \\)\n2. Area: \\( A = \\pi r^2 \\) → \\( \\frac{dA}{dt} = 2\\pi r \\frac{dr}{dt} \\)\n3. Solve: \\( \\frac{dr}{dt} = \\frac{3}{8\\pi} \\) cm/s"
+          }
+        ]
+      }
+    }
+  },
+
         };
