@@ -420,4 +420,77 @@ const mth102Data = {
     }
   },
 
+  "Mastering Integration": {
+    "Main-explanation": "Integration is the inverse operation of differentiation, used to compute areas, volumes, and accumulated quantities. This guide covers fundamental techniques, applications, and problem-solving strategies with mathematical rigor.",
+    "Subtopics": {
+      "1. Basic Integration Rules": {
+        "Explanation": "The foundation of integration begins with reversing differentiation rules. Key formulas:\n\n- **Power Rule**: \\( \\int x^n dx = \\frac{x^{n+1}}{n+1} + C \\) (for \\( n \\neq -1 \\))\n- **Exponential Rule**: \\( \\int e^x dx = e^x + C \\)\n- **Logarithmic Rule**: \\( \\int \\frac{1}{x} dx = \\ln|x| + C \\)\n- **Trigonometric Rules**: \n  \\( \\int \\sin x dx = -\\cos x + C \\)\n  \\( \\int \\sec^2 x dx = \\tan x + C \\)\n\n**Linearity Properties**:\n- Sum Rule: \\( \\int [f(x) + g(x)] dx = \\int f(x)dx + \\int g(x)dx \\)\n- Constant Multiple: \\( \\int k f(x)dx = k \\int f(x)dx \\)",
+        "Examples": [
+          {
+            "question": "Compute \\( \\int (3x^2 + 2^x + \\cos x) dx \\)",
+            "solution": "1. **Term-by-term integration**:\n   \\( \\int 3x^2 dx = x^3 + C_1 \\)\n   \\( \\int 2^x dx = \\frac{2^x}{\\ln 2} + C_2 \\) (using \\( a^x \\) rule)\n   \\( \\int \\cos x dx = \\sin x + C_3 \\)\n2. **Combine results**:\n   \\( x^3 + \\frac{2^x}{\\ln 2} + \\sin x + C \\) (where \\( C = C_1 + C_2 + C_3 \\))"
+          },
+          {
+            "question": "Evaluate \\( \\int_0^\\pi \\sin x dx \\)",
+            "solution": "1. Find antiderivative: \\( -\\cos x \\)\n2. Apply FTC: \\( -\\cos \\pi - (-\\cos 0) = -(-1) - (-1) = 2 \\)"
+          }
+        ]
+      },
+      "2. Integration Techniques": {
+        "Explanation": "Advanced methods for complex integrands:\n\n### **A. Substitution (u-Sub)**\nUsed when the integrand contains a function and its derivative.\n**Steps**:\n1. Identify \\( u = g(x) \\)\n2. Compute \\( du = g'(x)dx \\)\n3. Rewrite integral in terms of \\( u \\)\n4. Integrate and back-substitute\n\n### **B. Integration by Parts**\nDerived from the product rule:\n\\( \\int u dv = uv - \\int v du \\)\n**LIATE Priority**: Choose \\( u \\) as Logarithmic, Inverse trig, Algebraic, Trigonometric, Exponential.\n\n### **C. Partial Fractions**\nDecomposes rational functions:\n1. Factor denominator\n2. Write as sum of simpler fractions\n3. Solve for coefficients\n4. Integrate term-by-term\n\n### **D. Trigonometric Techniques**\n- **Odd/Even Powers**: Use identities like \\( \\sin^2 x = \\frac{1-\\cos 2x}{2} \\)\n- **Products**: Convert using angle-sum formulas\n\n### **E. Trigonometric Substitution**\nFor integrands with \\( \\sqrt{a^2 ± x^2} \\):\n| Expression | Substitution | Identity |\n|------------|--------------|----------|\n| \\( \\sqrt{a^2 - x^2} \\) | \\( x = a\\sin\\theta \\) | \\( 1-\\sin^2\\theta = \\cos^2\\theta \\) |\n| \\( \\sqrt{x^2 + a^2} \\) | \\( x = a\\tan\\theta \\) | \\( 1+\\tan^2\\theta = \\sec^2\\theta \\) |",
+        "Examples": [
+          {
+            "question": "Compute \\( \\int x e^{x^2} dx \\) using substitution",
+            "solution": "1. Let \\( u = x^2 \\), \\( du = 2x dx \\) → \\( \\frac{1}{2}du = x dx \\)\n2. Rewrite: \\( \\frac{1}{2} \\int e^u du = \\frac{1}{2}e^u + C \\)\n3. Back-substitute: \\( \\frac{1}{2}e^{x^2} + C \\)"
+          },
+          {
+            "question": "Evaluate \\( \\int x \\ln x dx \\) by parts",
+            "solution": "1. Choose \\( u = \\ln x \\) (L in LIATE), \\( dv = x dx \\)\n2. Compute \\( du = \\frac{1}{x}dx \\), \\( v = \\frac{x^2}{2} \\)\n3. Apply formula: \\( \\frac{x^2}{2}\\ln x - \\int \\frac{x}{2}dx = \\frac{x^2}{2}\\ln x - \\frac{x^2}{4} + C \\)"
+          }
+        ]
+      },
+      "3. Definite Integrals & Applications": {
+        "Explanation": "### **Fundamental Theorem of Calculus (FTC)**\n\\( \\int_a^b f(x)dx = F(b) - F(a) \\), where \\( F'(x) = f(x) \\).\n\n### **Applications**\n1. **Area Under Curve**: \\( A = \\int_a^b f(x)dx \\)\n2. **Volumes of Revolution**:\n   - **Disk Method**: \\( V = \\pi \\int_a^b [f(x)]^2 dx \\)\n   - **Shell Method**: \\( V = 2\\pi \\int_a^b x f(x) dx \\)\n3. **Arc Length**: \\( L = \\int_a^b \\sqrt{1 + [f'(x)]^2} dx \\)",
+        "Examples": [
+          {
+            "question": "Find the area between \\( y = x^2 \\) and \\( y = x \\) from \\( x = 0 \\) to \\( 1 \\)",
+            "solution": "1. **Top function**: \\( y = x \\), **Bottom**: \\( y = x^2 \\)\n2. Integral: \\( \\int_0^1 (x - x^2)dx = \\left[ \\frac{x^2}{2} - \\frac{x^3}{3} \\right]_0^1 = \\frac{1}{6} \\)"
+          },
+          {
+            "question": "Compute the volume of the solid formed by rotating \\( y = \\sqrt{x} \\) around the x-axis from \\( x = 0 \\) to \\( 4 \\)",
+            "solution": "1. **Disk Method**: \\( V = \\pi \\int_0^4 (\\sqrt{x})^2 dx = \\pi \\int_0^4 x dx \\)\n2. Evaluate: \\( \\pi \\left[ \\frac{x^2}{2} \\right]_0^4 = 8\\pi \\)"
+          }
+        ]
+      },
+      "4. Improper Integrals": {
+        "Explanation": "Integrals with infinite limits or unbounded integrands:\n1. **Type 1 (Infinite Limits)**:\n   \\( \\int_a^\\infty f(x)dx = \\lim_{b \\to \\infty} \\int_a^b f(x)dx \\)\n2. **Type 2 (Discontinuities)**:\n   \\( \\int_a^b f(x)dx = \\lim_{t \\to a^+} \\int_t^b f(x)dx \\)\n\n**Convergence Test**: Compare to known integrals or use limits.",
+        "Examples": [
+          {
+            "question": "Evaluate \\( \\int_1^\\infty \\frac{1}{x^3} dx \\)",
+            "solution": "1. Rewrite as limit: \\( \\lim_{b \\to \\infty} \\int_1^b x^{-3} dx \\)\n2. Antiderivative: \\( -\\frac{1}{2x^2} \\)\n3. Compute limit: \\( \\lim_{b \\to \\infty} \\left( -\\frac{1}{2b^2} + \\frac{1}{2} \\right) = \\frac{1}{2} \\) (converges)"
+          },
+          {
+            "question": "Check convergence of \\( \\int_0^1 \\frac{1}{\\sqrt{x}} dx \\)",
+            "solution": "1. Rewrite: \\( \\lim_{a \\to 0^+} \\int_a^1 x^{-1/2} dx \\)\n2. Antiderivative: \\( 2\\sqrt{x} \\)\n3. Evaluate: \\( 2 - 2\\sqrt{a} \\to 2 \\) as \\( a \\to 0^+ \\) (converges)"
+          }
+        ]
+      },
+      "5. Practice Problems & Solutions": {
+        "Explanation": "### **Problem Categories**\n1. **Basic Antiderivatives** (5 problems)\n2. **Substitution** (5 problems)\n3. **Integration by Parts** (5 problems)\n4. **Partial Fractions & Trig** (5 problems)\n5. **Applications & Improper** (5 problems)\n\n**Approach**:\n1. Identify the technique needed\n2. Execute method step-by-step\n3. Verify with differentiation",
+        "Examples": [
+          {
+            "question": "Compute \\( \\int \\frac{x}{x^2 + 4} dx \\)",
+            "solution": "**Substitution**:\n1. Let \\( u = x^2 + 4 \\), \\( du = 2x dx \\)\n2. Rewrite: \\( \\frac{1}{2} \\int \\frac{du}{u} = \\frac{1}{2}\\ln|u| + C \\)\n3. Final: \\( \\frac{1}{2}\\ln(x^2 + 4) + C \\)"
+          },
+          {
+            "question": "Find the volume of revolution for \\( y = x^2 \\) (0 to 2) about the y-axis",
+            "solution": "**Shell Method**:\n1. Radius \\( = x \\), Height \\( = x^2 \\)\n2. Integral: \\( 2\\pi \\int_0^2 x \\cdot x^2 dx = 2\\pi \\left[ \\frac{x^4}{4} \\right]_0^2 = 8\\pi \\)"
+          }
+        ]
+      },
+ 
+    }
+  }
+
+
         };
