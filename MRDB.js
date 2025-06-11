@@ -1,8 +1,9 @@
 //Question Data
 const mth102Data = {
   "Limits": {
-    "Main-explanation": "Limits describe the value a function approaches as the input approaches some value. They are foundational for calculus, enabling the definition of derivatives and integrals.",
+    "Main-explanation": {
     "Subtopics": {
+      "What are limit?": "Limits describe the value a function approaches as the input approaches some value. They are foundational for calculus, enabling the definition of derivatives and integrals.",
       "1. Direct Substitution": {
         "Explanation": "If a function is continuous at point 'a', simply substitute x = a to find the limit.",
         "Examples": {
