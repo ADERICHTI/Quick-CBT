@@ -494,3 +494,62 @@ const mth102Data = {
 
 
         };
+
+
+        // Cheat Sheet Data
+        const cheatSheetData = {
+            "Standard Derivatives": {
+                "1. Constant Function": {
+                    "formula": "\\frac{d}{dx} (c) = 0 \\quad \\text{(where } c \\text{ is a constant)}"
+                },
+                "2. Identity Function": {
+                    "formula": "\\frac{d}{dx} (x) = 1"
+                },
+                "3. Power Rule": {
+                    "formula": "\\frac{d}{dx} (x^n) = n x^{n-1} \\quad \\text{(for any real number } n)"
+                },
+                "4. Exponential Functions": {
+                    "e^x": "\\frac{d}{dx} (e^x) = e^x",
+                    "a^x": "\\frac{d}{dx} (a^x) = a^x \\ln a \\quad (a > 0, a \\neq 1)"
+                },
+                "5. Logarithmic Functions": {
+                    "ln x": "\\frac{d}{dx} (\\ln x) = \\frac{1}{x} \\quad (x > 0)",
+                    "log_a x": "\\frac{d}{dx} (\\log_a x) = \\frac{1}{x \\ln a} \\quad (a > 0, a \\neq 1)"
+                },
+                "6. Trigonometric Functions": {
+                    "sin x": "\\frac{d}{dx} (\\sin x) = \\cos x",
+                    "cos x": "\\frac{d}{dx} (\\cos x) = -\\sin x",
+                    "tan x": "\\frac{d}{dx} (\\tan x) = \\sec^2 x",
+                    "cot x": "\\frac{d}{dx} (\\cot x) = -\\csc^2 x",
+                    "sec x": "\\frac{d}{dx} (\\sec x) = \\sec x \\tan x",
+                    "csc x": "\\frac{d}{dx} (\\csc x) = -\\csc x \\cot x"
+                },
+                "7. Inverse Trigonometric Functions": {
+                    "sin⁻¹ x": "\\frac{d}{dx} (\\sin^{-1} x) = \\frac{1}{\\sqrt{1 - x^2}} \\quad (|x| < 1)",
+                    "cos⁻¹ x": "\\frac{d}{dx} (\\cos^{-1} x) = -\\frac{1}{\\sqrt{1 - x^2}} \\quad (|x| < 1)",
+                    "tan⁻¹ x": "\\frac{d}{dx} (\\tan^{-1} x) = \\frac{1}{1 + x^2}"
+                },
+                "8. Differentiation Rules": {
+                    "Sum Rule": "\\frac{d}{dx} [f(x) + g(x)] = f'(x) + g'(x)",
+                    "Product Rule": "\\frac{d}{dx} [f(x) g(x)] = f'(x) g(x) + f(x) g'(x)",
+                    "Quotient Rule": "\\frac{d}{dx} \\left( \\frac{f(x)}{g(x)} \\right) = \\frac{f'(x) g(x) - f(x) g'(x)}{[g(x)]^2}",
+                    "Chain Rule": "\\frac{d}{dx} f(g(x)) = f'(g(x)) \\cdot g'(x)"
+                }
+            },
+            "Standard Integrals": {
+                "1. Basic Integrals": {
+                    "∫ dx": "x + C",
+                    "∫ x^n dx": "\\frac{x^{n+1}}{n+1} + C \\quad (n \\neq -1)",
+                    "∫ 1/x dx": "\\ln |x| + C"
+                },
+                "2. Exponential Functions": {
+                    "∫ e^x dx": "e^x + C",
+                    "∫ a^x dx": "\\frac{a^x}{\\ln a} + C \\quad (a > 0, a \\neq 1)"
+                },
+                "3. Trigonometric Functions": {
+                    "∫ sin x dx": "-\\cos x + C",
+                    "∫ cos x dx": "\\sin x + C",
+                    "∫ sec² x dx": "\\tan x + C"
+                }
+            }
+        };
