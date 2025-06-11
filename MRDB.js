@@ -46,7 +46,7 @@ const mth102Data = {
         ]
       },
       "5. Overcoming Common Challenges": {
-        "Explanation": "Tips to succeed:\n1. **Visualize**: Sketch graphs for derivatives/integrals\n2. **Practice Daily**: Solve 3-5 problems daily\n3. **Ask Why**: Understand theorems, don’t just memorize\n4. **Use Resources**: Interactive tools (e.g., Desmos, Wolfram Alpha)",
+        "Explanation": "Visualize and understand concept",
         "Examples": [
           {
             "question": "How to remember the Chain Rule?",
@@ -55,7 +55,7 @@ const mth102Data = {
         ]
       },
       "6. Next Steps": {
-        "Explanation": "Ready to begin? Here’s how to start:\n1. **Assess Your Level**: Try a pre-calculus quiz (e.g., solve \\( \\log_2(8) = ? \\))\n2. **Choose a Learning Path**:\n   - Beginner: Start with **Limits**\n   - Intermediate: Jump to **Derivatives**\n3. **Visit the Course Outline**: Navigate to the homepage for structured modules.\n4. **Stay Consistent**: Dedicate 30 minutes daily.",
+        "Explanation": "Ready to begin? Here’s how to start:\n1. **Assess Your Level**: Try a pre-calculus quiz (e.g., solve \\( \\log_2(8) = ? \\))\n2. **Choose a Learning Path**:\n   - Beginner: Start with **Limits**\n   - Intermediate: Jump to **Derivatives**\n3. **Visit the Course Outline**: Navigate to the homepage for structured modules.\n4. **Consistency matters**.",
         "Examples": [
           {
             "question": "What if I find limits confusing?",
