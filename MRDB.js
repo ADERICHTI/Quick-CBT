@@ -1,6 +1,71 @@
 // MTH 102 revision data
 
 const mth102Data = {
+
+            "Introduction to Calculus": {
+    "Main-explanation": "Calculus is the mathematical study of continuous change, divided into differential calculus (derivatives) and integral calculus (integrals). It provides tools to analyze motion, growth, and accumulation in mathematics, physics, engineering, and beyond.",
+    "Subtopics": {
+      "1. The Two Big Ideas of Calculus": {
+        "Explanation": "1. **Derivatives**: Measure instantaneous rates of change (e.g., velocity from position).\n2. **Integrals**: Accumulate quantities (e.g., total distance from speed).\n\nThese are connected by the **Fundamental Theorem of Calculus**.",
+        "Examples": [
+          {
+            "question": "How does a derivative represent slope?",
+            "solution": "The derivative \\( f'(x) \\) gives the slope of the tangent line to \\( y = f(x) \\) at any point \\( x \\). For example, if \\( f(x) = x^2 \\), then \\( f'(x) = 2x \\), meaning the slope at \\( x = 3 \\) is \\( 6 \\)."
+          },
+          {
+            "question": "What does an integral calculate?",
+            "solution": "Integrals sum infinitesimal pieces to find totals. For example, \\( \\int_0^3 x^2 \\, dx = 9 \\) calculates the area under \\( y = x^2 \\) from \\( x = 0 \\) to \\( 3 \\)."
+          }
+        ]
+      },
+      "2. Why Calculus Matters": {
+        "Explanation": "Applications include:\n- Physics: Motion, forces\n- Economics: Marginal cost/revenue\n- Biology: Population growth\n- Engineering: Optimization\n- Computer Graphics: Curves and surfaces",
+        "Examples": [
+          {
+            "question": "How is calculus used in robotics?",
+            "solution": "Derivatives calculate joint velocities for smooth movement, while integrals plan paths over time."
+          }
+        ]
+      },
+      "3. Foundations Needed": {
+        "Explanation": "Before starting calculus, master:\n1. **Algebra**: Solve equations like \\( 2x + 5 = 15 \\)\n2. **Functions**: Understand \\( f(x) = x^2 - 3 \\)\n3. **Trigonometry**: Know \\( \\sin(x) \\), \\( \\cos(x) \\)\n4. **Graphs**: Plot and interpret \\( y = mx + b \\)",
+        "Examples": [
+          {
+            "question": "Simplify \\( \\frac{x^2 - 9}{x - 3} \\)",
+            "solution": "\\[ \\frac{(x-3)(x+3)}{x-3} = x + 3 \\quad (x \\neq 3) \\]"
+          }
+        ]
+      },
+      "4. Calculus Roadmap": {
+        "Explanation": "Progression through key topics:\n1. **Limits**: Understand behavior near points\n2. **Derivatives**: Rates of change\n3. **Applications of Derivatives**: Optimization, motion\n4. **Integrals**: Accumulation\n5. **Applications of Integrals**: Areas, volumes\n6. **Advanced Topics**: Multivariable calculus, differential equations",
+        "Examples": [
+          {
+            "question": "What’s the next step after learning basic derivatives?",
+            "solution": "Apply them to real problems: finding maximum profit (optimization) or modeling projectile motion (related rates)."
+          }
+        ]
+      },
+      "5. Overcoming Common Challenges": {
+        "Explanation": "Tips to succeed:\n1. **Visualize**: Sketch graphs for derivatives/integrals\n2. **Practice Daily**: Solve 3-5 problems daily\n3. **Ask Why**: Understand theorems, don’t just memorize\n4. **Use Resources**: Interactive tools (e.g., Desmos, Wolfram Alpha)",
+        "Examples": [
+          {
+            "question": "How to remember the Chain Rule?",
+            "solution": "Think 'outer × inner': \\( \\frac{d}{dx} \\sin(3x) = \\cos(3x) \\cdot 3 \\)"
+          }
+        ]
+      },
+      "6. Next Steps": {
+        "Explanation": "Ready to begin? Here’s how to start:\n1. **Assess Your Level**: Try a pre-calculus quiz (e.g., solve \\( \\log_2(8) = ? \\))\n2. **Choose a Learning Path**:\n   - Beginner: Start with **Limits**\n   - Intermediate: Jump to **Derivatives**\n3. **Visit the Course Outline**: Navigate to the homepage for structured modules.\n4. **Stay Consistent**: Dedicate 30 minutes daily.",
+        "Examples": [
+          {
+            "question": "What if I find limits confusing?",
+            "solution": "Revisit algebra/function basics, then try understanding the concept of limit. **What next → Move to the Course Outline now** to select your first module. Let’s turn theory into practice!"
+          }
+        ],
+      }
+    }
+  },
+          
           "Limits": {
             "Main-explanation": "Limits describe the value a function approaches as the input approaches some value. They are foundational for calculus, enabling the definition of derivatives and integrals.",
             "Subtopics": {
@@ -354,70 +419,5 @@ const mth102Data = {
       }
     }
   },
-
-  "Introduction to Calculus": {
-    "Main-explanation": "Calculus is the mathematical study of continuous change, divided into differential calculus (derivatives) and integral calculus (integrals). It provides tools to analyze motion, growth, and accumulation in mathematics, physics, engineering, and beyond.",
-    "Subtopics": {
-      "1. The Two Big Ideas of Calculus": {
-        "Explanation": "1. **Derivatives**: Measure instantaneous rates of change (e.g., velocity from position).\n2. **Integrals**: Accumulate quantities (e.g., total distance from speed).\n\nThese are connected by the **Fundamental Theorem of Calculus**.",
-        "Examples": [
-          {
-            "question": "How does a derivative represent slope?",
-            "solution": "The derivative \\( f'(x) \\) gives the slope of the tangent line to \\( y = f(x) \\) at any point \\( x \\). For example, if \\( f(x) = x^2 \\), then \\( f'(x) = 2x \\), meaning the slope at \\( x = 3 \\) is \\( 6 \\)."
-          },
-          {
-            "question": "What does an integral calculate?",
-            "solution": "Integrals sum infinitesimal pieces to find totals. For example, \\( \\int_0^3 x^2 \\, dx = 9 \\) calculates the area under \\( y = x^2 \\) from \\( x = 0 \\) to \\( 3 \\)."
-          }
-        ]
-      },
-      "2. Why Calculus Matters": {
-        "Explanation": "Applications include:\n- Physics: Motion, forces\n- Economics: Marginal cost/revenue\n- Biology: Population growth\n- Engineering: Optimization\n- Computer Graphics: Curves and surfaces",
-        "Examples": [
-          {
-            "question": "How is calculus used in robotics?",
-            "solution": "Derivatives calculate joint velocities for smooth movement, while integrals plan paths over time."
-          }
-        ]
-      },
-      "3. Foundations Needed": {
-        "Explanation": "Before starting calculus, master:\n1. **Algebra**: Solve equations like \\( 2x + 5 = 15 \\)\n2. **Functions**: Understand \\( f(x) = x^2 - 3 \\)\n3. **Trigonometry**: Know \\( \\sin(x) \\), \\( \\cos(x) \\)\n4. **Graphs**: Plot and interpret \\( y = mx + b \\)",
-        "Examples": [
-          {
-            "question": "Simplify \\( \\frac{x^2 - 9}{x - 3} \\)",
-            "solution": "\\[ \\frac{(x-3)(x+3)}{x-3} = x + 3 \\quad (x \\neq 3) \\]"
-          }
-        ]
-      },
-      "4. Calculus Roadmap": {
-        "Explanation": "Progression through key topics:\n1. **Limits**: Understand behavior near points\n2. **Derivatives**: Rates of change\n3. **Applications of Derivatives**: Optimization, motion\n4. **Integrals**: Accumulation\n5. **Applications of Integrals**: Areas, volumes\n6. **Advanced Topics**: Multivariable calculus, differential equations",
-        "Examples": [
-          {
-            "question": "What’s the next step after learning basic derivatives?",
-            "solution": "Apply them to real problems: finding maximum profit (optimization) or modeling projectile motion (related rates)."
-          }
-        ]
-      },
-      "5. Overcoming Common Challenges": {
-        "Explanation": "Tips to succeed:\n1. **Visualize**: Sketch graphs for derivatives/integrals\n2. **Practice Daily**: Solve 3-5 problems daily\n3. **Ask Why**: Understand theorems, don’t just memorize\n4. **Use Resources**: Interactive tools (e.g., Desmos, Wolfram Alpha)",
-        "Examples": [
-          {
-            "question": "How to remember the Chain Rule?",
-            "solution": "Think 'outer × inner': \\( \\frac{d}{dx} \\sin(3x) = \\cos(3x) \\cdot 3 \\)"
-          }
-        ]
-      },
-      "6. Next Steps": {
-        "Explanation": "Ready to begin? Here’s how to start:\n1. **Assess Your Level**: Try a pre-calculus quiz (e.g., solve \\( \\log_2(8) = ? \\))\n2. **Choose a Learning Path**:\n   - Beginner: Start with **Limits**\n   - Intermediate: Jump to **Derivatives**\n3. **Visit the Course Outline**: Navigate to the homepage for structured modules.\n4. **Stay Consistent**: Dedicate 30 minutes daily.",
-        "Examples": [
-          {
-            "question": "What if I find limits confusing?",
-            "solution": "Revisit algebra/function basics, then try understanding the concept of limit. **What next → Move to the Course Outline now** to select your first module. Let’s turn theory into practice!"
-          }
-        ],
-      }
-    }
-  }
-
 
         };
