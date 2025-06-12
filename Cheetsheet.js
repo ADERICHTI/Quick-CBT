@@ -35,42 +35,46 @@
             });
         }
 
-        // Load content into cheat sheet
-        function loadCheatsheetContent(category) {
-            let contentHTML = '';
-            const categoryName = category === 'derivatives' ? 'Standard Derivatives' : 'Standard Integrals';
-            const categoryData = cheatSheetData[categoryName];
 
-            for (const [section, items] of Object.entries(categoryData)) {
-                contentHTML += `<div class="cheatsheet-item"><h4>${section}</h4>`;
-                
-                if (typeof items === 'object') {
-                    for (const [itemName, formula] of Object.entries(items)) {
-                        contentHTML += `
-                            <div class="formula-item">
-                                <div class="formula-name">${itemName}:</div>
-                                <div class="formula">${formula}</div>
-                            </div>
-                        `;
-                    }
-                } else {
-                    contentHTML += `<div class="formula">${items}</div>`;
-                }
-                
-                contentHTML += `</div>`;
-            }
 
-            cheatsheetItems.innerHTML = contentHTML;
-            
-            // Render KaTeX after content is loaded
-            if (window.katex) {
-                renderMathInElement(cheatsheetItems, {
-                    delimiters: [
-                        {left: '$$', right: '$$', display: true},
-                        {left: '\\(', right: '\\)', display: false},
-                        {left: '\\[', right: '\\]', display: true}
-                    ],
-                    throwOnError: false
-                });
-            }
+function loadCheatsheetContent(category) {
+  const categoryName = category === 'derivatives' ? 'Standard Derivatives' : 'Standard Integrals';
+  const categoryData = cheatSheetData[categoryName];
+  const cheatsheetItems = document.getElementById('cheatsheetItems');
+  
+  let contentHTML = '';
+
+  for (const [section, items] of Object.entries(categoryData)) {
+    contentHTML += `<div class="cheatsheet-section"><h4>${section}</h4>`;
+    
+    if (typeof items === 'object') {
+      for (const [itemName, formula] of Object.entries(items)) {
+        if (typeof formula === 'object') {
+          // Handle nested groups
+          contentHTML += `<div class="formula-group"><h5>${itemName}</h5>`;
+          for (const [subItem, subFormula] of Object.entries(formula)) {
+            contentHTML += `
+              <div class="formula-item">
+                <div class="formula-name">${subItem}:</div>
+                <div class="formula">${subFormula}</div>
+              </div>
+            `;
+          }
+          contentHTML += `</div>`;
+        } else {
+          // Regular formula
+          contentHTML += `
+            <div class="formula-item">
+              <div class="formula-name">${itemName}:</div>
+              <div class="formula">${formula}</div>
+            </div>
+          `;
         }
+      }
+    }
+    
+    contentHTML += `</div>`;
+  }
+
+  cheatsheetItems.innerHTML = contentHTML;
+}
