@@ -500,47 +500,63 @@ const mth102Data = {
         const cheatSheetData = {
   "Standard Derivatives": {
     "1. Basic Functions": {
-      "Constant Function": "\\frac{d}{dx} (c) = 0 \\quad \\text{(where } c \\text{ is a constant)}",
-      "Identity Function": "\\frac{d}{dx} (x) = 1",
-      "Power Rule": "\\frac{d}{dx} (x^n) = n x^{n-1} \\quad \\text{(for any real number } n)",
+      "Constant Function": "d/dx (c) = 0 (where c is a constant)",
+      "Identity Function": "d/dx (x) = 1",
+      "Power Rule": "d/dx (x^n) = n x^(n-1) (for any real number n)",
       "Exponential Functions": {
-        "e^x": "\\frac{d}{dx} (e^x) = e^x",
-        "a^x": "\\frac{d}{dx} (a^x) = a^x \\ln a \\quad (a > 0, a \\neq 1)"
+        "e^x": "d/dx (e^x) = e^x",
+        "a^x": "d/dx (a^x) = a^x ln(a) (a > 0, a ≠ 1)"
       },
       "Logarithmic Functions": {
-        "ln x": "\\frac{d}{dx} (\\ln x) = \\frac{1}{x} \\quad (x > 0)",
-        "logₐ x": "\\frac{d}{dx} (\\log_a x) = \\frac{1}{x \\ln a} \\quad (a > 0, a \\neq 1)"
+        "ln x": "d/dx (ln x) = 1/x (x > 0)",
+        "logₐ x": "d/dx (logₐ x) = 1/(x ln a) (a > 0, a ≠ 1)"
       }
     },
     "2. Trigonometric Functions": {
-      "sin x": "\\frac{d}{dx} (\\sin x) = \\cos x",
-      "cos x": "\\frac{d}{dx} (\\cos x) = -\\sin x",
-      "tan x": "\\frac{d}{dx} (\\tan x) = \\sec^2 x",
-      "cot x": "\\frac{d}{dx} (\\cot x) = -\\csc^2 x",
-      "sec x": "\\frac{d}{dx} (\\sec x) = \\sec x \\tan x",
-      "csc x": "\\frac{d}{dx} (\\csc x) = -\\csc x \\cot x"
+      "sin x": "d/dx (sin x) = cos x",
+      "cos x": "d/dx (cos x) = -sin x",
+      "tan x": "d/dx (tan x) = sec² x",
+      "cot x": "d/dx (cot x) = -csc² x",
+      "sec x": "d/dx (sec x) = sec x tan x",
+      "csc x": "d/dx (csc x) = -csc x cot x"
     },
     "3. Inverse Trigonometric Functions": {
-      "sin⁻¹ x": "\\frac{d}{dx} (\\sin^{-1} x) = \\frac{1}{\\sqrt{1 - x^2}} \\quad (|x| < 1)",
-      "cos⁻¹ x": "\\frac{d}{dx} (\\cos^{-1} x) = -\\frac{1}{\\sqrt{1 - x^2}} \\quad (|x| < 1)",
-      "tan⁻¹ x": "\\frac{d}{dx} (\\tan^{-1} x) = \\frac{1}{1 + x^2}",
-      "cot⁻¹ x": "\\frac{d}{dx} (\\cot^{-1} x) = -\\frac{1}{1 + x^2}",
-      "sec⁻¹ x": "\\frac{d}{dx} (\\sec^{-1} x) = \\frac{1}{|x| \\sqrt{x^2 - 1}} \\quad (|x| > 1)",
-      "csc⁻¹ x": "\\frac{d}{dx} (\\csc^{-1} x) = -\\frac{1}{|x| \\sqrt{x^2 - 1}} \\quad (|x| > 1)"
+      "sin⁻¹ x": "d/dx (sin⁻¹ x) = 1/√(1 - x²) (|x| < 1)",
+      "cos⁻¹ x": "d/dx (cos⁻¹ x) = -1/√(1 - x²) (|x| < 1)",
+      "tan⁻¹ x": "d/dx (tan⁻¹ x) = 1/(1 + x²)",
+      "cot⁻¹ x": "d/dx (cot⁻¹ x) = -1/(1 + x²)",
+      "sec⁻¹ x": "d/dx (sec⁻¹ x) = 1/(|x|√(x² - 1)) (|x| > 1)",
+      "csc⁻¹ x": "d/dx (csc⁻¹ x) = -1/(|x|√(x² - 1)) (|x| > 1)"
     },
     "4. Hyperbolic Functions": {
-      "sinh x": "\\frac{d}{dx} (\\sinh x) = \\cosh x",
-      "cosh x": "\\frac{d}{dx} (\\cosh x) = \\sinh x",
-      "tanh x": "\\frac{d}{dx} (\\tanh x) = \\text{sech}^2 x",
-      "coth x": "\\frac{d}{dx} (\\coth x) = -\\text{csch}^2 x",
-      "sech x": "\\frac{d}{dx} (\\text{sech} x) = -\\text{sech} x \\tanh x",
-      "csch x": "\\frac{d}{dx} (\\text{csch} x) = -\\text{csch} x \\coth x"
+      "sinh x": "d/dx (sinh x) = cosh x",
+      "cosh x": "d/dx (cosh x) = sinh x",
+      "tanh x": "d/dx (tanh x) = sech² x",
+      "coth x": "d/dx (coth x) = -csch² x",
+      "sech x": "d/dx (sech x) = -sech x tanh x",
+      "csch x": "d/dx (csch x) = -csch x coth x"
     },
     "5. Differentiation Rules": {
-      "Sum Rule": "\\frac{d}{dx} [f(x) + g(x)] = f'(x) + g'(x)",
-      "Product Rule": "\\frac{d}{dx} [f(x) g(x)] = f'(x) g(x) + f(x) g'(x)",
-      "Quotient Rule": "\\frac{d}{dx} \\left( \\frac{f(x)}{g(x)} \\right) = \\frac{f'(x) g(x) - f(x) g'(x)}{[g(x)]^2}",
-      "Chain Rule": "\\frac{d}{dx} f(g(x)) = f'(g(x)) \\cdot g'(x)"
+      "Sum Rule": "d/dx [f(x) + g(x)] = f'(x) + g'(x)",
+      "Product Rule": "d/dx [f(x) g(x)] = f'(x)g(x) + f(x)g'(x)",
+      "Quotient Rule": "d/dx [f(x)/g(x)] = [f'(x)g(x) - f(x)g'(x)]/[g(x)]²",
+      "Chain Rule": "d/dx f(g(x)) = f'(g(x)) · g'(x)"
+    }
+  },
+  "Standard Integrals": {
+    "1. Basic Integrals": {
+      "∫ dx": "x + C",
+      "∫ x^n dx": "x^(n+1)/(n+1) + C (n ≠ -1)",
+      "∫ 1/x dx": "ln|x| + C"
+    },
+    "2. Exponential Functions": {
+      "∫ e^x dx": "e^x + C",
+      "∫ a^x dx": "a^x/ln(a) + C (a > 0, a ≠ 1)"
+    },
+    "3. Trigonometric Functions": {
+      "∫ sin x dx": "-cos x + C",
+      "∫ cos x dx": "sin x + C",
+      "∫ sec² x dx": "tan x + C"
     }
   }
-}
+};
