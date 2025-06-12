@@ -1199,35 +1199,12 @@
                     document.querySelector('.container').style.display = 'block';
                     init();
                  initCS();
-                   if (!window.katex) {
-        loadKaTeX();
-      }
+             
                 }
             });
         });
 
-function loadKaTeX() {
-  const css = document.createElement('link');
-  css.rel = 'stylesheet';
-  css.href = 'https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css';
-  document.head.appendChild(css);
-  
-  const js = document.createElement('script');
-  js.src = 'https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js';
-  js.onload = () => {
-    const autoRender = document.createElement('script');
-    autoRender.src = 'https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js';
-    autoRender.onload = () => {
-      console.log("KaTeX fully loaded");
-      // Re-render any existing math content
-      if (window.renderMathInElement) {
-        renderMathInElement(document.body);
-      }
-    };
-    document.head.appendChild(autoRender);
-  };
-  document.head.appendChild(js);
-}
+
 
      
         // App Menu Functionality
