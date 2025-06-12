@@ -38,9 +38,6 @@ function signInWithGoogle() {
             console.error('Sign in error:', error);
             authLoader.style.display = 'none';
             signInButton.disabled = false;
-            document.querySelector('.container').style.display = 'block';
-            showAppContent();
-            init();
         });
 }
 
