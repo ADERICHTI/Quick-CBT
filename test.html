@@ -663,7 +663,69 @@
                 height: 45px;
             }
         }
+
      
+#cheatSheetBtn {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#cheatSheetBtn:hover {
+    background-color: #45a049;
+}
+
+.cheatSheetOption {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cheatSheetOption:hover {
+    background-color: #0b7dda;
+}
+
+#backToOptions, #closeCheatSheet {
+    padding: 8px 16px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#backToOptions:hover, #closeCheatSheet:hover {
+    background-color: #d32f2f;
+}
+
+#contentDisplay {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+#contentDisplay h4 {
+    margin-top: 15px;
+    color: #333;
+}
+
+#contentDisplay ul {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+#contentDisplay li {
+    margin-bottom: 5px;
+}
+
 
     .katex { font-size: 1.1em; }
         .example-question .katex, .example-solution .katex {
@@ -818,7 +880,55 @@
     <button id="closeCheatSheet" style="margin-top: 20px;">Close</button>
 </div>
 
-<script>
+
+
+
+
+
+ 
+
+    <!-- Help Button (from template) -->
+    <button id="helpButton" class="help-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12" y2="17"></line>
+        </svg>
+    </button>
+
+    <!-- Help Dialog (from template) -->
+    <div id="helpDialog" class="help-dialog">
+        <div class="help-dialog-content">
+            <button class="close-help">&times;</button>
+            <h3>Need Help or Have Feedback?</h3>
+            <p>For any inquiries or suggestions about the application, please reach out to the developer:</p>
+            <div class="developer-info">
+                <p><strong>Iyiola Adedamola Richard</strong></p>
+                <a href="https://iar-portfolio.netlify.app/" target="_blank">Visit Developer Portfolio</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        By: Iyiola Adedamola Richard @QuickCBT&copy;2025
+    </footer>
+
+       <!-- Load Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"></script>
+
+    <!-- Load config and auth -->
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+     <script src="MRDB.js"></script>
+<script src="Cheetsheet.js"></script>
+
+ <script>
 // Cheat sheet data
 const cheatSheetData = {
     "Standard Derivatives": {
@@ -944,114 +1054,6 @@ function showCheatSheetContent(type) {
     contentDisplay.innerHTML = html;
 }
 </script>
-
-<style>
-#cheatSheetBtn {
-    padding: 8px 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#cheatSheetBtn:hover {
-    background-color: #45a049;
-}
-
-.cheatSheetOption {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    background-color: #2196F3;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.cheatSheetOption:hover {
-    background-color: #0b7dda;
-}
-
-#backToOptions, #closeCheatSheet {
-    padding: 8px 16px;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#backToOptions:hover, #closeCheatSheet:hover {
-    background-color: #d32f2f;
-}
-
-#contentDisplay {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-#contentDisplay h4 {
-    margin-top: 15px;
-    color: #333;
-}
-
-#contentDisplay ul {
-    margin-top: 5px;
-    padding-left: 20px;
-}
-
-#contentDisplay li {
-    margin-bottom: 5px;
-}
-</style>
-
-
-
- 
-
-    <!-- Help Button (from template) -->
-    <button id="helpButton" class="help-button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-            <line x1="12" y1="17" x2="12" y2="17"></line>
-        </svg>
-    </button>
-
-    <!-- Help Dialog (from template) -->
-    <div id="helpDialog" class="help-dialog">
-        <div class="help-dialog-content">
-            <button class="close-help">&times;</button>
-            <h3>Need Help or Have Feedback?</h3>
-            <p>For any inquiries or suggestions about the application, please reach out to the developer:</p>
-            <div class="developer-info">
-                <p><strong>Iyiola Adedamola Richard</strong></p>
-                <a href="https://iar-portfolio.netlify.app/" target="_blank">Visit Developer Portfolio</a>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        By: Iyiola Adedamola Richard @QuickCBT&copy;2025
-    </footer>
-
-       <!-- Load Firebase SDKs -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-
-     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
-        onload="renderMathInElement(document.body);"></script>
-
-    <!-- Load config and auth -->
-    <script src="config.js"></script>
-    <script src="auth.js"></script>
-     <script src="MRDB.js"></script>
-<script src="Cheetsheet.js"></script>
 
     <script>
       
