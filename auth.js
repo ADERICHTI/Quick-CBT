@@ -39,6 +39,7 @@ function signInWithGoogle() {
             authLoader.style.display = 'none';
             signInButton.disabled = false;
             document.querySelector('.container').style.display = 'block';
+            showAppContent();
             init();
         });
 }
