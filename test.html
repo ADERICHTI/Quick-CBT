@@ -665,66 +665,7 @@
         }
 
      
-#cheatSheetBtn {
-    padding: 8px 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
 
-#cheatSheetBtn:hover {
-    background-color: #45a049;
-}
-
-.cheatSheetOption {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    background-color: #2196F3;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.cheatSheetOption:hover {
-    background-color: #0b7dda;
-}
-
-#backToOptions, #closeCheatSheet {
-    padding: 8px 16px;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#backToOptions:hover, #closeCheatSheet:hover {
-    background-color: #d32f2f;
-}
-
-#contentDisplay {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-#contentDisplay h4 {
-    margin-top: 15px;
-    color: #333;
-}
-
-#contentDisplay ul {
-    margin-top: 5px;
-    padding-left: 20px;
-}
-
-#contentDisplay li {
-    margin-bottom: 5px;
-}
 
 
     .katex { font-size: 1.1em; }
@@ -863,29 +804,7 @@
 
 
 
- <!-- Add this button next to your help button -->
-<button id="cheatSheetBtn" style="margin-right: 10px;">Cheat Sheets</button>
 
-<!-- Dialog structure -->
-<div id="cheatSheetDialog" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border: 1px solid #ccc; z-index: 1000; max-width: 80%; max-height: 80vh; overflow: auto;">
-    <h2>Cheat Sheets</h2>
-    <div id="cheatSheetOptions">
-        <button class="cheatSheetOption" data-type="derivatives">Standard Derivatives</button>
-        <button class="cheatSheetOption" data-type="integrals">Standard Integrals</button>
-    </div>
-    <div id="cheatSheetContent" style="margin-top: 20px; display: none;">
-        <button id="backToOptions" style="margin-bottom: 10px;">← Back</button>
-        <div id="contentDisplay"></div>
-    </div>
-    <button id="closeCheatSheet" style="margin-top: 20px;">Close</button>
-</div>
-
-
-
-
-
-
- 
 
     <!-- Help Button (from template) -->
     <button id="helpButton" class="help-button">
@@ -928,132 +847,8 @@
      <script src="MRDB.js"></script>
 <script src="Cheetsheet.js"></script>
 
- <script>
-// Cheat sheet data
-const cheatSheetData = {
-    "Standard Derivatives": {
-        "1. Basic Functions": [
-            "Constant Function: d/dx (c) = 0 (where c is a constant)",
-            "Identity Function: d/dx (x) = 1",
-            "Power Rule: d/dx (x^n) = n x^(n-1) (for any real number n)",
-            "Exponential e^x: d/dx (e^x) = e^x",
-            "Exponential a^x: d/dx (a^x) = a^x ln a (a > 0, a ≠ 1)",
-            "Natural log: d/dx (ln x) = 1/x (x > 0)",
-            "General log: d/dx (log_a x) = 1/(x ln a) (a > 0, a ≠ 1)"
-        ],
-        "2. Trigonometric Functions": [
-            "Sine: d/dx (sin x) = cos x",
-            "Cosine: d/dx (cos x) = -sin x",
-            "Tangent: d/dx (tan x) = sec² x",
-            "Cotangent: d/dx (cot x) = -csc² x",
-            "Secant: d/dx (sec x) = sec x tan x",
-            "Cosecant: d/dx (csc x) = -csc x cot x"
-        ],
-        "3. Inverse Trigonometric Functions": [
-            "Arcsine: d/dx (sin⁻¹ x) = 1/√(1 - x²) (|x| < 1)",
-            "Arccosine: d/dx (cos⁻¹ x) = -1/√(1 - x²) (|x| < 1)",
-            "Arctangent: d/dx (tan⁻¹ x) = 1/(1 + x²)",
-            "Arccotangent: d/dx (cot⁻¹ x) = -1/(1 + x²)",
-            "Arcsecant: d/dx (sec⁻¹ x) = 1/(|x|√(x² - 1)) (|x| > 1)",
-            "Arccosecant: d/dx (csc⁻¹ x) = -1/(|x|√(x² - 1)) (|x| > 1)"
-        ],
-        "4. Hyperbolic Functions": [
-            "Sinh: d/dx (sinh x) = cosh x",
-            "Cosh: d/dx (cosh x) = sinh x",
-            "Tanh: d/dx (tanh x) = sech² x",
-            "Coth: d/dx (coth x) = -csch² x",
-            "Sech: d/dx (sech x) = -sech x tanh x",
-            "Csch: d/dx (csch x) = -csch x coth x"
-        ],
-        "5. Key Differentiation Rules": [
-            "Sum Rule: d/dx [f(x) + g(x)] = f'(x) + g'(x)",
-            "Product Rule: d/dx [f(x)g(x)] = f'(x)g(x) + f(x)g'(x)",
-            "Quotient Rule: d/dx [f(x)/g(x)] = [f'(x)g(x) - f(x)g'(x)]/[g(x)]²",
-            "Chain Rule: d/dx f(g(x)) = f'(g(x))·g'(x)"
-        ]
-    },
-    "Standard Integrals": {
-        "1. Basic Integrals": [
-            "∫ k dx = kx + C (k is constant)",
-            "∫ x^n dx = x^(n+1)/(n+1) + C (n ≠ -1)",
-            "∫ 1/x dx = ln|x| + C",
-            "∫ e^x dx = e^x + C",
-            "∫ a^x dx = a^x/ln(a) + C"
-        ],
-        "2. Trigonometric Integrals": [
-            "∫ sin(x) dx = -cos(x) + C",
-            "∫ cos(x) dx = sin(x) + C",
-            "∫ tan(x) dx = -ln|cos(x)| + C",
-            "∫ sec²(x) dx = tan(x) + C",
-            "∫ csc²(x) dx = -cot(x) + C"
-        ],
-        "3. Inverse Trigonometric Integrals": [
-            "∫ 1/√(1-x²) dx = sin⁻¹(x) + C",
-            "∫ -1/√(1-x²) dx = cos⁻¹(x) + C",
-            "∫ 1/(1+x²) dx = tan⁻¹(x) + C",
-            "∫ -1/(1+x²) dx = cot⁻¹(x) + C"
-        ],
-        "4. Exponential and Logarithmic Integrals": [
-            "∫ ln(x) dx = x ln(x) - x + C",
-            "∫ log_a(x) dx = (x ln(x) - x)/ln(a) + C",
-            "∫ xe^(ax) dx = e^(ax)(ax - 1)/a² + C"
-        ]
-    }
-};
 
-// DOM elements
-const cheatSheetBtn = document.getElementById('cheatSheetBtn');
-const cheatSheetDialog = document.getElementById('cheatSheetDialog');
-const cheatSheetOptions = document.getElementById('cheatSheetOptions');
-const cheatSheetContent = document.getElementById('cheatSheetContent');
-const contentDisplay = document.getElementById('contentDisplay');
-const backToOptions = document.getElementById('backToOptions');
-const closeCheatSheet = document.getElementById('closeCheatSheet');
 
-// Event listeners
-cheatSheetBtn.addEventListener('click', () => {
-    cheatSheetDialog.style.display = 'block';
-    cheatSheetOptions.style.display = 'block';
-    cheatSheetContent.style.display = 'none';
-});
-
-closeCheatSheet.addEventListener('click', () => {
-    cheatSheetDialog.style.display = 'none';
-});
-
-backToOptions.addEventListener('click', () => {
-    cheatSheetOptions.style.display = 'block';
-    cheatSheetContent.style.display = 'none';
-});
-
-// Add event listeners to option buttons
-document.querySelectorAll('.cheatSheetOption').forEach(button => {
-    button.addEventListener('click', (e) => {
-        const type = e.target.getAttribute('data-type');
-        showCheatSheetContent(type);
-    });
-});
-
-function showCheatSheetContent(type) {
-    cheatSheetOptions.style.display = 'none';
-    cheatSheetContent.style.display = 'block';
-    
-    const title = type === 'derivatives' ? 'Standard Derivatives' : 'Standard Integrals';
-    const data = cheatSheetData[title];
-    
-    let html = `<h3>${title}</h3>`;
-    
-    for (const category in data) {
-        html += `<h4>${category}</h4><ul>`;
-        data[category].forEach(item => {
-            html += `<li>${item}</li>`;
-        });
-        html += `</ul>`;
-    }
-    
-    contentDisplay.innerHTML = html;
-}
-</script>
 
     <script>
       
