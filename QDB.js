@@ -2301,7 +2301,285 @@
                 "answers": ["I"]
             }
         ],
-    
+
+
+        "STA 112: Binomial Probability Distribution - Module 8": [
+            {
+                "No": 1,
+                "question": "What defines a Binomial experiment?",
+                "options": [
+                    "I. Fixed number of trials, two outcomes, constant probability, independent trials",
+                    "II. Variable number of trials, multiple outcomes, changing probability",
+                    "III. Continuous outcomes, single trial, normal distribution",
+                    "IV. Time-dependent events, Poisson distribution"
+                ],
+                "answers": ["I. A Binomial experiment requires: (1) fixed number of trials (n), (2) only two possible outcomes per trial (success/failure), (3) constant probability of success (p), and (4) independent trials."]
+            },
+            {
+                "No": 2,
+                "question": "What is the formula for the Binomial probability mass function?",
+                "options": [
+                    "I. P(X=k) = C(n,k) * p^k * (1-p)^(n-k)",
+                    "II. P(X=k) = e^(-λ) * λ^k / k!",
+                    "III. P(X=k) = (1/σ√2π) * e^(-(k-μ)²/2σ²)",
+                    "IV. P(X=k) = p * (1-p)^(k-1)"
+                ],
+                "answers": ["I. The Binomial PMF is P(X=k) = C(n,k) * p^k * (1-p)^(n-k), where C(n,k) is the combination of n trials taken k at a time, p is success probability, and (1-p) is failure probability."]
+            },
+            {
+                "No": 3,
+                "question": "In 10 coin flips, what's P(exactly 3 heads)?",
+                "options": [
+                    "I. 0.1172",
+                    "II. 0.3125",
+                    "III. 0.5000",
+                    "IV. 0.2500"
+                ],
+                "answers": ["I. C(10,3)*(0.5)^3*(0.5)^7 = 120*(1/1024) ≈ 0.1172. This calculates combinations of 3 successes in 10 trials with p=0.5."]
+            },
+            {
+                "No": 4,
+                "question": "What is E[X] for X ~ Bin(n=20,p=0.3)?",
+                "options": [
+                    "I. 6",
+                    "II. 4.2",
+                    "III. 14",
+                    "IV. 20"
+                ],
+                "answers": ["I. E[X] = n*p = 20*0.3 = 6. The expected number of successes is the product of trials and success probability."]
+            },
+            {
+                "No": 5,
+                "question": "What is Var(X) for X ~ Bin(n=50,p=0.2)?",
+                "options": [
+                    "I. 10",
+                    "II. 8",
+                    "III. 40",
+                    "IV. 2.5"
+                ],
+                "answers": ["II. Var(X) = n*p*(1-p) = 50*0.2*0.8 = 8. Variance measures spread around the mean."]
+            },
+            {
+                "No": 6,
+                "question": "When does a Binomial distribution become symmetric?",
+                "options": [
+                    "I. When p = 0.5",
+                    "II. When n > 30",
+                    "III. When p = 0",
+                    "IV. When p = 1"
+                ],
+                "answers": ["I. The distribution is symmetric when p=0.5 because success/failure probabilities are equal, creating balance."]
+            },
+            {
+                "No": 7,
+                "question": "What's P(X≥1) for X ~ Bin(n=5,p=0.4)?",
+                "options": [
+                    "I. 0.9222",
+                    "II. 0.0778",
+                    "III. 0.5000",
+                    "IV. 0.3456"
+                ],
+                "answers": ["I. P(X≥1) = 1 - P(X=0) = 1 - (0.6)^5 ≈ 0.9222. The complement rule simplifies calculation."]
+            },
+            {
+                "No": 8,
+                "question": "Which distribution approximates Bin(n=100,p=0.01)?",
+                "options": [
+                    "I. Poisson(λ=1)",
+                    "II. Normal(μ=1,σ²=0.99)",
+                    "III. Exponential(β=100)",
+                    "IV. Uniform(a=0,b=100)"
+                ],
+                "answers": ["I. When n is large and p is small (here np=1), Binomial approximates Poisson with λ=np."]
+            },
+            {
+                "No": 9,
+                "question": "What's the skewness of X ~ Bin(n,p)?",
+                "options": [
+                    "I. (1-2p)/√(np(1-p))",
+                    "II. np(1-p)",
+                    "III. p/√n",
+                    "IV. (1-p)/n"
+                ],
+                "answers": ["I. Skewness = (1-2p)/√(np(1-p)). Positive when p<0.5 (right-skewed), negative when p>0.5 (left-skewed)."]
+            },
+            {
+                "No": 10,
+                "question": "A die rolled 5 times, P(exactly two 6's)?",
+                "options": [
+                    "I. 0.1608",
+                    "II. 0.0032",
+                    "III. 0.0322",
+                    "IV. 0.0804"
+                ],
+                "answers": ["I. C(5,2)*(1/6)²*(5/6)³ ≈ 0.1608. Models success (6) vs failure (1-5) with p=1/6."]
+            },
+            {
+                "No": 11,
+                "question": "For X ~ Bin(n,p), what's P(X=mode)?",
+                "options": [
+                    "I. Highest probability in distribution",
+                    "II. Always equals p",
+                    "III. Always equals n",
+                    "IV. The mean probability"
+                ],
+                "answers": ["I. The mode is the value with highest probability, occurring at floor((n+1)p) or ceil((n+1)p)-1."]
+            },
+            {
+                "No": 12,
+                "question": "What's the MGF of X ~ Bin(n,p)?",
+                "options": [
+                    "I. (peᵗ + (1-p))ⁿ",
+                    "II. e^(λ(eᵗ-1))",
+                    "III. (1-βt)^(-α)",
+                    "IV. e^(μt+σ²t²/2)"
+                ],
+                "answers": ["I. MGF = E[eᵗˣ] = Σ C(n,x)(peᵗ)ˣ(1-p)ⁿ⁻ˣ = (peᵗ + 1-p)ⁿ by the Binomial Theorem."]
+            },
+            {
+                "No": 13,
+                "question": "If P(X=0)=0.0625 for Bin(n,p), and n=4, what's p?",
+                "options": [
+                    "I. 0.5",
+                    "II. 0.25",
+                    "III. 0.75",
+                    "IV. 0.1"
+                ],
+                "answers": ["I. (1-p)⁴ = 0.0625 ⇒ 1-p = 0.5 ⇒ p=0.5. Solved using the P(X=0) case."]
+            },
+            {
+                "No": 14,
+                "question": "When can Normal approximate Binomial?",
+                "options": [
+                    "I. When np>5 and n(1-p)>5",
+                    "II. When n>100",
+                    "III. When p=0.5 exactly",
+                    "IV. When λ=np>10"
+                ],
+                "answers": ["I. Normal approximation works when both np>5 and n(1-p)>5 for reasonable symmetry."]
+            },
+            {
+                "No": 15,
+                "question": "What's P(3≤X≤5) for X ~ Bin(n=10,p=0.4)?",
+                "options": [
+                    "I. 0.6665",
+                    "II. 0.3333",
+                    "III. 0.2500",
+                    "IV. 0.8333"
+                ],
+                "answers": ["I. Calculate P(X=3)+P(X=4)+P(X=5) using Binomial formula ≈ 0.6665."]
+            },
+            {
+                "No": 16,
+                "question": "For X ~ Bin(n,p), what's Var(X)/E(X)?",
+                "options": [
+                    "I. 1-p",
+                    "II. p",
+                    "III. n(1-p)",
+                    "IV. np"
+                ],
+                "answers": ["I. Var(X)/E(X) = [np(1-p)]/[np] = 1-p. Useful for parameter estimation."]
+            },
+            {
+                "No": 17,
+                "question": "What's the kurtosis of Bin(n,p)?",
+                "options": [
+                    "I. 3 + (1-6p(1-p))/(np(1-p))",
+                    "II. Always 3",
+                    "III. (1-2p)/√(np(1-p))",
+                    "IV. np(1-p)"
+                ],
+                "answers": ["I. Shows excess kurtosis (compared to Normal's 3) that decreases as n increases."]
+            },
+            {
+                "No": 18,
+                "question": "If X ~ Bin(10,0.3), Y ~ Bin(20,0.3), independent, then X+Y ~ ?",
+                "options": [
+                    "I. Bin(30,0.3)",
+                    "II. Bin(10,0.6)",
+                    "III. N(9,6.3)",
+                    "IV. Not Binomial"
+                ],
+                "answers": ["I. Sum of independent Binomials with same p is Bin(n₁+n₂,p). Here 10+20=30 trials."]
+            },
+            {
+                "No": 19,
+                "question": "5% defective items, in 100 samples P(≤2 defectives)?",
+                "options": [
+                    "I. 0.1183 (Poisson approx)",
+                    "II. 0.2578 (Exact Binomial)",
+                    "III. 0.5000",
+                    "IV. 0.0821"
+                ],
+                "answers": ["I. λ=np=5. Using Poisson: P(0)+P(1)+P(2) = e⁻⁵(1+5+12.5) ≈ 0.1183. Reasonable approximation when n large, p small."]
+            },
+            {
+                "No": 20,
+                "question": "What's the continuity correction for P(X=7) in Normal approximation?",
+                "options": [
+                    "I. P(6.5 < X < 7.5)",
+                    "II. P(X < 7.5)",
+                    "III. P(X > 6.5)",
+                    "IV. P(6 < X < 8)"
+                ],
+                "answers": ["I. For discrete X, P(X=7) ≈ P(6.5 < X < 7.5) in continuous Normal approximation."]
+            },
+            {
+                "No": 21,
+                "question": "For X ~ Bin(n,p), P(X is even) when p=0.5 is:",
+                "options": [
+                    "I. 0.5",
+                    "II. 1-p",
+                    "III. p^n",
+                    "IV. 0.25"
+                ],
+                "answers": ["I. When p=0.5, P(X even) = 0.5 for any n by symmetry between even/odd counts."]
+            },
+            {
+                "No": 22,
+                "question": "What's the mode of Bin(15,0.4)?",
+                "options": [
+                    "I. 6",
+                    "II. 5",
+                    "III. 4",
+                    "IV. 7"
+                ],
+                "answers": ["I. floor((n+1)p) = floor(16*0.4) = floor(6.4) = 6. The most probable value."]
+            },
+            {
+                "No": 23,
+                "question": "If Var(X)=6.4 for Bin(n,p) with n=20, what's p?",
+                "options": [
+                    "I. 0.2 or 0.8",
+                    "II. 0.4 or 0.6",
+                    "III. 0.5 only",
+                    "IV. 0.3 or 0.7"
+                ],
+                "answers": ["I. Solve 20p(1-p)=6.4 ⇒ p²-p+0.32=0 ⇒ p=0.2 or 0.8. Variance is symmetric in p."]
+            },
+            {
+                "No": 24,
+                "question": "Which is true about Bin(n,p) as n→∞?",
+                "options": [
+                    "I. Approaches Normal if np>5 and n(1-p)>5",
+                    "II. Always approaches Poisson",
+                    "III. Becomes Uniform",
+                    "IV. Variance decreases to 0"
+                ],
+                "answers": ["I. By CLT, Binomial approaches Normal under np>5 and n(1-p)>5 conditions, not always Poisson."]
+            },
+            {
+                "No": 25,
+                "question": "For X ~ Bin(n,p), what's P(X=k)/P(X=k-1)?",
+                "options": [
+                    "I. (n-k+1)p / [k(1-p)]",
+                    "II. k(1-p) / [(n-k+1)p]",
+                    "III. np / k",
+                    "IV. (1-p) / p"
+                ],
+                "answers": ["I. Ratio = [C(n,k)p^k(1-p)^(n-k)] / [C(n,k-1)p^(k-1)(1-p)^(n-k+1)] = [(n-k+1)/k] * [p/(1-p)]. Useful for recursive calculations."]
+            }
+        ],
            
 
         "COS 101: Fundamentals of Computer Science - Week 1": [
