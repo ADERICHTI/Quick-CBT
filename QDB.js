@@ -2302,8 +2302,287 @@
             }
         ],
 
+       
+        "STA 112: Bernoulli Probability Distribution - Module 8": [
+            {
+                "No": 1,
+                "question": "What defines a Bernoulli trial?",
+                "options": [
+                    "I. Single trial with exactly two possible outcomes",
+                    "II. Multiple trials with continuous outcomes",
+                    "III. Single trial with multiple possible outcomes",
+                    "IV. Infinite trials with binary outcomes"
+                ],
+                "answers": ["I. A Bernoulli trial is a single random experiment with exactly two possible outcomes: success (with probability p) or failure (with probability 1-p)."]
+            },
+            {
+                "No": 2,
+                "question": "What is the probability mass function of a Bernoulli distribution?",
+                "options": [
+                    "I. P(X=x) = p^x (1-p)^(1-x) for x ∈ {0,1}",
+                    "II. P(X=x) = e^(-λ) λ^x/x!",
+                    "III. P(X=x) = (1-p)^(x-1) p",
+                    "IV. P(X=x) = 1/σ√(2π) e^(-(x-μ)²/2σ²)"
+                ],
+                "answers": ["I. The Bernoulli PMF is P(X=1)=p and P(X=0)=1-p, which can be compactly written as P(X=x)=p^x(1-p)^(1-x) for x ∈ {0,1}."]
+            },
+            {
+                "No": 3,
+                "question": "What is the mean of a Bernoulli random variable X with success probability p?",
+                "options": [
+                    "I. p",
+                    "II. 1-p",
+                    "III. p(1-p)",
+                    "IV. √(p(1-p))"
+                ],
+                "answers": ["I. E[X] = 1*p + 0*(1-p) = p. The expected value equals the success probability."]
+            },
+            {
+                "No": 4,
+                "question": "What is the variance of a Bernoulli(p) random variable?",
+                "options": [
+                    "I. p(1-p)",
+                    "II. p",
+                    "III. 1-p",
+                    "IV. √p"
+                ],
+                "answers": ["I. Var(X) = E[X²] - (E[X])² = p - p² = p(1-p). Variance is maximized when p=0.5."]
+            },
+            {
+                "No": 5,
+                "question": "Which distribution describes the sum of n independent Bernoulli trials?",
+                "options": [
+                    "I. Binomial",
+                    "II. Poisson",
+                    "III. Geometric",
+                    "IV. Normal"
+                ],
+                "answers": ["I. The sum of n independent Bernoulli(p) trials follows a Binomial(n,p) distribution."]
+            },
+            {
+                "No": 6,
+                "question": "What is the moment generating function of a Bernoulli(p) distribution?",
+                "options": [
+                    "I. (1-p) + pe^t",
+                    "II. e^(λ(e^t-1))",
+                    "III. (pe^t)/(1-(1-p)e^t)",
+                    "IV. e^(μt+σ²t²/2)"
+                ],
+                "answers": ["I. MGF = E[e^(tX)] = (1-p)e^(t*0) + pe^(t*1) = (1-p) + pe^t."]
+            },
+            {
+                "No": 7,
+                "question": "For a Bernoulli trial, what is P(X=1|X≥0.5)?",
+                "options": [
+                    "I. p",
+                    "II. 1",
+                    "III. 0",
+                    "IV. 1-p"
+                ],
+                "answers": ["II. Since X can only be 0 or 1, X≥0.5 implies X=1, so the probability is 1."]
+            },
+            {
+                "No": 8,
+                "question": "What is the skewness of a Bernoulli(p) distribution?",
+                "options": [
+                    "I. (1-2p)/√(p(1-p))",
+                    "II. p(1-p)",
+                    "III. 3 + 1/(p(1-p))",
+                    "IV. 0"
+                ],
+                "answers": ["I. Skewness = (1-2p)/√(p(1-p)). Positive when p<0.5, negative when p>0.5, zero when p=0.5."]
+            },
+            {
+                "No": 9,
+                "question": "What is the kurtosis of a Bernoulli(p) distribution?",
+                "options": [
+                    "I. [1-3p(1-p)]/[p(1-p)]",
+                    "II. 3",
+                    "III. p(1-p)",
+                    "IV. 1/p + 1/(1-p)"
+                ],
+                "answers": ["I. Kurtosis = [1-3p(1-p)]/[p(1-p)]. Shows excess kurtosis relative to normal distribution."]
+            },
+            {
+                "No": 10,
+                "question": "If X ~ Bernoulli(0.7), what is P(X=0)?",
+                "options": [
+                    "I. 0.3",
+                    "II. 0.7",
+                    "III. 0",
+                    "IV. 1"
+                ],
+                "answers": ["I. P(X=0) = 1-p = 1-0.7 = 0.3. The probability of failure is the complement of success."]
+            },
+            {
+                "No": 11,
+                "question": "What is the entropy of a Bernoulli(p) distribution?",
+                "options": [
+                    "I. -p log p - (1-p) log (1-p)",
+                    "II. p(1-p)",
+                    "III. log(p/(1-p))",
+                    "IV. p log(1/p) + (1-p) log(1/(1-p))"
+                ],
+                "answers": ["I. Entropy measures uncertainty and is H(X) = -Σ p(x)log p(x) = -p log p - (1-p) log (1-p)."]
+            },
+            {
+                "No": 12,
+                "question": "For independent X ~ Bernoulli(p), Y ~ Bernoulli(q), what is P(X=1 and Y=1)?",
+                "options": [
+                    "I. pq",
+                    "II. p+q",
+                    "III. p(1-q)",
+                    "IV. 1-pq"
+                ],
+                "answers": ["I. For independent variables, P(X=1∩Y=1) = P(X=1)*P(Y=1) = p*q."]
+            },
+            {
+                "No": 13,
+                "question": "What is the median of a Bernoulli(p) distribution when p ≠ 0.5?",
+                "options": [
+                    "I. 0 if p < 0.5, 1 if p > 0.5",
+                    "II. Always 0.5",
+                    "III. p",
+                    "IV. Undefined"
+                ],
+                "answers": ["I. The median is the smallest value where CDF ≥ 0.5: 0 when p<0.5 (since P(X≤0)=1-p≥0.5), 1 when p>0.5."]
+            },
+            {
+                "No": 14,
+                "question": "What is the characteristic function of Bernoulli(p)?",
+                "options": [
+                    "I. (1-p) + pe^(it)",
+                    "II. e^(λ(e^(it)-1))",
+                    "III. (1-p+pe^it)^n",
+                    "IV. e^(itμ-σ²t²/2)"
+                ],
+                "answers": ["I. φ(t) = E[e^(itX)] = (1-p)e^(it*0) + pe^(it*1) = (1-p) + pe^(it)."]
+            },
+            {
+                "No": 15,
+                "question": "If X ~ Bernoulli(p), what is E[X²]?",
+                "options": [
+                    "I. p",
+                    "II. p²",
+                    "III. p(1-p)",
+                    "IV. 1-p"
+                ],
+                "answers": ["I. Since X²=X for X ∈ {0,1}, E[X²] = E[X] = p."]
+            },
+            {
+                "No": 16,
+                "question": "What is the relationship between Bernoulli and Binomial distributions?",
+                "options": [
+                    "I. Binomial is sum of independent Bernoulli trials",
+                    "II. Bernoulli is special case of Binomial with n=1",
+                    "III. Both I and II",
+                    "IV. They are unrelated"
+                ],
+                "answers": ["III. Both statements are true: Binomial(n,p) is the sum of n Bernoulli(p) trials, and Bernoulli(p) is Binomial(1,p)."]
+            },
+            {
+                "No": 17,
+                "question": "For X ~ Bernoulli(p), what is Var(3X+2)?",
+                "options": [
+                    "I. 9p(1-p)",
+                    "II. 3p(1-p)",
+                    "III. p(1-p)",
+                    "IV. 9p"
+                ],
+                "answers": ["I. Var(aX+b) = a²Var(X) = 9p(1-p). Constants don't affect variance, multiplier is squared."]
+            },
+            {
+                "No": 18,
+                "question": "What is the mode of a Bernoulli(p) distribution when p=0.5?",
+                "options": [
+                    "I. Both 0 and 1",
+                    "II. 0",
+                    "III. 1",
+                    "IV. Undefined"
+                ],
+                "answers": ["I. When p=0.5, P(X=0)=P(X=1), so both values are modes."]
+            },
+            {
+                "No": 19,
+                "question": "If X ~ Bernoulli(0.4), what is E[e^X]?",
+                "options": [
+                    "I. 0.4e + 0.6",
+                    "II. e^0.4",
+                    "III. 0.4e",
+                    "IV. e^0.6"
+                ],
+                "answers": ["I. E[e^X] = (1-p)e^0 + pe^1 = 0.6*1 + 0.4*e ≈ 0.6 + 0.4*2.718 ≈ 1.6872."]
+            },
+            {
+                "No": 20,
+                "question": "What is P(X=1 or X=0) for any Bernoulli random variable?",
+                "options": [
+                    "I. 1",
+                    "II. p",
+                    "III. 1-p",
+                    "IV. p + (1-p)"
+                ],
+                "answers": ["I. The probability of the entire sample space is always 1, and X can only be 0 or 1."]
+            },
+            {
+                "No": 21,
+                "question": "For X ~ Bernoulli(p), what is the distribution of 1-X?",
+                "options": [
+                    "I. Bernoulli(1-p)",
+                    "II. Bernoulli(p)",
+                    "III. Uniform(0,1)",
+                    "IV. Binomial(1,1-p)"
+                ],
+                "answers": ["I. 1-X swaps successes and failures, so it's Bernoulli(1-p)."]
+            },
+            {
+                "No": 22,
+                "question": "What is the covariance between two independent Bernoulli(p) variables?",
+                "options": [
+                    "I. 0",
+                    "II. p(1-p)",
+                    "III. p²",
+                    "IV. 1-p"
+                ],
+                "answers": ["I. Cov(X,Y) = 0 for independent variables, regardless of distribution."]
+            },
+            {
+                "No": 23,
+                "question": "If X ~ Bernoulli(p), what is the distribution of X²?",
+                "options": [
+                    "I. Bernoulli(p)",
+                    "II. Bernoulli(p²)",
+                    "III. Constant 0",
+                    "IV. Constant 1"
+                ],
+                "answers": ["I. Since X²=X when X ∈ {0,1}, X² has the same distribution as X."]
+            },
+            {
+                "No": 24,
+                "question": "What is the probability generating function of Bernoulli(p)?",
+                "options": [
+                    "I. (1-p) + pz",
+                    "II. (1-p+pz)^n",
+                    "III. e^(λ(z-1))",
+                    "IV. pz/(1-(1-p)z)"
+                ],
+                "answers": ["I. G(z) = E[z^X] = (1-p)z^0 + pz^1 = (1-p) + pz."]
+            },
+            {
+                "No": 25,
+                "question": "For what value of p is a Bernoulli distribution deterministic?",
+                "options": [
+                    "I. p=0 or p=1",
+                    "II. p=0.5",
+                    "III. All p values",
+                    "IV. Never deterministic"
+                ],
+                "answers": ["I. When p=0 (always 0) or p=1 (always 1), the outcome is no longer random."]
+            }
+        ],
 
-        "STA 112: Binomial Probability Distribution - Module 8": [
+
+        "STA 112: Binomial Probability Distribution - Module 9": [
             {
                 "No": 1,
                 "question": "What defines a Binomial experiment?",
