@@ -2859,7 +2859,285 @@
                 "answers": ["I. Ratio = [C(n,k)p^k(1-p)^(n-k)] / [C(n,k-1)p^(k-1)(1-p)^(n-k+1)] = [(n-k+1)/k] * [p/(1-p)]. Useful for recursive calculations."]
             }
         ],
+
            
+        "STA 112: Poisson Probability Distribution - Module 10": [
+            {
+                "No": 1,
+                "question": "What is the probability mass function of a Poisson distribution?",
+                "options": [
+                    "I. P(X=k) = (e^{-λ} λ^k)/k! for k=0,1,2,...",
+                    "II. P(X=k) = C(n,k) p^k (1-p)^(n-k)",
+                    "III. P(X=k) = (1-p)^(k-1) p",
+                    "IV. P(X=k) = 1/λ e^(-k/λ)"
+                ],
+                "answers": ["I. The Poisson PMF is P(X=k) = (e^{-λ} λ^k)/k! where λ is the rate parameter and k is the number of events."]
+            },
+            {
+                "No": 2,
+                "question": "What does λ represent in a Poisson distribution?",
+                "options": [
+                    "I. Both the mean and variance of the distribution",
+                    "II. The probability of success",
+                    "III. The number of trials",
+                    "IV. The standard deviation"
+                ],
+                "answers": ["I. In Poisson distribution, λ is both the mean (expected value) and variance of the distribution."]
+            },
+            {
+                "No": 3,
+                "question": "Which of these is a key assumption of Poisson processes?",
+                "options": [
+                    "I. Events occur independently",
+                    "II. The average rate is constant",
+                    "III. Two events cannot occur at exactly the same time",
+                    "IV. All of the above"
+                ],
+                "answers": ["IV. Poisson processes assume: (1) independence, (2) constant rate λ, and (3) no simultaneous events."]
+            },
+            {
+                "No": 4,
+                "question": "If X ~ Poisson(3), what is P(X=2)?",
+                "options": [
+                    "I. 0.2240",
+                    "II. 0.4232",
+                    "III. 0.1991",
+                    "IV. 0.3528"
+                ],
+                "answers": ["I. P(X=2) = (e^-3 * 3^2)/2! = (0.0498 * 9)/2 ≈ 0.2240."]
+            },
+            {
+                "No": 5,
+                "question": "What is E[X] for X ~ Poisson(λ)?",
+                "options": [
+                    "I. λ",
+                    "II. λ²",
+                    "III. 1/λ",
+                    "IV. √λ"
+                ],
+                "answers": ["I. The expected value E[X] = λ for Poisson distribution."]
+            },
+            {
+                "No": 6,
+                "question": "What is Var(X) for X ~ Poisson(λ)?",
+                "options": [
+                    "I. λ",
+                    "II. λ²",
+                    "III. 1/λ",
+                    "IV. √λ"
+                ],
+                "answers": ["I. The variance Var(X) = λ for Poisson distribution (equal to the mean)."]
+            },
+            {
+                "No": 7,
+                "question": "When can Poisson approximate Binomial?",
+                "options": [
+                    "I. When n is large and p is small",
+                    "II. When n is small and p is large",
+                    "III. When n=1",
+                    "IV. When p=0.5"
+                ],
+                "answers": ["I. Poisson approximates Binomial when n→∞, p→0 with np=λ constant."]
+            },
+            {
+                "No": 8,
+                "question": "If calls arrive at 2 per minute, what's P(5 calls in 2 minutes)?",
+                "options": [
+                    "I. 0.1563",
+                    "II. 0.0361",
+                    "III. 0.1755",
+                    "IV. 0.2240"
+                ],
+                "answers": ["II. For 2/min, λ=4 for 2 minutes. P(X=5) = (e^-4 * 4^5)/5! ≈ 0.1563."]
+            },
+            {
+                "No": 9,
+                "question": "What is the skewness of Poisson(λ)?",
+                "options": [
+                    "I. 1/√λ",
+                    "II. λ",
+                    "III. 1/λ",
+                    "IV. √λ"
+                ],
+                "answers": ["I. Skewness = 1/√λ. Distribution becomes more symmetric as λ increases."]
+            },
+            {
+                "No": 10,
+                "question": "What is the MGF of Poisson(λ)?",
+                "options": [
+                    "I. exp(λ(e^t - 1))",
+                    "II. (1-p + pe^t)^n",
+                    "III. e^(μt + σ²t²/2)",
+                    "IV. λ/(λ-t)"
+                ],
+                "answers": ["I. The MGF is M(t) = E[e^{tX}] = exp(λ(e^t - 1))."]
+            },
+            {
+                "No": 11,
+                "question": "If X ~ Poisson(5), what is P(X≥3)?",
+                "options": [
+                    "I. 0.8753",
+                    "II. 0.1247",
+                    "III. 0.5595",
+                    "IV. 0.2650"
+                ],
+                "answers": ["I. P(X≥3) = 1 - P(X≤2) = 1 - [P(0)+P(1)+P(2)] ≈ 1 - 0.1247 = 0.8753."]
+            },
+            {
+                "No": 12,
+                "question": "What is the mode of Poisson(λ) when λ is not integer?",
+                "options": [
+                    "I. ⌊λ⌋",
+                    "II. ⌈λ⌉",
+                    "III. Both ⌊λ⌋ and ⌊λ⌋-1",
+                    "IV. λ"
+                ],
+                "answers": ["I. For non-integer λ, mode is the floor function ⌊λ⌋."]
+            },
+            {
+                "No": 13,
+                "question": "What is P(X=0) for X ~ Poisson(λ)?",
+                "options": [
+                    "I. e^{-λ}",
+                    "II. 1-e^{-λ}",
+                    "III. λe^{-λ}",
+                    "IV. 0"
+                ],
+                "answers": ["I. P(X=0) = e^{-λ} λ^0/0! = e^{-λ}."]
+            },
+            {
+                "No": 14,
+                "question": "For independent X ~ Poisson(λ), Y ~ Poisson(μ), what is X+Y?",
+                "options": [
+                    "I. Poisson(λ+μ)",
+                    "II. Poisson(λμ)",
+                    "III. Normal(λ+μ, √(λ+μ))",
+                    "IV. Not Poisson"
+                ],
+                "answers": ["I. Sum of independent Poissons is Poisson with summed rates."]
+            },
+            {
+                "No": 15,
+                "question": "What is the kurtosis of Poisson(λ)?",
+                "options": [
+                    "I. 3 + 1/λ",
+                    "II. 1/λ",
+                    "III. 3",
+                    "IV. λ"
+                ],
+                "answers": ["I. Kurtosis = 3 + 1/λ (excess kurtosis decreases as λ increases)."]
+            },
+            {
+                "No": 16,
+                "question": "If defects occur at 0.1 per meter, P(no defects in 10 meters)?",
+                "options": [
+                    "I. e^{-1} ≈ 0.3679",
+                    "II. 1-e^{-1} ≈ 0.6321",
+                    "III. e^{-0.1} ≈ 0.9048",
+                    "IV. 0.1e^{-0.1} ≈ 0.0905"
+                ],
+                "answers": ["I. For 0.1/meter, λ=1 for 10m. P(X=0) = e^{-1} ≈ 0.3679."]
+            },
+            {
+                "No": 17,
+                "question": "What is the characteristic function of Poisson(λ)?",
+                "options": [
+                    "I. exp(λ(e^{it} - 1))",
+                    "II. (1-p + pe^{it})^n",
+                    "III. e^{itμ - σ²t²/2}",
+                    "IV. λ/(λ-it)"
+                ],
+                "answers": ["I. φ(t) = E[e^{itX}] = exp(λ(e^{it} - 1))."]
+            },
+            {
+                "No": 18,
+                "question": "For X ~ Poisson(λ), what is E[1/(X+1)]?",
+                "options": [
+                    "I. (1-e^{-λ})/λ",
+                    "II. e^{-λ}",
+                    "III. 1/λ",
+                    "IV. 1/(λ+1)"
+                ],
+                "answers": ["I. E[1/(X+1)] = (1-e^{-λ})/λ, derived using Taylor series expansion."]
+            },
+            {
+                "No": 19,
+                "question": "What is the median of Poisson(λ)?",
+                "options": [
+                    "I. Approximately λ - 1/3 for large λ",
+                    "II. Always ⌊λ⌋",
+                    "III. λ",
+                    "IV. Undefined"
+                ],
+                "answers": ["I. For large λ, median ≈ λ - 1/3. No simple closed form in general."]
+            },
+            {
+                "No": 20,
+                "question": "If X ~ Poisson(5), what is P(3 ≤ X ≤ 7)?",
+                "options": [
+                    "I. 0.7426",
+                    "II. 0.2574",
+                    "III. 0.8666",
+                    "IV. 0.1334"
+                ],
+                "answers": ["I. P(3≤X≤7) = P(X=3)+...+P(X=7) ≈ 0.1404+0.1755+0.1755+0.1462+0.1044 ≈ 0.7426."]
+            },
+            {
+                "No": 21,
+                "question": "What is the probability generating function of Poisson(λ)?",
+                "options": [
+                    "I. exp(λ(z-1))",
+                    "II. (1-p+pz)^n",
+                    "III. z/(1-(1-p)z)",
+                    "IV. λz/(1-(1-λ)z)"
+                ],
+                "answers": ["I. G(z) = E[z^X] = exp(λ(z-1))."]
+            },
+            {
+                "No": 22,
+                "question": "For X ~ Poisson(λ), what is E[X(X-1)]?",
+                "options": [
+                    "I. λ²",
+                    "II. λ",
+                    "III. λ(λ+1)",
+                    "IV. λ(λ-1)"
+                ],
+                "answers": ["I. E[X(X-1)] = λ² (second factorial moment)."]
+            },
+            {
+                "No": 23,
+                "question": "What is the entropy of Poisson(λ)?",
+                "options": [
+                    "I. λ(1 - lnλ) + e^{-λ}Σ(λ^k ln(k!)/k!)",
+                    "II. λ",
+                    "III. lnλ",
+                    "IV. 1/λ"
+                ],
+                "answers": ["I. Entropy H(X) = -Σ P(k)lnP(k) = λ(1 - lnλ) + e^{-λ}Σ(λ^k ln(k!)/k!)."]
+            },
+            {
+                "No": 24,
+                "question": "If X ~ Poisson(λ), what is the distribution of X given X≥1?",
+                "options": [
+                    "I. Zero-truncated Poisson",
+                    "II. Binomial",
+                    "III. Geometric",
+                    "IV. Normal"
+                ],
+                "answers": ["I. Conditioning on X≥1 gives a zero-truncated Poisson distribution."]
+            },
+            {
+                "No": 25,
+                "question": "What is the limit of Poisson(λ) as λ→∞?",
+                "options": [
+                    "I. Normal(λ, √λ)",
+                    "II. Binomial(n,λ/n)",
+                    "III. Exponential(1/λ)",
+                    "IV. Uniform(0,2λ)"
+                ],
+                "answers": ["I. By CLT, Poisson(λ) → Normal(λ,√λ) as λ→∞."]
+            }
+        ],
 
         "COS 101: Fundamentals of Computer Science - Week 1": [
             {
