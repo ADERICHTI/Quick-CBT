@@ -3139,6 +3139,287 @@
             }
         ],
 
+
+            "STA 112: Normal Distribution - Module 11": [
+            {
+                "No": 1,
+                "question": "A continuous random variable X follows a normal distribution with mean μ = 50 and standard deviation σ = 10. What is P(X > 60)?",
+                "options": [
+                    "I. 0.1587",
+                    "II. 0.3413",
+                    "III. 0.8413",
+                    "IV. 0.5000"
+                ],
+                "answers": ["I. Z = (60-50)/10 = 1. P(X > 60) = P(Z > 1) = 1 - 0.8413 = 0.1587 (from Z-table)."]
+            },
+            {
+                "No": 2,
+                "question": "If X ~ N(30, 25), what is the probability that X lies between 25 and 35?",
+                "options": [
+                    "I. 0.6826",
+                    "II. 0.3413",
+                    "III. 0.9544",
+                    "IV. 0.5000"
+                ],
+                "answers": ["I. σ = √25 = 5. Z₁ = (25-30)/5 = -1, Z₂ = (35-30)/5 = 1. P(-1 < Z < 1) = 0.6826."]
+            },
+            {
+                "No": 3,
+                "question": "The lifetime of a lightbulb is normally distributed with μ = 1000 hours and σ = 100 hours. What percentage of bulbs last less than 800 hours?",
+                "options": [
+                    "I. 2.28%",
+                    "II. 15.87%",
+                    "III. 34.13%",
+                    "IV. 47.72%"
+                ],
+                "answers": ["I. Z = (800-1000)/100 = -2. P(X < 800) = P(Z < -2) = 0.0228 (2.28%)."]
+            },
+            {
+                "No": 4,
+                "question": "For a standard normal distribution, what is P(-1.5 < Z < 1.5)?",
+                "options": [
+                    "I. 0.8664",
+                    "II. 0.9332",
+                    "III. 0.4332",
+                    "IV. 0.0668"
+                ],
+                "answers": ["I. P(Z < 1.5) = 0.9332, P(Z < -1.5) = 0.0668. P(-1.5 < Z < 1.5) = 0.9332 - 0.0668 = 0.8664."]
+            },
+            {
+                "No": 5,
+                "question": "Given X ~ N(70, 16), find the value of k such that P(X < k) = 0.95.",
+                "options": [
+                    "I. 76.58",
+                    "II. 80.32",
+                    "III. 83.45",
+                    "IV. 86.64"
+                ],
+                "answers": ["I. σ = √16 = 4. For P(Z < z) = 0.95, z ≈ 1.645. k = μ + zσ = 70 + 1.645×4 = 76.58."]
+            },
+            {
+                "No": 6,
+                "question": "The heights of students are normally distributed with μ = 165 cm and σ = 10 cm. What is P(155 < X < 175)?",
+                "options": [
+                    "I. 0.6826",
+                    "II. 0.9544",
+                    "III. 0.9974",
+                    "IV. 0.5000"
+                ],
+                "answers": ["I. Z₁ = (155-165)/10 = -1, Z₂ = (175-165)/10 = 1. P(-1 < Z < 1) = 0.6826."]
+            },
+            {
+                "No": 7,
+                "question": "For a standard normal distribution, what is the value of P(Z > 2.33)?",
+                "options": [
+                    "I. 0.0099",
+                    "II. 0.4901",
+                    "III. 0.9901",
+                    "IV. 0.5000"
+                ],
+                "answers": ["I. P(Z > 2.33) = 1 - P(Z < 2.33) = 1 - 0.9901 = 0.0099."]
+            },
+            {
+                "No": 8,
+                "question": "If X ~ N(100, 25), what is P(90 < X < 110)?",
+                "options": [
+                    "I. 0.9544",
+                    "II. 0.6826",
+                    "III. 0.3413",
+                    "IV. 0.5000"
+                ],
+                "answers": ["I. σ = √25 = 5. Z₁ = (90-100)/5 = -2, Z₂ = (110-100)/5 = 2. P(-2 < Z < 2) = 0.9544."]
+            },
+            {
+                "No": 9,
+                "question": "What is the 90th percentile of a standard normal distribution?",
+                "options": [
+                    "I. 1.28",
+                    "II. 1.645",
+                    "III. 1.96",
+                    "IV. 2.33"
+                ],
+                "answers": ["I. The Z-value for which P(Z < z) = 0.90 is z ≈ 1.28."]
+            },
+            {
+                "No": 10,
+                "question": "A machine produces items with lengths normally distributed (μ = 50 mm, σ = 2 mm). What percentage are longer than 53 mm?",
+                "options": [
+                    "I. 6.68%",
+                    "II. 15.87%",
+                    "III. 93.32%",
+                    "IV. 30.85%"
+                ],
+                "answers": ["I. Z = (53-50)/2 = 1.5. P(X > 53) = P(Z > 1.5) = 1 - 0.9332 = 0.0668 (6.68%)."]
+            },
+            {
+                "No": 11,
+                "question": "For X ~ N(40, 9), find P(X < 37).",
+                "options": [
+                    "I. 0.1587",
+                    "II. 0.3413",
+                    "III. 0.8413",
+                    "IV. 0.5000"
+                ],
+                "answers": ["I. σ = √9 = 3. Z = (37-40)/3 = -1. P(X < 37) = P(Z < -1) = 0.1587."]
+            },
+            {
+                "No": 12,
+                "question": "The IQ scores are normally distributed with μ = 100 and σ = 15. What is the probability of an IQ > 130?",
+                "options": [
+                    "I. 0.0228",
+                    "II. 0.9772",
+                    "III. 0.3413",
+                    "IV. 0.5000"
+                ],
+                "answers": ["I. Z = (130-100)/15 = 2. P(X > 130) = P(Z > 2) = 1 - 0.9772 = 0.0228."]
+            },
+            {
+                "No": 13,
+                "question": "If P(Z < k) = 0.99, what is k?",
+                "options": [
+                    "I. 2.33",
+                    "II. 1.96",
+                    "III. 1.645",
+                    "IV. 2.58"
+                ],
+                "answers": ["I. The Z-value for P(Z < k) = 0.99 is k ≈ 2.33."]
+            },
+            {
+                "No": 14,
+                "question": "For X ~ N(20, 4), find P(18 < X < 22).",
+                "options": [
+                    "I. 0.6826",
+                    "II. 0.9544",
+                    "III. 0.9974",
+                    "IV. 0.5000"
+                ],
+                "answers": ["I. σ = √4 = 2. Z₁ = (18-20)/2 = -1, Z₂ = (22-20)/2 = 1. P(-1 < Z < 1) = 0.6826."]
+            },
+            {
+                "No": 15,
+                "question": "What is the median of a normal distribution with μ = 75 and σ = 5?",
+                "options": [
+                    "I. 75",
+                    "II. 70",
+                    "III. 80",
+                    "IV. 5"
+                ],
+                "answers": ["I. For a normal distribution, mean = median = mode. Thus, median = μ = 75."]
+            },
+            {
+                "No": 16,
+                "question": "If P(Z > k) = 0.05, what is k?",
+                "options": [
+                    "I. 1.645",
+                    "II. 1.96",
+                    "III. 2.33",
+                    "IV. 2.58"
+                ],
+                "answers": ["I. P(Z > k) = 0.05 implies P(Z < k) = 0.95. From Z-table, k ≈ 1.645."]
+            },
+            {
+                "No": 17,
+                "question": "The weights of apples are normally distributed (μ = 150g, σ = 20g). What is P(130 < X < 170)?",
+                "options": [
+                    "I. 0.6826",
+                    "II. 0.9544",
+                    "III. 0.9974",
+                    "IV. 0.5000"
+                ],
+                "answers": ["II. Z₁ = (130-150)/20 = -1, Z₂ = (170-150)/20 = 1. P(-1 < Z < 1) = 0.6826, but the range covers ±2σ (130 to 170 is μ ± σ). Correction: P(130 < X < 170) = P(-1 < Z < 1) = 0.6826. However, the correct answer for μ ± 2σ (110 to 190) would be 0.9544. The question likely intended μ ± σ, so the answer is I. 0.6826."]
+            },
+            {
+                "No": 18,
+                "question": "For a standard normal distribution, what is P(Z < -1.96)?",
+                "options": [
+                    "I. 0.0250",
+                    "II. 0.9750",
+                    "III. 0.4750",
+                    "IV. 0.5000"
+                ],
+                "answers": ["I. P(Z < -1.96) = 0.0250 (from Z-table)."]
+            },
+            {
+                "No": 19,
+                "question": "The exam scores are N(70, 100). What score is at the 95th percentile?",
+                "options": [
+                    "I. 86.4",
+                    "II. 90.0",
+                    "III. 95.0",
+                    "IV. 100.0"
+                ],
+                "answers": ["I. σ = √100 = 10. For P(Z < z) = 0.95, z ≈ 1.645. Score = μ + zσ = 70 + 1.645×10 = 86.4."]
+            },
+            {
+                "No": 20,
+                "question": "If X ~ N(50, 16), what is P(X = 50)?",
+                "options": [
+                    "I. 0",
+                    "II. 0.5",
+                    "III. 1",
+                    "IV. 0.25"
+                ],
+                "answers": ["I. For a continuous distribution, P(X = exact value) = 0. Probability is defined over intervals."]
+            },
+            {
+                "No": 21,
+                "question": "What is the variance of a standard normal distribution?",
+                "options": [
+                    "I. 1",
+                    "II. 0",
+                    "III. 2",
+                    "IV. 0.5"
+                ],
+                "answers": ["I. By definition, a standard normal distribution has μ = 0 and σ² = 1."]
+            },
+            {
+                "No": 22,
+                "question": "For X ~ N(30, 9), find P(X > 36).",
+                "options": [
+                    "I. 0.0228",
+                    "II. 0.9772",
+                    "III. 0.3413",
+                    "IV. 0.5000"
+                ],
+                "answers": ["I. σ = √9 = 3. Z = (36-30)/3 = 2. P(X > 36) = P(Z > 2) = 1 - 0.9772 = 0.0228."]
+            },
+            {
+                "No": 23,
+                "question": "The 99% confidence interval for a standard normal distribution is:",
+                "options": [
+                    "I. [-2.58, 2.58]",
+                    "II. [-1.96, 1.96]",
+                    "III. [-1.645, 1.645]",
+                    "IV. [-2.33, 2.33]"
+                ],
+                "answers": ["I. For 99% confidence, P(-2.58 < Z < 2.58) ≈ 0.99."]
+            },
+            {
+                "No": 24,
+                "question": "If X ~ N(μ, σ²), what is the distribution of Z = (X - μ)/σ?",
+                "options": [
+                    "I. N(0, 1)",
+                    "II. N(μ, σ²)",
+                    "III. N(1, 0)",
+                    "IV. N(μ, 1)"
+                ],
+                "answers": ["I. Standardizing any normal random variable X yields Z ~ N(0, 1)."]
+            },
+            {
+                "No": 25,
+                "question": "What is the skewness of a normal distribution?",
+                "options": [
+                    "I. 0",
+                    "II. 1",
+                    "III. 2",
+                    "IV. 3"
+                ],
+                "answers": ["I. The normal distribution is symmetric, so its skewness = 0."]
+            }
+        ],
+       
+           
+
         "COS 101: Fundamentals of Computer Science - Week 1": [
             {
                 "No": 1,
@@ -3418,283 +3699,6 @@
         ],
 
 
-        "STA 112: Normal Distribution - Module 11": [
-            {
-                "No": 1,
-                "question": "A continuous random variable X follows a normal distribution with mean μ = 50 and standard deviation σ = 10. What is P(X > 60)?",
-                "options": [
-                    "I. 0.1587",
-                    "II. 0.3413",
-                    "III. 0.8413",
-                    "IV. 0.5000"
-                ],
-                "answers": ["I. Z = (60-50)/10 = 1. P(X > 60) = P(Z > 1) = 1 - 0.8413 = 0.1587 (from Z-table)."]
-            },
-            {
-                "No": 2,
-                "question": "If X ~ N(30, 25), what is the probability that X lies between 25 and 35?",
-                "options": [
-                    "I. 0.6826",
-                    "II. 0.3413",
-                    "III. 0.9544",
-                    "IV. 0.5000"
-                ],
-                "answers": ["I. σ = √25 = 5. Z₁ = (25-30)/5 = -1, Z₂ = (35-30)/5 = 1. P(-1 < Z < 1) = 0.6826."]
-            },
-            {
-                "No": 3,
-                "question": "The lifetime of a lightbulb is normally distributed with μ = 1000 hours and σ = 100 hours. What percentage of bulbs last less than 800 hours?",
-                "options": [
-                    "I. 2.28%",
-                    "II. 15.87%",
-                    "III. 34.13%",
-                    "IV. 47.72%"
-                ],
-                "answers": ["I. Z = (800-1000)/100 = -2. P(X < 800) = P(Z < -2) = 0.0228 (2.28%)."]
-            },
-            {
-                "No": 4,
-                "question": "For a standard normal distribution, what is P(-1.5 < Z < 1.5)?",
-                "options": [
-                    "I. 0.8664",
-                    "II. 0.9332",
-                    "III. 0.4332",
-                    "IV. 0.0668"
-                ],
-                "answers": ["I. P(Z < 1.5) = 0.9332, P(Z < -1.5) = 0.0668. P(-1.5 < Z < 1.5) = 0.9332 - 0.0668 = 0.8664."]
-            },
-            {
-                "No": 5,
-                "question": "Given X ~ N(70, 16), find the value of k such that P(X < k) = 0.95.",
-                "options": [
-                    "I. 76.58",
-                    "II. 80.32",
-                    "III. 83.45",
-                    "IV. 86.64"
-                ],
-                "answers": ["I. σ = √16 = 4. For P(Z < z) = 0.95, z ≈ 1.645. k = μ + zσ = 70 + 1.645×4 = 76.58."]
-            },
-            {
-                "No": 6,
-                "question": "The heights of students are normally distributed with μ = 165 cm and σ = 10 cm. What is P(155 < X < 175)?",
-                "options": [
-                    "I. 0.6826",
-                    "II. 0.9544",
-                    "III. 0.9974",
-                    "IV. 0.5000"
-                ],
-                "answers": ["I. Z₁ = (155-165)/10 = -1, Z₂ = (175-165)/10 = 1. P(-1 < Z < 1) = 0.6826."]
-            },
-            {
-                "No": 7,
-                "question": "For a standard normal distribution, what is the value of P(Z > 2.33)?",
-                "options": [
-                    "I. 0.0099",
-                    "II. 0.4901",
-                    "III. 0.9901",
-                    "IV. 0.5000"
-                ],
-                "answers": ["I. P(Z > 2.33) = 1 - P(Z < 2.33) = 1 - 0.9901 = 0.0099."]
-            },
-            {
-                "No": 8,
-                "question": "If X ~ N(100, 25), what is P(90 < X < 110)?",
-                "options": [
-                    "I. 0.9544",
-                    "II. 0.6826",
-                    "III. 0.3413",
-                    "IV. 0.5000"
-                ],
-                "answers": ["I. σ = √25 = 5. Z₁ = (90-100)/5 = -2, Z₂ = (110-100)/5 = 2. P(-2 < Z < 2) = 0.9544."]
-            },
-            {
-                "No": 9,
-                "question": "What is the 90th percentile of a standard normal distribution?",
-                "options": [
-                    "I. 1.28",
-                    "II. 1.645",
-                    "III. 1.96",
-                    "IV. 2.33"
-                ],
-                "answers": ["I. The Z-value for which P(Z < z) = 0.90 is z ≈ 1.28."]
-            },
-            {
-                "No": 10,
-                "question": "A machine produces items with lengths normally distributed (μ = 50 mm, σ = 2 mm). What percentage are longer than 53 mm?",
-                "options": [
-                    "I. 6.68%",
-                    "II. 15.87%",
-                    "III. 93.32%",
-                    "IV. 30.85%"
-                ],
-                "answers": ["I. Z = (53-50)/2 = 1.5. P(X > 53) = P(Z > 1.5) = 1 - 0.9332 = 0.0668 (6.68%)."]
-            },
-            {
-                "No": 11,
-                "question": "For X ~ N(40, 9), find P(X < 37).",
-                "options": [
-                    "I. 0.1587",
-                    "II. 0.3413",
-                    "III. 0.8413",
-                    "IV. 0.5000"
-                ],
-                "answers": ["I. σ = √9 = 3. Z = (37-40)/3 = -1. P(X < 37) = P(Z < -1) = 0.1587."]
-            },
-            {
-                "No": 12,
-                "question": "The IQ scores are normally distributed with μ = 100 and σ = 15. What is the probability of an IQ > 130?",
-                "options": [
-                    "I. 0.0228",
-                    "II. 0.9772",
-                    "III. 0.3413",
-                    "IV. 0.5000"
-                ],
-                "answers": ["I. Z = (130-100)/15 = 2. P(X > 130) = P(Z > 2) = 1 - 0.9772 = 0.0228."]
-            },
-            {
-                "No": 13,
-                "question": "If P(Z < k) = 0.99, what is k?",
-                "options": [
-                    "I. 2.33",
-                    "II. 1.96",
-                    "III. 1.645",
-                    "IV. 2.58"
-                ],
-                "answers": ["I. The Z-value for P(Z < k) = 0.99 is k ≈ 2.33."]
-            },
-            {
-                "No": 14,
-                "question": "For X ~ N(20, 4), find P(18 < X < 22).",
-                "options": [
-                    "I. 0.6826",
-                    "II. 0.9544",
-                    "III. 0.9974",
-                    "IV. 0.5000"
-                ],
-                "answers": ["I. σ = √4 = 2. Z₁ = (18-20)/2 = -1, Z₂ = (22-20)/2 = 1. P(-1 < Z < 1) = 0.6826."]
-            },
-            {
-                "No": 15,
-                "question": "What is the median of a normal distribution with μ = 75 and σ = 5?",
-                "options": [
-                    "I. 75",
-                    "II. 70",
-                    "III. 80",
-                    "IV. 5"
-                ],
-                "answers": ["I. For a normal distribution, mean = median = mode. Thus, median = μ = 75."]
-            },
-            {
-                "No": 16,
-                "question": "If P(Z > k) = 0.05, what is k?",
-                "options": [
-                    "I. 1.645",
-                    "II. 1.96",
-                    "III. 2.33",
-                    "IV. 2.58"
-                ],
-                "answers": ["I. P(Z > k) = 0.05 implies P(Z < k) = 0.95. From Z-table, k ≈ 1.645."]
-            },
-            {
-                "No": 17,
-                "question": "The weights of apples are normally distributed (μ = 150g, σ = 20g). What is P(130 < X < 170)?",
-                "options": [
-                    "I. 0.6826",
-                    "II. 0.9544",
-                    "III. 0.9974",
-                    "IV. 0.5000"
-                ],
-                "answers": ["II. Z₁ = (130-150)/20 = -1, Z₂ = (170-150)/20 = 1. P(-1 < Z < 1) = 0.6826, but the range covers ±2σ (130 to 170 is μ ± σ). Correction: P(130 < X < 170) = P(-1 < Z < 1) = 0.6826. However, the correct answer for μ ± 2σ (110 to 190) would be 0.9544. The question likely intended μ ± σ, so the answer is I. 0.6826."]
-            },
-            {
-                "No": 18,
-                "question": "For a standard normal distribution, what is P(Z < -1.96)?",
-                "options": [
-                    "I. 0.0250",
-                    "II. 0.9750",
-                    "III. 0.4750",
-                    "IV. 0.5000"
-                ],
-                "answers": ["I. P(Z < -1.96) = 0.0250 (from Z-table)."]
-            },
-            {
-                "No": 19,
-                "question": "The exam scores are N(70, 100). What score is at the 95th percentile?",
-                "options": [
-                    "I. 86.4",
-                    "II. 90.0",
-                    "III. 95.0",
-                    "IV. 100.0"
-                ],
-                "answers": ["I. σ = √100 = 10. For P(Z < z) = 0.95, z ≈ 1.645. Score = μ + zσ = 70 + 1.645×10 = 86.4."]
-            },
-            {
-                "No": 20,
-                "question": "If X ~ N(50, 16), what is P(X = 50)?",
-                "options": [
-                    "I. 0",
-                    "II. 0.5",
-                    "III. 1",
-                    "IV. 0.25"
-                ],
-                "answers": ["I. For a continuous distribution, P(X = exact value) = 0. Probability is defined over intervals."]
-            },
-            {
-                "No": 21,
-                "question": "What is the variance of a standard normal distribution?",
-                "options": [
-                    "I. 1",
-                    "II. 0",
-                    "III. 2",
-                    "IV. 0.5"
-                ],
-                "answers": ["I. By definition, a standard normal distribution has μ = 0 and σ² = 1."]
-            },
-            {
-                "No": 22,
-                "question": "For X ~ N(30, 9), find P(X > 36).",
-                "options": [
-                    "I. 0.0228",
-                    "II. 0.9772",
-                    "III. 0.3413",
-                    "IV. 0.5000"
-                ],
-                "answers": ["I. σ = √9 = 3. Z = (36-30)/3 = 2. P(X > 36) = P(Z > 2) = 1 - 0.9772 = 0.0228."]
-            },
-            {
-                "No": 23,
-                "question": "The 99% confidence interval for a standard normal distribution is:",
-                "options": [
-                    "I. [-2.58, 2.58]",
-                    "II. [-1.96, 1.96]",
-                    "III. [-1.645, 1.645]",
-                    "IV. [-2.33, 2.33]"
-                ],
-                "answers": ["I. For 99% confidence, P(-2.58 < Z < 2.58) ≈ 0.99."]
-            },
-            {
-                "No": 24,
-                "question": "If X ~ N(μ, σ²), what is the distribution of Z = (X - μ)/σ?",
-                "options": [
-                    "I. N(0, 1)",
-                    "II. N(μ, σ²)",
-                    "III. N(1, 0)",
-                    "IV. N(μ, 1)"
-                ],
-                "answers": ["I. Standardizing any normal random variable X yields Z ~ N(0, 1)."]
-            },
-            {
-                "No": 25,
-                "question": "What is the skewness of a normal distribution?",
-                "options": [
-                    "I. 0",
-                    "II. 1",
-                    "III. 2",
-                    "IV. 3"
-                ],
-                "answers": ["I. The normal distribution is symmetric, so its skewness = 0."]
-            }
-        ],
          
     
         "COS 101: History and Generation of Computing - Week 2": [
