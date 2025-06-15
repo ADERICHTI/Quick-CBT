@@ -32,7 +32,7 @@ const elements = {
 // ======================
 // State Management
 // ======================
-const state = {
+const stateA = {
   currentUser: null,
   isEditingProfile: false,
   activeToasts: 0
@@ -125,9 +125,9 @@ const userService = {
 
   async updateProfile(updates) {
     try {
-      if (!state.currentUser) return;
+      if (!stateA.currentUser) return;
       
-      await db.collection('users').doc(state.currentUser.uid).update(updates);
+      await db.collection('users').doc(stateA.currentUser.uid).update(updates);
       return true;
     } catch (error) {
       console.error('Error updating profile:', error);
@@ -137,9 +137,9 @@ const userService = {
 
   async loadUserData() {
     try {
-      if (!state.currentUser) return;
+      if (!stateA.currentUser) return;
       
-      const docSnap = await db.collection('users').doc(state.currentUser.uid).get();
+      const docSnap = await db.collection('users').doc(stateA.currentUser.uid).get();
       return docSnap.exists ? docSnap.data() : null;
     } catch (error) {
       console.error('Error loading user data:', error);
@@ -193,14 +193,14 @@ const uiService = {
     });
 
     elements.profileEditBtn.textContent = enable ? 'Save Changes' : 'Edit Profile';
-    state.isEditingProfile = enable;
+    stateA.isEditingProfile = enable;
   },
 
   updateSettingsUI(userData) {
     // Profile Section
-    elements.settingsProfilePic.src = state.currentUser.photoURL || 'https://via.placeholder.com/150';
-    elements.settingsUserName.textContent = state.currentUser.displayName || 'User';
-    elements.settingsUserEmail.textContent = state.currentUser.email || 'Not available';
+    elements.settingsProfilePic.src = stateA.currentUser.photoURL || 'https://via.placeholder.com/150';
+    elements.settingsUserName.textContent = stateA.currentUser.displayName || 'User';
+    elements.settingsUserEmail.textContent = stateA.currentUser.email || 'Not available';
     
     // School Data
     elements.settingsFaculty.textContent = userData.schoolData.faculty;
@@ -267,9 +267,9 @@ const uiService = {
   },
 
   showToast(message, isError = false) {
-    if (state.activeToasts >= 3) return;
+    if (stateA.activeToasts >= 3) return;
     
-    state.activeToasts++;
+    stateA.activeToasts++;
     const toast = document.createElement('div');
     toast.className = `toast ${isError ? 'error' : 'success'}`;
     toast.textContent = message;
@@ -279,7 +279,7 @@ const uiService = {
       toast.classList.add('fade-out');
       setTimeout(() => {
         toast.remove();
-        state.activeToasts--;
+        stateA.activeToasts--;
       }, 300);
     }, 3000);
   }
@@ -319,7 +319,7 @@ const handleSignOut = async () => {
 };
 
 const handleProfileEdit = async () => {
-  if (state.isEditingProfile) {
+  if (stateA.isEditingProfile) {
     try {
       const updates = {
         'schoolData.faculty': elements.settingsFaculty.textContent.trim(),
@@ -353,7 +353,7 @@ const initAuth = () => {
   auth.onAuthStateChanged(async (user) => {
     try {
       if (user) {
-        state.currentUser = user;
+        stateA.currentUser = user;
         uiService.showUserProfile(user);
         uiService.showAppContent();
         
@@ -364,11 +364,11 @@ const initAuth = () => {
           uiService.updateSettingsUI(userData);
         }
       } else {
-        state.currentUser = null;
+        stateA.currentUser = null;
         uiService.showSignInScreen();
       }
     } catch (error) {
-      console.error('Auth state change error:', error);
+      console.error('Auth stateA change error:', error);
       uiService.showToast('Error loading application data', true);
     }
   });
