@@ -288,7 +288,7 @@ const uiService = {
 // ======================
 // Event Handlers
 // ======================
-const setupEventListeners = () => {
+const setupEventListenersAuth = () => {
   // Authentication
   elements.signInButton.addEventListener('click', handleSignIn);
   elements.signOutButton.addEventListener('click', handleSignOut);
@@ -347,7 +347,7 @@ const handleProfileEdit = async () => {
 // Initialization
 // ======================
 const initAuth = () => {
-  setupEventListeners();
+  setupEventListenersAuth();
   uiService.showSignInScreen();
 
   auth.onAuthStateChanged(async (user) => {
