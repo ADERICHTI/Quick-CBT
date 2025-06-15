@@ -347,7 +347,7 @@ const handleProfileEdit = async () => {
 // ======================
 // Initialization
 // ======================
-const init = () => {
+const initAuth = () => {
   setupEventListeners();
   uiService.showSignInScreen();
 
@@ -375,5 +375,4 @@ const init = () => {
   });
 };
 
-// Start the application
-document.addEventListener('DOMContentLoaded', init);
+
