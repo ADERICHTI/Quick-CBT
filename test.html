@@ -1312,6 +1312,7 @@
               initAuth(); // Initialize authentication
               setupEventListeners();
               populateCourseCategories();
+              await handleUserSignIn(user); // Update user status
               
               // Only populate subject grid if user is authenticated
               auth.onAuthStateChanged(user => {
