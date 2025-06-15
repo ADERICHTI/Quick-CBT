@@ -1320,12 +1320,8 @@
                       populateCourseCategories();
 
 
-      const userDoc = await db.collection('users').doc(user.uid).get();
-        if (userDoc.exists) {
-            const userData = userDoc.data();
-            alert(userData.uid)
-            // Use userData.preferences to set user preferences
-        }
+    //  const userDoc = await db.collection('users').doc(user.uid).get();
+     
                   }
               });
           }
