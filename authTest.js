@@ -33,7 +33,7 @@ async function updateUserDocument(user, updates) {
 }   
 
 // Sign-in handler
-export async function handleUserSignIn(user) {
+async function handleUserSignIn(user) {
     const timestamp = firebase.firestore.FieldValue.serverTimestamp();
     
     const userData = {
@@ -58,7 +58,7 @@ export async function handleUserSignIn(user) {
 }
 
 // Sign-out handler
-export async function handleUserSignOut(user) {
+async function handleUserSignOut(user) {
     const timestamp = firebase.firestore.FieldValue.serverTimestamp();
     
     const updates = {
