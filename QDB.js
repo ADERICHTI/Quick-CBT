@@ -6758,5 +6758,283 @@
                 "answers": ["III. Policies and income affect health outcomes"]
             }
         ],
+
+        "GES 107: Nutrition and Health - Topic 2": [
+            {
+                "No": 1,
+                "question": "Nutrition science primarily studies:",
+                "options": [
+                    "I. The process of food digestion only",
+                    "II. How organisms take in and use food for energy and growth",
+                    "III. Only the chemical composition of foods",
+                    "IV. Cooking methods for optimal taste"
+                ],
+                "answers": ["II. How organisms take in and use food for energy and growth"]
+            },
+            {
+                "No": 2,
+                "question": "Good food is characterized by being:",
+                "options": [
+                    "I. Wholesome and free from contaminants",
+                    "II. Always imported and expensive",
+                    "III. Processed with artificial additives",
+                    "IV. Available only in large quantities"
+                ],
+                "answers": ["I. Wholesome and free from contaminants"]
+            },
+            {
+                "No": 3,
+                "question": "Nutritional status refers to:",
+                "options": [
+                    "I. The weight of an individual",
+                    "II. One's health condition in relation to nutrition",
+                    "III. The number of meals consumed daily",
+                    "IV. The cost of one's diet"
+                ],
+                "answers": ["II. One's health condition in relation to nutrition"]
+            },
+            {
+                "No": 4,
+                "question": "An essential nutrient is one that:",
+                "options": [
+                    "I. The body can synthesize in large amounts",
+                    "II. Must be obtained from diet",
+                    "III. Is only found in supplements",
+                    "IV. Is required in gram quantities daily"
+                ],
+                "answers": ["II. Must be obtained from diet"]
+            },
+            {
+                "No": 5,
+                "question": "Macronutrients include:",
+                "options": [
+                    "I. Vitamins and minerals",
+                    "II. Protein, fats, and carbohydrates",
+                    "III. Only dietary fiber",
+                    "IV. Just water and electrolytes"
+                ],
+                "answers": ["II. Protein, fats, and carbohydrates"]
+            },
+            {
+                "No": 6,
+                "question": "Which is NOT a function of carbohydrates?",
+                "options": [
+                    "I. Primary energy source",
+                    "II. Spares protein from being used for energy",
+                    "III. Forms structural components of DNA",
+                    "IV. Synthesizes essential amino acids"
+                ],
+                "answers": ["IV. Synthesizes essential amino acids"]
+            },
+            {
+                "No": 7,
+                "question": "Diabetes mellitus results from:",
+                "options": [
+                    "I. Excessive carbohydrate intake",
+                    "II. Insufficient insulin production/action",
+                    "III. Overconsumption of proteins",
+                    "IV. Lack of dietary fiber"
+                ],
+                "answers": ["II. Insufficient insulin production/action"]
+            },
+            {
+                "No": 8,
+                "question": "Lipids are classified as:",
+                "options": [
+                    "I. Simple, compound, and derived",
+                    "II. Only saturated and unsaturated",
+                    "III. Exclusively cholesterol forms",
+                    "IV. Just triglycerides"
+                ],
+                "answers": ["I. Simple, compound, and derived"]
+            },
+            {
+                "No": 9,
+                "question": "High saturated fat intake is linked to:",
+                "options": [
+                    "I. Improved brain function",
+                    "II. Increased blood cholesterol",
+                    "III. Enhanced calcium absorption",
+                    "IV. Reduced risk of heart disease"
+                ],
+                "answers": ["II. Increased blood cholesterol"]
+            },
+            {
+                "No": 10,
+                "question": "Protein-energy malnutrition includes:",
+                "options": [
+                    "I. Kwashiorkor and marasmus",
+                    "II. Scurvy and beriberi",
+                    "III. Osteoporosis and rickets",
+                    "IV. Anemia and goiter"
+                ],
+                "answers": ["I. Kwashiorkor and marasmus"]
+            },
+            {
+                "No": 11,
+                "question": "Kwashiorkor typically results from:",
+                "options": [
+                    "I. Adequate calories but insufficient protein",
+                    "II. Overall starvation",
+                    "III. Vitamin C deficiency",
+                    "IV. Excessive iron intake"
+                ],
+                "answers": ["I. Adequate calories but insufficient protein"]
+            },
+            {
+                "No": 12,
+                "question": "The most abundant mineral in the body is:",
+                "options": [
+                    "I. Iron",
+                    "II. Calcium",
+                    "III. Sodium",
+                    "IV. Zinc"
+                ],
+                "answers": ["II. Calcium"]
+            },
+            {
+                "No": 13,
+                "question": "Calcium absorption is enhanced by:",
+                "options": [
+                    "I. Phytic acid",
+                    "II. Vitamin D",
+                    "III. Oxalates",
+                    "IV. Excessive fiber"
+                ],
+                "answers": ["II. Vitamin D"]
+            },
+            {
+                "No": 14,
+                "question": "Potassium is primarily important for:",
+                "options": [
+                    "I. Blood clotting",
+                    "II. Nerve impulse transmission",
+                    "III. Hemoglobin synthesis",
+                    "IV. Thyroid function"
+                ],
+                "answers": ["II. Nerve impulse transmission"]
+            },
+            {
+                "No": 15,
+                "question": "Sodium deficiency may result from:",
+                "options": [
+                    "I. Excessive water intake",
+                    "II. Severe vomiting/diarrhea",
+                    "III. High protein diet",
+                    "IV. Vitamin supplementation"
+                ],
+                "answers": ["II. Severe vomiting/diarrhea"]
+            },
+            {
+                "No": 16,
+                "question": "Iron is essential for:",
+                "options": [
+                    "I. Bone mineralization",
+                    "II. Oxygen transport in blood",
+                    "III. Thyroid hormone production",
+                    "IV. Blood sugar regulation"
+                ],
+                "answers": ["II. Oxygen transport in blood"]
+            },
+            {
+                "No": 17,
+                "question": "Iodine deficiency causes:",
+                "options": [
+                    "I. Scurvy",
+                    "II. Goiter and cretinism",
+                    "III. Osteomalacia",
+                    "IV. Pellagra"
+                ],
+                "answers": ["II. Goiter and cretinism"]
+            },
+            {
+                "No": 18,
+                "question": "Vitamin A deficiency leads to:",
+                "options": [
+                    "I. Night blindness",
+                    "II. Skeletal deformities",
+                    "III. Bleeding disorders",
+                    "IV. Neurological damage"
+                ],
+                "answers": ["I. Night blindness"]
+            },
+            {
+                "No": 19,
+                "question": "Vitamin D is unique because it:",
+                "options": [
+                    "I. Can be synthesized by sunlight exposure",
+                    "II. Is only found in animal products",
+                    "III. Acts solely as an antioxidant",
+                    "IV. Is water-soluble"
+                ],
+                "answers": ["I. Can be synthesized by sunlight exposure"]
+            },
+            {
+                "No": 20,
+                "question": "Vitamin C functions as:",
+                "options": [
+                    "I. A blood clotting factor",
+                    "II. An antioxidant and collagen precursor",
+                    "III. A component of thyroid hormones",
+                    "IV. A bone mineralization agent"
+                ],
+                "answers": ["II. An antioxidant and collagen precursor"]
+            },
+            {
+                "No": 21,
+                "question": "Thiamine (B1) deficiency causes:",
+                "options": [
+                    "I. Scurvy",
+                    "II. Beriberi",
+                    "III. Pellagra",
+                    "IV. Rickets"
+                ],
+                "answers": ["II. Beriberi"]
+            },
+            {
+                "No": 22,
+                "question": "Folate is especially important for:",
+                "options": [
+                    "I. Blood glucose control",
+                    "II. DNA synthesis and cell division",
+                    "III. Calcium absorption",
+                    "IV. Muscle contraction"
+                ],
+                "answers": ["II. DNA synthesis and cell division"]
+            },
+            {
+                "No": 23,
+                "question": "Water's roles include:",
+                "options": [
+                    "I. Temperature regulation only",
+                    "II. Nutrient transport and waste removal",
+                    "III. Providing dietary fiber",
+                    "IV. Synthesizing hormones"
+                ],
+                "answers": ["II. Nutrient transport and waste removal"]
+            },
+            {
+                "No": 24,
+                "question": "Signs of good nutrition include:",
+                "options": [
+                    "I. Dry, scaly skin",
+                    "II. Firm muscles and clear skin",
+                    "III. Fatigue and irritability",
+                    "IV. Poor wound healing"
+                ],
+                "answers": ["II. Firm muscles and clear skin"]
+            },
+            {
+                "No": 25,
+                "question": "Your responsibilities in nutrition include:",
+                "options": [
+                    "I. Selecting varied foods for balanced diet",
+                    "II. Eating only processed foods",
+                    "III. Consulting only social media for nutrition advice",
+                    "IV. Ignoring dietary guidelines"
+                ],
+                "answers": ["I. Selecting varied foods for balanced diet"]
+            }
+        ],
 }
 }
