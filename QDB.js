@@ -7314,5 +7314,284 @@
                 "answers": ["II. Hand hygiene and proper disinfection"]
             }
         ],
+
+
+        "GES 107: Reproductive System and Health - Topic 4": [
+            {
+                "No": 1,
+                "question": "What is the primary function of the reproductive system?",
+                "options": [
+                    "I. To produce gametes (sperm/eggs) and ensure species continuity",
+                    "II. To regulate body temperature",
+                    "III. To filter blood and remove waste",
+                    "IV. To produce hormones for digestion"
+                ],
+                "answers": ["I. The reproductive system's main role is gamete production and facilitating fertilization for species survival."]
+            },
+            {
+                "No": 2,
+                "question": "Which organ produces sperm in males?",
+                "options": [
+                    "I. Prostate gland",
+                    "II. Testes",
+                    "III. Epididymis",
+                    "IV. Vas deferens"
+                ],
+                "answers": ["II. The testes are the primary sites of sperm production (spermatogenesis)."]
+            },
+            {
+                "No": 3,
+                "question": "What is the role of the epididymis?",
+                "options": [
+                    "I. To produce testosterone",
+                    "II. To store and mature sperm",
+                    "III. To secrete seminal fluid",
+                    "IV. To transport urine"
+                ],
+                "answers": ["II. The epididymis stores sperm and allows them to mature and gain motility."]
+            },
+            {
+                "No": 4,
+                "question": "Which hormone stimulates sperm production?",
+                "options": [
+                    "I. Estrogen",
+                    "II. Follicle-stimulating hormone (FSH)",
+                    "III. Insulin",
+                    "IV. Thyroxine"
+                ],
+                "answers": ["II. FSH, produced by the pituitary gland, stimulates spermatogenesis in the testes."]
+            },
+            {
+                "No": 5,
+                "question": "What is cryptorchidism?",
+                "options": [
+                    "I. Inflammation of the testes",
+                    "II. Undescended testes",
+                    "III. Overproduction of sperm",
+                    "IV. A type of prostate cancer"
+                ],
+                "answers": ["II. Cryptorchidism is the failure of one or both testes to descend into the scrotum before birth."]
+            },
+            {
+                "No": 6,
+                "question": "Which structure transports sperm from the epididymis to the urethra?",
+                "options": [
+                    "I. Seminal vesicles",
+                    "II. Vas deferens",
+                    "III. Ejaculatory duct",
+                    "IV. Bulbourethral gland"
+                ],
+                "answers": ["II. The vas deferens carries sperm from the epididymis to the ejaculatory duct."]
+            },
+            {
+                "No": 7,
+                "question": "What is the function of seminal fluid?",
+                "options": [
+                    "I. To nourish and protect sperm",
+                    "II. To produce testosterone",
+                    "III. To filter urine",
+                    "IV. To regulate body temperature"
+                ],
+                "answers": ["I. Seminal fluid (from seminal vesicles, prostate, and bulbourethral glands) provides energy and neutralizes vaginal acidity for sperm."]
+            },
+            {
+                "No": 8,
+                "question": "Which condition is characterized by painful, prolonged erection without sexual arousal?",
+                "options": [
+                    "I. Erectile dysfunction",
+                    "II. Priapism",
+                    "III. Orchitis",
+                    "IV. Varicocele"
+                ],
+                "answers": ["II. Priapism is a medical emergency where erection persists for hours, damaging penile tissue."]
+            },
+            {
+                "No": 9,
+                "question": "What is the primary female reproductive organ?",
+                "options": [
+                    "I. Uterus",
+                    "II. Ovary",
+                    "III. Fallopian tube",
+                    "IV. Cervix"
+                ],
+                "answers": ["II. Ovaries produce eggs (oocytes) and hormones (estrogen/progesterone)."]
+            },
+            {
+                "No": 10,
+                "question": "Where does fertilization typically occur?",
+                "options": [
+                    "I. Uterus",
+                    "II. Cervix",
+                    "III. Fallopian tube",
+                    "IV. Vagina"
+                ],
+                "answers": ["III. Fertilization usually happens in the ampulla of the fallopian tube."]
+            },
+            {
+                "No": 11,
+                "question": "What is the endometrium?",
+                "options": [
+                    "I. The outer layer of the uterus",
+                    "II. The lining of the fallopian tubes",
+                    "III. The inner lining of the uterus that sheds during menstruation",
+                    "IV. A part of the ovary"
+                ],
+                "answers": ["III. The endometrium thickens monthly to prepare for pregnancy and sheds if fertilization doesn’t occur."]
+            },
+            {
+                "No": 12,
+                "question": "Which hormone triggers ovulation?",
+                "options": [
+                    "I. Progesterone",
+                    "II. Luteinizing hormone (LH)",
+                    "III. Estrogen",
+                    "IV. Prolactin"
+                ],
+                "answers": ["II. The LH surge around day 14 of the menstrual cycle triggers ovulation."]
+            },
+            {
+                "No": 13,
+                "question": "What is menarche?",
+                "options": [
+                    "I. The end of menstruation",
+                    "II. The first menstrual period",
+                    "III. A menstrual disorder",
+                    "IV. Ovulation pain"
+                ],
+                "answers": ["II. Menarche marks the onset of menstruation during puberty (typically age 9–15)."]
+            },
+            {
+                "No": 14,
+                "question": "Which phase of the menstrual cycle follows ovulation?",
+                "options": [
+                    "I. Follicular phase",
+                    "II. Luteal phase",
+                    "III. Proliferative phase",
+                    "IV. Menstrual phase"
+                ],
+                "answers": ["II. The luteal phase (days 15–28) involves corpus luteum activity and progesterone secretion."]
+            },
+            {
+                "No": 15,
+                "question": "What causes dysmenorrhea?",
+                "options": [
+                    "I. High estrogen levels",
+                    "II. Prostaglandin-induced uterine contractions",
+                    "III. Lack of ovulation",
+                    "IV. Endometrial cancer"
+                ],
+                "answers": ["II. Dysmenorrhea (painful periods) is caused by prostaglandins triggering intense uterine cramps."]
+            },
+            {
+                "No": 16,
+                "question": "Which STI is caused by Treponema pallidum?",
+                "options": [
+                    "I. Gonorrhea",
+                    "II. Syphilis",
+                    "III. Chlamydia",
+                    "IV. Herpes"
+                ],
+                "answers": ["II. Syphilis is a bacterial STI caused by Treponema pallidum, progressing in stages if untreated."]
+            },
+            {
+                "No": 17,
+                "question": "What is polycystic ovary syndrome (PCOS)?",
+                "options": [
+                    "I. A type of ovarian cancer",
+                    "II. A hormonal disorder causing cysts and irregular periods",
+                    "III. A bacterial infection of the ovaries",
+                    "IV. A congenital absence of ovaries"
+                ],
+                "answers": ["II. PCOS involves hormonal imbalance, ovarian cysts, and symptoms like irregular menstruation/infertility."]
+            },
+            {
+                "No": 18,
+                "question": "Which contraceptive method also protects against STIs?",
+                "options": [
+                    "I. Birth control pills",
+                    "II. Intrauterine device (IUD)",
+                    "III. Male condom",
+                    "IV. Diaphragm"
+                ],
+                "answers": ["III. Condoms (male/female) are the only contraceptives that reduce STI transmission."]
+            },
+            {
+                "No": 19,
+                "question": "What is menopause?",
+                "options": [
+                    "I. The first menstrual cycle",
+                    "II. Cessation of menstruation for 12+ months",
+                    "III. A surgical removal of the uterus",
+                    "IV. A hormonal disorder"
+                ],
+                "answers": ["II. Menopause (avg. age 51) marks the end of menstrual cycles due to declining ovarian function."]
+            },
+            {
+                "No": 20,
+                "question": "Which of the following is a symptom of menopause?",
+                "options": [
+                    "I. Hot flashes",
+                    "II. Increased fertility",
+                    "III. Heavy menstrual bleeding",
+                    "IV. Pelvic pain"
+                ],
+                "answers": ["I. Hot flashes, night sweats, and mood swings are common due to hormonal fluctuations."]
+            },
+            {
+                "No": 21,
+                "question": "What is the Tanner staging system used for?",
+                "options": [
+                    "I. Diagnosing STIs",
+                    "II. Tracking pubertal development",
+                    "III. Assessing menopause symptoms",
+                    "IV. Evaluating sperm count"
+                ],
+                "answers": ["II. Tanner stages (I–V) classify physical changes during puberty (e.g., breast/genital development)."]
+            },
+            {
+                "No": 22,
+                "question": "Which condition is characterized by absence of menstruation?",
+                "options": [
+                    "I. Menorrhagia",
+                    "II. Amenorrhea",
+                    "III. Dysmenorrhea",
+                    "IV. Metrorrhagia"
+                ],
+                "answers": ["II. Amenorrhea (primary/secondary) is the absence of periods, often due to hormonal or structural issues."]
+            },
+            {
+                "No": 23,
+                "question": "What is a vasectomy?",
+                "options": [
+                    "I. Removal of the prostate",
+                    "II. Cutting/sealing the vas deferens for male sterilization",
+                    "III. A treatment for erectile dysfunction",
+                    "IV. A hormone therapy"
+                ],
+                "answers": ["II. Vasectomy is a permanent contraceptive method that blocks sperm transport via the vas deferens."]
+            },
+            {
+                "No": 24,
+                "question": "Which structure implants in the uterus during pregnancy?",
+                "options": [
+                    "I. Ovary",
+                    "II. Blastocyst",
+                    "III. Corpus luteum",
+                    "IV. Cervix"
+                ],
+                "answers": ["II. The blastocyst (early embryo) implants into the endometrium ~6 days post-fertilization."]
+            },
+            {
+                "No": 25,
+                "question": "What is the role of the corpus luteum?",
+                "options": [
+                    "I. To produce eggs",
+                    "II. To secrete progesterone to maintain pregnancy",
+                    "III. To trigger menstruation",
+                    "IV. To produce FSH"
+                ],
+                "answers": ["II. The corpus luteum forms post-ovulation and secretes progesterone to support early pregnancy."]
+            }
+        ],
 }
 }
