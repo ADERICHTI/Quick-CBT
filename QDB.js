@@ -7036,5 +7036,283 @@
                 "answers": ["I. Selecting varied foods for balanced diet"]
             }
         ],
+
+        "GES 107: Microbes and Human Health - Topic 3": [
+            {
+                "No": 1,
+                "question": "Microorganisms are best defined as:",
+                "options": [
+                    "I. Visible organisms that cause disease",
+                    "II. Small living organisms not visible to the naked eye",
+                    "III. Only bacteria and viruses",
+                    "IV. Organisms found exclusively in hospitals"
+                ],
+                "answers": ["II. Small living organisms not visible to the naked eye"]
+            },
+            {
+                "No": 2,
+                "question": "Pathogens differ from non-pathogens in that they:",
+                "options": [
+                    "I. Are always larger in size",
+                    "II. Can cause disease in hosts",
+                    "III. Are only found in water",
+                    "IV. Cannot survive outside the body"
+                ],
+                "answers": ["II. Can cause disease in hosts"]
+            },
+            {
+                "No": 3,
+                "question": "E. coli is considered a pathogen when it is found in:",
+                "options": [
+                    "I. The large intestine",
+                    "II. The urinary system",
+                    "III. Soil samples",
+                    "IV. Fermented foods"
+                ],
+                "answers": ["II. The urinary system"]
+            },
+            {
+                "No": 4,
+                "question": "Which of these is NOT a beneficial role of non-pathogenic microbes?",
+                "options": [
+                    "I. Food production (yogurt, cheese)",
+                    "II. Water purification",
+                    "III. Causing infections in healthy individuals",
+                    "IV. Soil health maintenance"
+                ],
+                "answers": ["III. Causing infections in healthy individuals"]
+            },
+            {
+                "No": 5,
+                "question": "The main groups of disease-causing microorganisms include:",
+                "options": [
+                    "I. Bacteria, viruses, fungi, protozoa",
+                    "II. Only bacteria and viruses",
+                    "III. Just fungi and parasites",
+                    "IV. Microbes found only in tropical areas"
+                ],
+                "answers": ["I. Bacteria, viruses, fungi, protozoa"]
+            },
+            {
+                "No": 6,
+                "question": "Bacteria are classified according to their:",
+                "options": [
+                    "I. Shape and arrangement",
+                    "II. Color and smell",
+                    "III. Size and weight",
+                    "IV. Age and origin"
+                ],
+                "answers": ["I. Shape and arrangement"]
+            },
+            {
+                "No": 7,
+                "question": "Antibiotics are effective against:",
+                "options": [
+                    "I. All microorganisms equally",
+                    "II. Primarily bacteria",
+                    "III. Only viral infections",
+                    "IV. Fungal and protozoan infections only"
+                ],
+                "answers": ["II. Primarily bacteria"]
+            },
+            {
+                "No": 8,
+                "question": "Fungal infections commonly cause:",
+                "options": [
+                    "I. Conditions like athlete's foot and thrush",
+                    "II. Only systemic life-threatening diseases",
+                    "III. Exclusively respiratory illnesses",
+                    "IV. Diseases that antibiotics can easily cure"
+                ],
+                "answers": ["I. Conditions like athlete's foot and thrush"]
+            },
+            {
+                "No": 9,
+                "question": "Protozoa are:",
+                "options": [
+                    "I. Single-celled animal-like organisms",
+                    "II. A type of bacteria",
+                    "III. Non-living infectious particles",
+                    "IV. Only found in contaminated water"
+                ],
+                "answers": ["I. Single-celled animal-like organisms"]
+            },
+            {
+                "No": 10,
+                "question": "Viruses differ from bacteria in that they:",
+                "options": [
+                    "I. Can reproduce independently",
+                    "II. Require living host cells to multiply",
+                    "III. Are easily treated with antibiotics",
+                    "IV. Are visible under light microscopes"
+                ],
+                "answers": ["II. Require living host cells to multiply"]
+            },
+            {
+                "No": 11,
+                "question": "The three viruses of major concern to health workers are:",
+                "options": [
+                    "I. HIV, Hepatitis B, and Hepatitis C",
+                    "II. Common cold, flu, and chickenpox",
+                    "III. Measles, mumps, and rubella",
+                    "IV. Rabies, Ebola, and Zika"
+                ],
+                "answers": ["I. HIV, Hepatitis B, and Hepatitis C"]
+            },
+            {
+                "No": 12,
+                "question": "Microbial growth is influenced by:",
+                "options": [
+                    "I. Temperature and pH only",
+                    "II. Temperature, pH, darkness, food, moisture, and oxygen",
+                    "III. Only the availability of light",
+                    "IV. The age of the microorganism"
+                ],
+                "answers": ["II. Temperature, pH, darkness, food, moisture, and oxygen"]
+            },
+            {
+                "No": 13,
+                "question": "Aerobic microbes require:",
+                "options": [
+                    "I. The absence of oxygen",
+                    "II. Oxygen to grow",
+                    "III. Only carbon dioxide",
+                    "IV. Complete darkness"
+                ],
+                "answers": ["II. Oxygen to grow"]
+            },
+            {
+                "No": 14,
+                "question": "Pathogens cause disease by:",
+                "options": [
+                    "I. Producing toxins only",
+                    "II. Causing allergic reactions only",
+                    "III. Destroying host cells or producing toxins",
+                    "IV. Simply being present in the body"
+                ],
+                "answers": ["III. Destroying host cells or producing toxins"]
+            },
+            {
+                "No": 15,
+                "question": "Nosocomial infections are:",
+                "options": [
+                    "I. Always viral in nature",
+                    "II. Acquired in healthcare settings",
+                    "III. Only occurring in tropical countries",
+                    "IV. Easily prevented with vaccines"
+                ],
+                "answers": ["II. Acquired in healthcare settings"]
+            },
+            {
+                "No": 16,
+                "question": "The chain of infection includes:",
+                "options": [
+                    "I. Only the pathogen and host",
+                    "II. Infectious agent, reservoir, portal of exit, mode of transmission, portal of entry, susceptible host",
+                    "III. Just the mode of transmission",
+                    "IV. The pathogen and its genetic material only"
+                ],
+                "answers": ["II. Infectious agent, reservoir, portal of exit, mode of transmission, portal of entry, susceptible host"]
+            },
+            {
+                "No": 17,
+                "question": "Human reservoirs of infection include:",
+                "options": [
+                    "I. Only symptomatic individuals",
+                    "II. Both symptomatic individuals and asymptomatic carriers",
+                    "III. Only healthcare workers",
+                    "IV. Just elderly individuals"
+                ],
+                "answers": ["II. Both symptomatic individuals and asymptomatic carriers"]
+            },
+            {
+                "No": 18,
+                "question": "Zoonoses are diseases that:",
+                "options": [
+                    "I. Only affect animals",
+                    "II. Are transmitted from animals to humans",
+                    "III. Are exclusive to human populations",
+                    "IV. Cannot be prevented"
+                ],
+                "answers": ["II. Are transmitted from animals to humans"]
+            },
+            {
+                "No": 19,
+                "question": "Portal of exit refers to:",
+                "options": [
+                    "I. How a pathogen leaves its reservoir",
+                    "II. The entrance point for pathogens",
+                    "III. The final destination of pathogens",
+                    "IV. The killing of pathogens"
+                ],
+                "answers": ["I. How a pathogen leaves its reservoir"]
+            },
+            {
+                "No": 20,
+                "question": "Contact transmission includes:",
+                "options": [
+                    "I. Only direct person-to-person contact",
+                    "II. Direct contact and indirect contact with contaminated objects",
+                    "III. Only airborne transmission",
+                    "IV. Exclusively vector-borne transmission"
+                ],
+                "answers": ["II. Direct contact and indirect contact with contaminated objects"]
+            },
+            {
+                "No": 21,
+                "question": "Droplet transmission occurs when:",
+                "options": [
+                    "I. Pathogens travel more than 1 meter through air",
+                    "II. Large droplets travel short distances (<1m) and contact mucous membranes",
+                    "III. Only through insect bites",
+                    "IV. Via contaminated water only"
+                ],
+                "answers": ["II. Large droplets travel short distances (<1m) and contact mucous membranes"]
+            },
+            {
+                "No": 22,
+                "question": "Airborne transmission differs from droplet transmission in that:",
+                "options": [
+                    "I. It involves smaller particles that travel farther",
+                    "II. It only occurs outdoors",
+                    "III. It requires direct physical contact",
+                    "IV. It cannot be prevented"
+                ],
+                "answers": ["I. It involves smaller particles that travel farther"]
+            },
+            {
+                "No": 23,
+                "question": "The body's first line of defense against pathogens includes:",
+                "options": [
+                    "I. Only antibodies",
+                    "II. Skin and mucous membranes",
+                    "III. Just fever response",
+                    "IV. Exclusively white blood cells"
+                ],
+                "answers": ["II. Skin and mucous membranes"]
+            },
+            {
+                "No": 24,
+                "question": "Factors increasing host susceptibility include:",
+                "options": [
+                    "I. Age, nutritional status, and immune function",
+                    "II. Only genetic factors",
+                    "III. Exclusively environmental factors",
+                    "IV. Just the time of day"
+                ],
+                "answers": ["I. Age, nutritional status, and immune function"]
+            },
+            {
+                "No": 25,
+                "question": "Breaking the chain of infection can be achieved by:",
+                "options": [
+                    "I. Only treating symptoms",
+                    "II. Hand hygiene and proper disinfection",
+                    "III. Just isolating infected individuals",
+                    "IV. Waiting for natural immunity to develop"
+                ],
+                "answers": ["II. Hand hygiene and proper disinfection"]
+            }
+        ],
 }
 }
