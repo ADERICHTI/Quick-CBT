@@ -6480,5 +6480,283 @@
                 "answers": ["III"]
             }
         ],
+
+        "GES 107: Overview of Healthy Living - Topic 1": [
+            {
+                "No": 1,
+                "question": "According to the WHO definition, health is:",
+                "options": [
+                    "I. Merely the absence of disease",
+                    "II. A state of complete physical, mental and social well-being",
+                    "III. The ability to work productively",
+                    "IV. Having access to medical care"
+                ],
+                "answers": ["II. A state of complete physical, mental and social well-being"]
+            },
+            {
+                "No": 2,
+                "question": "Which of these is NOT a characteristic of health?",
+                "options": [
+                    "I. It is dynamic and ever-changing",
+                    "II. It includes only physical components",
+                    "III. It is a right for all persons",
+                    "IV. It refers to complete well-being"
+                ],
+                "answers": ["II. It includes only physical components"]
+            },
+            {
+                "No": 3,
+                "question": "Structural determinants of health include:",
+                "options": [
+                    "I. Personal exercise habits",
+                    "II. Government policies and income levels",
+                    "III. Individual dietary choices",
+                    "IV. Frequency of medical checkups"
+                ],
+                "answers": ["II. Government policies and income levels"]
+            },
+            {
+                "No": 4,
+                "question": "Which behavior is NOT a mode of HIV transmission?",
+                "options": [
+                    "I. Sharing skin-piercing instruments",
+                    "II. Eating contaminated food",
+                    "III. Unprotected sexual intercourse",
+                    "IV. Mother-to-child during breastfeeding"
+                ],
+                "answers": ["II. Eating contaminated food"]
+            },
+            {
+                "No": 5,
+                "question": "The key message about lifestyle diseases is that they:",
+                "options": [
+                    "I. Are completely genetic and unpreventable",
+                    "II. Can be prevented by modifying behaviors",
+                    "III. Only affect older populations",
+                    "IV. Require hospitalization to manage"
+                ],
+                "answers": ["II. Can be prevented by modifying behaviors"]
+            },
+            {
+                "No": 6,
+                "question": "A common challenge university students face is:",
+                "options": [
+                    "I. Excessive free time with no responsibilities",
+                    "II. Pressure to become romantically involved",
+                    "III. Lack of any academic workload",
+                    "IV. Overabundance of financial resources"
+                ],
+                "answers": ["II. Pressure to become romantically involved"]
+            },
+            {
+                "No": 7,
+                "question": "The 'Three Major Lifestyles to Stay Healthy' are:",
+                "options": [
+                    "I. Eat well, rest well, exercise well",
+                    "II. Study, socialize, sleep",
+                    "III. Work, pray, fast",
+                    "IV. Travel, meditate, diet"
+                ],
+                "answers": ["I. Eat well, rest well, exercise well"]
+            },
+            {
+                "No": 8,
+                "question": "Which food is recommended for a low-fat diet?",
+                "options": [
+                    "I. Fried chicken",
+                    "II. Lean meat and fish",
+                    "III. Processed snacks",
+                    "IV. Sugary beverages"
+                ],
+                "answers": ["II. Lean meat and fish"]
+            },
+            {
+                "No": 9,
+                "question": "What is a consequence of inadequate rest?",
+                "options": [
+                    "I. Improved concentration",
+                    "II. Reduced stress levels",
+                    "III. Increased risk of sickness",
+                    "IV. Enhanced physical performance"
+                ],
+                "answers": ["III. Increased risk of sickness"]
+            },
+            {
+                "No": 10,
+                "question": "How much physical activity is recommended daily for health benefits?",
+                "options": [
+                    "I. 10 minutes",
+                    "II. 30 minutes",
+                    "III. 2 hours",
+                    "IV. Only on weekends"
+                ],
+                "answers": ["II. 30 minutes"]
+            },
+            {
+                "No": 11,
+                "question": "Which practice is NOT part of 'Other Extras' for healthy living?",
+                "options": [
+                    "I. Washing hands after hospital visits",
+                    "II. Using seat belts",
+                    "III. Drinking alcohol moderately",
+                    "IV. Brushing teeth twice daily"
+                ],
+                "answers": ["III. Drinking alcohol moderately"]
+            },
+            {
+                "No": 12,
+                "question": "Stress can be identified by symptoms such as:",
+                "options": [
+                    "I. Persistent fatigue and irritability",
+                    "II. Increased appetite and joy",
+                    "III. Improved sleep quality",
+                    "IV. Enhanced memory retention"
+                ],
+                "answers": ["I. Persistent fatigue and irritability"]
+            },
+            {
+                "No": 13,
+                "question": "Which statement about tobacco is true?",
+                "options": [
+                    "I. Occasional use has no health risks",
+                    "II. Quitting reduces health risks over time",
+                    "III. It strengthens the immune system",
+                    "IV. Only smoking (not chewing) is harmful"
+                ],
+                "answers": ["II. Quitting reduces health risks over time"]
+            },
+            {
+                "No": 14,
+                "question": "What is the primary function of water in the body?",
+                "options": [
+                    "I. To provide energy",
+                    "II. To regulate body temperature and transport nutrients",
+                    "III. To replace the need for food",
+                    "IV. To act as a primary source of vitamins"
+                ],
+                "answers": ["II. To regulate body temperature and transport nutrients"]
+            },
+            {
+                "No": 15,
+                "question": "Which is a behavioral risk factor for cardiovascular disease?",
+                "options": [
+                    "I. Sleeping 8 hours daily",
+                    "II. Smoking tobacco",
+                    "III. Eating fruits regularly",
+                    "IV. Walking daily"
+                ],
+                "answers": ["II. Smoking tobacco"]
+            },
+            {
+                "No": 16,
+                "question": "The 'ABC' of HIV prevention stands for:",
+                "options": [
+                    "I. Abstain, Be faithful, Use Condoms",
+                    "II. Avoid, Blame, Condemn",
+                    "III. Antibiotics, Blood tests, Care",
+                    "IV. Awareness, Belief, Compliance"
+                ],
+                "answers": ["I. Abstain, Be faithful, Use Condoms"]
+            },
+            {
+                "No": 17,
+                "question": "Which activity is an example of exercising well?",
+                "options": [
+                    "I. Watching TV for hours",
+                    "II. Taking the elevator instead of stairs",
+                    "III. Parking far from a store to walk more",
+                    "IV. Sitting for prolonged periods"
+                ],
+                "answers": ["III. Parking far from a store to walk more"]
+            },
+            {
+                "No": 18,
+                "question": "What is the recommended sleep duration for adults?",
+                "options": [
+                    "I. 4–5 hours",
+                    "II. 6–7 hours",
+                    "III. 8 hours",
+                    "IV. 10+ hours"
+                ],
+                "answers": ["III. 8 hours"]
+            },
+            {
+                "No": 19,
+                "question": "Which is a sign of poor nutrition?",
+                "options": [
+                    "I. Clear skin and strong muscles",
+                    "II. Dry, pale skin and fatigue",
+                    "III. High energy levels",
+                    "IV. Healthy weight for height"
+                ],
+                "answers": ["II. Dry, pale skin and fatigue"]
+            },
+            {
+                "No": 20,
+                "question": "Assertiveness in healthy living means:",
+                "options": [
+                    "I. Avoiding all social interactions",
+                    "II. Forcing others to adopt your habits",
+                    "III. Resisting peer pressure to engage in harmful behaviors",
+                    "IV. Ignoring personal health needs"
+                ],
+                "answers": ["III. Resisting peer pressure to engage in harmful behaviors"]
+            },
+            {
+                "No": 21,
+                "question": "Which factor does NOT contribute to university stress?",
+                "options": [
+                    "I. Heavy academic workload",
+                    "II. Making new friends",
+                    "III. Having excessive free time",
+                    "IV. Financial constraints"
+                ],
+                "answers": ["III. Having excessive free time"]
+            },
+            {
+                "No": 22,
+                "question": "What is the purpose of 'Other Extras' like handwashing?",
+                "options": [
+                    "I. To replace exercise",
+                    "II. To prevent infections and promote hygiene",
+                    "III. To reduce the need for sleep",
+                    "IV. To eliminate dietary needs"
+                ],
+                "answers": ["II. To prevent infections and promote hygiene"]
+            },
+            {
+                "No": 23,
+                "question": "Which is a consequence of chronic stress?",
+                "options": [
+                    "I. Improved immune function",
+                    "II. Reduced disease susceptibility",
+                    "III. Increased risk of illness",
+                    "IV. Enhanced cognitive abilities"
+                ],
+                "answers": ["III. Increased risk of illness"]
+            },
+            {
+                "No": 24,
+                "question": "The 'Eat Well' guideline emphasizes:",
+                "options": [
+                    "I. Skipping meals for weight loss",
+                    "II. Consuming more fried foods",
+                    "III. Eating fruits, vegetables, and balanced meals",
+                    "IV. Relying on energy drinks for stamina"
+                ],
+                "answers": ["III. Eating fruits, vegetables, and balanced meals"]
+            },
+            {
+                "No": 25,
+                "question": "Which statement about health determinants is true?",
+                "options": [
+                    "I. Only genetics matter",
+                    "II. Behavior and environment play no role",
+                    "III. Policies and income affect health outcomes",
+                    "IV. Health is static and unchangeable"
+                ],
+                "answers": ["III. Policies and income affect health outcomes"]
+            }
+        ],
 }
 }
