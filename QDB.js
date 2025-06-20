@@ -7593,5 +7593,284 @@
                 "answers": ["II. The corpus luteum forms post-ovulation and secretes progesterone to support early pregnancy."]
             }
         ],
+
+
+        "GES 107: Adolescent Sexual Behavior - Topic 5": [
+            {
+                "No": 1,
+                "question": "According to WHO, what age range defines adolescence?",
+                "options": [
+                    "I. 5–12 years",
+                    "II. 10–19 years",
+                    "III. 15–25 years",
+                    "IV. 18–30 years"
+                ],
+                "answers": ["II. WHO defines adolescence as ages 10–19, encompassing physical and psychological transitions."]
+            },
+            {
+                "No": 2,
+                "question": "Which of the following is a key feature of adolescence?",
+                "options": [
+                    "I. Completion of brain development",
+                    "II. Experimentation with identity and risky behaviors",
+                    "III. Stable hormonal levels",
+                    "IV. Absence of peer influence"
+                ],
+                "answers": ["II. Adolescents often explore identity and take risks due to ongoing brain development and social pressures."]
+            },
+            {
+                "No": 3,
+                "question": "What is a major reason adolescents engage in early sexual debut?",
+                "options": [
+                    "I. High parental supervision",
+                    "II. Peer pressure and curiosity",
+                    "III. Lack of sexual education in schools",
+                    "IV. Legal restrictions"
+                ],
+                "answers": ["II. Peer pressure, curiosity, and media influence are primary drivers of early sexual initiation."]
+            },
+            {
+                "No": 4,
+                "question": "Which consequence is linked to early sexual debut?",
+                "options": [
+                    "I. Lower STI risk",
+                    "II. Increased academic performance",
+                    "III. Higher risk of STIs/unplanned pregnancy",
+                    "IV. Delayed puberty"
+                ],
+                "answers": ["III. Early debut raises STI/pregnancy risks due to immature reproductive systems and inconsistent protection."]
+            },
+            {
+                "No": 5,
+                "question": "What percentage of Nigerian adolescents had sexual intercourse by age 18 (NDHS 1999)?",
+                "options": [
+                    "I. 20%",
+                    "II. 40%",
+                    "III. 60%",
+                    "IV. 80%"
+                ],
+                "answers": ["III. NDHS 1999 found >60% of Nigerian adolescents were sexually active by 18, highlighting early exposure."]
+            },
+            {
+                "No": 6,
+                "question": "Why are adolescent girls more vulnerable to STIs than adult women?",
+                "options": [
+                    "I. Stronger immune systems",
+                    "II. Cervical ectropion (columnar epithelium exposure)",
+                    "III. Higher estrogen levels",
+                    "IV. Lack of vaginal mucus"
+                ],
+                "answers": ["II. Cervical ectropion in teens increases STI susceptibility as columnar cells are easier to infect."]
+            },
+            {
+                "No": 7,
+                "question": "Which STI is strongly associated with cervical cancer in adolescents?",
+                "options": [
+                    "I. HIV",
+                    "II. Human papillomavirus (HPV)",
+                    "III. Syphilis",
+                    "IV. Gonorrhea"
+                ],
+                "answers": ["II. HPV causes 99% of cervical cancers; vaccination is critical for adolescents."]
+            },
+            {
+                "No": 8,
+                "question": "What is a common barrier to condom use among adolescents?",
+                "options": [
+                    "I. Fear of reduced pleasure",
+                    "II. High cost",
+                    "III. Parental approval",
+                    "IV. Easy access"
+                ],
+                "answers": ["I. Myths about reduced pleasure and trust in partners often deter condom use."]
+            },
+            {
+                "No": 9,
+                "question": "Which intervention reduces adolescent pregnancy rates?",
+                "options": [
+                    "I. Abstinence-only education",
+                    "II. Comprehensive sexuality education",
+                    "III. Restricting contraceptive access",
+                    "IV. Ignoring peer influence"
+                ],
+                "answers": ["II. Comprehensive programs (e.g., ABC + contraceptives) are proven to reduce pregnancies/STIs."]
+            },
+            {
+                "No": 10,
+                "question": "What is 'sexting'?",
+                "options": [
+                    "I. Sending explicit messages/images digitally",
+                    "II. A type of contraceptive",
+                    "III. STI screening",
+                    "IV. Peer counseling"
+                ],
+                "answers": ["I. Sexting involves sharing sexual content electronically, risking exploitation/legal consequences."]
+            },
+            {
+                "No": 11,
+                "question": "Which factor increases HIV risk among adolescent girls in Africa?",
+                "options": [
+                    "I. Gender inequality",
+                    "II. High school enrollment",
+                    "III. Economic independence",
+                    "IV. Late marriage"
+                ],
+                "answers": ["I. Gender norms often limit girls’ power to negotiate safe sex, increasing HIV vulnerability."]
+            },
+            {
+                "No": 12,
+                "question": "What is the 'ABC' approach to HIV prevention?",
+                "options": [
+                    "I. Abstinence, Being faithful, Condoms",
+                    "II. Antibiotics, Blood tests, Counseling",
+                    "III. Avoidance, Birth control, Care",
+                    "IV. Awareness, Behavior, Contraception"
+                ],
+                "answers": ["I. ABC promotes Abstinence, mutual faithfulness (Be faithful), and correct Condom use."]
+            },
+            {
+                "No": 13,
+                "question": "How does alcohol use affect adolescent sexual behavior?",
+                "options": [
+                    "I. Reduces risky sex",
+                    "II. Impairs judgment, increasing unprotected sex",
+                    "III. Enhances contraceptive use",
+                    "IV. Delays sexual debut"
+                ],
+                "answers": ["II. Alcohol lowers inhibitions, leading to unprotected sex and higher STI/pregnancy risks."]
+            },
+            {
+                "No": 14,
+                "question": "What is a key component of youth-friendly health services?",
+                "options": [
+                    "I. Parental consent mandates",
+                    "II. Confidentiality and non-judgmental care",
+                    "III. High service costs",
+                    "IV. Limited hours"
+                ],
+                "answers": ["II. Confidentiality and accessibility encourage adolescents to seek sexual health services."]
+            },
+            {
+                "No": 15,
+                "question": "Which Nigerian study found 15.7% HIV prevalence among tested university males?",
+                "options": [
+                    "I. Adewole & Lawoyin (2003)",
+                    "II. NDHS (2008)",
+                    "III. UNICEF (2001)",
+                    "IV. WHO (1998)"
+                ],
+                "answers": ["I. Adewole & Lawoyin’s 2003 UI study showed 8.3% consented to testing, with 15.7% HIV+."]
+            },
+            {
+                "No": 16,
+                "question": "What is 'perceived invulnerability' in adolescents?",
+                "options": [
+                    "I. Fear of all risks",
+                    "II. Belief that negative outcomes won’t affect them",
+                    "III. High STI awareness",
+                    "IV. Parental control"
+                ],
+                "answers": ["II. Teens often underestimate personal risk ('It won’t happen to me'), leading to unsafe practices."]
+            },
+            {
+                "No": 17,
+                "question": "Which strategy effectively delays sexual debut?",
+                "options": [
+                    "I. Scare tactics",
+                    "II. Peer education programs",
+                    "III. Ignoring gender norms",
+                    "IV. Limiting sports"
+                ],
+                "answers": ["II. Peer-led programs build trust and provide relatable information on delaying sex."]
+            },
+            {
+                "No": 18,
+                "question": "What is a consequence of adolescent childbearing?",
+                "options": [
+                    "I. Higher educational attainment",
+                    "II. Increased economic opportunities",
+                    "III. School dropout and poverty cycles",
+                    "IV. Lower maternal mortality"
+                ],
+                "answers": ["III. Teen mothers often face interrupted education and economic hardship, perpetuating poverty."]
+            },
+            {
+                "No": 19,
+                "question": "Which STI presents with painless genital ulcers (chancres)?",
+                "options": [
+                    "I. Herpes",
+                    "II. Syphilis",
+                    "III. HIV",
+                    "IV. HPV"
+                ],
+                "answers": ["II. Syphilis’s primary stage features painless chancres, often unnoticed by adolescents."]
+            },
+            {
+                "No": 20,
+                "question": "Why is parental communication about sex important?",
+                "options": [
+                    "I. Delays puberty",
+                    "II. Reduces accurate knowledge",
+                    "III. Promotes healthier sexual decisions",
+                    "IV. Increases stigma"
+                ],
+                "answers": ["III. Open dialogue correlates with delayed debut, condom use, and fewer partners."]
+            },
+            {
+                "No": 21,
+                "question": "What is the role of NGOs in adolescent sexual health?",
+                "options": [
+                    "I. Providing judgmental counseling",
+                    "II. Advocating for restrictive policies",
+                    "III. Offering youth-friendly services/education",
+                    "IV. Ignoring cultural contexts"
+                ],
+                "answers": ["III. NGOs bridge gaps with accessible education, testing, and contraceptives tailored to youth."]
+            },
+            {
+                "No": 22,
+                "question": "Which Nigerian survey reported 33% of 15–19-year-olds had sex with casual partners?",
+                "options": [
+                    "I. NDHS (2008)",
+                    "II. NARHS (2003)",
+                    "III. UNICEF (2010)",
+                    "IV. WHO (2015)"
+                ],
+                "answers": ["I. NDHS 2008 found 33% of 15–19-year-old females had casual partners, elevating STI risks."]
+            },
+            {
+                "No": 23,
+                "question": "What is a benefit of adolescent VCT (Voluntary Counseling and Testing)?",
+                "options": [
+                    "I. Increases stigma",
+                    "II. Delays treatment initiation",
+                    "III. Promotes early HIV detection/linkage to care",
+                    "IV. Discourages condom use"
+                ],
+                "answers": ["III. VCT empowers teens to know their status and access prevention/treatment early."]
+            },
+            {
+                "No": 24,
+                "question": "Which psychoactive substance is most abused by Nigerian adolescents?",
+                "options": [
+                    "I. Heroin",
+                    "II. Alcohol",
+                    "III. Cannabis",
+                    "IV. Cocaine"
+                ],
+                "answers": ["II. Alcohol is the most common, impairing judgment and increasing risky sexual behavior."]
+            },
+            {
+                "No": 25,
+                "question": "What is the primary goal of PMTCT (Prevent Mother-to-Child Transmission)?",
+                "options": [
+                    "I. Increase adolescent fertility",
+                    "II. Reduce HIV transmission to babies during pregnancy/delivery/breastfeeding",
+                    "III. Promote early sexual debut",
+                    "IV. Limit contraceptive access"
+                ],
+                "answers": ["II. PMTCT uses ARVs to cut vertical HIV transmission rates from 30% to <5%."]
+            }
+        ],
 }
 }
