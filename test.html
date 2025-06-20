@@ -1266,7 +1266,7 @@
 
 <!-- Then load your config -->
 <script src="config.js"></script>
-<script src="authTests.js"></script>
+<script src="auth.js"></script>
 
 
     <script src="./QDB.js"></script>
@@ -1312,16 +1312,11 @@
               initAuth(); // Initialize authentication
               setupEventListeners();
               populateCourseCategories();
-              await handleUserSignIn(user); // Update user status
               
               // Only populate subject grid if user is authenticated
               auth.onAuthStateChanged(user => {
                   if (user) {
                       populateCourseCategories();
-
-
-    //  const userDoc = await db.collection('users').doc(user.uid).get();
-     
                   }
               });
           }
@@ -1668,53 +1663,10 @@ closeDialog.addEventListener('click', () => {
   resultsDialog.style.display = 'none';
 });
 
-        function showQuestionDetails(subject) {
-  dialogTitle.textContent = `${subject} - Question Details`;
-  dialogContent.innerHTML = '';
-  
-  const questions = questionsData.questions[subject];
-  
-  questions.forEach((question, index) => {
-    const userAnswerIndex = state.userAnswers[subject][index];
-    let userAnswerDisplay = 'Not answered';
-    let isCorrect = false;
-    
-    if (userAnswerIndex !== null) {
-      const userAnswerPrefix = question.options[userAnswerIndex].split('.')[0].trim();
-      const userAnswerText = question.options[userAnswerIndex].split('.').slice(1).join('.').trim();
-      userAnswerDisplay = `${userAnswerPrefix}. ${userAnswerText}`;
-      isCorrect = question.answers.includes(userAnswerPrefix);
-    }
-    
-    // Format correct answers with their full text
-    const correctAnswersDisplay = question.answers.map(ans => {
-      const correctOption = question.options.find(opt => opt.startsWith(ans));
-      return correctOption ? correctOption : ans;
-    }).join(', ');
-    
-    const questionDetail = document.createElement('div');
-    questionDetail.className = 'question-detail';
-    
-    questionDetail.innerHTML = `
-      <div class="question-number">Question ${question.No}</div>
-      <div class="question-text">${question.question}</div>
-      <div class="answer-info">
-        <strong>Your answer:</strong> ${userAnswerDisplay} 
-        <span style="color: ${isCorrect ? 'var(--secondary-color)' : 'var(--accent-color)'}">
-          (${isCorrect ? 'Correct' : 'Incorrect'})
-        </span>
-      </div>
-      <div class="correct-answer"><strong>Correct answer:</strong> ${correctAnswersDisplay}</div>
-      <hr style="margin-top: 10px; border: none; border-top: 1px solid #eee;">
-    `;
-    
-    dialogContent.appendChild(questionDetail);
-  });
-  
-  resultsDialog.style.display = 'flex';
-}
+        
 
-        function calculateResults() {
+      
+function calculateResults() {
   let totalCorrect = 0;
   let totalQuestions = 0;
   
@@ -1728,25 +1680,22 @@ closeDialog.addEventListener('click', () => {
       const userAnswerIndex = state.userAnswers[subject][index];
       if (userAnswerIndex !== null) {
         const userAnswerPrefix = question.options[userAnswerIndex].split('.')[0].trim();
-        if (question.answers.includes(userAnswerPrefix)) {
+        if (question.answers.some(ans => ans.startsWith(userAnswerPrefix))) {
           correct++;
         }
       }
     });
     
-    // Rest of your calculateResults function remains the same...
     totalCorrect += correct;
     totalQuestions += questions.length;
     
     const percentage = Math.round((correct / questions.length) * 100);
     
-    // Create view details button
     const viewDetailsBtn = document.createElement('button');
     viewDetailsBtn.className = 'view-details-btn';
     viewDetailsBtn.textContent = 'View Details';
     viewDetailsBtn.addEventListener('click', () => showQuestionDetails(subject));
     
-    // Add to results table
     const row = document.createElement('tr');
     row.innerHTML = `
       <td>${subject}</td>
@@ -1762,6 +1711,63 @@ closeDialog.addEventListener('click', () => {
   totalScore.textContent = `Total Score: ${totalPercentage}%`;
 }
 
+function showQuestionDetails(subject) {
+  dialogTitle.textContent = `${subject} - Question Details`;
+  dialogContent.innerHTML = '';
+  
+  const questions = questionsData.questions[subject];
+  
+  questions.forEach((question, index) => {
+    const userAnswerIndex = state.userAnswers[subject][index];
+    let userAnswerDisplay = 'Not answered';
+    let isCorrect = false;
+    let explanation = '';
+    
+    if (userAnswerIndex !== null) {
+      const userAnswer = question.options[userAnswerIndex];
+      const userAnswerPrefix = userAnswer.split('.')[0].trim();
+      userAnswerDisplay = userAnswer;
+      
+      // Check if correct and get explanation
+      const correctAnswer = question.answers.find(ans => ans.startsWith(userAnswerPrefix));
+      isCorrect = correctAnswer !== undefined;
+      explanation = isCorrect ? correctAnswer : 
+                   question.answers[0]; // Show first correct answer's explanation
+    } else {
+      explanation = question.answers[0]; // Show first correct answer's explanation if not answered
+    }
+    
+    const questionDetail = document.createElement('div');
+    questionDetail.className = 'question-detail';
+    
+    questionDetail.innerHTML = `
+      <div class="question-number">Question ${question.No}</div>
+      <div class="question-text">${question.question}</div>
+      <div class="user-answer">
+        <strong>Your answer:</strong> 
+        <span style="color: ${userAnswerIndex === null ? 'var(--dark-gray)' : 
+                      isCorrect ? 'var(--secondary-color)' : 'var(--accent-color)'}">
+          ${userAnswerDisplay}
+        </span>
+        ${userAnswerIndex !== null ? 
+          `<span style="color: ${isCorrect ? 'var(--secondary-color)' : 'var(--accent-color)'}">
+            (${isCorrect ? 'Correct' : 'Incorrect'})
+          </span>` : ''}
+      </div>
+      <div class="correct-answer">
+        <strong>Correct answer:</strong> ${question.answers.join(' OR ')}
+      </div>
+      <div class="explanation">
+        <strong>Explanation:</strong> ${explanation.split('. ').slice(1).join('. ')}
+      </div>
+      <hr style="margin-top: 10px; border: none; border-top: 1px solid #eee;">
+    `;
+    
+    dialogContent.appendChild(questionDetail);
+  });
+  
+  resultsDialog.style.display = 'flex';
+}
         // Restart the test
         function restartTest() {
             // Reset state
