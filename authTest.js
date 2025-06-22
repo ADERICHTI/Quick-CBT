@@ -25,6 +25,38 @@ auth.onAuthStateChanged(async (user) => {
     }
 });
 
+
+const networkErrorPopup = document.getElementById('networkErrorPopup');
+const dismissNetworkErrorBtn = document.getElementById('dismissNetworkError');
+
+// Track online status
+let isOnline = navigator.onLine;
+
+// Network error handler function
+function showNetworkError(message) {
+  const errorContent = networkErrorPopup.querySelector('p');
+  errorContent.textContent = message || 'A network error occurred. Please check your connection.';
+  networkErrorPopup.style.display = 'flex';
+}
+
+// Dismiss button handler
+dismissNetworkErrorBtn.addEventListener('click', () => {
+  networkErrorPopup.style.display = 'none';
+});
+
+// Listen for online/offline events
+window.addEventListener('online', () => {
+  isOnline = true;
+  networkErrorPopup.style.display = 'none';
+  // Optional: show reconnected message
+  console.log('Connection restored');
+});
+
+window.addEventListener('offline', () => {
+  isOnline = false;
+  showNetworkError('You appear to be offline. Some features may not work properly.');
+});
+
 // Google Sign-In Handler
 async function signInWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
@@ -38,6 +70,12 @@ async function signInWithGoogle() {
         console.error('Sign in error:', error);
         authLoader.style.display = 'none';
         signInButton.disabled = false;
+
+
+         // Show network error if applicable
+        if (!isOnline || error.code === 'auth/network-request-failed') {
+            showNetworkError('Could not connect to authentication service. Please check your network connection.');
+        }
     }
 }
 
@@ -79,6 +117,10 @@ async function handleUserSignIn(user) {
         manageConnectionStatus(userRef);
     } catch (error) {
         console.error('Error updating user status:', error);
+
+           if (!isOnline || error.code === 'unavailable') {
+            showNetworkError('Could not sync your status with the server. Changes will sync when you reconnect.');
+        }
     }
 }
 
