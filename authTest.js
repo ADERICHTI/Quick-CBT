@@ -1,5 +1,6 @@
-// Initialize Firebase Authentication and handle UI
+// Initialize Firebase services
 const auth = firebase.auth();
+const db = firebase.firestore();
 
 // DOM Elements
 const authContainer = document.getElementById('authContainer');
@@ -12,9 +13,10 @@ const signOutButton = document.getElementById('signOutButton');
 const authLoader = document.getElementById('authLoader');
 
 // Firebase Auth State Listener
-auth.onAuthStateChanged(user => {
+auth.onAuthStateChanged(async (user) => {
     if (user) {
         // User is signed in
+        await handleUserSignIn(user);
         showUserProfile(user);
         showAppContent();
     } else {
@@ -23,83 +25,90 @@ auth.onAuthStateChanged(user => {
     }
 });
 
-      // Generalized update function
-async function updateUserDocument(user, updates) {
-    try {
-        await db.collection('users').doc(user.uid).set(updates, { merge: true });
-    } catch (error) {
-        console.error("Error updating user document: ", error);
-    }
-}   
-
-// Sign-in handler
-async function handleUserSignIn(user) {
-    const timestamp = firebase.firestore.FieldValue.serverTimestamp();
-    
-    const userData = {
-        uid: user.uid,  // Always include UID for new docs
-        schoolData: {
-            // These will be preserved if they exists
-          faculty: firebase.firestore.FieldValue.delete(), 
-          department: firebase.firestore.FieldValue.delete(), 
-          level: firebase.firestore.FieldValue.delete(),    // Example: Remove if exists
-        },
-      status: "online",
-      loginTimeStamp: timestamp,
-        logoutTimeStamp: null,
-        // Initialize other top-level fields if needed
-        preferences: {
-            theme: "light",
-            defaultDuration: 30
-        }
-    };
-    
-    await updateUserDocument(user, userData);
-}
-
-// Sign-out handler
-async function handleUserSignOut(user) {
-    const timestamp = firebase.firestore.FieldValue.serverTimestamp();
-    
-    const updates = {
-        'status': 'offline',
-        'logoutTimeStamp': timestamp
-    };
-    
-    await updateUserDocument(user, updates);
-}
-
 // Google Sign-In Handler
-function signInWithGoogle() {
+async function signInWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
     authLoader.style.display = 'block';
     signInButton.disabled = true;
     
-    auth.signInWithPopup(provider)
-        .then(result => {
-            // Signed in successfully
-            console.log('User signed in:', result.user);
-          const user = result.user;
-            await handleUserSignIn(user);
-        })
-        .catch(error => {
-            console.error('Sign in error:', error);
-            authLoader.style.display = 'none';
-            signInButton.disabled = false;
-        });
+    try {
+        const result = await auth.signInWithPopup(provider);
+        console.log('User signed in:', result.user);
+    } catch (error) {
+        console.error('Sign in error:', error);
+        authLoader.style.display = 'none';
+        signInButton.disabled = false;
+    }
 }
 
 // Sign Out Handler
-function signOut() {
-  const user = auth.currentUser;
-    auth.signOut()
-        .then(() => {
-            console.log('User signed out');
-          await handleUserSignOut(user);
-        })
-        .catch(error => {
-            console.error('Sign out error:', error);
-        });
+async function signOut() {
+    try {
+        // Update user status before signing out
+        const user = auth.currentUser;
+        if (user) {
+            await db.collection('users').doc(user.uid).update({
+                online: false,
+                lastSeen: firebase.firestore.FieldValue.serverTimestamp()
+            });
+        }
+        
+        await auth.signOut();
+        console.log('User signed out');
+    } catch (error) {
+        console.error('Sign out error:', error);
+    }
+}
+
+// Handle user sign-in and status update
+async function handleUserSignIn(user) {
+    try {
+        const userRef = db.collection('users').doc(user.uid);
+        
+        // Set or update user document
+        await userRef.set({
+            uid: user.uid,
+            displayName: user.displayName,
+            email: user.email,
+            photoURL: user.photoURL,
+            online: true,
+            lastLogin: firebase.firestore.FieldValue.serverTimestamp()
+        }, { merge: true });
+        
+        // Set up listener for connection status
+        manageConnectionStatus(userRef);
+    } catch (error) {
+        console.error('Error updating user status:', error);
+    }
+}
+
+// Manage real-time connection status
+function manageConnectionStatus(userRef) {
+    // Detect connection state changes
+    const connectionRef = db.collection('.info').doc('connected');
+    
+    const unsubscribe = connectionRef.onSnapshot((snapshot) => {
+        if (snapshot.data().connected) {
+            // User is online
+            userRef.update({
+                online: true,
+                lastSeen: null
+            });
+        } else {
+            // User went offline
+            userRef.update({
+                online: false,
+                lastSeen: firebase.firestore.FieldValue.serverTimestamp()
+            });
+        }
+    });
+    
+    // Clean up listener when user signs out
+    auth.onAuthStateChanged((user) => {
+        if (!user) {
+            unsubscribe();
+        }
+    });
 }
 
 // UI Functions
