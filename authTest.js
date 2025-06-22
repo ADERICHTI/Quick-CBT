@@ -1,5 +1,6 @@
 // Initialize Firebase Authentication and handle UI
 const auth = firebase.auth();
+const db = firebase.firestore();
 
 // DOM Elements
 const authContainer = document.getElementById('authContainer');
