@@ -1329,7 +1329,12 @@
     <script src="./QDB.js"></script>
 
     <script>
- 
+
+        firebase.firestore().settings({
+          experimentalForceLongPolling: true,
+          useFetchStreams: false
+        });
+
 
         // Application State
         const state = {
