@@ -18,6 +18,11 @@ auth.onAuthStateChanged(user => {
         // User is signed in
         showUserProfile(user);
         showAppContent();
+         db.collection("users").add({
+                frame: "frame",
+                content: "content",
+                tagname: "tagname"
+            })
     } else {
         // User is signed out
         showSignInScreen();
