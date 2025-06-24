@@ -3,33 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>French Vocal - Pronunciation Master</title>
+    <title>French-Pro | Pronunciation Tool</title>
     <style>
         :root {
-            --primary-color: #6d4cff;
-            --hover-color: #5a3ce6;
-            --background: #f8f4ff;
+            --primary-color: #4285f4;
+            --hover-color: #3367d6;
+            --background: #f8f9fa;
             --card-bg: #ffffff;
-            --text-color: #2d2d3a;
-            --secondary-text: #6b6b7a;
-            --glass-bg: rgba(255, 255, 255, 0.92);
-            --glass-border: 1px solid rgba(255, 255, 255, 0.4);
-            --blur: blur(12px);
-            --glass-shadow: 0 8px 32px rgba(109, 76, 255, 0.1);
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            --success-color: #4caf50;
-            --warning-color: #ff9800;
+            --text-color: #202124;
+            --secondary-text: #5f6368;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.3);
+            --blur: blur(8px);
+            --glass-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --light-gray: #f8f9fa;
+            --medium-gray: #dadce0;
+            --dark-gray: #5f6368;
+            --secondary-color: #34A853;
+            --accent-color: #EA4335;
+            --warning-color: #FBBC05;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         body {
-            font-family: 'Segoe UI', 'Roboto', sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             background-color: var(--background);
             color: var(--text-color);
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            min-height: 100vh;
-            background-image: radial-gradient(circle at 10% 20%, rgba(109, 76, 255, 0.05) 0%, rgba(255, 255, 255, 1) 90%);
         }
 
         .container {
@@ -37,31 +39,25 @@
             margin: 0 auto;
             padding: 20px;
             display: none;
-            background-color: var(--glass-bg);
-            backdrop-filter: var(--blur);
-            -webkit-backdrop-filter: var(--blur);
-            border-radius: 16px;
-            box-shadow: var(--glass-shadow);
-            border: var(--glass-border);
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding-top: 35px;
             margin-top: 20px;
             margin-bottom: 20px;
-            transition: var(--transition);
         }
 
         h1 {
             color: var(--primary-color);
             text-align: center;
             margin-bottom: 30px;
-            font-weight: 600;
-            font-size: 2.2rem;
-            letter-spacing: -0.5px;
+            font-weight: 500;
         }
 
-        .app-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
+        .h1header {
+            margin-top: 20px;
+            margin-bottom: 21px;
+            color: #aeb6c2;
         }
 
         .controls {
@@ -69,42 +65,40 @@
             flex-wrap: wrap;
             gap: 15px;
             margin-bottom: 25px;
-            align-items: flex-end;
+            align-items: center;
         }
 
         .control-group {
             display: flex;
             flex-direction: column;
-            flex-grow: 1;
-            min-width: 200px;
+            min-width: 150px;
         }
 
         label {
-            margin-bottom: 8px;
+            margin-bottom: 5px;
             font-size: 14px;
             color: var(--secondary-text);
-            font-weight: 500;
         }
 
-        textarea, select, button {
-            padding: 14px 16px;
-            border-radius: 12px;
-            border: 1px solid #e0e0e0;
-            font-size: 16px;
-            transition: var(--transition);
-            background-color: white;
+        select, input, button, textarea {
+            padding: 10px 15px;
+            border-radius: 4px;
+            border: 1px solid #dfe1e5;
+            font-size: 14px;
+            transition: all 0.3s;
+            font-family: 'Roboto', Arial, sans-serif;
         }
 
         textarea {
+            width: 100%;
             min-height: 120px;
             resize: vertical;
-            font-family: inherit;
         }
 
-        textarea:focus, select:focus {
+        select:focus, input:focus, textarea:focus {
             outline: none;
             border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(109, 76, 255, 0.2);
+            box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
         }
 
         button {
@@ -116,32 +110,22 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            min-width: 120px;
+            gap: 8px;
         }
 
         button:hover {
             background-color: var(--hover-color);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(109, 76, 255, 0.2);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         button:disabled {
-            background-color: #e0e0e0;
-            color: #a0a0a0;
+            background-color: #cccccc;
             cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
         }
 
-        .button-secondary {
-            background-color: white;
-            color: var(--primary-color);
-            border: 1px solid var(--primary-color);
-        }
-
-        .button-secondary:hover {
-            background-color: #f5f2ff;
+        .icon {
+            width: 18px;
+            height: 18px;
         }
 
         .status {
@@ -150,26 +134,42 @@
             font-size: 16px;
             color: var(--primary-color);
             min-height: 24px;
-            padding: 12px;
-            border-radius: 12px;
-            background-color: rgba(109, 76, 255, 0.08);
         }
 
-        .icon {
-            width: 20px;
-            height: 20px;
+        .history-card {
+            padding: 15px;
+            border-radius: 8px;
+            background-color: var(--background);
+            margin-bottom: 10px;
+            border-left: 4px solid var(--primary-color);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .history-card:hover {
+            transform: translateX(5px);
+            background-color: #e8f0fe;
+        }
+
+        .history-text {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .history-date {
+            font-size: 12px;
+            color: var(--secondary-text);
         }
 
         footer {
             width: 100%;
             text-align: center;
-            color: var(--secondary-text);
-            padding: 20px;
-            font-size: 14px;
-            margin-top: 40px;
+            color: #999;
+            padding: 20px 0;
+            margin-top: 30px;
         }
 
-        /* Help Button Styles */
+        /* Help Button */
         .help-button {
             position: fixed;
             bottom: 30px;
@@ -180,18 +180,18 @@
             background-color: var(--primary-color);
             color: white;
             border: none;
-            box-shadow: 0 8px 24px rgba(109, 76, 255, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 1000;
-            transition: var(--transition);
+            transition: all 0.3s ease;
         }
 
         .help-button:hover {
-            transform: scale(1.1) translateY(-5px);
-            background-color: var(--hover-color);
+            transform: scale(1.1);
+            background-color: #3367d6;
         }
 
         .help-button svg {
@@ -199,7 +199,7 @@
             height: 24px;
         }
 
-        /* Help Dialog Styles */
+        /* Help Dialog */
         .help-dialog {
             display: none;
             position: fixed;
@@ -215,29 +215,25 @@
         }
 
         .help-dialog-content {
-            background-color: var(--glass-bg);
-            backdrop-filter: var(--blur);
-            -webkit-backdrop-filter: var(--blur);
+            background-color: white;
             padding: 30px;
-            border-radius: 16px;
+            border-radius: 12px;
             max-width: 500px;
             width: 90%;
-            box-shadow: var(--glass-shadow);
-            border: var(--glass-border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             position: relative;
         }
 
         .help-dialog h3 {
             color: var(--primary-color);
             margin-bottom: 15px;
-            font-size: 1.5rem;
         }
 
         .developer-info {
             margin: 20px 0;
-            padding: 20px;
-            background-color: rgba(109, 76, 255, 0.05);
-            border-radius: 12px;
+            padding: 15px;
+            background-color: var(--light-gray);
+            border-radius: 8px;
         }
 
         .developer-info a {
@@ -258,19 +254,7 @@
             border: none;
             font-size: 24px;
             cursor: pointer;
-            color: var(--secondary-text);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
-
-        .close-help:hover {
-            background-color: rgba(0, 0, 0, 0.05);
-            color: var(--text-color);
+            color: var(--dark-gray);
         }
 
         /* Auth Styles */
@@ -290,13 +274,12 @@
 
         .auth-card {
             background-color: white;
-            border-radius: 16px;
+            border-radius: 12px;
             padding: 40px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
             max-width: 400px;
             width: 90%;
-            border: var(--glass-border);
         }
 
         .auth-header {
@@ -304,14 +287,12 @@
         }
 
         .auth-header h2 {
-            color: var(--primary-color);
+            color: #aeb6c2;
             margin-bottom: 10px;
-            font-size: 1.8rem;
         }
 
         .auth-header p {
-            color: var(--secondary-text);
-            font-size: 1rem;
+            color: var(--dark-gray);
         }
 
         .btn-google {
@@ -324,15 +305,10 @@
             gap: 10px;
             padding: 12px 20px;
             margin: 0 auto;
-            border-radius: 12px;
-            font-weight: 500;
-            transition: var(--transition);
         }
 
         .btn-google:hover {
             background-color: #f8f9fa;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .google-icon {
@@ -347,10 +323,10 @@
             border: 4px solid rgba(0, 0, 0, 0.1);
             border-radius: 50%;
             border-top: 4px solid var(--primary-color);
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
+            margin: 0 auto 10px;
         }
 
         @keyframes spin {
@@ -358,10 +334,10 @@
             100% { transform: rotate(360deg); }
         }
 
-        /* User Profile Styles */
+        /* User Profile */
         .user-profile {
             position: fixed;
-            top: 20px;
+            top: 3px;
             right: 20px;
             z-index: 100;
         }
@@ -370,19 +346,13 @@
             background-color: var(--glass-bg);
             backdrop-filter: var(--blur);
             -webkit-backdrop-filter: var(--blur);
-            border-radius: 12px;
-            padding: 12px 16px;
+            border-radius: 8px;
+            padding: 15px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
             box-shadow: var(--glass-shadow);
             border: var(--glass-border);
-            transition: var(--transition);
-        }
-
-        .profile-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(109, 76, 255, 0.15);
         }
 
         .profile-avatar {
@@ -390,8 +360,6 @@
             height: 40px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid white;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .profile-info {
@@ -402,45 +370,42 @@
         .profile-info h3 {
             font-size: 14px;
             margin-bottom: 2px;
-            color: var(--text-color);
-            font-weight: 600;
+            color: var(--dark-gray);
         }
 
         .profile-info p {
             font-size: 12px;
-            color: var(--secondary-text);
-            opacity: 0.9;
+            color: var(--dark-gray);
+            opacity: 0.8;
         }
 
         .btn-signout {
-            background-color: white;
-            color: var(--primary-color);
-            border: 1px solid var(--primary-color);
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
             padding: 6px 12px;
-            border-radius: 8px;
+            border-radius: 4px;
             font-size: 12px;
             cursor: pointer;
             transition: var(--transition);
-            font-weight: 500;
         }
 
         .btn-signout:hover {
-            background-color: #f5f2ff;
-            transform: translateY(-1px);
+            background-color: #d33426;
         }
 
-        /* App Menu Styles */
+        /* App Menu */
         .app-menu {
-            position: fixed;
-            top: 20px;
-            left: 20px;
+            position: absolute;
+            top: 15px;
+            right: 20px;
             z-index: 1000;
         }
 
         .app-menu-button {
-            width: 48px;
-            height: 48px;
-            border-radius: 14px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
             background-color: var(--glass-bg);
             backdrop-filter: var(--blur);
             -webkit-backdrop-filter: var(--blur);
@@ -451,13 +416,12 @@
             justify-content: center;
             cursor: pointer;
             transition: var(--transition);
-            color: var(--primary-color);
+            color: var(--dark-gray);
         }
 
         .app-menu-button:hover {
-            background-color: rgba(109, 76, 255, 0.1);
+            background-color: rgba(66, 133, 244, 0.1);
             transform: rotate(90deg);
-            color: var(--hover-color);
         }
 
         .app-menu-dialog {
@@ -486,7 +450,7 @@
             background-color: var(--glass-bg);
             backdrop-filter: var(--blur);
             -webkit-backdrop-filter: var(--blur);
-            border-radius: 16px;
+            border-radius: 12px;
             padding: 25px;
             width: 90%;
             max-width: 400px;
@@ -506,76 +470,39 @@
             color: var(--primary-color);
             margin-bottom: 20px;
             text-align: center;
-            font-size: 1.5rem;
         }
 
         .app-list {
             list-style: none;
             padding: 0;
-            margin: 0;
         }
 
         .app-list li {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .app-list a {
             display: block;
-            padding: 14px 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 12px;
-            color: var(--text-color);
+            padding: 12px 15px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 6px;
+            color: var(--dark-gray);
             text-decoration: none;
             transition: var(--transition);
             border: 1px solid rgba(0, 0, 0, 0.05);
-            font-weight: 500;
         }
 
         .app-list a:hover {
-            background-color: rgba(109, 76, 255, 0.1);
+            background-color: rgba(66, 133, 244, 0.1);
             transform: translateX(5px);
             color: var(--primary-color);
-            box-shadow: 0 4px 12px rgba(109, 76, 255, 0.1);
-        }
-
-        /* Voice selection styles */
-        .voice-selector {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .voice-option {
-            flex: 1;
-            padding: 12px;
-            border-radius: 12px;
-            background-color: white;
-            border: 1px solid #e0e0e0;
-            cursor: pointer;
-            transition: var(--transition);
-            text-align: center;
-            font-weight: 500;
-        }
-
-        .voice-option:hover {
-            background-color: #f5f2ff;
-        }
-
-        .voice-option.selected {
-            background-color: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
         }
 
         /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .container {
-                margin: 10px;
-                padding: 15px;
-            }
-            
+        @media (max-width: 600px) {
             .controls {
                 flex-direction: column;
+                align-items: stretch;
             }
             
             .control-group {
@@ -593,15 +520,15 @@
     <div id="authContainer" class="auth-container">
         <div class="auth-card">
             <div class="auth-header">
-                <h2>Welcome to French Vocal</h2>
-                <p>Master French pronunciation with our TTS technology</p>
+                <h2>Welcome to French-Pro</h2>
+                <p>Sign in to Get Started <br> French Pronunciation Tool</p>
             </div>
             <div class="auth-body">
                 <div id="authLoader" class="auth-loader" style="display: none;">
                     <div class="loader-spinner"></div>
                     <p>Signing you in...</p>
                 </div>
-                <button id="signInButton" class="btn-google">
+                <button id="signInButton" class="btn btn-google">
                     <svg class="google-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px">
                         <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
                         <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
@@ -625,7 +552,7 @@
                 <h3 id="userName"></h3>
                 <p id="userEmail"></p>
             </div>
-            <button id="signOutButton" class="btn-signout">Sign Out</button>
+            <button id="signOutButton" class="btn btn-signout">Sign Out</button>
         </div>
     </div>
 
@@ -633,19 +560,18 @@
     <div class="app-menu">
         <button id="appMenuButton" class="app-menu-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
+                <circle cx="12" cy="12" r="1"></circle>
+                <circle cx="12" cy="5" r="1"></circle>
+                <circle cx="12" cy="19" r="1"></circle>
             </svg>
         </button>
         
         <div id="appMenuDialog" class="app-menu-dialog">
             <div id="appMenuContent" class="app-menu-content">
-                <h3>QuickCBT&copy; Apps</h3>
+                <h3>QuickCBT&copy;</h3>
                 <ul class="app-list">
                     <li><a href="https://quickcbt.netlify.app" target="_blank">QuickCBT</a></li>
                     <li><a href="https://quickcbt.netlify.app/mth102-rev" target="_blank">MTH 102 Revision</a></li>
-                    <li><a href="#" id="currentAppLink">French Vocal</a></li>
                 </ul>
                 <footer>
                     By: Iyiola Adedamola Richard @QuickCBT&copy;2025
@@ -656,68 +582,58 @@
 
     <!-- Main App Container -->
     <div class="container">
-        <div class="app-header">
-            <h1>French Vocal</h1>
-        </div>
+        <h1 class="h1header">French-Pro-Beta</h1>
         
         <div class="controls">
-            <div class="control-group" style="flex-grow: 2;">
-                <label for="french-text">Enter French Text</label>
-                <textarea id="french-text" placeholder="Type or paste French text here..."></textarea>
-            </div>
-        </div>
-        
-        <div class="controls">
-            <div class="control-group">
-                <label>Voice Type</label>
-                <div class="voice-selector">
-                    <div class="voice-option selected" data-voice="female">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
-                            <path d="M12 2a2 2 0 0 0-2 2c0 1.02-.5 2-1 2.5C8.5 7 8 7.52 8 8v5.5a6.5 6.5 0 1 0 13 0V8c0-.48-.5-1-1-1.5-.5-.5-1-1.48-1-2.5a2 2 0 0 0-2-2z"></path>
-                            <path d="M12 2v4"></path>
-                            <path d="M10 22v-2"></path>
-                            <path d="M14 22v-2"></path>
-                        </svg>
-                        Female
-                    </div>
-                    <div class="voice-option" data-voice="male">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
-                            <path d="M10 16c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5"></path>
-                            <path d="M19 7V5c0-1.1-.9-2-2-2h-2"></path>
-                            <path d="M5 7V5c0-1.1.9-2 2-2h2"></path>
-                            <path d="M12 22c-3 0-5.5-2-5.5-5.5V17h11v-.5c0 3.5-2.5 5.5-5.5 5.5z"></path>
-                            <path d="M12 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
-                        </svg>
-                        Male
-                    </div>
-                </div>
-            </div>
-            
-            <div class="control-group">
-                <label for="speed">Speed</label>
-                <select id="speed">
-                    <option value="0.8">Slow</option>
-                    <option value="1" selected>Normal</option>
-                    <option value="1.2">Fast</option>
+            <div class="control-group" style="flex-grow: 1;">
+                <label for="voice-select">Voice</label>
+                <select id="voice-select">
+                    <option value="">Default (Female)</option>
                 </select>
             </div>
             
+            <div class="control-group">
+                <label for="speed-select">Speed</label>
+                <select id="speed-select">
+                    <option value="0.7">Slow</option>
+                    <option value="1" selected>Normal</option>
+                    <option value="1.3">Fast</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <label for="french-text">Enter French Text</label>
+            <textarea id="french-text" placeholder="Type or paste French text here..."></textarea>
+        </div>
+        
+        <div class="controls">
             <button id="play-btn">
                 <svg class="icon" viewBox="0 0 24 24">
                     <path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
                 </svg>
-                Play
+                Pronounce
             </button>
             
-            <button id="stop-btn" class="button-secondary" disabled>
+            <button id="stop-btn" disabled>
                 <svg class="icon" viewBox="0 0 24 24">
                     <path fill="currentColor" d="M6,19H18V5H6V19Z" />
                 </svg>
                 Stop
             </button>
+            
+            <button id="clear-btn">
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
+                </svg>
+                Clear
+            </button>
         </div>
         
-        <div class="status" id="status">Ready to pronounce French text</div>
+        <div class="status" id="status"></div>
+        
+        <h3>History</h3>
+        <div id="history-container"></div>
     </div>
 
     <!-- Help Button -->
@@ -733,16 +649,10 @@
     <div id="helpDialog" class="help-dialog">
         <div class="help-dialog-content">
             <button class="close-help">&times;</button>
-            <h3>French Vocal Help</h3>
-            <p>This app helps you master French pronunciation with text-to-speech technology. Here's how to use it:</p>
-            <ol>
-                <li>Enter French text in the text area</li>
-                <li>Select female or male voice</li>
-                <li>Adjust speed if needed</li>
-                <li>Click Play to hear the pronunciation</li>
-            </ol>
+            <h3>Need Help or Have Feedback?</h3>
+            <p>For any inquiries or suggestions about the application, please reach out to the developer:</p>
             <div class="developer-info">
-                <p><strong>Developer: Iyiola Adedamola Richard</strong></p>
+                <p><strong>Iyiola Adedamola Richard</strong></p>
                 <a href="https://iar-portfolio.netlify.app/" target="_blank">Visit Developer Portfolio</a>
             </div>
         </div>
@@ -757,250 +667,261 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     
-
-     <script src="config.js"> </script>
     <!-- Load config and auth -->
-    <script>
-  
-        const auth = firebase.auth();
-        const db = firebase.firestore();
-    </script>
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
     
     <script>
-        // Authentication functions
-        function initAuth() {
-            const authContainer = document.getElementById('authContainer');
-            const userProfile = document.getElementById('userProfile');
-            const userName = document.getElementById('userName');
-            const userEmail = document.getElementById('userEmail');
-            const userAvatar = document.getElementById('userAvatar');
-            const signInButton = document.getElementById('signInButton');
-            const signOutButton = document.getElementById('signOutButton');
-            const authLoader = document.getElementById('authLoader');
-
-            // Listen for auth state changes
-            auth.onAuthStateChanged(user => {
-                if (user) {
-                    // User is signed in
-                    authContainer.style.display = 'none';
-                    userProfile.style.display = 'block';
-                    
-                    // Update user info
-                    userName.textContent = user.displayName || 'User';
-                    userEmail.textContent = user.email;
-                    userAvatar.src = user.photoURL || 'https://via.placeholder.com/40';
-                    
-                    // Initialize app
-                    initApp();
-                    
-                    // Play welcome message
-                    playWelcomeMessage();
-                } else {
-                    // User is signed out
-                    authContainer.style.display = 'flex';
-                    userProfile.style.display = 'none';
-                }
-            });
-
-            // Sign in handler
-            signInButton.addEventListener('click', () => {
-                const provider = new firebase.auth.GoogleAuthProvider();
-                authLoader.style.display = 'block';
-                signInButton.style.display = 'none';
-                
-                auth.signInWithPopup(provider)
-                    .catch(error => {
-                        console.error('Sign in error:', error);
-                        authLoader.style.display = 'none';
-                        signInButton.style.display = 'flex';
-                    });
-            });
-
-            // Sign out handler
-            signOutButton.addEventListener('click', () => {
-                auth.signOut();
-            });
-        }
-
-        // Play welcome message
-        function playWelcomeMessage() {
-            const synth = window.speechSynthesis;
-            const utterance = new SpeechSynthesisUtterance("Bienvenue dans French Vocal. Prêt à prononcer du français.");
-            utterance.lang = 'fr-FR';
-            utterance.rate = 1.0;
-            
-            // Find a French female voice
-            const voices = synth.getVoices();
-            const frenchFemaleVoice = voices.find(voice => 
-                voice.lang.includes('fr') && voice.name.includes('Fem')
-            );
-            
-            if (frenchFemaleVoice) {
-                utterance.voice = frenchFemaleVoice;
-            }
-            
-            synth.speak(utterance);
-        }
-
-        // Main app functionality
-        function initApp() {
-            const container = document.querySelector('.container');
-            container.style.display = 'block';
-            
-            const frenchText = document.getElementById('french-text');
-            const playBtn = document.getElementById('play-btn');
-            const stopBtn = document.getElementById('stop-btn');
-            const speedSelect = document.getElementById('speed');
-            const statusElement = document.getElementById('status');
-            const voiceOptions = document.querySelectorAll('.voice-option');
-            
-            // Speech synthesis
-            const synth = window.speechSynthesis;
-            let currentUtterance = null;
-            let isPlaying = false;
-            let selectedVoiceType = 'female';
+        // DOM elements
+        const frenchText = document.getElementById('french-text');
+        const voiceSelect = document.getElementById('voice-select');
+        const speedSelect = document.getElementById('speed-select');
+        const playBtn = document.getElementById('play-btn');
+        const stopBtn = document.getElementById('stop-btn');
+        const clearBtn = document.getElementById('clear-btn');
+        const statusElement = document.getElementById('status');
+        const historyContainer = document.getElementById('history-container');
+        const containerElement = document.querySelector('.container');
+        
+        // Speech synthesis
+        const synth = window.speechSynthesis;
+        let currentUtterance = null;
+        let voices = [];
+        let isPlaying = false;
+        
+        // Initialize the app
+        function init() {
+            containerElement.style.display = "block";
             
             // Load voices when they become available
-            let voicesLoaded = false;
-            
-            function loadVoices() {
-                if (synth.getVoices().length > 0) {
-                    voicesLoaded = true;
-                } else {
-                    synth.onvoiceschanged = () => {
-                        voicesLoaded = true;
-                    };
-                }
-            }
-            
-            // Initialize voice loading
+            synth.onvoiceschanged = loadVoices;
             loadVoices();
             
-            // Voice selection
-            voiceOptions.forEach(option => {
-                option.addEventListener('click', () => {
-                    voiceOptions.forEach(opt => opt.classList.remove('selected'));
-                    option.classList.add('selected');
-                    selectedVoiceType = option.dataset.voice;
-                });
-            });
+            // Play welcome message
+            setTimeout(() => {
+                speak("Bienvenue dans French-Pro", true);
+            }, 1000);
             
-            // Play button handler
-            playBtn.addEventListener('click', () => {
-                if (isPlaying) return;
-                
-                const text = frenchText.value.trim();
-                if (!text) {
-                    statusElement.textContent = "Please enter some French text";
-                    return;
-                }
-                
-                isPlaying = true;
-                playBtn.disabled = true;
-                stopBtn.disabled = false;
-                statusElement.textContent = "Playing...";
-                
-                // Cancel any current speech
-                if (currentUtterance) {
-                    synth.cancel();
-                }
-                
-                currentUtterance = new SpeechSynthesisUtterance(text);
-                currentUtterance.lang = 'fr-FR';
-                currentUtterance.rate = parseFloat(speedSelect.value);
-                
-                // Set voice based on selection
-                if (voicesLoaded) {
-                    const voices = synth.getVoices();
-                    let preferredVoice = null;
-                    
-                    if (selectedVoiceType === 'female') {
-                        preferredVoice = voices.find(voice => 
-                            voice.lang.includes('fr') && voice.name.includes('Fem')
-                        );
-                    } else {
-                        preferredVoice = voices.find(voice => 
-                            voice.lang.includes('fr') && !voice.name.includes('Fem')
-                        );
-                    }
-                    
-                    if (preferredVoice) {
-                        currentUtterance.voice = preferredVoice;
-                    }
-                }
-                
-                currentUtterance.onend = () => {
-                    isPlaying = false;
-                    playBtn.disabled = false;
-                    stopBtn.disabled = true;
-                    statusElement.textContent = "Finished playing";
-                };
-                
-                currentUtterance.onerror = (event) => {
-                    console.error('Speech error:', event);
-                    isPlaying = false;
-                    playBtn.disabled = false;
-                    stopBtn.disabled = true;
-                    statusElement.textContent = "Error playing audio";
-                };
-                
-                synth.speak(currentUtterance);
-            });
+            // Load history from localStorage
+            loadHistory();
             
-            // Stop button handler
-            stopBtn.addEventListener('click', () => {
-                if (currentUtterance) {
-                    synth.cancel();
-                }
-                
-                isPlaying = false;
-                playBtn.disabled = false;
-                stopBtn.disabled = true;
-                statusElement.textContent = "Stopped playback";
-            });
+            // Event listeners
+            playBtn.addEventListener('click', playText);
+            stopBtn.addEventListener('click', stopPlayback);
+            clearBtn.addEventListener('click', clearText);
+        }
+        
+        // Load available voices
+        function loadVoices() {
+            voices = synth.getVoices();
+            voiceSelect.innerHTML = '<option value="">Default (Female)</option>';
             
-            // Help dialog functionality
-            const helpButton = document.getElementById('helpButton');
-            const helpDialog = document.getElementById('helpDialog');
-            const closeHelp = document.querySelector('.close-help');
+            // Filter French voices and add to select
+            const frenchVoices = voices.filter(voice => 
+                voice.lang.startsWith('fr-') || 
+                voice.name.toLowerCase().includes('french')
+            );
             
-            helpButton.addEventListener('click', () => {
-                helpDialog.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            });
-            
-            closeHelp.addEventListener('click', () => {
-                helpDialog.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            });
-            
-            helpDialog.addEventListener('click', (e) => {
-                if (e.target === helpDialog) {
-                    helpDialog.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
-            });
-            
-            // App menu functionality
-            const appMenuButton = document.getElementById('appMenuButton');
-            const appMenuDialog = document.getElementById('appMenuDialog');
-            const appMenuContent = document.getElementById('appMenuContent');
-            
-            appMenuButton.addEventListener('click', (e) => {
-                e.stopPropagation();
-                appMenuDialog.classList.toggle('active');
-            });
-            
-            document.addEventListener('click', (e) => {
-                if (!appMenuContent.contains(e.target) {
-                    appMenuDialog.classList.remove('active');
-                }
+            frenchVoices.forEach(voice => {
+                const option = document.createElement('option');
+                option.value = voice.name;
+                option.textContent = `${voice.name} (${voice.lang}) ${voice.default ? ' - Default' : ''}`;
+                voiceSelect.appendChild(option);
             });
         }
         
-        // Initialize auth when DOM is loaded
+        // Speak text
+        function speak(text, isWelcome = false) {
+            if (isPlaying && !isWelcome) return;
+            
+            if (currentUtterance) {
+                synth.cancel();
+            }
+            
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'fr-FR';
+            utterance.rate = parseFloat(speedSelect.value);
+            
+            // Set selected voice if available
+            const selectedVoiceName = voiceSelect.value;
+            if (selectedVoiceName) {
+                const selectedVoice = voices.find(voice => voice.name === selectedVoiceName);
+                if (selectedVoice) {
+                    utterance.voice = selectedVoice;
+                }
+            }
+            
+            if (!isWelcome) {
+                isPlaying = true;
+                playBtn.disabled = true;
+                stopBtn.disabled = false;
+                statusElement.textContent = "Pronouncing...";
+                
+                utterance.onend = () => {
+                    isPlaying = false;
+                    playBtn.disabled = false;
+                    stopBtn.disabled = true;
+                    statusElement.textContent = "Ready";
+                    
+                    // Add to history if not empty
+                    if (text.trim()) {
+                        addToHistory(text);
+                    }
+                };
+            }
+            
+            currentUtterance = utterance;
+            synth.speak(utterance);
+        }
+        
+        // Play the text
+        function playText() {
+            const text = frenchText.value.trim();
+            if (!text) {
+                statusElement.textContent = "Please enter some French text";
+                return;
+            }
+            
+            speak(text);
+        }
+        
+        // Stop playback
+        function stopPlayback() {
+            isPlaying = false;
+            if (currentUtterance) {
+                synth.cancel();
+            }
+            
+            statusElement.textContent = "Stopped";
+            playBtn.disabled = false;
+            stopBtn.disabled = true;
+        }
+        
+        // Clear text
+        function clearText() {
+            frenchText.value = '';
+            statusElement.textContent = "Text cleared";
+            setTimeout(() => {
+                statusElement.textContent = "Ready";
+            }, 2000);
+        }
+        
+        // Add to history
+        function addToHistory(text) {
+            const history = getHistory();
+            const now = new Date();
+            const timestamp = now.toLocaleString();
+            
+            // Add new item to beginning of array
+            history.unshift({
+                text: text,
+                date: timestamp
+            });
+            
+            // Keep only last 10 items
+            if (history.length > 10) {
+                history.pop();
+            }
+            
+            // Save to localStorage
+            localStorage.setItem('frenchProHistory', JSON.stringify(history));
+            
+            // Update UI
+            loadHistory();
+        }
+        
+        // Get history from localStorage
+        function getHistory() {
+            const history = localStorage.getItem('frenchProHistory');
+            return history ? JSON.parse(history) : [];
+        }
+        
+        // Load history into UI
+        function loadHistory() {
+            const history = getHistory();
+            historyContainer.innerHTML = '';
+            
+            if (history.length === 0) {
+                historyContainer.innerHTML = '<p style="color: var(--secondary-text); text-align: center;">No history yet</p>';
+                return;
+            }
+            
+            history.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = 'history-card';
+                card.innerHTML = `
+                    <div class="history-text">${item.text}</div>
+                    <div class="history-date">${item.date}</div>
+                `;
+                
+                card.addEventListener('click', () => {
+                    frenchText.value = item.text;
+                    frenchText.focus();
+                });
+                
+                historyContainer.appendChild(card);
+            });
+        }
+        
+        // Initialize the app when DOM is loaded and user is authenticated
         document.addEventListener('DOMContentLoaded', () => {
+            // Initialize auth first
             initAuth();
+            
+            // Initialize app when user is authenticated
+            auth.onAuthStateChanged(user => {
+                if (user) {
+                    document.querySelector('.container').style.display = 'block';
+                    init();
+                }
+            });
+        });
+
+        // Help Button Functionality
+        const helpButton = document.getElementById('helpButton');
+        const helpDialog = document.getElementById('helpDialog');
+        const closeHelp = document.querySelector('.close-help');
+
+        helpButton.addEventListener('click', () => {
+            helpDialog.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeHelp.addEventListener('click', () => {
+            helpDialog.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        helpDialog.addEventListener('click', (e) => {
+            if (e.target === helpDialog) {
+                helpDialog.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // App Menu Functionality
+        const appMenuButton = document.getElementById('appMenuButton');
+        const appMenuDialog = document.getElementById('appMenuDialog');
+        const appMenuContent = document.getElementById('appMenuContent');
+
+        // Toggle menu
+        appMenuButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            appMenuDialog.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!appMenuContent.contains(e.target) && e.target !== appMenuButton) {
+                appMenuDialog.classList.remove('active');
+            }
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.app-list a').forEach(link => {
+            link.addEventListener('click', () => {
+                appMenuDialog.classList.remove('active');
+            }
         });
     </script>
 </body>
