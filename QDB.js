@@ -6481,6 +6481,336 @@
             }
         ],
 
+
+    "PHY 101: Uniform Circular Motion - 8": [
+      {
+        "No": 1,
+        "question": "Which of the following is an example of uniform circular motion?",
+        "options": [
+          "I. A car accelerating on a straight road",
+          "II. The moon revolving around the Earth",
+          "III. A ball falling freely under gravity",
+          "IV. A rocket launching into space"
+        ],
+        "answers": [
+          "II. The moon revolving around the Earth is an example of uniform circular motion because it moves at a constant speed along a circular path."
+        ]
+      },
+      {
+        "No": 2,
+        "question": "In uniform circular motion, the velocity vector is constantly changing because:",
+        "options": [
+          "I. The speed is changing",
+          "II. The direction of motion is changing",
+          "III. Both speed and direction are changing",
+          "IV. The acceleration is zero"
+        ],
+        "answers": [
+          "II. The direction of motion is changing, which causes the velocity vector to change even if the speed remains constant."
+        ]
+      },
+      {
+        "No": 3,
+        "question": "What is angular velocity (ω) defined as?",
+        "options": [
+          "I. The rate of change of linear velocity",
+          "II. The rate of change of angular position",
+          "III. The centripetal force per unit mass",
+          "IV. The tangential acceleration"
+        ],
+        "answers": [
+          "II. Angular velocity is defined as the rate of change of angular position, measured in radians per second."
+        ]
+      },
+      {
+        "No": 4,
+        "question": "A ceiling fan rotates at 500 revolutions per minute (rpm). What is its average angular velocity in rad/s?",
+        "options": [
+          "I. 52.36 rad/s",
+          "II. 26.18 rad/s",
+          "III. 10.47 rad/s",
+          "IV. 5.24 rad/s"
+        ],
+        "answers": [
+          "I. 500 rpm is equivalent to (500 × 2π) / 60 ≈ 52.36 rad/s."
+        ]
+      },
+      {
+        "No": 5,
+        "question": "What is the relationship between angular velocity (ω) and instantaneous velocity (v) in circular motion?",
+        "options": [
+          "I. v = ω × r",
+          "II. v = ω / r",
+          "III. v = ω² × r",
+          "IV. v = ω + r"
+        ],
+        "answers": [
+          "I. The instantaneous velocity (v) is the product of angular velocity (ω) and the radius (r) of the circular path."
+        ]
+      },
+      {
+        "No": 6,
+        "question": "What is angular acceleration?",
+        "options": [
+          "I. The rate of change of angular velocity",
+          "II. The centripetal force divided by mass",
+          "III. The tangential velocity squared",
+          "IV. The linear acceleration in the direction of motion"
+        ],
+        "answers": [
+          "I. Angular acceleration is defined as the rate of change of angular velocity."
+        ]
+      },
+      {
+        "No": 7,
+        "question": "What causes centripetal acceleration in uniform circular motion?",
+        "options": [
+          "I. Change in speed",
+          "II. Change in direction of velocity",
+          "III. Change in angular velocity",
+          "IV. Tangential acceleration"
+        ],
+        "answers": [
+          "II. Centripetal acceleration arises due to the constant change in the direction of the velocity vector, even if the speed remains constant."
+        ]
+      },
+      {
+        "No": 8,
+        "question": "What is the formula for centripetal acceleration (a_c)?",
+        "options": [
+          "I. a_c = v / r",
+          "II. a_c = v² × r",
+          "III. a_c = v² / r",
+          "IV. a_c = ω × r"
+        ],
+        "answers": [
+          "III. Centripetal acceleration is given by a_c = v² / r, where v is the tangential velocity and r is the radius."
+        ]
+      },
+      {
+        "No": 9,
+        "question": "In uniform circular motion, the angular acceleration is:",
+        "options": [
+          "I. Zero because the angular velocity is constant",
+          "II. Equal to the centripetal acceleration",
+          "III. Proportional to the radius",
+          "IV. Always negative"
+        ],
+        "answers": [
+          "I. Angular acceleration is zero in uniform circular motion because the angular velocity does not change."
+        ]
+      },
+      {
+        "No": 10,
+        "question": "What is the direction of centripetal acceleration?",
+        "options": [
+          "I. Tangential to the circle",
+          "II. Radially outward",
+          "III. Radially inward",
+          "IV. Parallel to the velocity vector"
+        ],
+        "answers": [
+          "III. Centripetal acceleration is always directed radially inward toward the center of the circular path."
+        ]
+      },
+      {
+        "No": 11,
+        "question": "A 35 kg wheel rotates at 3,000 rev/min with a radius of gyration of 12 cm. What is its kinetic energy?",
+        "options": [
+          "I. 1.25 × 10⁴ J",
+          "II. 2.49 × 10⁴ J",
+          "III. 3.75 × 10⁴ J",
+          "IV. 5.00 × 10⁴ J"
+        ],
+        "answers": [
+          "II. The kinetic energy is calculated using the rotational kinetic energy formula: KE = (1/2)Iω², where I is the moment of inertia and ω is the angular velocity. The answer is 2.49 × 10⁴ J."
+        ]
+      },
+      {
+        "No": 12,
+        "question": "The flywheel of a car has a mass of 300 kg and a radius of gyration of 1.5 m. If a constant torque of 200 Nm is applied, what is its angular acceleration?",
+        "options": [
+          "I. 0.148 rad/s²",
+          "II. 0.296 rad/s²",
+          "III. 0.444 rad/s²",
+          "IV. 0.592 rad/s²"
+        ],
+        "answers": [
+          "II. The angular acceleration is calculated using τ = Iα, where τ is the torque and I is the moment of inertia. The answer is 0.296 rad/s²."
+        ]
+      },
+      {
+        "No": 13,
+        "question": "For the same flywheel, what is its angular velocity after 5 revolutions?",
+        "options": [
+          "I. 2.15 rad/s",
+          "II. 4.31 rad/s",
+          "III. 6.47 rad/s",
+          "IV. 8.62 rad/s"
+        ],
+        "answers": [
+          "II. Using the kinematic equation ω² = ω₀² + 2αθ, where θ is the angular displacement (5 rev = 10π rad), the angular velocity is 4.31 rad/s."
+        ]
+      },
+      {
+        "No": 14,
+        "question": "What is the role of the string in the motion of a stone whirled in a circle?",
+        "options": [
+          "I. It provides tangential acceleration",
+          "II. It provides the centripetal force",
+          "III. It increases the angular velocity",
+          "IV. It reduces the radius of the circle"
+        ],
+        "answers": [
+          "II. The string provides the centripetal force necessary to keep the stone moving in a circular path."
+        ]
+      },
+      {
+        "No": 15,
+        "question": "In uniform circular motion, which quantity remains constant?",
+        "options": [
+          "I. Velocity",
+          "II. Acceleration",
+          "III. Speed",
+          "IV. Angular acceleration"
+        ],
+        "answers": [
+          "III. The speed remains constant in uniform circular motion, while the direction of velocity and the acceleration change."
+        ]
+      },
+      {
+        "No": 16,
+        "question": "What is the direction of the velocity vector in uniform circular motion?",
+        "options": [
+          "I. Radially inward",
+          "II. Radially outward",
+          "III. Tangential to the circle",
+          "IV. Parallel to the acceleration"
+        ],
+        "answers": [
+          "III. The velocity vector is always tangential to the circular path at any point."
+        ]
+      },
+      {
+        "No": 17,
+        "question": "Which of the following is NOT true about uniform circular motion?",
+        "options": [
+          "I. The speed is constant",
+          "II. The acceleration is directed toward the center",
+          "III. The angular velocity is zero",
+          "IV. The velocity vector changes direction"
+        ],
+        "answers": [
+          "III. The angular velocity is not zero; it is constant in uniform circular motion."
+        ]
+      },
+      {
+        "No": 18,
+        "question": "What happens to the centripetal acceleration if the radius of the circular path is doubled while the speed remains the same?",
+        "options": [
+          "I. It doubles",
+          "II. It halves",
+          "III. It quadruples",
+          "IV. It remains the same"
+        ],
+        "answers": [
+          "II. Centripetal acceleration is inversely proportional to the radius (a_c = v² / r), so doubling the radius halves the acceleration."
+        ]
+      },
+      {
+        "No": 19,
+        "question": "Which force is responsible for the Earth's revolution around the Sun?",
+        "options": [
+          "I. Gravitational force",
+          "II. Electromagnetic force",
+          "III. Frictional force",
+          "IV. Tension force"
+        ],
+        "answers": [
+          "I. The gravitational force between the Earth and the Sun provides the centripetal force for the Earth's revolution."
+        ]
+      },
+      {
+        "No": 20,
+        "question": "What is the moment of inertia (I) of a wheel with mass (m) and radius of gyration (k)?",
+        "options": [
+          "I. I = m × k",
+          "II. I = m / k",
+          "III. I = m × k²",
+          "IV. I = m² × k"
+        ],
+        "answers": [
+          "III. The moment of inertia is given by I = m × k², where k is the radius of gyration."
+        ]
+      },
+      {
+        "No": 21,
+        "question": "If the angular velocity of a rotating body increases, what happens to its centripetal acceleration?",
+        "options": [
+          "I. It decreases",
+          "II. It increases",
+          "III. It remains the same",
+          "IV. It becomes zero"
+        ],
+        "answers": [
+          "II. Centripetal acceleration (a_c = ω² × r) increases with the square of the angular velocity."
+        ]
+      },
+      {
+        "No": 22,
+        "question": "What is the unit of angular acceleration?",
+        "options": [
+          "I. m/s²",
+          "II. rad/s",
+          "III. rad/s²",
+          "IV. Nm"
+        ],
+        "answers": [
+          "III. Angular acceleration is measured in radians per second squared (rad/s²)."
+        ]
+      },
+      {
+        "No": 23,
+        "question": "In the derivation of centripetal acceleration, why are the triangles AOB and MNP similar?",
+        "options": [
+          "I. They have equal sides",
+          "II. They are both right-angled",
+          "III. They are isosceles with equal angles (Δθ)",
+          "IV. They have the same area"
+        ],
+        "answers": [
+          "III. The triangles are similar because they are isosceles and share the same angle Δθ."
+        ]
+      },
+      {
+        "No": 24,
+        "question": "What is the tangential acceleration in uniform circular motion?",
+        "options": [
+          "I. Equal to centripetal acceleration",
+          "II. Zero",
+          "III. Constant and non-zero",
+          "IV. Directed radially inward"
+        ],
+        "answers": [
+          "II. Tangential acceleration is zero in uniform circular motion because the speed is constant."
+        ]
+      },
+      {
+        "No": 25,
+        "question": "Which of the following best describes the motion of an electron around the nucleus?",
+        "options": [
+          "I. Linear motion",
+          "II. Uniform circular motion",
+          "III. Random motion",
+          "IV. Parabolic motion"
+        ],
+        "answers": [
+          "II. The motion of an electron around the nucleus is an example of uniform circular motion, as it follows a circular path at constant speed."
+        ]
+      }
+    ],
+                       
+
         "GES 107: Overview of Healthy Living - Topic 1": [
             {
                 "No": 1,
