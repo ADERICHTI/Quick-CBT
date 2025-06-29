@@ -7467,6 +7467,335 @@
         ]
       }
     ],
+
+
+    "PHY 101: Gravitation(2) - 10": [
+      {
+        "No": 1,
+        "question": "If the distance between two masses is tripled, how does the gravitational force between them change?",
+        "options": [
+          "I. It becomes 3 times stronger.",
+          "II. It becomes 9 times weaker.",
+          "III. It becomes 6 times weaker.",
+          "IV. It stays the same."
+        ],
+        "answers": [
+          "II. Gravitational force follows an inverse-square law (F ∝ 1/r²). Tripling the distance makes the force 1/9th of the original."
+        ]
+      },
+      {
+        "No": 2,
+        "question": "What is the gravitational field strength at a height equal to Earth's radius above its surface?",
+        "options": [
+          "I. 9.8 N/kg",
+          "II. 4.9 N/kg",
+          "III. 2.45 N/kg",
+          "IV. 19.6 N/kg"
+        ],
+        "answers": [
+          "III. At height = Earth's radius (r), distance from center = 2r. Since g ∝ 1/r², g = 9.8/(2)² = 2.45 N/kg."
+        ]
+      },
+      {
+        "No": 3,
+        "question": "A satellite orbits Earth with a period of 90 minutes. What happens if its orbital radius is increased to 4 times its original value?",
+        "options": [
+          "I. Period becomes 360 minutes.",
+          "II. Period becomes 720 minutes.",
+          "III. Period becomes 180 minutes.",
+          "IV. Period becomes 45 minutes."
+        ],
+        "answers": [
+          "II. Kepler's Third Law: T² ∝ r³. If r → 4r, T² → (4)³ = 64, so T → 8 × 90 min = 720 min."
+        ]
+      },
+      {
+        "No": 4,
+        "question": "Why does an astronaut in orbit feel weightless?",
+        "options": [
+          "I. There is no gravity in space.",
+          "II. Gravity is balanced by the spacecraft's upward force.",
+          "III. The astronaut and spacecraft are in free fall together.",
+          "IV. Gravity acts sideways in orbit."
+        ],
+        "answers": [
+          "III. Weightlessness occurs because both the astronaut and spacecraft accelerate toward Earth at the same rate (free fall)."
+        ]
+      },
+      {
+        "No": 5,
+        "question": "Calculate the escape velocity from a planet with twice Earth's mass and half its radius. (Earth's escape velocity = 11.2 km/s)",
+        "options": [
+          "I. 5.6 km/s",
+          "II. 11.2 km/s",
+          "III. 22.4 km/s",
+          "IV. 44.8 km/s"
+        ],
+        "answers": [
+          "III. Escape velocity vₑ = √(2GM/R). For 2M and R/2: vₑ = √(2G(2M)/(R/2)) = √(8GM/R) = 2 × 11.2 km/s = 22.4 km/s."
+        ]
+      },
+      {
+        "No": 6,
+        "question": "Which graph represents gravitational potential energy (U) vs. distance (r) from a planet's center?",
+        "options": [
+          "I. A straight horizontal line.",
+          "II. A line sloping upward from left to right.",
+          "III. A curve approaching zero as r increases.",
+          "IV. A curve decreasing to negative infinity as r decreases."
+        ],
+        "answers": [
+          "III. Gravitational potential energy U = -GMm/r, so U approaches zero as r increases (hyperbolic curve)."
+        ]
+      },
+      {
+        "No": 7,
+        "question": "A geostationary satellite must orbit:",
+        "options": [
+          "I. Over the poles at 24-hour period.",
+          "II. Above the equator at 12-hour period.",
+          "III. Above the equator at 24-hour period.",
+          "IV. At any latitude with 48-hour period."
+        ],
+        "answers": [
+          "III. Geostationary satellites orbit above the equator with a 24-hour period to match Earth's rotation."
+        ]
+      },
+      {
+        "No": 8,
+        "question": "If Earth's mass were doubled but its radius unchanged, how would your weight change?",
+        "options": [
+          "I. Halved",
+          "II. Doubled",
+          "III. Unchanged",
+          "IV. Quadrupled"
+        ],
+        "answers": [
+          "II. Weight = mg. Since g = GM/R², doubling M doubles g, and thus your weight."
+        ]
+      },
+      {
+        "No": 9,
+        "question": "What is the net gravitational force inside a hollow spherical shell?",
+        "options": [
+          "I. Zero",
+          "II. Infinite",
+          "III. Equal to the shell's mass.",
+          "IV. Directed outward."
+        ],
+        "answers": [
+          "I. By the shell theorem, the net gravitational force inside a hollow spherical shell is zero."
+        ]
+      },
+      {
+        "No": 10,
+        "question": "Two planets have densities ρ and 2ρ and radii R and 2R. What is the ratio of their surface gravities?",
+        "options": [
+          "I. 1:1",
+          "II. 1:2",
+          "III. 1:4",
+          "IV. 1:8"
+        ],
+        "answers": [
+          "II. Surface gravity g = (4/3)πGρR. For ρ₁ = ρ, R₁ = R → g₁ ∝ ρR. For ρ₂ = 2ρ, R₂ = 2R → g₂ ∝ 2ρ × 2R = 4ρR. Ratio g₁:g₂ = 1:2."
+        ]
+      },
+      {
+        "No": 11,
+        "question": "What is the work done to move a mass from Earth's surface to infinity?",
+        "options": [
+          "I. Zero",
+          "II. Equal to kinetic energy.",
+          "III. Equal to the object's gravitational potential energy on Earth.",
+          "IV. Infinite"
+        ],
+        "answers": [
+          "III. Work done = ΔU = 0 - (-GMm/R) = GMm/R, which matches the object's initial gravitational potential energy."
+        ]
+      },
+      {
+        "No": 12,
+        "question": "Which statement about gravitational potential is correct?",
+        "options": [
+          "I. It is always positive.",
+          "II. It is zero at Earth's center.",
+          "III. It decreases with altitude.",
+          "IV. It is a vector quantity."
+        ],
+        "answers": [
+          "III. Gravitational potential V = -GM/r, so it becomes less negative (increases) with altitude (increasing r)."
+        ]
+      },
+      {
+        "No": 13,
+        "question": "A satellite's kinetic energy in circular orbit is:",
+        "options": [
+          "I. Equal to its potential energy.",
+          "II. Half the magnitude of its potential energy.",
+          "III. Twice its potential energy.",
+          "IV. Unrelated to its potential energy."
+        ],
+        "answers": [
+          "II. In circular orbits, KE = |PE|/2 (KE = GMm/2r; PE = -GMm/r)."
+        ]
+      },
+      {
+        "No": 14,
+        "question": "What is the orbital speed of a satellite 200 km above Earth's surface? (Earth's radius = 6400 km, g = 9.8 m/s²)",
+        "options": [
+          "I. 7.7 km/s",
+          "II. 3.9 km/s",
+          "III. 11.2 km/s",
+          "IV. 5.5 km/s"
+        ],
+        "answers": [
+          "I. v = √(GM/r) = √(gR²/(R+h)) = √(9.8 × (6400 × 10³)² / (6600 × 10³)) ≈ 7.7 km/s."
+        ]
+      },
+      {
+        "No": 15,
+        "question": "If the Sun collapsed into a black hole with the same mass, Earth's orbit would:",
+        "options": [
+          "I. Spiral into the black hole.",
+          "II. Become highly elliptical.",
+          "III. Remain unchanged.",
+          "IV. Rapidly expand."
+        ],
+        "answers": [
+          "III. Only the Sun's mass affects Earth's orbit, not its size. The orbit would remain the same."
+        ]
+      },
+      {
+        "No": 16,
+        "question": "What is the gravitational potential energy of a 10 kg object at Earth's surface? (Earth's mass = 6 × 10²⁴ kg, radius = 6.4 × 10⁶ m)",
+        "options": [
+          "I. -6.25 × 10⁷ J",
+          "II. -9.8 × 10⁷ J",
+          "III. -3.13 × 10⁸ J",
+          "IV. 0 J"
+        ],
+        "answers": [
+          "A. U = -GMm/R = -(6.67 × 10⁻¹¹ × 6 × 10²⁴ × 10)/(6.4 × 10⁶) ≈ -6.25 × 10⁷ J."
+        ]
+      },
+      {
+        "No": 17,
+        "question": "Which condition must hold for a satellite to maintain a stable circular orbit?",
+        "options": [
+          "I. Centripetal force = Gravitational force.",
+          "II. Gravitational force > Centripetal force.",
+          "III. Gravitational force < Centripetal force.",
+          "IV. Gravitational force = Zero."
+        ],
+        "answers": [
+          "I. For stable orbits, mv²/r = GMm/r² (centripetal force equals gravitational force)."
+        ]
+      },
+      {
+        "No": 18,
+        "question": "How does gravitational potential energy change when two masses are brought closer?",
+        "options": [
+          "I. It becomes more positive.",
+          "II. It becomes more negative.",
+          "III. It remains constant.",
+          "IV. It becomes zero."
+        ],
+        "answers": [
+          "II. U = -GMm/r. As r decreases, U becomes more negative (lower potential energy)."
+        ]
+      },
+      {
+        "No": 19,
+        "question": "What is the acceleration due to gravity at an altitude where a geostationary satellite orbits? (Earth's radius = 6400 km, orbital radius = 42000 km)",
+        "options": [
+          "I. 9.8 m/s²",
+          "II. 0.23 m/s²",
+          "III. 2.45 m/s²",
+          "IV. 0 m/s²"
+        ],
+        "answers": [
+          "II. g = GM/r². At r = 42000 km, g = (9.8 × (6400/42000)²) ≈ 0.23 m/s²."
+        ]
+      },
+      {
+        "No": 20,
+        "question": "A planet has 1/4 Earth's radius and 1/2 Earth's mass. What is its escape velocity compared to Earth's?",
+        "options": [
+          "I. Same as Earth's.",
+          "II. Half of Earth's.",
+          "III. Twice Earth's.",
+          "IV. Four times Earth's."
+        ],
+        "answers": [
+          "III. vₑ = √(2GM/R). For M → M/2 and R → R/4: vₑ = √(2G(M/2)/(R/4)) = √(4GM/R) = 2 × Earth's vₑ."
+        ]
+      },
+      {
+        "No": 21,
+        "question": "Which energy diagram represents a satellite in stable orbit?",
+        "options": [
+          "I. Total energy > 0.",
+          "II. Total energy = 0.",
+          "III. Total energy < 0.",
+          "IV. Total energy = ∞."
+        ],
+        "answers": [
+          "III. Bound orbits (e.g., circular/elliptical) have negative total energy (E = KE + PE = -GMm/2r)."
+        ]
+      },
+      {
+        "No": 22,
+        "question": "What is the angular momentum of a satellite of mass m in circular orbit at radius r?",
+        "options": [
+          "I. mvr",
+          "II. Zero",
+          "III. mv²/r",
+          "IV. GMm/r²"
+        ],
+        "answers": [
+          "I. Angular momentum L = mvr for circular orbits (v = orbital speed)."
+        ]
+      },
+      {
+        "No": 23,
+        "question": "If Earth stopped rotating but kept its shape, how would the apparent weight of a person at the equator change?",
+        "options": [
+          "I. Increase.",
+          "II. Decrease.",
+          "III. Stay the same.",
+          "IV. Become zero."
+        ],
+        "answers": [
+          "I. Apparent weight = mg - mv²/R. Without rotation (v = 0), apparent weight increases to mg."
+        ]
+      },
+      {
+        "No": 24,
+        "question": "What is the time period of a satellite orbiting just above Earth's surface? (Earth's radius = 6400 km, g = 9.8 m/s²)",
+        "options": [
+          "I. 84 minutes",
+          "II. 24 hours",
+          "III. 60 minutes",
+          "IV. 365 days"
+        ],
+        "answers": [
+          "I. T = 2π√(R/g) = 2π√(6.4 × 10⁶/9.8) ≈ 84 minutes."
+        ]
+      },
+      {
+        "No": 25,
+        "question": "Which scenario violates Kepler's Second Law?",
+        "options": [
+          "I. A planet speeds up when closer to the Sun.",
+          "II. A planet sweeps equal areas in equal times.",
+          "III. A planet's orbital speed is constant.",
+          "IV. A planet's angular momentum changes over time."
+        ],
+        "answers": [
+          "III. Kepler's Second Law requires variable speed (faster when closer to the Sun). Constant speed violates this."
+        ]
+      }
+    ],
                        
 
         "GES 107: Overview of Healthy Living - Topic 1": [
