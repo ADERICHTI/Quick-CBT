@@ -7138,6 +7138,335 @@
         ]
       }
     ],
+
+
+    "PHY 101: Gravitation(1) - 10": [
+      {
+        "No": 1,
+        "question": "What does Newton's Law of Gravitation state?",
+        "options": [
+          "I. Force is proportional to mass and inversely proportional to distance.",
+          "II. Force is proportional to the product of masses and inversely proportional to distance squared.",
+          "III. Force depends only on the mass of larger objects.",
+          "IV. Gravitational force only acts on celestial bodies."
+        ],
+        "answers": [
+          "II. Newton's Law states that the gravitational force between two objects is directly proportional to the product of their masses and inversely proportional to the square of the distance between them."
+        ]
+      },
+      {
+        "No": 2,
+        "question": "What is the gravitational force between two 1 kg masses 1 meter apart? (G = 6.67 × 10^-11 N·m²/kg²)",
+        "options": [
+          "I. 6.67 × 10^-11 N",
+          "II. 1 N",
+          "III. 9.8 N",
+          "IV. 6.67 × 10^11 N"
+        ],
+        "answers": [
+          "I. Using F = G(m1m2)/r², F = (6.67 × 10^-11 × 1 × 1)/1² = 6.67 × 10^-11 N."
+        ]
+      },
+      {
+        "No": 3,
+        "question": "What is gravitational field strength?",
+        "options": [
+          "I. The force between two massive objects.",
+          "II. The gravitational force per unit mass at a point.",
+          "III. The potential energy of an object in a gravitational field.",
+          "IV. The speed required to escape a gravitational field."
+        ],
+        "answers": [
+          "II. Gravitational field strength is defined as the gravitational force experienced per unit mass at a point in the field."
+        ]
+      },
+      {
+        "No": 4,
+        "question": "What happens to gravitational force if the distance between two masses is doubled?",
+        "options": [
+          "I. It doubles.",
+          "II. It halves.",
+          "III. It becomes one-fourth.",
+          "IV. It remains unchanged."
+        ],
+        "answers": [
+          "III. Since force is inversely proportional to the square of the distance, doubling the distance reduces the force to 1/4 of its original value."
+        ]
+      },
+      {
+        "No": 5,
+        "question": "What is the gravitational field strength on Earth's surface? (g = 9.8 m/s²)",
+        "options": [
+          "I. 1 N/kg",
+          "II. 9.8 N/kg",
+          "III. 6.67 × 10^-11 N/kg",
+          "IV. 0 N/kg"
+        ],
+        "answers": [
+          "II. On Earth's surface, gravitational field strength equals the acceleration due to gravity, 9.8 N/kg."
+        ]
+      },
+      {
+        "No": 6,
+        "question": "What is gravitational potential energy?",
+        "options": [
+          "I. Energy due to motion in a gravitational field.",
+          "II. Energy stored in compressed objects.",
+          "III. Energy an object possesses due to its position in a gravitational field.",
+          "IV. Energy released during nuclear fusion."
+        ],
+        "answers": [
+          "III. Gravitational potential energy is the energy an object has due to its height or position in a gravitational field."
+        ]
+      },
+      {
+        "No": 7,
+        "question": "What is the escape velocity?",
+        "options": [
+          "I. The speed at which an object falls to Earth.",
+          "II. The minimum speed needed to escape a planet's gravitational pull.",
+          "III. The orbital speed of satellites.",
+          "IV. The speed of light."
+        ],
+        "answers": [
+          "II. Escape velocity is the minimum speed required for an object to break free from a planet's gravitational attraction without further propulsion."
+        ]
+      },
+      {
+        "No": 8,
+        "question": "Which of Kepler's Laws states that planets sweep equal areas in equal times?",
+        "options": [
+          "I. First Law",
+          "II. Second Law",
+          "III. Third Law",
+          "IV. Law of Orbits"
+        ],
+        "answers": [
+          "II. Kepler's Second Law (Law of Areas) states that a line joining a planet to the Sun sweeps out equal areas in equal times."
+        ]
+      },
+      {
+        "No": 9,
+        "question": "What does Kepler's Third Law relate?",
+        "options": [
+          "I. Orbital period and orbital radius.",
+          "II. Mass and gravitational force.",
+          "III. Planet size and temperature.",
+          "IV. Escape velocity and planet density."
+        ],
+        "answers": [
+          "I. Kepler's Third Law states that the square of the orbital period is proportional to the cube of the semi-major axis of the orbit."
+        ]
+      },
+      {
+        "No": 10,
+        "question": "What is a geostationary satellite?",
+        "options": [
+          "I. A satellite that orbits the Moon.",
+          "II. A satellite that remains fixed over one point on Earth's equator.",
+          "III. A satellite that escapes Earth's gravity.",
+          "IV. A satellite used only for military purposes."
+        ],
+        "answers": [
+          "II. A geostationary satellite orbits Earth at the same rate as Earth's rotation, appearing stationary above a fixed point on the equator."
+        ]
+      },
+      {
+        "No": 11,
+        "question": "What is the gravitational potential at infinity?",
+        "options": [
+          "I. Zero",
+          "II. Infinite",
+          "III. Equal to Earth's gravitational potential.",
+          "IV. Negative"
+        ],
+        "answers": [
+          "I. By convention, gravitational potential is defined as zero at an infinite distance from any mass."
+        ]
+      },
+      {
+        "No": 12,
+        "question": "What happens to the gravitational force if both masses are doubled?",
+        "options": [
+          "I. Halves",
+          "II. Doubles",
+          "III. Quadruples",
+          "IV. Remains the same"
+        ],
+        "answers": [
+          "III. Since force is proportional to the product of the masses, doubling both masses quadruples the force."
+        ]
+      },
+      {
+        "No": 13,
+        "question": "Which quantity is always negative in a gravitational field?",
+        "options": [
+          "I. Gravitational force",
+          "II. Gravitational potential energy",
+          "III. Gravitational field strength",
+          "IV. Escape velocity"
+        ],
+        "answers": [
+          "II. Gravitational potential energy is always negative because work must be done against the field to reach infinity (zero potential)."
+        ]
+      },
+      {
+        "No": 14,
+        "question": "What is the orbital velocity of a satellite?",
+        "options": [
+          "I. The speed needed to escape gravity.",
+          "II. The speed at which it revolves around a planet.",
+          "III. The speed of light.",
+          "IV. The speed at which it falls to Earth."
+        ],
+        "answers": [
+          "II. Orbital velocity is the constant speed at which a satellite travels in its orbit around a planet."
+        ]
+      },
+      {
+        "No": 15,
+        "question": "What is the shape of planetary orbits according to Kepler's First Law?",
+        "options": [
+          "I. Circular",
+          "II. Parabolic",
+          "III. Elliptical",
+          "IV. Hyperbolic"
+        ],
+        "answers": [
+          "III. Kepler's First Law states that planets move in elliptical orbits with the Sun at one focus."
+        ]
+      },
+      {
+        "No": 16,
+        "question": "What is the gravitational field strength at the center of Earth?",
+        "options": [
+          "I. 9.8 N/kg",
+          "II. Infinite",
+          "III. Zero",
+          "IV. Negative"
+        ],
+        "answers": [
+          "III. At Earth's center, gravitational forces cancel out, resulting in zero field strength."
+        ]
+      },
+      {
+        "No": 17,
+        "question": "Which factor does NOT affect the escape velocity of a planet?",
+        "options": [
+          "I. Planet's mass",
+          "II. Planet's radius",
+          "III. Object's mass",
+          "IV. Gravitational constant (G)"
+        ],
+        "answers": [
+          "III. Escape velocity depends on the planet's mass and radius but not the escaping object's mass."
+        ]
+      },
+      {
+        "No": 18,
+        "question": "What is the work done to move a mass in a circular orbit?",
+        "options": [
+          "I. Positive",
+          "II. Negative",
+          "III. Zero",
+          "IV. Infinite"
+        ],
+        "answers": [
+          "III. In a stable circular orbit, gravitational force is perpendicular to displacement, so no work is done."
+        ]
+      },
+      {
+        "No": 19,
+        "question": "What is the relationship between gravitational force and distance?",
+        "options": [
+          "I. Linear",
+          "II. Inverse",
+          "III. Inverse square",
+          "IV. Exponential"
+        ],
+        "answers": [
+          "III. Gravitational force follows an inverse-square law with distance."
+        ]
+      },
+      {
+        "No": 20,
+        "question": "Which of the following is NOT a unit of gravitational field strength?",
+        "options": [
+          "I. N/kg",
+          "II. m/s²",
+          "III. J/kg",
+          "IV. kg/m³"
+        ],
+        "answers": [
+          "IV. kg/m³ is a unit of density, not gravitational field strength."
+        ]
+      },
+      {
+        "No": 21,
+        "question": "What is the gravitational potential energy of an object at Earth's surface? (m = mass, g = 9.8 m/s², h = height)",
+        "options": [
+          "I. mgh",
+          "II. -mgh",
+          "III. Zero",
+          "IV. Infinite"
+        ],
+        "answers": [
+          "II. Near Earth's surface, gravitational potential energy is U = -mgh (negative because the reference point is infinity)."
+        ]
+      },
+      {
+        "No": 22,
+        "question": "What is the condition for a satellite to be in geostationary orbit?",
+        "options": [
+          "I. Orbital period = 24 hours, orbits equator.",
+          "II. Orbital period = 12 hours, orbits poles.",
+          "III. Speed = escape velocity.",
+          "IV. Altitude = 100 km."
+        ],
+        "answers": [
+          "I. A geostationary satellite must have a 24-hour orbital period and orbit above the equator."
+        ]
+      },
+      {
+        "No": 23,
+        "question": "Which quantity remains constant for a planet orbiting the Sun?",
+        "options": [
+          "I. Speed",
+          "II. Kinetic energy",
+          "III. Angular momentum",
+          "IV. Potential energy"
+        ],
+        "answers": [
+          "III. Angular momentum is conserved in planetary orbits (Kepler's Second Law)."
+        ]
+      },
+      {
+        "No": 24,
+        "question": "What is the direction of gravitational field lines near Earth's surface?",
+        "options": [
+          "I. Parallel to the surface.",
+          "II. Radially outward.",
+          "III. Radially inward.",
+          "IV. Circular around Earth."
+        ],
+        "answers": [
+          "III. Gravitational field lines point radially inward toward Earth's center."
+        ]
+      },
+      {
+        "No": 25,
+        "question": "What is the gravitational potential energy of two masses at infinite separation?",
+        "options": [
+          "I. Zero",
+          "II. Maximum",
+          "III. Minimum",
+          "IV. Undefined"
+        ],
+        "answers": [
+          "I. By definition, gravitational potential energy is zero when objects are infinitely far apart."
+        ]
+      }
+    ],
                        
 
         "GES 107: Overview of Healthy Living - Topic 1": [
