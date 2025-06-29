@@ -6809,6 +6809,335 @@
         ]
       }
     ],
+
+
+    "PHY 101: System of Particles - 9": [
+      {
+        "No": 1,
+        "question": "What is the definition of the centre of mass of a system of particles?",
+        "options": [
+          "I. The point where all particles are stationary.",
+          "II. The point where the total mass is zero.",
+          "III. The point that moves as if the entire mass is concentrated there.",
+          "IV. The geometric center of the system."
+        ],
+        "answers": [
+          "III. The centre of mass behaves as if the entire mass of the system is concentrated at that point, simplifying motion analysis."
+        ]
+      },
+      {
+        "No": 2,
+        "question": "For a two-particle system with masses m1 and m2 at positions x1 and x2, the centre of mass X is given by:",
+        "options": [
+          "I. X = (m1x1 + m2x2) / (m1 + m2)",
+          "II. X = (x1 + x2) / 2",
+          "III. X = m1x1 + m2x2",
+          "IV. X = (m1 + m2) / (x1 + x2)"
+        ],
+        "answers": [
+          "I. The formula accounts for mass-weighted positions."
+        ]
+      },
+      {
+        "No": 3,
+        "question": "In which coordinate system is a point P represented by (r, θ)?",
+        "options": [
+          "I. Cartesian",
+          "II. Polar",
+          "III. Spherical",
+          "IV. Cylindrical"
+        ],
+        "answers": [
+          "II. Polar coordinates use (r, θ) to describe planar positions."
+        ]
+      },
+      {
+        "No": 4,
+        "question": "Which statement about the centre of mass is FALSE?",
+        "options": [
+          "I. It always lies within the object.",
+          "II. It can accelerate under external forces.",
+          "III. It is mass-weighted.",
+          "IV. It simplifies motion equations."
+        ],
+        "answers": [
+          "I. The centre of mass may lie outside an object (e.g., a ring)."
+        ]
+      },
+      {
+        "No": 5,
+        "question": "What is the centre of mass of a uniform rod of length L?",
+        "options": [
+          "I. L/4 from one end",
+          "II. L/3 from one end",
+          "III. L/2 from one end",
+          "IV. L from one end"
+        ],
+        "answers": [
+          "III. For a uniform rod, symmetry dictates the centre of mass is at the midpoint."
+        ]
+      },
+      {
+        "No": 6,
+        "question": "In 3D Cartesian coordinates, how many axes are needed to specify a point?",
+        "options": [
+          "I. 1",
+          "II. 2",
+          "III. 3",
+          "IV. 4"
+        ],
+        "answers": [
+          "III. Three axes (x, y, z) are required for 3D space."
+        ]
+      },
+      {
+        "No": 7,
+        "question": "If two particles of equal mass are placed at (1, 0) and (-1, 0), their centre of mass is at:",
+        "options": [
+          "I. (0, 0)",
+          "II. (1, 0)",
+          "III. (-1, 0)",
+          "IV. (0.5, 0)"
+        ],
+        "answers": [
+          "I. Equal masses at symmetric positions result in a centre of mass at the origin."
+        ]
+      },
+      {
+        "No": 8,
+        "question": "What is the angle θ in polar coordinates measured from?",
+        "options": [
+          "I. The y-axis",
+          "II. The x-axis",
+          "III. The z-axis",
+          "IV. The origin"
+        ],
+        "answers": [
+          "II. θ is the angle from the positive x-axis in the xy-plane."
+        ]
+      },
+      {
+        "No": 9,
+        "question": "Which of the following is a scalar quantity in the study of particle systems?",
+        "options": [
+          "I. Velocity",
+          "II. Force",
+          "III. Mass",
+          "IV. Acceleration"
+        ],
+        "answers": [
+          "III. Mass is a scalar; others are vectors."
+        ]
+      },
+      {
+        "No": 10,
+        "question": "The centre of mass of a system of particles moves as if:",
+        "options": [
+          "I. No forces act on it.",
+          "II. Only internal forces act.",
+          "III. All external forces act at this point.",
+          "IV. It is weightless."
+        ],
+        "answers": [
+          "III. External forces are treated as acting on the centre of mass."
+        ]
+      },
+      {
+        "No": 11,
+        "question": "Convert the polar coordinates (5, 30°) to Cartesian coordinates.",
+        "options": [
+          "I. (4.33, 2.5)",
+          "II. (2.5, 4.33)",
+          "III. (5, 30)",
+          "IV. (30, 5)"
+        ],
+        "answers": [
+          "I. x = 5 * cos(30°) ≈ 4.33, y = 5 * sin(30°) = 2.5."
+        ]
+      },
+      {
+        "No": 12,
+        "question": "What is the centre of mass of three identical masses placed at the vertices of an equilateral triangle?",
+        "options": [
+          "I. At one vertex",
+          "II. At the midpoint of a side",
+          "III. At the centroid",
+          "IV. Outside the triangle"
+        ],
+        "answers": [
+          "III. Symmetry places the centre of mass at the centroid."
+        ]
+      },
+      {
+        "No": 13,
+        "question": "Which coordinate system is best suited for circular motion analysis?",
+        "options": [
+          "I. Cartesian",
+          "II. Polar",
+          "III. Spherical",
+          "IV. Cylindrical"
+        ],
+        "answers": [
+          "II. Polar coordinates (r, θ) naturally describe circular paths."
+        ]
+      },
+      {
+        "No": 14,
+        "question": "If a system has no external force acting on it, the centre of mass:",
+        "options": [
+          "I. Remains stationary.",
+          "II. Moves with constant velocity.",
+          "III. Accelerates.",
+          "IV. Oscillates."
+        ],
+        "answers": [
+          "II. By Newton’s first law, the centre of mass maintains constant velocity."
+        ]
+      },
+      {
+        "No": 15,
+        "question": "What is the x-coordinate of the centre of mass for particles at (2, 3), (-1, 4), and (0, -5) with masses 1 kg, 2 kg, 3 kg?",
+        "options": [
+          "I. 0",
+          "II. 0.5",
+          "III. 1",
+          "IV. -0.17"
+        ],
+        "answers": [
+          "I. X = (1*2 + 2*(-1) + 3*0) / (1+2+3) = 0."
+        ]
+      },
+      {
+        "No": 16,
+        "question": "In Cartesian coordinates, the position vector of point (3, 4) has a magnitude of:",
+        "options": [
+          "I. 3",
+          "II. 4",
+          "III. 5",
+          "IV. 7"
+        ],
+        "answers": [
+          "III. Magnitude = sqrt(3² + 4²) = 5."
+        ]
+      },
+      {
+        "No": 17,
+        "question": "Which of the following is true for an isolated system of particles?",
+        "options": [
+          "I. Total kinetic energy is zero.",
+          "II. Centre of mass velocity changes.",
+          "III. Total linear momentum is conserved.",
+          "IV. Potential energy is always zero."
+        ],
+        "answers": [
+          "III. Linear momentum is conserved in the absence of external forces."
+        ]
+      },
+      {
+        "No": 18,
+        "question": "The centre of mass of a rigid body:",
+        "options": [
+          "I. Depends on the reference frame.",
+          "II. Is always at the geometric center.",
+          "III. Is fixed relative to the body.",
+          "IV. Cannot be outside the body."
+        ],
+        "answers": [
+          "III. For rigid bodies, the centre of mass has a fixed position relative to the body."
+        ]
+      },
+      {
+        "No": 19,
+        "question": "Which coordinate system uses (x, y, z)?",
+        "options": [
+          "I. Polar",
+          "II. Cartesian",
+          "III. Spherical",
+          "IV. Cylindrical"
+        ],
+        "answers": [
+          "II. Cartesian coordinates are represented by (x, y, z)."
+        ]
+      },
+      {
+        "No": 20,
+        "question": "For a system in equilibrium, the centre of mass:",
+        "options": [
+          "I. Moves linearly.",
+          "II. Remains at rest or moves with constant velocity.",
+          "III. Accelerates uniformly.",
+          "IV. Must coincide with the origin."
+        ],
+        "answers": [
+          "II. Equilibrium implies no acceleration (Newton’s first law)."
+        ]
+      },
+      {
+        "No": 21,
+        "question": "What is the radial distance r in polar coordinates for point (3, 4)?",
+        "options": [
+          "I. 3",
+          "II. 4",
+          "III. 5",
+          "IV. 7"
+        ],
+        "answers": [
+          "III. r = sqrt(3² + 4²) = 5."
+        ]
+      },
+      {
+        "No": 22,
+        "question": "The motion of the centre of mass of a system is determined by:",
+        "options": [
+          "I. Internal forces only.",
+          "II. External forces only.",
+          "III. Both internal and external forces.",
+          "IV. Neither."
+        ],
+        "answers": [
+          "II. Only external forces affect the centre of mass motion (internal forces cancel out)."
+        ]
+      },
+      {
+        "No": 23,
+        "question": "Which of the following is a vector quantity?",
+        "options": [
+          "I. Mass",
+          "II. Time",
+          "III. Position",
+          "IV. Temperature"
+        ],
+        "answers": [
+          "III. Position is a vector (has magnitude and direction)."
+        ]
+      },
+      {
+        "No": 24,
+        "question": "If the masses of two particles are doubled, their centre of mass:",
+        "options": [
+          "I. Halves.",
+          "II. Doubles.",
+          "III. Remains unchanged.",
+          "IV. Moves to infinity."
+        ],
+        "answers": [
+          "III. The position depends on mass ratios, not absolute values."
+        ]
+      },
+      {
+        "No": 25,
+        "question": "Which law directly relates to the conservation of momentum in a system of particles?",
+        "options": [
+          "I. Newton’s First Law",
+          "II. Newton’s Second Law",
+          "III. Newton’s Third Law",
+          "IV. Law of Gravitation"
+        ],
+        "answers": [
+          "III. Newton’s Third Law (action-reaction pairs) ensures momentum conservation in isolated systems."
+        ]
+      }
+    ],
                        
 
         "GES 107: Overview of Healthy Living - Topic 1": [
