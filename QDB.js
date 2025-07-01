@@ -9747,5 +9747,284 @@
                 "answers": ["I. Fear of discrimination prevents people from seeking testing, disclosing status, or adhering to ART."]
             }
         ],
+
+
+        "GES 107: Sickle Cell Disease - Topic 8": [
+            {
+                "No": 1,
+                "question": "What is the genetic inheritance pattern of sickle cell disease?",
+                "options": [
+                    "I. Autosomal dominant",
+                    "II. Autosomal recessive",
+                    "III. X-linked recessive",
+                    "IV. Mitochondrial"
+                ],
+                "answers": ["II. Sickle cell disease is autosomal recessive - both parents must pass a mutated HBB gene (HbS) for the child to inherit the disease."]
+            },
+            {
+                "No": 2,
+                "question": "Which amino acid substitution causes sickle hemoglobin (HbS)?",
+                "options": [
+                    "I. Glutamic acid → Valine at position 6",
+                    "II. Valine → Glutamic acid at position 6",
+                    "III. Lysine → Arginine at position 8",
+                    "IV. Histidine → Proline at position 7"
+                ],
+                "answers": ["I. The β-globin chain mutation replaces glutamic acid with valine (β6Glu→Val), causing hemoglobin polymerization when deoxygenated."]
+            },
+            {
+                "No": 3,
+                "question": "What is the primary pathological event in sickle cell disease?",
+                "options": [
+                    "I. Excessive iron absorption",
+                    "II. Polymerization of HbS under low oxygen",
+                    "III. Autoimmune destruction of RBCs",
+                    "IV. Viral infection of erythrocytes"
+                ],
+                "answers": ["II. Deoxygenated HbS forms rigid polymers that distort RBCs into sickle shapes, triggering vaso-occlusion and hemolysis."]
+            },
+            {
+                "No": 4,
+                "question": "Which diagnostic test confirms sickle cell disease?",
+                "options": [
+                    "I. Complete blood count (CBC)",
+                    "II. Hemoglobin electrophoresis",
+                    "III. Liver function test",
+                    "IV. Urinalysis"
+                ],
+                "answers": ["II. Hemoglobin electrophoresis distinguishes HbS (80–100% in SCA) from normal HbA and other variants (e.g., HbC, HbF)."]
+            },
+            {
+                "No": 5,
+                "question": "What is the most common clinical manifestation of sickle cell disease in infants?",
+                "options": [
+                    "I. Stroke",
+                    "II. Dactylitis (hand-foot syndrome)",
+                    "III. Priapism",
+                    "IV. Leg ulcers"
+                ],
+                "answers": ["II. Dactylitis (painful swelling of hands/feet) is often the first symptom in infants aged 6–12 months due to vaso-occlusion in small bones."]
+            },
+            {
+                "No": 6,
+                "question": "Which complication is caused by sickled RBCs blocking splenic vessels?",
+                "options": [
+                    "I. Aplastic crisis",
+                    "II. Splenic sequestration",
+                    "III. Cholelithiasis",
+                    "IV. Osteomyelitis"
+                ],
+                "answers": ["II. Splenic sequestration involves trapped RBCs causing sudden splenomegaly, anemia, and hypovolemic shock, especially in children."]
+            },
+            {
+                "No": 7,
+                "question": "What is the purpose of hydroxyurea in sickle cell treatment?",
+                "options": [
+                    "I. Antibiotic prophylaxis",
+                    "II. Stimulate HbF production",
+                    "III. Iron chelation",
+                    "IV. Pain relief"
+                ],
+                "answers": ["II. Hydroxyurea increases fetal hemoglobin (HbF), which inhibits HbS polymerization, reducing crises and organ damage."]
+            },
+            {
+                "No": 8,
+                "question": "Which infection is a leading cause of mortality in children with SCA?",
+                "options": [
+                    "I. Malaria",
+                    "II. Streptococcus pneumoniae",
+                    "III. HIV",
+                    "IV. Hepatitis B"
+                ],
+                "answers": ["II. Functional asplenia in SCA increases susceptibility to encapsulated bacteria like S. pneumoniae; penicillin prophylaxis is critical."]
+            },
+            {
+                "No": 9,
+                "question": "What causes aplastic crises in SCA?",
+                "options": [
+                    "I. Parvovirus B19 infection",
+                    "II. Dehydration",
+                    "III. High altitude",
+                    "IV. Iron overload"
+                ],
+                "answers": ["I. Parvovirus B19 suppresses erythropoiesis, causing severe anemia due to the short lifespan of sickled RBCs (10–20 days)."]
+            },
+            {
+                "No": 10,
+                "question": "Which ocular complication occurs in SCA due to retinal vessel occlusion?",
+                "options": [
+                    "I. Glaucoma",
+                    "II. Proliferative retinopathy",
+                    "III. Cataracts",
+                    "IV. Conjunctivitis"
+                ],
+                "answers": ["II. Retinal vessel occlusion leads to neovascularization (proliferative retinopathy), risking retinal detachment and blindness."]
+            },
+            {
+                "No": 11,
+                "question": "What is the recommended childhood vaccination for SCA patients?",
+                "options": [
+                    "I. HPV vaccine",
+                    "II. Pneumococcal conjugate vaccine (PCV13)",
+                    "III. Rabies vaccine",
+                    "IV. BCG vaccine"
+                ],
+                "answers": ["II. PCV13 (and PPSV23) prevent pneumococcal sepsis; given with penicillin prophylaxis from 2 months old."]
+            },
+            {
+                "No": 12,
+                "question": "Which finding distinguishes sickle cell trait (HbAS) from sickle cell disease (HbSS)?",
+                "options": [
+                    "I. Chronic hemolytic anemia",
+                    "II. HbS >50% on electrophoresis",
+                    "III. Vaso-occlusive crises",
+                    "IV. Normal life expectancy"
+                ],
+                "answers": ["IV. Sickle cell trait (HbAS) is benign with near-normal lifespan; HbSS causes severe complications and reduced longevity."]
+            },
+            {
+                "No": 13,
+                "question": "Why does sickle cell trait provide protection against malaria?",
+                "options": [
+                    "I. HbS kills Plasmodium directly",
+                    "II. Sickling removes parasitized RBCs from circulation",
+                    "III. Enhanced immune response to parasites",
+                    "IV. Reduced mosquito attraction"
+                ],
+                "answers": ["II. Plasmodium-infected HbAS RBCs sickle prematurely and are cleared by the spleen, reducing parasite load (balanced polymorphism)."]
+            },
+            {
+                "No": 14,
+                "question": "Which renal complication is common in SCA?",
+                "options": [
+                    "I. Nephrotic syndrome",
+                    "II. Renal tubular acidosis",
+                    "III. Papillary necrosis",
+                    "IV. Polycystic kidneys"
+                ],
+                "answers": ["III. Medullary hypoxia causes papillary necrosis, leading to hematuria and impaired urine concentration."]
+            },
+            {
+                "No": 15,
+                "question": "What is the first-line treatment for acute vaso-occlusive pain crisis?",
+                "options": [
+                    "I. Blood transfusion",
+                    "II. NSAIDs and opioids",
+                    "III. Hydroxyurea",
+                    "IV. Antibiotics"
+                ],
+                "answers": ["II. Rapid analgesia (e.g., morphine) + hydration is key; transfusions are reserved for severe complications."]
+            },
+            {
+                "No": 16,
+                "question": "Which test detects sickle cells in a peripheral blood smear?",
+                "options": [
+                    "I. Sickling test with sodium metabisulfite",
+                    "II. PCR",
+                    "III. ELISA",
+                    "IV. Coombs test"
+                ],
+                "answers": ["I. Sodium metabisulfite induces sickling in HbS-containing RBCs; confirms presence but not disease severity."]
+            },
+            {
+                "No": 17,
+                "question": "What causes leg ulcers in SCA?",
+                "options": [
+                    "I. Chronic hemolysis",
+                    "II. Venous stasis and hypoxia",
+                    "III. Autoimmune vasculitis",
+                    "IV. Bacterial infection"
+                ],
+                "answers": ["II. Poor perfusion due to microvascular occlusion leads to painful ulcers, typically near malleoli."]
+            },
+            {
+                "No": 18,
+                "question": "Which cardiac finding is typical in SCA?",
+                "options": [
+                    "I. Left ventricular hypertrophy",
+                    "II. Cardiomyopathy",
+                    "III. High-output heart failure",
+                    "IV. Pericardial effusion"
+                ],
+                "answers": ["III. Chronic anemia causes high-output failure with tachycardia, cardiomegaly, and flow murmurs."]
+            },
+            {
+                "No": 19,
+                "question": "What is the role of transcranial Doppler (TCD) in SCA?",
+                "options": [
+                    "I. Detect silent strokes",
+                    "II. Monitor intracranial pressure",
+                    "III. Diagnose migraines",
+                    "IV. Assess hydrocephalus"
+                ],
+                "answers": ["I. TCD screens children for stroke risk by measuring cerebral artery velocity; abnormal results prompt transfusion therapy."]
+            },
+            {
+                "No": 20,
+                "question": "Which genotype causes the most severe sickle cell disease?",
+                "options": [
+                    "I. HbSS",
+                    "II. HbSC",
+                    "III. HbSβ⁰-thalassemia",
+                    "IV. HbSβ⁺-thalassemia"
+                ],
+                "answers": ["I. HbSS (sickle cell anemia) is most severe; HbSC and HbSβ-thalassemia have milder phenotypes."]
+            },
+            {
+                "No": 21,
+                "question": "Why is folic acid supplementation important in SCA?",
+                "options": [
+                    "I. Treat iron overload",
+                    "II. Support increased erythropoiesis",
+                    "III. Prevent infections",
+                    "IV. Reduce pain crises"
+                ],
+                "answers": ["II. Chronic hemolysis increases folate demand for RBC production; deficiency worsens anemia."]
+            },
+            {
+                "No": 22,
+                "question": "Which surgical precaution is critical for SCA patients?",
+                "options": [
+                    "I. Avoid general anesthesia",
+                    "II. Preoperative blood transfusion",
+                    "III. Double antibiotic dose",
+                    "IV. No special measures needed"
+                ],
+                "answers": ["II. Pre-op transfusion (to Hb >10 g/dL) reduces perioperative complications like acute chest syndrome."]
+            },
+            {
+                "No": 23,
+                "question": "What is the hallmark lab finding in SCA?",
+                "options": [
+                    "I. Leukopenia",
+                    "II. Thrombocytosis",
+                    "III. Reticulocytosis",
+                    "IV. Hypobilirubinemia"
+                ],
+                "answers": ["III. Reticulocytosis (3–15%) reflects bone marrow compensation for chronic hemolysis."]
+            },
+            {
+                "No": 24,
+                "question": "Which genetic counseling strategy is recommended for carriers (HbAS)?",
+                "options": [
+                    "I. Discourage marriage",
+                    "II. Partner testing and prenatal diagnosis",
+                    "III. Immediate sterilization",
+                    "IV. No counseling needed"
+                ],
+                "answers": ["II. Carrier couples (HbAS × HbAS) have a 25% risk of HbSS per pregnancy; prenatal testing (CVS/amniocentesis) guides decisions."]
+            },
+            {
+                "No": 25,
+                "question": "What is the curative option for severe SCA?",
+                "options": [
+                    "I. Regular blood transfusions",
+                    "II. Hematopoietic stem cell transplant (HSCT)",
+                    "III. Gene therapy",
+                    "IV. Hydroxyurea lifelong"
+                ],
+                "answers": ["II. HSCT from an HLA-matched sibling can cure SCA but carries risks (graft rejection, GVHD)."]
+            }
+        ],
 }
 }
