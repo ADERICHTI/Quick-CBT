@@ -9468,5 +9468,284 @@
                 "answers": ["II. HPV vaccines (targeting types 16/18/6/11) prevent 90% of cervical cancers when given pre-exposure."]
             }
         ],
+
+
+        "GES 107: HIV/AIDS - Topic 7": [
+            {
+                "No": 1,
+                "question": "What does HIV stand for?",
+                "options": [
+                    "I. Human Immunodeficiency Virus",
+                    "II. Human Influenza Virus",
+                    "III. Human Inflammatory Virus",
+                    "IV. Human Infectious Virus"
+                ],
+                "answers": ["I. HIV stands for Human Immunodeficiency Virus, which attacks the body's immune system."]
+            },
+            {
+                "No": 2,
+                "question": "Which cells does HIV primarily target?",
+                "options": [
+                    "I. Red blood cells",
+                    "II. CD4+ T lymphocytes",
+                    "III. Platelets",
+                    "IV. Neurons"
+                ],
+                "answers": ["II. HIV binds to CD4 receptors on helper T-cells, destroying the immune system's coordination."]
+            },
+            {
+                "No": 3,
+                "question": "What is the most common mode of HIV transmission worldwide?",
+                "options": [
+                    "I. Mosquito bites",
+                    "II. Heterosexual sexual contact",
+                    "III. Sharing utensils",
+                    "IV. Airborne droplets"
+                ],
+                "answers": ["II. Unprotected heterosexual sex accounts for ~85% of global HIV transmissions."]
+            },
+            {
+                "No": 4,
+                "question": "Which bodily fluids can transmit HIV?",
+                "options": [
+                    "I. Blood, semen, vaginal fluids, breast milk",
+                    "II. Sweat and tears",
+                    "III. Saliva and urine",
+                    "IV. All bodily fluids equally"
+                ],
+                "answers": ["I. Concentrated virus in blood/genital fluids/breast milk transmits HIV; saliva/urine contain negligible amounts."]
+            },
+            {
+                "No": 5,
+                "question": "What is the 'window period' in HIV testing?",
+                "options": [
+                    "I. Time between infection and detectable antibodies (3-12 weeks)",
+                    "II. Time between diagnosis and treatment",
+                    "III. The latency phase of HIV",
+                    "IV. When viral load is undetectable"
+                ],
+                "answers": ["I. The window period is when someone is infected but tests negative (antibodies not yet produced)."]
+            },
+            {
+                "No": 6,
+                "question": "Which test is used to confirm HIV diagnosis after a positive screening?",
+                "options": [
+                    "I. ELISA",
+                    "II. Western Blot",
+                    "III. Rapid test",
+                    "IV. Urine test"
+                ],
+                "answers": ["II. Western Blot confirms ELISA screening results by detecting specific HIV proteins."]
+            },
+            {
+                "No": 7,
+                "question": "What does AIDS stand for?",
+                "options": [
+                    "I. Autoimmune Deficiency Syndrome",
+                    "II. Acquired Immune Deficiency Syndrome",
+                    "III. Advanced Immunological Disease State",
+                    "IV. Acute Infectious Disease Syndrome"
+                ],
+                "answers": ["II. AIDS is the final stage of HIV infection, marked by CD4 count <200 or opportunistic infections."]
+            },
+            {
+                "No": 8,
+                "question": "Which opportunistic infection is most common in AIDS patients?",
+                "options": [
+                    "I. Tuberculosis",
+                    "II. Pneumocystis pneumonia (PCP)",
+                    "III. Toxoplasmosis",
+                    "IV. Cryptococcal meningitis"
+                ],
+                "answers": ["I. TB is the leading AIDS-defining illness globally, especially in high-burden countries."]
+            },
+            {
+                "No": 9,
+                "question": "What is the standard first-line ART regimen in Nigeria?",
+                "options": [
+                    "I. AZT + 3TC + EFV",
+                    "II. Penicillin + aspirin",
+                    "III. Metronidazole + ciprofloxacin",
+                    "IV. ART is not used in Nigeria"
+                ],
+                "answers": ["I. Nigeria's 1st-line ART combines two NRTIs (AZT/3TC) and one NNRTI (EFV)."]
+            },
+            {
+                "No": 10,
+                "question": "What does PMTCT stand for?",
+                "options": [
+                    "I. Post-Menopausal Therapy and Care",
+                    "II. Prevention of Mother-to-Child Transmission",
+                    "III. Pre-Marital Testing and Counseling",
+                    "IV. Pediatric Malaria Treatment Center"
+                ],
+                "answers": ["II. PMTCT reduces vertical HIV transmission from 30% to <5% using ARVs during pregnancy/delivery."]
+            },
+            {
+                "No": 11,
+                "question": "Which ARV drug class inhibits HIV's reverse transcriptase?",
+                "options": [
+                    "I. Protease inhibitors",
+                    "II. Integrase inhibitors",
+                    "III. NRTIs/NNRTIs",
+                    "IV. Entry inhibitors"
+                ],
+                "answers": ["III. NRTIs (e.g., AZT) and NNRTIs (e.g., EFV) block reverse transcription of viral RNA to DNA."]
+            },
+            {
+                "No": 12,
+                "question": "What is the goal of viral load testing?",
+                "options": [
+                    "I. Diagnose HIV",
+                    "II. Measure HIV RNA copies/mL to monitor treatment efficacy",
+                    "III. Count CD4 cells",
+                    "IV. Detect drug resistance"
+                ],
+                "answers": ["II. Viral load tests quantify HIV RNA; <50 copies/mL indicates ART success."]
+            },
+            {
+                "No": 13,
+                "question": "Which condition meets WHO's criteria for ART initiation regardless of CD4 count?",
+                "options": [
+                    "I. Asymptomatic HIV",
+                    "II. Active tuberculosis",
+                    "III. Hypertension",
+                    "IV. Diabetes"
+                ],
+                "answers": ["II. TB/HIV co-infection requires immediate ART to reduce mortality."]
+            },
+            {
+                "No": 14,
+                "question": "What is the primary benefit of PrEP?",
+                "options": [
+                    "I. Cure HIV",
+                    "II. Prevent HIV in high-risk individuals",
+                    "III. Treat opportunistic infections",
+                    "IV. Boost CD4 count"
+                ],
+                "answers": ["II. Pre-Exposure Prophylaxis (e.g., Truvada) reduces HIV acquisition risk by >90% if taken daily."]
+            },
+            {
+                "No": 15,
+                "question": "Which symptom is characteristic of acute HIV infection?",
+                "options": [
+                    "I. Painless chancre",
+                    "II. Flu-like illness (fever, rash, lymphadenopathy)",
+                    "III. Jaundice",
+                    "IV. Paralysis"
+                ],
+                "answers": ["II. Acute retroviral syndrome mimics flu (2-4 weeks post-exposure) as the body reacts to HIV."]
+            },
+            {
+                "No": 16,
+                "question": "What is the significance of a CD4 count <200 cells/mm³?",
+                "options": [
+                    "I. Normal immune function",
+                    "II. AIDS diagnosis",
+                    "III. HIV resistance to ART",
+                    "IV. Pregnancy risk"
+                ],
+                "answers": ["II. CD4 <200 defines AIDS and high risk for opportunistic infections."]
+            },
+            {
+                "No": 17,
+                "question": "Which ARV is contraindicated in pregnancy's first trimester?",
+                "options": [
+                    "I. Efavirenz",
+                    "II. Zidovudine",
+                    "III. Lamivudine",
+                    "IV. Lopinavir"
+                ],
+                "answers": ["I. Efavirenz may cause fetal neural tube defects; use alternatives like nevirapine early in pregnancy."]
+            },
+            {
+                "No": 18,
+                "question": "What is the '3-in-1' approach to HIV prevention?",
+                "options": [
+                    "I. Abstinence, monogamy, condoms",
+                    "II. Test, Treat, Prevent",
+                    "III. Vaccinate, isolate, medicate",
+                    "IV. Pray, fast, donate"
+                ],
+                "answers": ["II. 'Test and Treat' strategies aim to diagnose early, treat with ART, and prevent transmission."]
+            },
+            {
+                "No": 19,
+                "question": "Which test detects HIV in infants <18 months?",
+                "options": [
+                    "I. Antibody tests",
+                    "II. PCR for HIV DNA/RNA",
+                    "III. Rapid tests",
+                    "IV. Western Blot"
+                ],
+                "answers": ["II. PCR detects viral genetic material since maternal antibodies persist in babies."]
+            },
+            {
+                "No": 20,
+                "question": "What is the main challenge of lifelong ART?",
+                "options": [
+                    "I. Cost",
+                    "II. Adherence to daily medication",
+                    "III. Immediate side effects",
+                    "IV. Need for refrigeration"
+                ],
+                "answers": ["II. >95% adherence is required to prevent resistance, a major barrier in resource-limited settings."]
+            },
+            {
+                "No": 21,
+                "question": "Which population has the highest HIV prevalence in sub-Saharan Africa?",
+                "options": [
+                    "I. Adolescent boys",
+                    "II. Postmenopausal women",
+                    "III. Young women (15–24 years)",
+                    "IV. Elderly men"
+                ],
+                "answers": ["III. Gender inequality and biological factors make young women 2x more likely to contract HIV than men."]
+            },
+            {
+                "No": 22,
+                "question": "What is the purpose of viral suppression in HIV treatment?",
+                "options": [
+                    "I. To cure HIV",
+                    "II. To prevent transmission and preserve immunity",
+                    "III. To replace CD4 cells",
+                    "IV. To eliminate all viruses from the body"
+                ],
+                "answers": ["II. Viral suppression (<50 copies/mL) maintains health and prevents transmission (U=U: Undetectable = Untransmittable)."]
+            },
+            {
+                "No": 23,
+                "question": "Which organization leads the global HIV/AIDS response?",
+                "options": [
+                    "I. WHO",
+                    "II. UNAIDS",
+                    "III. UNICEF",
+                    "IV. Red Cross"
+                ],
+                "answers": ["II. UNAIDS coordinates the UN's efforts to end AIDS by 2030 through 90-90-90 targets."]
+            },
+            {
+                "No": 24,
+                "question": "What is the '90-90-90' target?",
+                "options": [
+                    "I. 90% cured by 2090",
+                    "II. 90% diagnosed, 90% on ART, 90% virally suppressed by 2020",
+                    "III. 90% vaccine coverage",
+                    "IV. 90% condom use"
+                ],
+                "answers": ["II. The 90-90-90 strategy aims to control the epidemic through testing, treatment, and suppression."]
+            },
+            {
+                "No": 25,
+                "question": "Why is stigma a barrier to HIV control?",
+                "options": [
+                    "I. It discourages testing/treatment",
+                    "II. It makes the virus stronger",
+                    "III. It increases mosquito transmission",
+                    "IV. It reduces ARV effectiveness"
+                ],
+                "answers": ["I. Fear of discrimination prevents people from seeking testing, disclosing status, or adhering to ART."]
+            }
+        ],
 }
 }
