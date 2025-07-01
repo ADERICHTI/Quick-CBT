@@ -9189,5 +9189,284 @@
                 "answers": ["II. PMTCT uses ARVs to cut vertical HIV transmission rates from 30% to <5%."]
             }
         ],
+
+
+        "GES 107: Sexually Transmitted Infections (STIs) - Topic 6": [
+            {
+                "No": 1,
+                "question": "What is the primary mode of transmission for most STIs?",
+                "options": [
+                    "I. Airborne droplets",
+                    "II. Sexual contact (vaginal, anal, oral)",
+                    "III. Contaminated food/water",
+                    "IV. Mosquito bites"
+                ],
+                "answers": ["II. Most STIs spread through sexual contact via exchange of bodily fluids or skin-to-skin genital contact."]
+            },
+            {
+                "No": 2,
+                "question": "Which bacterial STI is known for causing painful genital ulcers?",
+                "options": [
+                    "I. Chlamydia",
+                    "II. Gonorrhea",
+                    "III. Chancroid (Haemophilus ducreyi)",
+                    "IV. Syphilis"
+                ],
+                "answers": ["III. Chancroid causes soft, painful ulcers (in contrast to syphilis' painless chancres)."]
+            },
+            {
+                "No": 3,
+                "question": "What is the most common symptom of gonorrhea in males?",
+                "options": [
+                    "I. Asymptomatic",
+                    "II. Painful urination and purulent urethral discharge",
+                    "III. Genital warts",
+                    "IV. Fever and rash"
+                ],
+                "answers": ["II. Males typically experience dysuria and thick yellow-green discharge due to urethral infection."]
+            },
+            {
+                "No": 4,
+                "question": "Which STI is caused by Treponema pallidum and progresses through stages if untreated?",
+                "options": [
+                    "I. HIV",
+                    "II. Herpes simplex virus",
+                    "III. Syphilis",
+                    "IV. Trichomoniasis"
+                ],
+                "answers": ["III. Syphilis has primary (chancre), secondary (rash), and tertiary (organ damage) stages."]
+            },
+            {
+                "No": 5,
+                "question": "What is a key feature of genital herpes outbreaks?",
+                "options": [
+                    "I. Single painless ulcer",
+                    "II. Clusters of painful vesicles/ulcers",
+                    "III. Thick vaginal discharge",
+                    "IV. Lower back pain"
+                ],
+                "answers": ["II. HSV causes recurrent groups of blisters that rupture into painful ulcers."]
+            },
+            {
+                "No": 6,
+                "question": "Which STI is associated with 'strawberry cervix' and frothy vaginal discharge?",
+                "options": [
+                    "I. Bacterial vaginosis",
+                    "II. Trichomoniasis",
+                    "III. Candidiasis",
+                    "IV. HPV"
+                ],
+                "answers": ["II. Trichomonas vaginalis causes frothy discharge and punctate cervical hemorrhages ('strawberry cervix')."]
+            },
+            {
+                "No": 7,
+                "question": "What percentage of cervical cancers are linked to HPV infection?",
+                "options": [
+                    "I. 25%",
+                    "II. 50%",
+                    "III. 75%",
+                    "IV. 99%"
+                ],
+                "answers": ["IV. HPV types 16/18 cause 99% of cervical cancers, preventable via vaccination."]
+            },
+            {
+                "No": 8,
+                "question": "Which STI increases HIV transmission risk by 3-fold due to genital ulcers?",
+                "options": [
+                    "I. Genital herpes (HSV-2)",
+                    "II. Chlamydia",
+                    "III. Pubic lice",
+                    "IV. Molluscum contagiosum"
+                ],
+                "answers": ["I. HSV-2 ulcers provide entry points for HIV and attract CD4+ cells to the genital area."]
+            },
+            {
+                "No": 9,
+                "question": "What is the recommended treatment for uncomplicated gonorrhea?",
+                "options": [
+                    "I. Penicillin G",
+                    "II. Ceftriaxone + azithromycin",
+                    "III. Metronidazole",
+                    "IV. Acyclovir"
+                ],
+                "answers": ["II. Dual therapy (ceftriaxone + azithromycin) combats rising resistance; penicillin is ineffective."]
+            },
+            {
+                "No": 10,
+                "question": "Which STI presents with 'curd-like' white vaginal discharge and itching?",
+                "options": [
+                    "I. Trichomoniasis",
+                    "II. Bacterial vaginosis",
+                    "III. Vulvovaginal candidiasis",
+                    "IV. Gonorrhea"
+                ],
+                "answers": ["III. Candida albicans causes thick white discharge and pruritus, often post-antibiotics."]
+            },
+            {
+                "No": 11,
+                "question": "What is the gold standard diagnostic test for syphilis?",
+                "options": [
+                    "I. Gram stain",
+                    "II. Wet mount microscopy",
+                    "III. Rapid plasma reagin (RPR)",
+                    "IV. Dark-field microscopy"
+                ],
+                "answers": ["IV. Dark-field microscopy visualizes live Treponema pallidum in primary syphilis lesions."]
+            },
+            {
+                "No": 12,
+                "question": "Which STI is diagnosed via NAAT (Nucleic Acid Amplification Test) of urine samples?",
+                "options": [
+                    "I. HIV",
+                    "II. Chlamydia trachomatis",
+                    "III. Genital warts",
+                    "IV. Scabies"
+                ],
+                "answers": ["II. NAAT is highly sensitive for detecting chlamydial DNA in urine or swabs."]
+            },
+            {
+                "No": 13,
+                "question": "What is the causative agent of lymphogranuloma venereum (LGV)?",
+                "options": [
+                    "I. Chlamydia trachomatis serovars L1–L3",
+                    "II. Neisseria gonorrhoeae",
+                    "III. Herpes simplex virus",
+                    "IV. Treponema pallidum"
+                ],
+                "answers": ["I. LGV is caused by invasive chlamydial serovars leading to buboes and rectal strictures."]
+            },
+            {
+                "No": 14,
+                "question": "Which STI manifests with painless, fleshy genital growths?",
+                "options": [
+                    "I. Syphilis",
+                    "II. Genital warts (HPV)",
+                    "III. Chancroid",
+                    "IV. Herpes"
+                ],
+                "answers": ["II. HPV types 6/11 cause cauliflower-like warts; types 16/18 are oncogenic."]
+            },
+            {
+                "No": 15,
+                "question": "What is the most effective method to prevent STIs during sexual activity?",
+                "options": [
+                    "I. Withdrawal method",
+                    "II. Oral contraceptives",
+                    "III. Correct and consistent condom use",
+                    "IV. Douching after sex"
+                ],
+                "answers": ["III. Condoms block transmission of most STIs (except skin-to-skin infections like HPV/herpes)."]
+            },
+            {
+                "No": 16,
+                "question": "Which STI is associated with 'clue cells' on microscopy?",
+                "options": [
+                    "I. Trichomoniasis",
+                    "II. Bacterial vaginosis",
+                    "III. Gonorrhea",
+                    "IV. Candidiasis"
+                ],
+                "answers": ["II. BV shows epithelial cells coated with Gardnerella (clue cells) and fishy odor."]
+            },
+            {
+                "No": 17,
+                "question": "What is the recommended treatment for bacterial vaginosis?",
+                "options": [
+                    "I. Fluconazole",
+                    "II. Metronidazole or clindamycin",
+                    "III. Acyclovir",
+                    "IV. Penicillin"
+                ],
+                "answers": ["II. Metronidazole targets anaerobic overgrowth (Gardnerella, Prevotella) in BV."]
+            },
+            {
+                "No": 18,
+                "question": "Which STI can cause pelvic inflammatory disease (PID) if untreated?",
+                "options": [
+                    "I. Chlamydia and gonorrhea",
+                    "II. Genital herpes",
+                    "III. Pubic lice",
+                    "IV. Trichomoniasis"
+                ],
+                "answers": ["I. Chlamydia/gonorrhea ascend to the uterus/tubes, causing PID and infertility."]
+            },
+            {
+                "No": 19,
+                "question": "What is the incubation period for syphilis before chancre appears?",
+                "options": [
+                    "I. 1–2 days",
+                    "II. 9–90 days (avg. 21 days)",
+                    "III. 6 months",
+                    "IV. 1 year"
+                ],
+                "answers": ["II. Primary syphilis chancres develop 3 weeks post-exposure (range 9–90 days)."]
+            },
+            {
+                "No": 20,
+                "question": "Which STI is diagnosed via Tzanck smear showing multinucleated giant cells?",
+                "options": [
+                    "I. HPV",
+                    "II. HSV",
+                    "III. HIV",
+                    "IV. Syphilis"
+                ],
+                "answers": ["II. Tzanck smear detects HSV-infected cells with fused nuclei (giant cells)."]
+            },
+            {
+                "No": 21,
+                "question": "What is the most common STI globally?",
+                "options": [
+                    "I. HIV",
+                    "II. HPV",
+                    "III. Trichomoniasis",
+                    "IV. Gonorrhea"
+                ],
+                "answers": ["II. HPV infects ~80% of sexually active people; most cases are asymptomatic."]
+            },
+            {
+                "No": 22,
+                "question": "Which STI presents with 'rice-water' discharge and severe itching?",
+                "options": [
+                    "I. Scabies",
+                    "II. Pediculosis pubis",
+                    "III. Molluscum contagiosum",
+                    "IV. Genital warts"
+                ],
+                "answers": ["I. Scabies (Sarcoptes scabiei) causes intense itch and serous discharge from burrows."]
+            },
+            {
+                "No": 23,
+                "question": "What is the first-line treatment for genital herpes outbreaks?",
+                "options": [
+                    "I. Ceftriaxone",
+                    "II. Acyclovir/valacyclovir",
+                    "III. Metronidazole",
+                    "IV. Azithromycin"
+                ],
+                "answers": ["II. Antivirals (acyclovir/valacyclovir) reduce outbreak duration and severity."]
+            },
+            {
+                "No": 24,
+                "question": "Which STI is reportable to public health authorities in most countries?",
+                "options": [
+                    "I. Genital warts",
+                    "II. Syphilis, gonorrhea, and HIV",
+                    "III. Bacterial vaginosis",
+                    "IV. Trichomoniasis"
+                ],
+                "answers": ["II. Syphilis, gonorrhea, and HIV are reportable to track outbreaks and allocate resources."]
+            },
+            {
+                "No": 25,
+                "question": "What is the primary prevention strategy for HPV-related cancers?",
+                "options": [
+                    "I. Antibiotic prophylaxis",
+                    "II. HPV vaccination (Gardasil/Cervarix)",
+                    "III. Condom use only",
+                    "IV. Annual Pap smears"
+                ],
+                "answers": ["II. HPV vaccines (targeting types 16/18/6/11) prevent 90% of cervical cancers when given pre-exposure."]
+            }
+        ],
 }
 }
