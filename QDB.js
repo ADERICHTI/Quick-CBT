@@ -10306,6 +10306,285 @@
                 "answers": ["III. NAFDAC established the National Pharmacovigilance Center in 2004 to monitor ADRs."]
             }
         ],
+
+
+        "GES 107: Epidemiology of HIV - Topic 10": [
+            {
+                "No": 1,
+                "question": "Which region had the highest HIV prevalence in 2008 according to the slides?",
+                "options": [
+                    "I. North America",
+                    "II. Sub-Saharan Africa",
+                    "III. Southeast Asia",
+                    "IV. Eastern Europe"
+                ],
+                "answers": ["II. Sub-Saharan Africa accounted for 67% of all people living with HIV in 2008, making it the worst affected region (Slide 124)."]
+            },
+            {
+                "No": 2,
+                "question": "What percentage of women living with HIV were in sub-Saharan Africa in 2008?",
+                "options": [
+                    "I. 45%",
+                    "II. 58%",
+                    "III. 76%",
+                    "IV. 82%"
+                ],
+                "answers": ["III. 76% of all HIV-positive women globally were in sub-Saharan Africa, reflecting gender disparities in transmission (Slide 124)."]
+            },
+            {
+                "No": 3,
+                "question": "Which HIV-1 subtype is most common globally and in Southern Africa?",
+                "options": [
+                    "I. Subtype A",
+                    "II. Subtype B",
+                    "III. Subtype C",
+                    "IV. Subtype O"
+                ],
+                "answers": ["III. Subtype C is the most predominant globally and in Southern Africa (Slide 125)."]
+            },
+            {
+                "No": 4,
+                "question": "What is the 'window period' in HIV testing?",
+                "options": [
+                    "I. Time between infection and antibody detection",
+                    "II. Time between symptom onset and treatment",
+                    "III. Duration of ART effectiveness",
+                    "IV. Phase of viral latency"
+                ],
+                "answers": ["I. The window period (4-6 weeks) is when antibodies are undetectable despite infection (Slide 127)."]
+            },
+            {
+                "No": 5,
+                "question": "Which test confirms HIV infection by detecting viral proteins?",
+                "options": [
+                    "I. ELISA",
+                    "II. Western Blot",
+                    "III. PCR",
+                    "IV. Rapid test"
+                ],
+                "answers": ["II. Western Blot is a confirmatory test that detects HIV-specific proteins (Slide 133)."]
+            },
+            {
+                "No": 6,
+                "question": "What CD4 count defines AIDS in adults per CDC criteria?",
+                "options": [
+                    "I. <500 cells/mm³",
+                    "II. <350 cells/mm³",
+                    "III. <200 cells/mm³",
+                    "IV. <100 cells/mm³"
+                ],
+                "answers": ["III. A CD4 count <200 cells/mm³ indicates AIDS, regardless of symptoms (Slide 128)."]
+            },
+            {
+                "No": 7,
+                "question": "Which condition is NOT an AIDS-defining illness per CDC?",
+                "options": [
+                    "I. Pulmonary tuberculosis",
+                    "II. Kaposi's sarcoma",
+                    "III. Oral thrush",
+                    "IV. Pneumocystis pneumonia"
+                ],
+                "answers": ["III. Oral thrush (Stage II in WHO classification) is not an AIDS-defining condition (Slides 128-130)."]
+            },
+            {
+                "No": 8,
+                "question": "What is the primary goal of HAART?",
+                "options": [
+                    "I. Cure HIV",
+                    "II. Maximally suppress viral load",
+                    "III. Boost CD4 count only",
+                    "IV. Replace immune cells"
+                ],
+                "answers": ["II. HAART aims for durable viral suppression (<50 copies/mL) to prevent progression (Slide 135)."]
+            },
+            {
+                "No": 9,
+                "question": "Which drug class inhibits HIV protease?",
+                "options": [
+                    "I. NRTIs",
+                    "II. NNRTIs",
+                    "III. Protease inhibitors",
+                    "IV. Entry inhibitors"
+                ],
+                "answers": ["III. Protease inhibitors (e.g., Lopinavir) block viral maturation (Slide 136)."]
+            },
+            {
+                "No": 10,
+                "question": "When should ART start for TB/HIV co-infected patients?",
+                "options": [
+                    "I. After completing TB treatment",
+                    "II. Within 8 weeks of TB treatment",
+                    "III. Only if CD4 <100 cells/mm³",
+                    "IV. Never"
+                ],
+                "answers": ["II. ART should begin within 8 weeks of TB treatment to reduce mortality (Slide 137)."]
+            },
+            {
+                "No": 11,
+                "question": "Which test diagnoses HIV in infants <18 months?",
+                "options": [
+                    "I. Antibody test",
+                    "II. Viral load (PCR)",
+                    "III. Western Blot",
+                    "IV. ELISA"
+                ],
+                "answers": ["II. PCR detects HIV DNA/RNA since maternal antibodies interfere with antibody tests (Slide 134)."]
+            },
+            {
+                "No": 12,
+                "question": "What is a major risk factor for HIV transmission in Africa?",
+                "options": [
+                    "I. Mosquito bites",
+                    "II. Heterosexual contact",
+                    "III. Sharing utensils",
+                    "IV. Vaccination"
+                ],
+                "answers": ["II. Heterosexual transmission drives >80% of infections in Africa (Slide 78)."]
+            },
+            {
+                "No": 13,
+                "question": "Which WHO clinical stage includes Kaposi's sarcoma?",
+                "options": [
+                    "I. Stage I",
+                    "II. Stage II",
+                    "III. Stage III",
+                    "IV. Stage IV"
+                ],
+                "answers": ["IV. Stage IV includes severe conditions like Kaposi's sarcoma (Slide 130)."]
+            },
+            {
+                "No": 14,
+                "question": "What viral load threshold indicates treatment failure?",
+                "options": [
+                    "I. >50 copies/mL after 6 months of ART",
+                    "II. >200 copies/mL after 1 year",
+                    "III. >1000 copies/mL anytime",
+                    "IV. Undetectable viral load"
+                ],
+                "answers": ["I. Viral load >50 copies/mL after 6 months signals treatment failure (Slide 137)."]
+            },
+            {
+                "No": 15,
+                "question": "Which is NOT a mode of HIV transmission?",
+                "options": [
+                    "I. Breastfeeding",
+                    "II. Unprotected sex",
+                    "III. Hugging",
+                    "IV. Contaminated needles"
+                ],
+                "answers": ["III. HIV cannot transmit via casual contact like hugging (Slide 79)."]
+            },
+            {
+                "No": 16,
+                "question": "What % of HIV+ infants acquire infection during delivery?",
+                "options": [
+                    "I. 10-20%",
+                    "II. 30-40%",
+                    "III. 50-60%",
+                    "IV. 70-80%"
+                ],
+                "answers": ["II. 30-40% of MTCT occurs during delivery without intervention (Slide 78)."]
+            },
+            {
+                "No": 17,
+                "question": "Which ARV is avoided in pregnancy's first trimester?",
+                "options": [
+                    "I. Zidovudine",
+                    "II. Efavirenz",
+                    "III. Nevirapine",
+                    "IV. Lamivudine"
+                ],
+                "answers": ["II. Efavirenz is teratogenic in early pregnancy (Slide 138)."]
+            },
+            {
+                "No": 18,
+                "question": "What is the CDC classification for asymptomatic HIV with CD4 >500?",
+                "options": [
+                    "I. A1",
+                    "II. B1",
+                    "III. C1",
+                    "IV. Not classified"
+                ],
+                "answers": ["I. Asymptomatic HIV with CD4 >500 is Category A1 (Slide 128)."]
+            },
+            {
+                "No": 19,
+                "question": "Which test measures HIV RNA levels?",
+                "options": [
+                    "I. CD4 count",
+                    "II. Viral load PCR",
+                    "III. Rapid test",
+                    "IV. Western Blot"
+                ],
+                "answers": ["II. Viral load PCR quantifies HIV RNA to monitor ART efficacy (Slide 127)."]
+            },
+            {
+                "No": 20,
+                "question": "What is the primary cause of death in untreated HIV?",
+                "options": [
+                    "I. Viral toxicity",
+                    "II. Opportunistic infections",
+                    "III. Drug overdose",
+                    "IV. Organ failure"
+                ],
+                "answers": ["II. Opportunistic infections (e.g., TB, PCP) kill due to immune depletion (Slide 128)."]
+            },
+            {
+                "No": 21,
+                "question": "Which group is prioritized for ART initiation regardless of CD4 count?",
+                "options": [
+                    "I. Pregnant women",
+                    "II. Adolescents",
+                    "III. Patients with TB",
+                    "IV. All of the above"
+                ],
+                "answers": ["IV. Pregnant women, TB patients, and adolescents with HIV are high-priority groups (Slides 137-138)."]
+            },
+            {
+                "No": 22,
+                "question": "What is the recommended 1st-line ART regimen in Nigeria?",
+                "options": [
+                    "I. AZT + 3TC + EFV",
+                    "II. TDF + FTC + DTG",
+                    "III. ABC + 3TC + LPV/r",
+                    "IV. d4T + ddI + NVP"
+                ],
+                "answers": ["I. AZT + 3TC + EFV is a preferred 1st-line regimen per Nigerian guidelines (Slide 138)."]
+            },
+            {
+                "No": 23,
+                "question": "Which HIV protein binds to CD4 receptors?",
+                "options": [
+                    "I. p24",
+                    "II. gp120",
+                    "III. Reverse transcriptase",
+                    "IV. Integrase"
+                ],
+                "answers": ["II. gp120 on HIV's envelope binds to CD4 receptors for cell entry (Slide 126)."]
+            },
+            {
+                "No": 24,
+                "question": "What is seroconversion?",
+                "options": [
+                    "I. Viral load increase",
+                    "II. Antibody development post-infection",
+                    "III. CD4 count drop",
+                    "IV. Drug resistance"
+                ],
+                "answers": ["II. Seroconversion is when the body produces detectable HIV antibodies (Slide 127)."]
+            },
+            {
+                "No": 25,
+                "question": "Which factor does NOT increase HIV transmission risk?",
+                "options": [
+                    "I. High viral load",
+                    "II. STI co-infection",
+                    "III. Male circumcision",
+                    "IV. Unprotected sex"
+                ],
+                "answers": ["III. Male circumcision reduces transmission risk by 60% (Slide 78)."]
+            }
+        ],
            
 }
 }
