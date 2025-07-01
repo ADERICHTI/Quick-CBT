@@ -1,7 +1,7 @@
 // New DataBase
 newQuestionsData  = {
     "questions": {
-        "PUS 101: Introduction to Legal Method - Topic 1": [
+        "PUL 101: Introduction to Legal Method - Topic 1": [
             {
                 "No": 1,
                 "question": "What is the primary focus of 'legal method' as defined in the text?",
