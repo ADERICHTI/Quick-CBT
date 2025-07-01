@@ -277,7 +277,285 @@ newQuestionsData  = {
                 ],
                 "answers": ["II. Judicial decisions are influenced by personal biases and social context (p. 15–16). Realists emphasize the human element in judging."]
             }
-        ]
+        ],
+
+        "PUL 101: Theories of Law - Topic 2": [
+            {
+                "No": 1,
+                "question": "Which legal theory defines law as 'a command set by a sovereign and backed by sanctions'?",
+                "options": [
+                    "I. Natural Law Theory",
+                    "II. Positivist Theory (Austin)",
+                    "III. Historical School",
+                    "IV. Sociological Jurisprudence"
+                ],
+                "answers": ["II. Positivist Theory (Austin) (p. 7). Austin's Command Theory emphasizes law's coercive nature from a sovereign authority."]
+            },
+            {
+                "No": 2,
+                "question": "What is the primary criticism of Austin's Command Theory?",
+                "options": [
+                    "I. It ignores customary law",
+                    "II. It cannot explain non-coercive laws like contracts or wills",
+                    "III. It focuses too much on judicial discretion",
+                    "IV. It only applies to democratic societies"
+                ],
+                "answers": ["II. It cannot explain non-coercive laws like contracts or wills (p. 8). Many laws facilitate private arrangements rather than command behavior."]
+            },
+            {
+                "No": 3,
+                "question": "The 'Pure Theory of Law' is associated with:",
+                "options": [
+                    "I. Jeremy Bentham",
+                    "II. Hans Kelsen",
+                    "III. Roscoe Pound",
+                    "IV. Karl Llewellyn"
+                ],
+                "answers": ["II. Hans Kelsen (p. 8-9). Kelsen viewed law as a hierarchy of norms grounded in a basic norm (Grundnorm)."]
+            },
+            {
+                "No": 4,
+                "question": "Natural Law Theory is primarily concerned with:",
+                "options": [
+                    "I. Historical legal developments",
+                    "II. Universal moral principles inherent in human nature",
+                    "III. Economic efficiency of laws",
+                    "IV. Judicial law-making processes"
+                ],
+                "answers": ["II. Universal moral principles inherent in human nature (p. 10-11). It holds that unjust laws are not valid laws."]
+            },
+            {
+                "No": 5,
+                "question": "Which theory argues that law should reflect a society's customs and traditions (Volksgeist)?",
+                "options": [
+                    "I. Utilitarianism",
+                    "II. Historical School (Savigny)",
+                    "III. Legal Realism",
+                    "IV. Marxist Theory"
+                ],
+                "answers": ["II. Historical School (Savigny) (p. 11). Savigny believed law emerges organically from a society's culture."]
+            },
+            {
+                "No": 6,
+                "question": "The Sociological School, per Eugen Ehrlich, emphasizes:",
+                "options": [
+                    "I. The 'living law' of societal conduct over formal rules",
+                    "II. The sovereign's commands as supreme",
+                    "III. Abstract moral principles",
+                    "IV. Revolutionary class struggle"
+                ],
+                "answers": ["I. The 'living law' of societal conduct over formal rules (p. 12-13). Ehrlich focused on how communities actually regulate behavior."]
+            },
+            {
+                "No": 7,
+                "question": "Roscoe Pound's theory of 'social engineering' views law as a tool for:",
+                "options": [
+                    "I. Maintaining aristocratic privilege",
+                    "II. Balancing competing societal interests",
+                    "III. Enforcing religious doctrines",
+                    "IV. Promoting judicial supremacy"
+                ],
+                "answers": ["II. Balancing competing societal interests (p. 13-14). Pound saw law as reconciling individual and collective needs."]
+            },
+            {
+                "No": 8,
+                "question": "Utilitarian jurisprudence, per Bentham, evaluates laws based on:",
+                "options": [
+                    "I. Divine commandments",
+                    "II. Their ability to maximize happiness for the greatest number",
+                    "III. Their conformity to historical traditions",
+                    "IV. Judicial preferences"
+                ],
+                "answers": ["II. Their ability to maximize happiness for the greatest number (p. 14). Utility is the measure of good laws."]
+            },
+            {
+                "No": 9,
+                "question": "The Functional School (Holmes) is summarized by the phrase:",
+                "options": [
+                    "I. 'Law is the command of the sovereign'",
+                    "II. 'The life of the law has not been logic but experience'",
+                    "III. 'Law reflects the spirit of the people'",
+                    "IV. 'Law is a system of natural justice'"
+                ],
+                "answers": ["II. 'The life of the law has not been logic but experience' (p. 14-15). Holmes emphasized law's practical consequences over abstractions."]
+            },
+            {
+                "No": 10,
+                "question": "Legal Realists argue that judicial decisions are influenced by:",
+                "options": [
+                    "I. Fixed legal rules alone",
+                    "II. Judges' personal biases and social context",
+                    "III. Divine natural law",
+                    "IV. Historical customs exclusively"
+                ],
+                "answers": ["II. Judges' personal biases and social context (p. 15-16). Realists highlight the human element in judging."]
+            },
+            {
+                "No": 11,
+                "question": "Marxist legal theory views law primarily as:",
+                "options": [
+                    "I. A neutral arbiter of disputes",
+                    "II. An instrument of the ruling class to maintain power",
+                    "III. A reflection of divine will",
+                    "IV. An unchanging moral code"
+                ],
+                "answers": ["II. An instrument of the ruling class to maintain power (p. 30). Marxists see law as perpetuating economic inequality."]
+            },
+            {
+                "No": 12,
+                "question": "Which theory would justify disobeying an unjust law?",
+                "options": [
+                    "I. Legal Positivism",
+                    "II. Natural Law Theory",
+                    "III. Historical School",
+                    "IV. Pure Theory of Law"
+                ],
+                "answers": ["II. Natural Law Theory (p. 10-11). It holds that immoral laws lack validity."]
+            },
+            {
+                "No": 13,
+                "question": "Kelsen's 'Grundnorm' refers to:",
+                "options": [
+                    "I. A specific criminal statute",
+                    "II. The basic norm validating a legal system",
+                    "III. A judicial precedent",
+                    "IV. A contractual term"
+                ],
+                "answers": ["II. The basic norm validating a legal system (p. 9). All other norms derive authority from this foundational rule."]
+            },
+            {
+                "No": 14,
+                "question": "The 'bad man' perspective on law is associated with:",
+                "options": [
+                    "I. John Austin",
+                    "II. Oliver Wendell Holmes",
+                    "III. Friedrich Carl von Savigny",
+                    "IV. Thomas Aquinas"
+                ],
+                "answers": ["II. Oliver Wendell Holmes (p. 14-15). It focuses on predicting what courts will do, not moral ideals."]
+            },
+            {
+                "No": 15,
+                "question": "Which theory is most likely to support revolutionary changes to legal systems?",
+                "options": [
+                    "I. Legal Positivism",
+                    "II. Marxist Theory",
+                    "III. Historical School",
+                    "IV. Pure Theory of Law"
+                ],
+                "answers": ["II. Marxist Theory (p. 30). It advocates overthrowing systems that perpetuate class oppression."]
+            },
+            {
+                "No": 16,
+                "question": "Savigny's Historical School opposes:",
+                "options": [
+                    "I. Codification of laws that disregard traditions",
+                    "II. Judicial discretion",
+                    "III. All forms of legal reform",
+                    "IV. The concept of sovereignty"
+                ],
+                "answers": ["I. Codification of laws that disregard traditions (p. 11-12). It values organic legal growth over imposed statutes."]
+            },
+            {
+                "No": 17,
+                "question": "Pound's 'jural postulates' are:",
+                "options": [
+                    "I. Fixed moral truths",
+                    "II. Basic assumptions about societal needs that law should protect",
+                    "III. Commands from religious authorities",
+                    "IV. Economic policies"
+                ],
+                "answers": ["II. Basic assumptions about societal needs that law should protect (p. 13-14). They guide interest-balancing in law."]
+            },
+            {
+                "No": 18,
+                "question": "Which theory would argue that 'law is what judges declare it to be'?",
+                "options": [
+                    "I. Natural Law",
+                    "II. Legal Realism",
+                    "III. Utilitarianism",
+                    "IV. Positivism"
+                ],
+                "answers": ["II. Legal Realism (p. 15-16). It focuses on judicial behavior over abstract rules."]
+            },
+            {
+                "No": 19,
+                "question": "Austin's 'sovereign' is characterized by:",
+                "options": [
+                    "I. Being bound by natural law",
+                    "II. Habitual obedience by the people and lack of legal limits on power",
+                    "III. Democratic election",
+                    "IV. Subordination to judicial review"
+                ],
+                "answers": ["II. Habitual obedience by the people and lack of legal limits on power (p. 7-8). The sovereign is the 'uncommanded commander'."]
+            },
+            {
+                "No": 20,
+                "question": "The 'repugnancy test' in Nigerian customary law aligns closest with:",
+                "options": [
+                    "I. Positivist Theory",
+                    "II. Natural Law Theory",
+                    "III. Marxist Theory",
+                    "IV. Pure Theory of Law"
+                ],
+                "answers": ["II. Natural Law Theory (p. 12). Customary laws must not conflict with 'natural justice, equity, and good conscience.'"]
+            },
+            {
+                "No": 21,
+                "question": "Which school critiques Austin's theory for ignoring the role of courts?",
+                "options": [
+                    "I. Functional School",
+                    "II. Historical School",
+                    "III. Sociological School",
+                    "IV. Utilitarian School"
+                ],
+                "answers": ["I. Functional School (p. 14-15). Holmes and others emphasized judges' law-making role."]
+            },
+            {
+                "No": 22,
+                "question": "The 'consensus model' of law's function is criticized for:",
+                "options": [
+                    "I. Overemphasizing societal conflict",
+                    "II. Assuming a universal value system exists in diverse societies",
+                    "III. Ignoring sovereign authority",
+                    "IV. Rejecting judicial precedent"
+                ],
+                "answers": ["II. Assuming a universal value system exists in diverse societies (p. 29). It overlooks power imbalances shaping 'consensus.'"]
+            },
+            {
+                "No": 23,
+                "question": "Kelsen's theory excludes:",
+                "options": [
+                    "I. Moral evaluations of law",
+                    "II. The concept of legal validity",
+                    "III. The role of legislatures",
+                    "IV. All forms of sanctions"
+                ],
+                "answers": ["I. Moral evaluations of law (p. 8-9). The Pure Theory separates law from morality."]
+            },
+            {
+                "No": 24,
+                "question": "The 'multiple conscience problem' is a critique of:",
+                "options": [
+                    "I. Legal Positivism",
+                    "II. Natural Law Theory",
+                    "III. Historical School",
+                    "IV. Sociological Jurisprudence"
+                ],
+                "answers": ["II. Natural Law Theory (p. 11). Individuals may disagree on what is 'natural' or 'just.'"]
+            },
+            {
+                "No": 25,
+                "question": "Which theory would support the view that 'law is a product of economic structures'?",
+                "options": [
+                    "I. Marxist Theory",
+                    "II. Pure Theory of Law",
+                    "III. Functional School",
+                    "IV. Positivist School"
+                ],
+                "answers": ["I. Marxist Theory (p. 30). It ties legal systems to the mode of production and class relations."]
+            }
+        ],
     }
 }
 
