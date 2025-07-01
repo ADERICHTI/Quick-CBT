@@ -282,4 +282,4 @@ newQuestionsData  = {
 }
 
 
-Object.assign(questionsData.questions, newQuestionsData)
+Object.assign(questionsData.questions, newQuestionsData.questions)
