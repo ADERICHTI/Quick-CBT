@@ -556,6 +556,284 @@ newQuestionsData  = {
                 "answers": ["I. Marxist Theory (p. 30). It ties legal systems to the mode of production and class relations."]
             }
         ],
+
+        "PUL 101: Functions and Objectives of Law - Topic 3": [
+            {
+                "No": 1,
+                "question": "Which of the following is NOT a primary function of law according to the text?",
+                "options": [
+                    "I. Regulation of social relationships",
+                    "II. Allocation of official authority",
+                    "III. Dispute settlement",
+                    "IV. Guaranteeing universal happiness"
+                ],
+                "answers": ["IV. Guaranteeing universal happiness (p. 17-20). Law aims for order and justice, not utopian outcomes."]
+            },
+            {
+                "No": 2,
+                "question": "The function of law that defines marriage and family rights falls under:",
+                "options": [
+                    "I. Dispute settlement",
+                    "II. Regulation of social relationships",
+                    "III. Change of law",
+                    "IV. Allocation of authority"
+                ],
+                "answers": ["II. Regulation of social relationships (p. 18). Law structures familial rights/duties (e.g., marriage, inheritance)."]
+            },
+            {
+                "No": 3,
+                "question": "Section 6 of the 1999 Constitution exemplifies which function of law?",
+                "options": [
+                    "I. Defining criminal offenses",
+                    "II. Allocating judicial power to courts",
+                    "III. Establishing moral codes",
+                    "IV. Regulating contracts"
+                ],
+                "answers": ["II. Allocating judicial power to courts (p. 19). It vests judicial authority in specified institutions."]
+            },
+            {
+                "No": 4,
+                "question": "The Land Use Act primarily serves which function?",
+                "options": [
+                    "I. Dispute resolution between neighbors",
+                    "II. Facilitating land access for development",
+                    "III. Criminalizing land encroachment",
+                    "IV. Abolishing customary land tenure"
+                ],
+                "answers": ["II. Facilitating land access for development (p. 17). It aims to make land available for economic growth."]
+            },
+            {
+                "No": 5,
+                "question": "Formal justice refers to:",
+                "options": [
+                    "I. Applying law strictly without considering circumstances",
+                    "II. Judicial activism to achieve fairness",
+                    "III. Community-based dispute resolution",
+                    "IV. Legislative lawmaking"
+                ],
+                "answers": ["I. Applying law strictly without considering circumstances (p. 22). Example: Mandatory sentences without discretion."]
+            },
+            {
+                "No": 6,
+                "question": "Substantive justice allows judges to:",
+                "options": [
+                    "I. Ignore statutory texts",
+                    "II. Consider extra-legal factors to avoid absurd outcomes",
+                    "III. Overrule legislative decisions",
+                    "IV. Create new offenses"
+                ],
+                "answers": ["II. Consider extra-legal factors to avoid absurd outcomes (p. 22). It mitigates harshness in strict legal application."]
+            },
+            {
+                "No": 7,
+                "question": "Which case demonstrated formal justice where the judge said 'my hands are tied'?",
+                "options": [
+                    "I. Donoghue v. Stevenson",
+                    "II. Awolowo v. Federal Minister of Internal Affairs",
+                    "III. Salomon v. Salomon",
+                    "IV. Holman v. Johnson"
+                ],
+                "answers": ["II. Awolowo v. Federal Minister of Internal Affairs (p. 22). The judge felt constrained by strict treason laws."]
+            },
+            {
+                "No": 8,
+                "question": "Law's role in maintaining 'law and order' is primarily a:",
+                "options": [
+                    "I. Moral objective",
+                    "II. Classical government function",
+                    "III. Economic policy tool",
+                    "IV. Religious mandate"
+                ],
+                "answers": ["II. Classical government function (p. 21). States exist to prevent anarchy through legal systems."]
+            },
+            {
+                "No": 9,
+                "question": "The Child Rights Act 2003 aligns with which objective of law?",
+                "options": [
+                    "I. Protecting vulnerable groups",
+                    "II. Expanding government power",
+                    "III. Restricting freedom of association",
+                    "IV. Codifying customary practices"
+                ],
+                "answers": ["I. Protecting vulnerable groups (p. 18). It safeguards children from abuse/exploitation."]
+            },
+            {
+                "No": 10,
+                "question": "Section 40 of the 1999 Constitution (freedom of association) balances:",
+                "options": [
+                    "I. Individual liberty vs. public order",
+                    "II. Judicial vs. legislative powers",
+                    "III. Federal vs. state authority",
+                    "IV. Civil vs. criminal penalties"
+                ],
+                "answers": ["I. Individual liberty vs. public order (p. 23-24). Rights may be limited to prevent chaos (e.g., unlawful assemblies)."]
+            },
+            {
+                "No": 11,
+                "question": "The 'territorial limitation' of law means:",
+                "options": [
+                    "I. Laws apply only to citizens",
+                    "II. Laws bind only those within a state's geographical boundaries",
+                    "III. Customary laws override statutes",
+                    "IV. International law supersedes domestic law"
+                ],
+                "answers": ["II. Laws bind only those within a state's geographical boundaries (p. 5-6). Example: Criminal Code applies only where enacted."]
+            },
+            {
+                "No": 12,
+                "question": "Which objective justifies limiting freedom of contract?",
+                "options": [
+                    "I. Promoting economic inequality",
+                    "II. Protecting public health/safety (e.g., invalidating harmful clauses)",
+                    "III. Encouraging monopolies",
+                    "IV. Preserving judicial workload"
+                ],
+                "answers": ["II. Protecting public health/safety (p. 24). Courts may void contracts contrary to public policy."]
+            },
+            {
+                "No": 13,
+                "question": "The dynamic nature of law refers to its ability to:",
+                "options": [
+                    "I. Remain unchanged for centuries",
+                    "II. Adapt to social/political changes (e.g., colonial to post-independence laws)",
+                    "III. Override constitutional provisions",
+                    "IV. Ignore judicial precedents"
+                ],
+                "answers": ["II. Adapt to social/political changes (p. 6). Example: Post-military democratic reforms."]
+            },
+            {
+                "No": 14,
+                "question": "Section 14(2)(a) of the 1999 Constitution reflects which objective?",
+                "options": [
+                    "I. Popular sovereignty (power derived from the people)",
+                    "II. Military supremacy",
+                    "III. Religious governance",
+                    "IV. Economic centralization"
+                ],
+                "answers": ["I. Popular sovereignty (p. 28). It vests sovereignty in the people, not rulers."]
+            },
+            {
+                "No": 15,
+                "question": "The 'rule of law' principle ensures:",
+                "options": [
+                    "I. Only legislators can interpret laws",
+                    "II. Government acts under legal authority",
+                    "III. Customary law prevails over statutes",
+                    "IV. Judges make all laws"
+                ],
+                "answers": ["II. Government acts under legal authority (p. 27-28). It prevents arbitrary use of power."]
+            },
+            {
+                "No": 16,
+                "question": "Which law-making process is used for constitutional amendments?",
+                "options": [
+                    "I. Ministerial orders",
+                    "II. Section 9 of the 1999 Constitution procedure",
+                    "III. Judicial rulings",
+                    "IV. Presidential decrees"
+                ],
+                "answers": ["II. Section 9 of the 1999 Constitution procedure (p. 20). Requires legislative supermajorities."]
+            },
+            {
+                "No": 17,
+                "question": "The Abolition of the Osu System Law exemplifies law's role in:",
+                "options": [
+                    "I. Preserving traditions",
+                    "II. Enforcing religious doctrines",
+                    "III. Eliminating discriminatory customs",
+                    "IV. Expanding criminal penalties"
+                ],
+                "answers": ["III. Eliminating discriminatory customs (p. 17). It targets harmful social practices."]
+            },
+            {
+                "No": 18,
+                "question": "A 'crime without victims' (e.g., drug use) raises debates about:",
+                "options": [
+                    "I. Law's role in enforcing morality vs. individual liberty",
+                    "II. Expanding police powers",
+                    "III. Abolishing all criminal laws",
+                    "IV. Judicial corruption"
+                ],
+                "answers": ["I. Law's role in enforcing morality vs. individual liberty (p. 32-33). Example: Shaw v DPP on public morals."]
+            },
+            {
+                "No": 19,
+                "question": "The Niger Delta Development Commission (NDDC) aligns with law's objective to:",
+                "options": [
+                    "I. Centralize resource control",
+                    "II. Redress developmental inequalities",
+                    "III. Criminalize protests",
+                    "IV. Replace state governments"
+                ],
+                "answers": ["II. Redress developmental inequalities (p. 17-18). It addresses marginalization through legal mechanisms."]
+            },
+            {
+                "No": 20,
+                "question": "Section 222 of the 1999 Constitution (political party registration) demonstrates:",
+                "options": [
+                    "I. Absolute freedom of association",
+                    "II. Regulation of political freedom to ensure stability",
+                    "III. Judicial control over elections",
+                    "IV. Banning of multiparty systems"
+                ],
+                "answers": ["II. Regulation of political freedom to ensure stability (p. 24). Sets criteria for party recognition."]
+            },
+            {
+                "No": 21,
+                "question": "The 'coercive' feature of law distinguishes it from:",
+                "options": [
+                    "I. Moral rules (enforced by social disapproval)",
+                    "II. Legislative debates",
+                    "III. Academic theories",
+                    "IV. Economic policies"
+                ],
+                "answers": ["I. Moral rules (p. 5). Legal breaches invoke state sanctions (e.g., imprisonment)."]
+            },
+            {
+                "No": 22,
+                "question": "Judicial activism promotes:",
+                "options": [
+                    "I. Strict literal interpretation",
+                    "II. Flexible interpretation to achieve substantive justice",
+                    "III. Deference to executive decisions",
+                    "IV. Automatic approval of legislation"
+                ],
+                "answers": ["II. Flexible interpretation to achieve substantive justice (p. 22). Judges may adapt laws to prevent injustice."]
+            },
+            {
+                "No": 23,
+                "question": "The 'consensus model' of law assumes:",
+                "options": [
+                    "I. Society shares common values enforced by law",
+                    "II. Laws always reflect minority interests",
+                    "III. Judges should ignore statutes",
+                    "IV. Legislation is unnecessary"
+                ],
+                "answers": ["I. Society shares common values enforced by law (p. 29). Criticized for overlooking power imbalances."]
+            },
+            {
+                "No": 24,
+                "question": "The Marxist critique argues that law primarily serves to:",
+                "options": [
+                    "I. Protect workers' rights",
+                    "II. Perpetuate ruling class dominance",
+                    "III. Implement divine will",
+                    "IV. Promote judicial independence"
+                ],
+                "answers": ["II. Perpetuate ruling class dominance (p. 30). Law is seen as a tool for economic oppression."]
+            },
+            {
+                "No": 25,
+                "question": "The 'open model' of social control combines elements of:",
+                "options": [
+                    "I. Consensus and conflict models",
+                    "II. Religious and secular laws",
+                    "III. Civil and criminal procedures",
+                    "IV. Local and international tribunals"
+                ],
+                "answers": ["I. Consensus and conflict models (p. 30). It balances stability with legitimate dissent."]
+            }
+        ],
     }
 }
 
