@@ -10026,5 +10026,286 @@
                 "answers": ["II. HSCT from an HLA-matched sibling can cure SCA but carries risks (graft rejection, GVHD)."]
             }
         ],
+
+
+
+        "GES 107: Drugs and Mankind - Topic 9": [
+            {
+                "No": 1,
+                "question": "Which of the following is the WHO definition of a drug?",
+                "options": [
+                    "I. Any substance used to modify physiological systems for the recipient's benefit",
+                    "II. Only synthetic chemicals prescribed by doctors",
+                    "III. Herbal remedies excluded from medical use",
+                    "IV. Substances illegal under international law"
+                ],
+                "answers": ["I. The WHO defines a drug as any substance or product used to modify physiological systems for the benefit of the recipient, including legal and herbal medicines."]
+            },
+            {
+                "No": 2,
+                "question": "What is the primary purpose of an antiretroviral drug (ARV)?",
+                "options": [
+                    "I. Cure HIV/AIDS completely",
+                    "II. Suppress viral replication in HIV patients",
+                    "III. Replace immune cells destroyed by HIV",
+                    "IV. Prevent HIV transmission via vaccines"
+                ],
+                "answers": ["II. ARVs suppress HIV replication to undetectable levels but do not cure the disease. They manage symptoms and prevent progression to AIDS."]
+            },
+            {
+                "No": 3,
+                "question": "Which drug classification includes penicillin and tetracycline?",
+                "options": [
+                    "I. Analgesics",
+                    "II. Antibiotics",
+                    "III. Antifungals",
+                    "IV. Antivirals"
+                ],
+                "answers": ["II. Penicillin and tetracycline are antibiotics used to treat bacterial infections by inhibiting bacterial growth or killing bacteria."]
+            },
+            {
+                "No": 4,
+                "question": "What is a key risk of opioid analgesics like morphine?",
+                "options": [
+                    "I. Tooth decay",
+                    "II. Drug dependence/addiction",
+                    "III. Increased blood sugar",
+                    "IV. Hair loss"
+                ],
+                "answers": ["II. Opioids are highly addictive due to their action on the brain's reward system, leading to dependence even with medical use."]
+            },
+            {
+                "No": 5,
+                "question": "Which agency regulates drug quality in Nigeria?",
+                "options": [
+                    "I. NDLEA",
+                    "II. NAFDAC",
+                    "III. WHO",
+                    "IV. PCN"
+                ],
+                "answers": ["II. NAFDAC (National Agency for Food and Drug Administration and Control) ensures the safety and efficacy of drugs in Nigeria."]
+            },
+            {
+                "No": 6,
+                "question": "What is the generic name of the drug branded as Panadol®?",
+                "options": [
+                    "I. Ibuprofen",
+                    "II. Aspirin",
+                    "III. Paracetamol",
+                    "IV. Diclofenac"
+                ],
+                "answers": ["III. Panadol® is a proprietary name for paracetamol, a common analgesic and antipyretic."]
+            },
+            {
+                "No": 7,
+                "question": "Which route of administration bypasses the gastrointestinal tract?",
+                "options": [
+                    "I. Oral",
+                    "II. Sublingual",
+                    "III. Intravenous",
+                    "IV. Rectal"
+                ],
+                "answers": ["III. Intravenous (IV) administration delivers drugs directly into the bloodstream, avoiding the GI tract."]
+            },
+            {
+                "No": 8,
+                "question": "What is the main function of antihistamines like piriton®?",
+                "options": [
+                    "I. Lower blood pressure",
+                    "II. Block histamine in allergic reactions",
+                    "III. Treat bacterial infections",
+                    "IV. Reduce blood sugar"
+                ],
+                "answers": ["II. Antihistamines counteract histamine effects, relieving allergy symptoms like itching and sneezing."]
+            },
+            {
+                "No": 9,
+                "question": "Which of the following is a side effect of prolonged corticosteroid use?",
+                "options": [
+                    "I. Weight loss",
+                    "II. Osteoporosis",
+                    "III. Hyperactivity",
+                    "IV. Improved wound healing"
+                ],
+                "answers": ["II. Corticosteroids weaken bones over time by reducing calcium absorption, leading to osteoporosis."]
+            },
+            {
+                "No": 10,
+                "question": "What characterizes rational drug use (RDU)?",
+                "options": [
+                    "I. Self-medication with antibiotics",
+                    "II. Prescribing based on correct diagnosis and cost-effectiveness",
+                    "III. Using expired drugs to avoid waste",
+                    "IV. Ignoring dosage instructions"
+                ],
+                "answers": ["II. RDU involves evidence-based prescribing, patient counseling, and cost-effective treatment."]
+            },
+            {
+                "No": 11,
+                "question": "Which drug is derived from the opium poppy?",
+                "options": [
+                    "I. Cocaine",
+                    "II. Morphine",
+                    "III. Cannabis",
+                    "IV. LSD"
+                ],
+                "answers": ["II. Morphine is an opioid derived from opium, used for severe pain relief."]
+            },
+            {
+                "No": 12,
+                "question": "What is pharmacovigilance?",
+                "options": [
+                    "I. Drug manufacturing process",
+                    "II. Monitoring adverse drug reactions (ADRs)",
+                    "III. Illegal drug trafficking control",
+                    "IV. Herbal medicine promotion"
+                ],
+                "answers": ["II. Pharmacovigilance tracks ADRs to improve drug safety post-marketing."]
+            },
+            {
+                "No": 13,
+                "question": "Which vitamin deficiency causes scurvy?",
+                "options": [
+                    "I. Vitamin A",
+                    "II. Vitamin C",
+                    "III. Vitamin D",
+                    "IV. Vitamin B12"
+                ],
+                "answers": ["II. Vitamin C deficiency leads to scurvy, characterized by bleeding gums and poor wound healing."]
+            },
+            {
+                "No": 14,
+                "question": "What is the role of the Pharmacists Council of Nigeria (PCN)?",
+                "options": [
+                    "I. Drug advertisement",
+                    "II. Licensing and regulating pharmacists",
+                    "III. Drug pricing",
+                    "IV. Banning all herbal medicines"
+                ],
+                "answers": ["II. PCN ensures pharmacists meet professional standards and regulates pharmacy practice in Nigeria."]
+            },
+            {
+                "No": 15,
+                "question": "Which drug is used to treat malaria?",
+                "options": [
+                    "I. Paracetamol",
+                    "II. Artesunate",
+                    "III. Metronidazole",
+                    "IV. Ciprofloxacin"
+                ],
+                "answers": ["II. Artesunate is an antimalarial derived from artemisinin, effective against Plasmodium parasites."]
+            },
+            {
+                "No": 16,
+                "question": "What is a contraindication for aspirin use?",
+                "options": [
+                    "I. High blood pressure",
+                    "II. Peptic ulcer",
+                    "III. Common cold",
+                    "IV. Vitamin deficiency"
+                ],
+                "answers": ["II. Aspirin can worsen peptic ulcers due to its irritant effect on the stomach lining."]
+            },
+            {
+                "No": 17,
+                "question": "Which class of drugs includes diazepam (Valium®)?",
+                "options": [
+                    "I. Antidepressants",
+                    "II. Anxiolytics",
+                    "III. Antipsychotics",
+                    "IV. Stimulants"
+                ],
+                "answers": ["II. Diazepam is an anxiolytic that reduces anxiety by enhancing GABA activity in the brain."]
+            },
+            {
+                "No": 18,
+                "question": "What is the primary source of heroin?",
+                "options": [
+                    "I. Cannabis plant",
+                    "II. Opium poppy",
+                    "III. Coca plant",
+                    "IV. Synthetic lab chemicals"
+                ],
+                "answers": ["II. Heroin is derived from morphine, which is extracted from the opium poppy."]
+            },
+            {
+                "No": 19,
+                "question": "Which drug is commonly abused as a stimulant?",
+                "options": [
+                    "I. Codeine",
+                    "II. Cocaine",
+                    "III. Morphine",
+                    "IV. Paracetamol"
+                ],
+                "answers": ["II. Cocaine is a powerful stimulant that increases dopamine levels, leading to euphoria and addiction."]
+            },
+            {
+                "No": 20,
+                "question": "What is the function of antacids?",
+                "options": [
+                    "I. Neutralize stomach acid",
+                    "II. Increase stomach acid",
+                    "III. Block histamine",
+                    "IV. Kill gut bacteria"
+                ],
+                "answers": ["I. Antacids like magnesium hydroxide neutralize excess stomach acid to relieve heartburn."]
+            },
+            {
+                "No": 21,
+                "question": "Which term describes diminished drug response over time?",
+                "options": [
+                    "I. Addiction",
+                    "II. Tolerance",
+                    "III. Synergy",
+                    "IV. Potentiation"
+                ],
+                "answers": ["II. Tolerance requires higher doses to achieve the same effect due to repeated exposure."]
+            },
+            {
+                "No": 22,
+                "question": "What is the first-line treatment for uncomplicated malaria in Nigeria?",
+                "options": [
+                    "I. Chloroquine",
+                    "II. Artemisinin-based combination therapy (ACT)",
+                    "III. Penicillin",
+                    "IV. Ibuprofen"
+                ],
+                "answers": ["II. ACTs (e.g., artemether-lumefantrine) are recommended due to chloroquine resistance."]
+            },
+            {
+                "No": 23,
+                "question": "Which enzyme do protease inhibitors target in HIV treatment?",
+                "options": [
+                    "I. Reverse transcriptase",
+                    "II. DNA polymerase",
+                    "III. Protease",
+                    "IV. Helicase"
+                ],
+                "answers": ["III. Protease inhibitors block HIV protease, preventing viral maturation."]
+            },
+            {
+                "No": 24,
+                "question": "What is a common adverse effect of long-term NSAID use?",
+                "options": [
+                    "I. Gastric ulcers",
+                    "II. Improved kidney function",
+                    "III. Lowered cholesterol",
+                    "IV. Hair growth"
+                ],
+                "answers": ["I. NSAIDs (e.g., ibuprofen) inhibit prostaglandins, increasing ulcer risk."]
+            },
+            {
+                "No": 25,
+                "question": "Which organization launched Nigeria’s pharmacovigilance program?",
+                "options": [
+                    "I. WHO",
+                    "II. NDLEA",
+                    "III. NAFDAC",
+                    "IV. UNICEF"
+                ],
+                "answers": ["III. NAFDAC established the National Pharmacovigilance Center in 2004 to monitor ADRs."]
+            }
+        ],
+           
 }
 }
