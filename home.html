@@ -1670,44 +1670,64 @@ closeDialog.addEventListener('click', () => {
 function calculateResults() {
   let totalCorrect = 0;
   let totalQuestions = 0;
-  
+
   resultsTableBody.innerHTML = '';
-  
+
   state.selectedSubjects.forEach(subject => {
     const questions = questionsData.questions[subject];
     let correct = 0;
-    
+
     questions.forEach((question, index) => {
       const userAnswerIndex = state.userAnswers[subject][index];
       if (userAnswerIndex !== null) {
-        const userAnswerPrefix = question.options[userAnswerIndex].split('.')[0].trim();
-        if (question.answers.some(ans => ans.startsWith(userAnswerPrefix))) {
+        const selectedOptionText = question.options[userAnswerIndex];
+        // Check if any of the correct answers match the selected option text or its prefix
+        const isAnswerCorrect = question.answers.some(correctAnswerText => {
+          // Attempt to get the prefix (e.g., "A", "B", "C", "I") from the correct answer text
+          const correctAnswerPrefixMatch = correctAnswerText.match(/^([A-Za-z]{1,2})\./);
+          const correctAnswerPrefix = correctAnswerPrefixMatch ? correctAnswerPrefixMatch[1].trim() : '';
+
+          // Attempt to get the prefix from the user's selected option text
+          const userAnswerPrefixMatch = selectedOptionText.match(/^([A-Za-z]{1,2})\./);
+          const userAnswerPrefix = userAnswerPrefixMatch ? userAnswerPrefixMatch[1].trim() : '';
+
+          // Compare prefixes, or if no prefix, compare the full text if it's an exact match
+          if (correctAnswerPrefix && userAnswerPrefix) {
+            return correctAnswerPrefix === userAnswerPrefix;
+          } else {
+            // Fallback: If no clear prefix, check for exact match of the entire option text
+            // This assumes that if there's no "A.", "B.", etc., the option itself is the answer identifier.
+            return selectedOptionText === correctAnswerText;
+          }
+        });
+
+        if (isAnswerCorrect) {
           correct++;
         }
       }
     });
-    
+
     totalCorrect += correct;
     totalQuestions += questions.length;
-    
+
     const percentage = Math.round((correct / questions.length) * 100);
-    
+
     const viewDetailsBtn = document.createElement('button');
     viewDetailsBtn.className = 'view-details-btn';
     viewDetailsBtn.textContent = 'View Details';
     viewDetailsBtn.addEventListener('click', () => showQuestionDetails(subject));
-    
+
     const row = document.createElement('tr');
     row.innerHTML = `
-      <td>${subject}</td>
-      <td>${correct}/${questions.length}</td>
-      <td>${percentage}%</td>
-      <td></td>
-    `;
+          <td>${subject}</td>
+          <td>${correct}/${questions.length}</td>
+          <td>${percentage}%</td>
+          <td></td>
+        `;
     row.lastElementChild.appendChild(viewDetailsBtn);
     resultsTableBody.appendChild(row);
   });
-  
+
   const totalPercentage = Math.round((totalCorrect / totalQuestions) * 100);
   totalScore.textContent = `Total Score: ${totalPercentage}%`;
 }
@@ -1715,58 +1735,71 @@ function calculateResults() {
 function showQuestionDetails(subject) {
   dialogTitle.textContent = `${subject} - Question Details`;
   dialogContent.innerHTML = '';
-  
+
   const questions = questionsData.questions[subject];
-  
+
   questions.forEach((question, index) => {
     const userAnswerIndex = state.userAnswers[subject][index];
     let userAnswerDisplay = 'Not answered';
     let isCorrect = false;
     let explanation = '';
-    
+
     if (userAnswerIndex !== null) {
-      const userAnswer = question.options[userAnswerIndex];
-      const userAnswerPrefix = userAnswer.split('.')[0].trim();
-      userAnswerDisplay = userAnswer;
-      
-      // Check if correct and get explanation
-      const correctAnswer = question.answers.find(ans => ans.startsWith(userAnswerPrefix));
-      isCorrect = correctAnswer !== undefined;
-      explanation = isCorrect ? correctAnswer : 
-                   question.answers[0]; // Show first correct answer's explanation
+      const selectedOptionText = question.options[userAnswerIndex];
+      userAnswerDisplay = selectedOptionText;
+
+      const isAnswerCorrect = question.answers.some(correctAnswerText => {
+        const correctAnswerPrefixMatch = correctAnswerText.match(/^([A-Za-z]{1,2})\./);
+        const correctAnswerPrefix = correctAnswerPrefixMatch ? correctAnswerPrefixMatch[1].trim() : '';
+
+        const userAnswerPrefixMatch = selectedOptionText.match(/^([A-Za-z]{1,2})\./);
+        const userAnswerPrefix = userAnswerPrefixMatch ? userAnswerPrefixMatch[1].trim() : '';
+
+        if (correctAnswerPrefix && userAnswerPrefix) {
+          return correctAnswerPrefix === userAnswerPrefix;
+        } else {
+          return selectedOptionText === correctAnswerText;
+        }
+      });
+      isCorrect = isAnswerCorrect;
+
+      // Find the explanation for the first correct answer provided in question.answers
+      explanation = question.answers[0].split('. ').slice(1).join('. ');
+
     } else {
-      explanation = question.answers[0]; // Show first correct answer's explanation if not answered
+      // Show the explanation from the first correct answer if not answered
+      explanation = question.answers[0].split('. ').slice(1).join('. ');
     }
-    
+
     const questionDetail = document.createElement('div');
     questionDetail.className = 'question-detail';
-    
+
     questionDetail.innerHTML = `
-      <div class="question-number">Question ${question.No}</div>
-      <div class="question-text">${question.question}</div>
-      <div class="user-answer">
-        <strong>Your answer:</strong> 
-        <span style="color: ${userAnswerIndex === null ? 'var(--dark-gray)' : 
-                      isCorrect ? 'var(--secondary-color)' : 'var(--accent-color)'}">
-          ${userAnswerDisplay}
-        </span>
-        ${userAnswerIndex !== null ? 
-          `<span style="color: ${isCorrect ? 'var(--secondary-color)' : 'var(--accent-color)'}">
-            (${isCorrect ? 'Correct' : 'Incorrect'})
-          </span>` : ''}
-      </div>
-      <div class="correct-answer">
-        <strong>Correct answer:</strong> ${question.answers.join(' OR ')}
-      </div>
-      <div class="explanation">
-        <strong>Explanation:</strong> ${explanation.split('. ').slice(1).join('. ')}
-      </div>
-      <hr style="margin-top: 10px; border: none; border-top: 1px solid #eee;">
-    `;
-    
+          <div class="question-number">Question ${question.No}</div>
+          <div class="question-text">${question.question}</div>
+          <div class="user-answer">
+            <strong>Your answer:</strong>
+            <span style="color: ${userAnswerIndex === null ? 'var(--dark-gray)' :
+                                  isCorrect ? 'var(--secondary-color)' : 'var(--accent-color)'}">
+              ${userAnswerDisplay}
+            </span>
+            ${userAnswerIndex !== null ?
+              `<span style="color: ${isCorrect ? 'var(--secondary-color)' : 'var(--accent-color)'}">
+                (${isCorrect ? 'Correct' : 'Incorrect'})
+              </span>` : ''}
+          </div>
+          <div class="correct-answer">
+            <strong>Correct answer:</strong> ${question.answers.join(' OR ')}
+          </div>
+          <div class="explanation">
+            <strong>Explanation:</strong> ${explanation}
+          </div>
+          <hr style="margin-top: 10px; border: none; border-top: 1px solid #eee;">
+        `;
+
     dialogContent.appendChild(questionDetail);
   });
-  
+
   resultsDialog.style.display = 'flex';
 }
         // Restart the test
@@ -1864,3 +1897,4 @@ document.querySelectorAll('.app-list a').forEach(link => {
   
 </body>
 </html>
+
