@@ -601,8 +601,9 @@
             if (frenchVoice) {
                 utterance.voice = frenchVoice;
             }
-            alert("spoken");
+            
             speechSynthesis.speak(utterance);
+            alert("spoken");
         } else {
             alert('Text-to-speech is not supported in your browser.');
         }
