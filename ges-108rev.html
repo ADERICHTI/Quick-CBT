@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GES 108 Revision App</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light grey background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden; /* Prevent horizontal scroll from answer slide */
+            color: #333;
+        }
+
+        .app-container {
+            background-color: #ffffff;
+            border-radius: 1.5rem; /* Rounded corners */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 95%;
+            max-width: 800px;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Hide overflow for sliding elements */
+            position: relative; /* For absolute positioning of answer panel */
+        }
+
+        .interface {
+            width: 100%;
+            height: 100%;
+            display: none; /* Hidden by default, shown by JS */
+            flex-direction: column;
+            padding: 1.5rem;
+            box-sizing: border-box;
+            position: absolute; /* Position interfaces on top of each other */
+            top: 0;
+            left: 0;
+            transition: transform 0.5s ease-out; /* Smooth transition for interface changes */
+        }
+
+        /* Active interface */
+        .interface.active {
+            display: flex;
+            transform: translateX(0);
+        }
+
+        /* Home specific styling */
+        #home-interface {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .home-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a73e8; /* Google blue */
+            margin-bottom: 2rem;
+        }
+
+        .home-button {
+            background-color: #4285f4; /* Google blue */
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem; /* Space between buttons */
+            display: inline-block; /* Allows margin-bottom to work */
+        }
+
+        .home-button:hover {
+            background-color: #357ae8;
+            transform: translateY(-2px);
+        }
+
+        .home-footer {
+            position: absolute;
+            bottom: 1.5rem;
+            width: calc(100% - 3rem); /* Account for padding */
+            font-size: 0.85rem;
+            color: #777;
+            text-align: center;
+        }
+
+        /* Revision interface specific styling */
+        #revision-interface {
+            justify-content: space-between;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap; /* Allow wrapping on small screens */
+            gap: 1rem;
+        }
+
+        .search-container {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            background-color: #f5f5f5;
+            border-radius: 0.75rem;
+            padding: 0.5rem 1rem;
+            max-width: 300px;
+        }
+
+        .search-input {
+            background: none;
+            border: none;
+            outline: none;
+            width: 100%;
+            padding: 0.25rem 0;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .question-number-label {
+            font-weight: 600;
+            color: #555;
+            min-width: 80px; /* Ensure space for label */
+            text-align: right;
+        }
+
+        .category-button {
+            background-color: #e0e0e0;
+            color: #555;
+            padding: 0.5rem 1rem;
+            border-radius: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-left: auto; /* Push to right */
+        }
+
+        .category-button:hover {
+            background-color: #d0d0d0;
+        }
+
+        .question-area {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 1rem 0;
+            text-align: left;
+        }
+
+        .question-text {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+            color: #222;
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 0.75rem;
+        }
+
+        .option-button {
+            background-color: #f0f0f0;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            text-align: left;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            border: 1px solid #e0e0e0;
+            font-size: 1rem;
+            color: #444;
+        }
+
+        .option-button:hover {
+            background-color: #e5e5e5;
+            transform: translateY(-1px);
+        }
+
+        .option-button.selected {
+            background-color: #e8f0fe; /* Light Google blue */
+            border-color: #4285f4; /* Google blue */
+            font-weight: 500;
+            color: #1a73e8;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+        }
+
+        .nav-button {
+            background-color: #4285f4;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-button:hover {
+            background-color: #357ae8;
+            transform: translateY(-2px);
+        }
+
+        .nav-button:disabled {
+            background-color: #a0c3f7;
+            cursor: not-allowed;
+            box-shadow: none;
+            transform: none;
+        }
+
+        /* Check Answer Button */
+        #check-answer-btn {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #34a853; /* Google green */
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: none; /* Hidden by default */
+            z-index: 10; /* Above other content */
+        }
+
+        #check-answer-btn:hover {
+            background-color: #2c8c46;
+            transform: translateY(-2px);
+        }
+
+        /* Answer Slide-out Panel */
+        #answer-panel {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #e8f0fe; /* Light Google blue */
+            transform: translateX(100%); /* Start off-screen to the right */
+            transition: transform 0.5s ease-out;
+            padding: 1.5rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto; /* Scroll for long explanations */
+            z-index: 20; /* Above revision interface */
+            border-radius: 1.5rem; /* Match container */
+        }
+
+        #answer-panel.active {
+            transform: translateX(0); /* Slide in */
+        }
+
+        .answer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .answer-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a73e8;
+        }
+
+        .close-answer-btn {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #555;
+            transition: color 0.2s ease;
+        }
+
+        .close-answer-btn:hover {
+            color: #333;
+        }
+
+        .answer-content {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .answer-content h3 {
+            font-weight: 600;
+            color: #1a73e8;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .answer-content ul {
+            list-style-type: disc;
+            margin-left: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .answer-content li {
+            margin-bottom: 0.25rem;
+        }
+
+        .pronounce-btn {
+            background-color: #fbbc05; /* Google yellow */
+            color: #333;
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            margin-left: 0.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.85rem;
+        }
+
+        .pronounce-btn:hover {
+            background-color: #e0a300;
+        }
+
+        /* Category Dialog */
+        #category-dialog-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+            display: none; /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            z-index: 30; /* Above all other content */
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        #category-dialog-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .category-dialog {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            transform: translateY(-20px); /* Start slightly above */
+            transition: transform 0.3s ease-out;
+        }
+
+        #category-dialog-overlay.active .category-dialog {
+            transform: translateY(0); /* Slide into place */
+        }
+
+        .category-dialog h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a73e8;
+            margin-bottom: 1.5rem;
+        }
+
+        .category-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .dialog-category-btn {
+            background-color: #f0f0f0;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            border: 1px solid #e0e0e0;
+            color: #444;
+        }
+
+        .dialog-category-btn:hover {
+            background-color: #e5e5e5;
+            transform: translateY(-1px);
+        }
+
+        .dialog-category-btn.selected {
+            background-color: #e8f0fe;
+            border-color: #4285f4;
+            color: #1a73e8;
+            font-weight: 600;
+        }
+
+        /* Quick Study Interface */
+        #quick-study-interface {
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .quick-study-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .quick-study-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a73e8;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .back-to-home-btn {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #555;
+            transition: color 0.2s ease;
+            margin-right: auto; /* Push title to center */
+        }
+
+        .back-to-home-btn:hover {
+            color: #333;
+        }
+
+        .quick-study-content-area {
+            flex-grow: 1;
+            padding-bottom: 2rem; /* Space for scroll */
+        }
+
+        .quick-study-point {
+            background-color: #f8faff; /* Lighter blue for points */
+            border: 1px solid #e0e0e0;
+            border-radius: 1rem;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            line-height: 1.6;
+        }
+
+        .quick-study-point h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #4285f4;
+            margin-bottom: 0.75rem;
+        }
+
+        .quick-study-point strong {
+            color: #333;
+        }
+
+        .quick-study-point ul {
+            list-style-type: disc;
+            margin-left: 1.25rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .quick-study-point p {
+            margin-bottom: 0.75rem;
+        }
+
+        .quick-study-point .key-terms, .quick-study-point .examples {
+            margin-top: 1rem;
+            padding-top: 0.75rem;
+            border-top: 1px dashed #cdd;
+        }
+
+        .quick-study-point .key-terms h4, .quick-study-point .examples h4 {
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .quick-study-point .key-terms span {
+            display: inline-block;
+            background-color: #e6f4ea; /* Light green for terms */
+            border-radius: 0.5rem;
+            padding: 0.25rem 0.6rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: #34a853;
+            font-weight: 500;
+        }
+
+        .quick-study-point .examples p {
+            background-color: #fff;
+            border-left: 4px solid #4285f4;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 0.75rem;
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .app-container {
+                width: 100%;
+                min-height: 100vh;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            .interface {
+                padding: 1rem;
+            }
+            .home-title {
+                font-size: 2rem;
+            }
+            .home-button {
+                padding: 0.7rem 1.5rem;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+            .search-container {
+                width: 100%;
+                max-width: none;
+            }
+            .category-button {
+                margin-left: 0;
+                width: 100%;
+                text-align: center;
+            }
+            .question-text {
+                font-size: 1.1rem;
+            }
+            .option-button {
+                font-size: 0.95rem;
+            }
+            #check-answer-btn {
+                bottom: 1rem;
+                right: 1rem;
+                padding: 0.7rem 1.5rem;
+            }
+            .answer-title {
+                font-size: 1.3rem;
+            }
+            .close-answer-btn {
+                font-size: 1.5rem;
+            }
+            .quick-study-title {
+                font-size: 1.5rem;
+            }
+            .back-to-home-btn {
+                font-size: 1.5rem;
+            }
+            .quick-study-point h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="app-container">
+        <!-- Home Interface -->
+        <div id="home-interface" class="interface active">
+            <h1 class="home-title">GES 108 Revision</h1>
+            <button id="start-revision-btn" class="home-button">Start Revision</button>
+            <button id="quick-study-btn" class="home-button">Quick Study</button>
+            <footer class="home-footer">Created by: Iyiola Adedamola Richard</footer>
+        </div>
+
+        <!-- Revision Interface -->
+        <div id="revision-interface" class="interface">
+            <div class="header">
+                <div class="search-container">
+                    <svg class="w-5 h-5 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    <input type="number" id="question-search-input" class="search-input" placeholder="Go to Q. No.">
+                </div>
+                <span id="question-number-label" class="question-number-label"></span>
+                <button id="category-dialog-trigger" class="category-button">Categories</button>
+            </div>
+
+            <div class="question-area">
+                <p id="question-text" class="question-text"></p>
+                <div id="options-container" class="options-container">
+                    <!-- Options will be loaded here by JS -->
+                </div>
+            </div>
+
+            <div class="navigation-buttons">
+                <button id="prev-question-btn" class="nav-button">Previous</button>
+                <button id="next-question-btn" class="nav-button">Next</button>
+            </div>
+
+            <button id="check-answer-btn" class="hidden">Check Answer</button>
+
+            <!-- Answer Slide-out Panel -->
+            <div id="answer-panel">
+                <div class="answer-header">
+                    <h2 class="answer-title">Answer & Explanation</h2>
+                    <button id="close-answer-btn" class="close-answer-btn">&times;</button>
+                </div>
+                <div id="answer-content" class="answer-content">
+                    <!-- Answer, explanation, and translation will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Study Interface -->
+        <div id="quick-study-interface" class="interface">
+            <div class="quick-study-header">
+                <button id="back-to-home-from-quick-study" class="back-to-home-btn">&larr;</button>
+                <h2 class="quick-study-title">Quick Study: Key Concepts</h2>
+            </div>
+            <div id="quick-study-content-area" class="quick-study-content-area">
+                <!-- Quick study points will be loaded here by JS -->
+            </div>
+        </div>
+
+        <!-- Category Selection Dialog Overlay -->
+        <div id="category-dialog-overlay">
+            <div class="category-dialog">
+                <h3>Select Category</h3>
+                <div id="category-list" class="category-list">
+                    <!-- Category buttons will be loaded here by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio element for pronunciation -->
+    <audio id="french-pronunciation-audio" style="display: none;"></audio>
+
+    <!-- db.js must be loaded first as it contains data -->
+    <script src="db.js"></script>
+
+    <script>
+        // script.js (main application logic)
+
+        // --- DOM Element References ---
+        const homeInterface = document.getElementById('home-interface');
+        const revisionInterface = document.getElementById('revision-interface');
+        const quickStudyInterface = document.getElementById('quick-study-interface');
+        const startRevisionBtn = document.getElementById('start-revision-btn');
+        const quickStudyBtn = document.getElementById('quick-study-btn');
+        const backToHomeFromQuickStudyBtn = document.getElementById('back-to-home-from-quick-study');
+
+        const questionTextElem = document.getElementById('question-text');
+        const optionsContainer = document.getElementById('options-container');
+        const prevQuestionBtn = document.getElementById('prev-question-btn');
+        const nextQuestionBtn = document.getElementById('next-question-btn');
+        const questionNumberLabel = document.getElementById('question-number-label');
+        const checkAnswerBtn = document.getElementById('check-answer-btn');
+        const answerPanel = document.getElementById('answer-panel');
+        const closeAnswerBtn = document.getElementById('close-answer-btn');
+        const answerContentElem = document.getElementById('answer-content');
+        const questionSearchInput = document.getElementById('question-search-input');
+
+        const categoryDialogTrigger = document.getElementById('category-dialog-trigger');
+        const categoryDialogOverlay = document.getElementById('category-dialog-overlay');
+        const categoryListElem = document.getElementById('category-list');
+
+        const quickStudyContentArea = document.getElementById('quick-study-content-area');
+        const frenchAudio = document.getElementById('french-pronunciation-audio');
+
+        // --- Global State Variables ---
+        let currentCategoryKey = Object.keys(questions)[0]; // Default to first category
+        let currentQuestionIndex = 0;
+        let selectedOption = null;
+        let currentInterface = 'home'; // 'home', 'revision', 'quickStudy'
+
+        // --- Helper Functions ---
+
+        /**
+         * Shows a specific interface and hides others.
+         * @param {string} interfaceName - The ID of the interface to show (e.g., 'home', 'revision', 'quick-study').
+         */
+        function showInterface(interfaceName) {
+            // Hide all interfaces first
+            homeInterface.classList.remove('active');
+            revisionInterface.classList.remove('active');
+            quickStudyInterface.classList.remove('active');
+
+            // Show the requested interface
+            if (interfaceName === 'home') {
+                homeInterface.classList.add('active');
+                currentInterface = 'home';
+            } else if (interfaceName === 'revision') {
+                revisionInterface.classList.add('active');
+                currentInterface = 'revision';
+                loadQuestion(currentQuestionIndex); // Load question when entering revision
+            } else if (interfaceName === 'quick-study') {
+                quickStudyInterface.classList.add('active');
+                currentInterface = 'quickStudy';
+                loadQuickStudyContent(); // Load quick study content
+            }
+            hideAnswerPanel(); // Ensure answer panel is hidden when changing interfaces
+            hideCategoryDialog(); // Ensure category dialog is hidden
+            checkAnswerBtn.classList.add('hidden'); // Hide check answer button
+            selectedOption = null; // Reset selected option
+        }
+
+        /**
+         * Loads and displays the current question based on currentCategoryKey and currentQuestionIndex.
+         */
+        function loadQuestion() {
+            const currentCategoryQuestions = questions[currentCategoryKey];
+            if (!currentCategoryQuestions || currentCategoryQuestions.length === 0) {
+                questionTextElem.innerHTML = "No questions in this category.";
+                optionsContainer.innerHTML = "";
+                questionNumberLabel.textContent = "0/0";
+                prevQuestionBtn.disabled = true;
+                nextQuestionBtn.disabled = true;
+                checkAnswerBtn.classList.add('hidden');
+                hideAnswerPanel();
+                return;
+            }
+
+            const questionData = currentCategoryQuestions[currentQuestionIndex];
+            if (!questionData) {
+                // This should ideally not happen if currentQuestionIndex is managed correctly
+                console.error("Question data not found for index:", currentQuestionIndex);
+                return;
+            }
+
+            questionTextElem.innerHTML = questionData.question;
+            optionsContainer.innerHTML = ''; // Clear previous options
+            selectedOption = null; // Reset selected option for new question
+            checkAnswerBtn.classList.add('hidden'); // Hide check answer button
+
+            questionData.options.forEach((option, index) => {
+                const button = document.createElement('button');
+                button.classList.add('option-button');
+                button.textContent = option;
+                button.dataset.option = option; // Store the option text
+                button.addEventListener('click', () => selectOption(button));
+                optionsContainer.appendChild(button);
+            });
+
+            updateNavigationButtons();
+            updateQuestionNumberLabel();
+            hideAnswerPanel(); // Hide answer panel when new question loads
+        }
+
+        /**
+         * Updates the state of navigation buttons (Previous/Next) based on current question index.
+         */
+        function updateNavigationButtons() {
+            const currentCategoryQuestions = questions[currentCategoryKey];
+            prevQuestionBtn.disabled = currentQuestionIndex === 0;
+            nextQuestionBtn.disabled = currentQuestionIndex === currentCategoryQuestions.length - 1;
+        }
+
+        /**
+         * Updates the question number label (e.g., "5/20").
+         */
+        function updateQuestionNumberLabel() {
+            const currentCategoryQuestions = questions[currentCategoryKey];
+            questionNumberLabel.textContent = `${currentQuestionIndex + 1}/${currentCategoryQuestions.length}`;
+        }
+
+        /**
+         * Handles option selection.
+         * @param {HTMLElement} selectedButton - The button element that was clicked.
+         */
+        function selectOption(selectedButton) {
+            // Remove 'selected' class from all options
+            document.querySelectorAll('.option-button').forEach(btn => {
+                btn.classList.remove('selected');
+            });
+
+            // Add 'selected' class to the clicked button
+            selectedButton.classList.add('selected');
+            selectedOption = selectedButton.dataset.option;
+            checkAnswerBtn.classList.remove('hidden'); // Show check answer button
+            hideAnswerPanel(); // Hide answer panel if an option is re-selected
+        }
+
+        /**
+         * Displays the answer panel with explanation and translation.
+         */
+        function showAnswer() {
+            const currentCategoryQuestions = questions[currentCategoryKey];
+            const questionData = currentCategoryQuestions[currentQuestionIndex];
+
+            if (!questionData) return;
+
+            let answerHtml = `
+                <p class="mb-2"><strong>Correct Answer:</strong> <span class="text-green-600">${questionData.answer}</span></p>
+                <h3>Explanation:</h3>
+                <p>${questionData.explanation}</p>
+            `;
+
+            if (questionData.translation && Object.keys(questionData.translation).length > 0) {
+                answerHtml += '<h3>Detailed Translation:</h3><ul>';
+                for (const frenchWord in questionData.translation) {
+                    const englishWord = questionData.translation[frenchWord];
+                    answerHtml += `<li><strong>${frenchWord}</strong>: ${englishWord} <button class="pronounce-btn" data-text="${frenchWord}">🔊</button></li>`;
+                }
+                answerHtml += '</ul>';
+            }
+
+            answerContentElem.innerHTML = answerHtml;
+            answerPanel.classList.add('active'); // Slide in the answer panel
+            checkAnswerBtn.classList.add('hidden'); // Hide check answer button after showing answer
+
+            // Add event listeners for pronunciation buttons
+            document.querySelectorAll('.pronounce-btn').forEach(btn => {
+                btn.addEventListener('click', (event) => {
+                    const textToSpeak = event.target.dataset.text;
+                    speakFrench(textToSpeak);
+                });
+            });
+        }
+
+        /**
+         * Hides the answer panel.
+         */
+        function hideAnswerPanel() {
+            answerPanel.classList.remove('active');
+        }
+
+        /**
+         * Navigates to the next question.
+         */
+        function nextQuestion() {
+            hideAnswerPanel(); // Hide answer panel
+            checkAnswerBtn.classList.add('hidden'); // Hide check answer button
+            selectedOption = null; // Reset selected option
+
+            const currentCategoryQuestions = questions[currentCategoryKey];
+            if (currentQuestionIndex < currentCategoryQuestions.length - 1) {
+                currentQuestionIndex++;
+                loadQuestion();
+            }
+        }
+
+        /**
+         * Navigates to the previous question.
+         */
+        function prevQuestion() {
+            hideAnswerPanel(); // Hide answer panel
+            checkAnswerBtn.classList.add('hidden'); // Hide check answer button
+            selectedOption = null; // Reset selected option
+
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion();
+            }
+        }
+
+        /**
+         * Navigates to a specific question number within the current category.
+         * @param {number} qNum - The 1-based question number.
+         */
+        function navigateToQuestion(qNum) {
+            const currentCategoryQuestions = questions[currentCategoryKey];
+            const targetIndex = qNum - 1; // Convert to 0-based index
+
+            if (targetIndex >= 0 && targetIndex < currentCategoryQuestions.length) {
+                currentQuestionIndex = targetIndex;
+                loadQuestion();
+                hideAnswerPanel();
+                checkAnswerBtn.classList.add('hidden');
+                selectedOption = null;
+            } else {
+                alert('Invalid question number for this category. Please enter a number between 1 and ' + currentCategoryQuestions.length);
+            }
+            questionSearchInput.value = ''; // Clear search input
+        }
+
+        /**
+         * Toggles the visibility of the category selection dialog.
+         */
+        function toggleCategoryDialog() {
+            categoryDialogOverlay.classList.toggle('active');
+            if (categoryDialogOverlay.classList.contains('active')) {
+                populateCategoryDialog();
+            }
+        }
+
+        /**
+         * Hides the category selection dialog.
+         */
+        function hideCategoryDialog() {
+            categoryDialogOverlay.classList.remove('active');
+        }
+
+        /**
+         * Populates the category selection dialog with buttons.
+         */
+        function populateCategoryDialog() {
+            categoryListElem.innerHTML = ''; // Clear existing buttons
+            Object.keys(questions).forEach(categoryName => {
+                const button = document.createElement('button');
+                button.classList.add('dialog-category-btn');
+                button.textContent = categoryName;
+                button.dataset.category = categoryName;
+                if (categoryName === currentCategoryKey) {
+                    button.classList.add('selected');
+                }
+                button.addEventListener('click', () => selectCategory(categoryName));
+                categoryListElem.appendChild(button);
+            });
+        }
+
+        /**
+         * Selects a new category and loads its first question.
+         * @param {string} categoryName - The key of the selected category.
+         */
+        function selectCategory(categoryName) {
+            currentCategoryKey = categoryName;
+            currentQuestionIndex = 0; // Reset to first question of new category
+            loadQuestion();
+            hideCategoryDialog();
+        }
+
+        /**
+         * Loads and displays the Quick Study content.
+         */
+        function loadQuickStudyContent() {
+            quickStudyContentArea.innerHTML = ''; // Clear previous content
+
+            quickStudyData.forEach(point => {
+                const pointDiv = document.createElement('div');
+                pointDiv.classList.add('quick-study-point');
+
+                let htmlContent = `<h3>${point.title}</h3>`;
+                htmlContent += `<p><strong>Explanation:</strong> ${point.explanation}</p>`;
+
+                if (point.details && point.details.length > 0) {
+                    htmlContent += '<ul>';
+                    point.details.forEach(detail => {
+                        htmlContent += `<li>${detail}</li>`;
+                    });
+                    htmlContent += '</ul>';
+                }
+
+                if (point.keyTerms && Object.keys(point.keyTerms).length > 0) {
+                    htmlContent += '<div class="key-terms"><h4>Key Terms:</h4>';
+                    for (const term in point.keyTerms) {
+                        htmlContent += `<span>${term}: ${point.keyTerms[term]} <button class="pronounce-btn" data-text="${term}">🔊</button></span>`;
+                    }
+                    htmlContent += '</div>';
+                }
+
+                if (point.examples && point.examples.length > 0) {
+                    htmlContent += '<div class="examples"><h4>Examples:</h4>';
+                    point.examples.forEach(example => {
+                        htmlContent += `<p>${example} <button class="pronounce-btn" data-text="${example.split('(')[0].trim()}">🔊</button></p>`; // Pronounce text before parenthesis
+                    });
+                    htmlContent += '</div>';
+                }
+
+                pointDiv.innerHTML = htmlContent;
+                quickStudyContentArea.appendChild(pointDiv);
+            });
+
+            // Add event listeners for pronunciation buttons in quick study
+            document.querySelectorAll('#quick-study-content-area .pronounce-btn').forEach(btn => {
+                btn.addEventListener('click', (event) => {
+                    const textToSpeak = event.target.dataset.text;
+                    speakFrench(textToSpeak);
+                });
+            });
+        }
+
+        /**
+         * Pronounces the given French text using the Web Speech API.
+         * @param {string} text - The French text to pronounce.
+         */
+        function speakFrench(text) {
+            if ('speechSynthesis' in window) {
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'fr-FR'; // Set language to French
+                utterance.rate = 0.9; // Slightly slower for clarity
+                utterance.pitch = 1;
+
+                // Find a French voice if available
+                const voices = speechSynthesis.getVoices();
+                const frenchVoice = voices.find(voice => voice.lang === 'fr-FR' || voice.lang === 'fr_FR');
+                if (frenchVoice) {
+                    utterance.voice = frenchVoice;
+                }
+
+                speechSynthesis.speak(utterance);
+            } else {
+                // Fallback for browsers that don't support SpeechSynthesis
+                console.warn("Speech Synthesis not supported in this browser.");
+                // You could play an audio file here as a fallback if you had them
+            }
+        }
+
+
+        // --- Event Listeners ---
+
+        startRevisionBtn.addEventListener('click', () => showInterface('revision'));
+        quickStudyBtn.addEventListener('click', () => showInterface('quick-study'));
+        backToHomeFromQuickStudyBtn.addEventListener('click', () => showInterface('home'));
+
+        prevQuestionBtn.addEventListener('click', prevQuestion);
+        nextQuestionBtn.addEventListener('click', nextQuestion);
+        checkAnswerBtn.addEventListener('click', showAnswer);
+        closeAnswerBtn.addEventListener('click', hideAnswerPanel);
+        categoryDialogTrigger.addEventListener('click', toggleCategoryDialog);
+        categoryDialogOverlay.addEventListener('click', (event) => {
+            // Close dialog if clicking outside the dialog box itself
+            if (event.target === categoryDialogOverlay) {
+                hideCategoryDialog();
+            }
+        });
+
+        questionSearchInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                const qNum = parseInt(questionSearchInput.value, 10);
+                if (!isNaN(qNum)) {
+                    navigateToQuestion(qNum);
+                } else {
+                    alert('Please enter a valid number.');
+                }
+            }
+        });
+
+        // Initial load
+        document.addEventListener('DOMContentLoaded', () => {
+            showInterface('home'); // Start on the home interface
+            // Pre-load voices for speech synthesis (important for some browsers)
+            if ('speechSynthesis' in window) {
+                speechSynthesis.getVoices(); // Request voices
+                speechSynthesis.onvoiceschanged = () => {
+                    // Voices are loaded, no action needed here, just ensures they are available
+                };
+            }
+        });
+    </script>
+</body>
+</html>
