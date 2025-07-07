@@ -3,143 +3,474 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GES 108 Revision App</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Firebase SDKs -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <title>GES 108 Revision</title>
     <style>
-        /* Custom animations and styles */
-        .interface {
-            display: none;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+        /* Glassy Paper Design System */
+        :root {
+            --primary-color: #4285F4;
+            --secondary-color: #34A853;
+            --accent-color: #EA4335;
+            --warning-color: #FBBC05;
+            --light-gray: rgba(248, 249, 250, 0.9);
+            --medium-gray: rgba(218, 220, 224, 0.7);
+            --dark-gray: #5f6368;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.3);
+            --glass-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 
+                          0 1px 3px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --blur: blur(8px);
         }
-        .interface.active {
-            display: block;
-            opacity: 1;
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Google Sans', Roboto, Arial, sans-serif;
         }
-        #answer-panel {
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-        }
-        #answer-panel.active {
-            transform: translateX(0);
-        }
-        #check-answer-btn {
-            transition: all 0.3s ease;
-        }
-        .category-dialog {
-            transform: scale(0.9);
-            opacity: 0;
-            transition: all 0.2s ease;
-        }
-        .category-dialog.active {
-            transform: scale(1);
-            opacity: 1;
-        }
-        .pronounce-btn:hover {
-            transform: scale(1.1);
-        }
-        
-        /* Glass morphism styles */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-        }
-        
-        /* Gradient background animation */
+
         body {
-            background: linear-gradient(135deg, #fff5f5 0%, #fff9f9 50%, #fff 100%);
+            background: linear-gradient(
+                135deg,
+                #fff5f5 0%,
+                #fff9f9 50%,
+                #fff 100%
+            );
             background-attachment: fixed;
             background-size: 200% 200%;
             animation: gradient 15s ease infinite;
+            color: #202124;
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-        
+
         @keyframes gradient {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+            width: 100%;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--glass-bg);
+            backdrop-filter: var(--blur);
+            -webkit-backdrop-filter: var(--blur);
+            padding: 15px 20px;
+            box-shadow: var(--glass-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: var(--glass-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-title {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--primary-color);
+            letter-spacing: 0.5px;
+        }
+
+        /* Interface Container */
+        .interface-container {
+            display: none;
+            background-color: var(--glass-bg);
+            backdrop-filter: var(--blur);
+            -webkit-backdrop-filter: var(--blur);
+            border-radius: 12px;
+            box-shadow: var(--glass-shadow);
+            border: var(--glass-border);
+            padding: 30px;
+            margin-top: 20px;
+            transition: var(--transition);
+        }
+
+        .interface-container.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Question Styles */
+        .question-container {
+            margin-bottom: 30px;
+        }
+
+        .question-number {
+            font-size: 14px;
+            color: var(--dark-gray);
+            margin-bottom: 5px;
+        }
+
+        .question-text {
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .option {
+            padding: 12px 16px;
+            background-color: var(--glass-bg);
+            border: 1px solid var(--medium-gray);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            backdrop-filter: var(--blur);
+            -webkit-backdrop-filter: var(--blur);
+        }
+
+        .option:hover {
+            background-color: rgba(66, 133, 244, 0.1);
+            border-color: var(--primary-color);
+        }
+
+        .option.selected {
+            background-color: rgba(66, 133, 244, 0.15);
+            border-color: var(--primary-color);
+        }
+
+        .option.selected::before {
+            content: '';
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            bottom: -1px;
+            width: 4px;
+            background-color: var(--primary-color);
+            border-radius: 4px 0 0 4px;
+        }
+
+        /* Navigation */
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--medium-gray);
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            border-radius: 4px;
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            backdrop-filter: var(--blur);
+            -webkit-backdrop-filter: var(--blur);
+        }
+
+        .nav-btn:hover {
+            background-color: var(--medium-gray);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Answer Panel */
+        #answer-panel {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            max-width: 400px;
+            height: 100%;
+            background-color: var(--glass-bg);
+            backdrop-filter: var(--blur);
+            -webkit-backdrop-filter: var(--blur);
+            box-shadow: var(--glass-shadow);
+            border-left: var(--glass-border);
+            padding: 20px;
+            overflow-y: auto;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        #answer-panel.active {
+            transform: translateX(0);
+        }
+
+        .answer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .answer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .answer-section {
+            padding: 15px;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Quick Study Interface */
+        .study-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: var(--glass-bg);
+            border-radius: 8px;
+            box-shadow: var(--glass-shadow);
+            border: var(--glass-border);
+        }
+
+        /* Buttons */
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-block;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #3367d6;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #2d9247;
+        }
+
+        /* Floating Action Buttons */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            background-color: #3367d6;
+        }
+
+        /* Category Selection */
+        .category-dialog {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .category-dialog.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .category-content {
+            background-color: var(--glass-bg);
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: var(--glass-shadow);
+            border: var(--glass-border);
+            transform: scale(0.9);
+            transition: all 0.3s ease;
+        }
+
+        .category-dialog.active .category-content {
+            transform: scale(1);
+        }
+
+        .category-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .category-item {
+            padding: 12px;
+            background-color: var(--light-gray);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .category-item:hover {
+            background-color: rgba(66, 133, 244, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navigation {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-btn {
+                width: 100%;
+            }
+            
+            #answer-panel {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
-<body class="font-inter min-h-screen flex flex-col">
-    <!-- Auth Container (hidden by default) -->
-    <div id="authContainer" class="fixed inset-0 bg-white bg-opacity-95 backdrop-filter backdrop-blur-sm z-50 flex items-center justify-center hidden">
-        <div class="glass-card rounded-xl p-8 max-w-md w-full text-center">
-            <div class="mb-6">
-                <h2 class="text-2xl font-bold text-blue-600">Welcome to GES 108 Revision</h2>
-                <p class="text-gray-600 mt-2">Sign in to track your progress</p>
+<body>
+    <header>
+        <div class="header-title">GES 108 Revision</div>
+        <div id="userProfile" style="display: none;">
+            <img id="userAvatar" src="" alt="User" style="width: 32px; height: 32px; border-radius: 50%;">
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Home Interface -->
+        <div class="interface-container active" id="home-interface">
+            <div class="text-center">
+                <h2 class="mb-20">Welcome to GES 108 Revision</h2>
+                <div style="display: flex; flex-direction: column; gap: 15px; max-width: 400px; margin: 0 auto;">
+                    <button id="start-revision-btn" class="btn btn-primary">Start Revision</button>
+                    <button id="quick-study-btn" class="btn btn-secondary">Quick Study Guide</button>
+                </div>
             </div>
-            <button id="signInButton" class="flex items-center justify-center w-full bg-white border border-gray-300 rounded-lg py-3 px-4 text-gray-700 font-medium hover:bg-gray-50 transition duration-200">
-                <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-                    <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
-                    <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
-                    <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
-                    <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
-                </svg>
-                Sign in with Google
-            </button>
+        </div>
+
+        <!-- Revision Interface -->
+        <div class="interface-container" id="revision-interface">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <input id="question-search-input" type="number" min="1" placeholder="Jump to Q#" 
+                        style="width: 80px; padding: 8px 12px; border-radius: 4px; border: 1px solid var(--medium-gray);">
+                    <span id="question-number-label" style="color: var(--dark-gray);">1/30</span>
+                </div>
+                <button id="category-dialog-trigger" class="nav-btn">Categories</button>
+            </div>
+
+            <div class="question-container">
+                <div class="question-number">Question 1</div>
+                <div class="question-text" id="question-text">Loading question...</div>
+                
+                <div class="options-container" id="options-container">
+                    <!-- Options will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="navigation">
+                <button class="nav-btn" id="prev-question-btn" disabled>Previous</button>
+                <button class="nav-btn" id="next-question-btn">Next</button>
+            </div>
+        </div>
+
+        <!-- Quick Study Interface -->
+        <div class="interface-container" id="quick-study-interface">
+            <div style="margin-bottom: 20px;">
+                <button id="back-to-home-from-quick-study" style="display: flex; align-items: center; color: var(--primary-color);">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="width: 16px; height: 16px; margin-right: 5px;" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                    </svg>
+                    Back to Home
+                </button>
+                <h2 style="font-size: 20px; font-weight: 600; color: var(--primary-color);">Quick Study: Key Concepts</h2>
+            </div>
+
+            <div id="quick-study-content-area">
+                <!-- Content will be populated by JavaScript -->
+            </div>
         </div>
     </div>
 
-    <!-- User Profile (hidden by default) -->
-    <div id="userProfile" class="fixed top-4 right-4 z-40 hidden">
-        <div class="glass-card rounded-full p-2 flex items-center shadow-md">
-            <img id="userAvatar" src="" alt="User" class="w-10 h-10 rounded-full">
-            <button id="signOutButton" class="ml-2 text-sm bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-full transition duration-200">
-                Sign Out
+    <!-- Answer Panel -->
+    <div id="answer-panel">
+        <div class="answer-header">
+            <h3>Answer & Explanation</h3>
+            <button id="close-answer-btn" style="background: none; border: none; font-size: 20px; cursor: pointer;">
+                &times;
             </button>
+        </div>
+        <div class="answer-content" id="answer-content">
+            <!-- Answer content will be populated by JavaScript -->
         </div>
     </div>
 
-    <!-- App Navigation Menu -->
-    <div class="fixed top-4 right-20 z-40">
-        <button id="appMenuButton" class="glass-card w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-gray-100 transition duration-200">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="1"></circle>
-                <circle cx="12" cy="5" r="1"></circle>
-                <circle cx="12" cy="19" r="1"></circle>
-            </svg>
-        </button>
-        
-        <div id="appMenuDialog" class="fixed top-16 right-4 glass-card rounded-xl shadow-xl p-4 w-64 z-50 opacity-0 invisible transition-all duration-300 transform translate-y-2">
-            <h3 class="text-lg font-semibold text-gray-800 mb-3 px-2">My Apps</h3>
-            <ul class="space-y-2">
-                <li>
-                    <a href="https://example.com/app1" class="flex items-center px-3 py-2 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                        </svg>
-                        App 1
-                    </a>
-                </li>
-                <li>
-                    <a href="https://example.com/app2" class="flex items-center px-3 py-2 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
-                        App 2
-                    </a>
-                </li>
-                <li>
-                    <a href="https://example.com/app3" class="flex items-center px-3 py-2 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
-                        App 3
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
+    <!-- Check Answer Button -->
+    <button id="check-answer-btn" class="fab" style="display: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+    </button>
 
     <!-- Help Button -->
-    <button id="helpButton" class="fixed bottom-6 right-6 glass-card w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-50 transition duration-200 z-40">
+    <button id="helpButton" class="fab" style="right: 30px; bottom: 100px; background-color: var(--secondary-color);">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
@@ -147,120 +478,46 @@
         </svg>
     </button>
 
-    <!-- Help Dialog -->
-    <div id="helpDialog" class="fixed inset-0 bg-black bg-opacity-50 backdrop-filter backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 invisible transition-all duration-300">
-        <div class="glass-card rounded-xl p-6 max-w-md w-full relative transform scale-95 transition-all duration-300">
-            <button id="closeHelpButton" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-            <h3 class="text-xl font-bold text-blue-600 mb-4">Need Help?</h3>
-            <div class="space-y-4">
-                <p class="text-gray-700">For any questions or feedback about the GES 108 Revision App, please contact:</p>
-                <div class="bg-blue-50 rounded-lg p-4 border border-blue-100">
-                    <p class="font-medium text-blue-800">Iyiola Adedamola Richard</p>
-                    <a href="https://iar-portfolio.netlify.app/" target="_blank" class="text-blue-600 hover:text-blue-800 underline">Visit Developer Portfolio</a>
-                </div>
-                <p class="text-sm text-gray-500">Version 1.0.0</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Home Interface -->
-    <div id="home-interface" class="interface active flex flex-col items-center justify-center flex-grow p-6">
-        <div class="text-center max-w-md w-full">
-            <h1 class="text-4xl font-bold text-blue-600 mb-8">GES 108 Revision</h1>
-            <div class="space-y-4">
-                <button id="start-revision-btn" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg shadow-md transition duration-200">
-                    Start Revision
-                </button>
-                <button id="quick-study-btn" class="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-lg shadow-md transition duration-200">
-                    Quick Study Guide
-                </button>
-            </div>
-        </div>
-        <footer class="mt-12 text-gray-500 text-sm">
-            Created by: Iyiola Adedamola Richard
-        </footer>
-    </div>
-
-    <!-- Revision Interface -->
-    <div id="revision-interface" class="interface p-6 max-w-3xl mx-auto w-full flex flex-col min-h-screen">
-        <header class="flex justify-between items-center mb-6">
-            <div class="flex items-center space-x-2">
-                <input id="question-search-input" type="number" min="1" placeholder="Jump to Q#" 
-                    class="w-20 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <span id="question-number-label" class="text-gray-600 font-medium">1/30</span>
-            </div>
-            <button id="category-dialog-trigger" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-md transition duration-200">
-                Categories
-            </button>
-        </header>
-
-        <div class="glass-card rounded-xl p-6 mb-6 flex-grow">
-            <div id="question-text" class="text-xl font-medium mb-6"></div>
-            <div id="options-container" class="space-y-3"></div>
-        </div>
-
-        <div class="flex justify-between mb-6">
-            <button id="prev-question-btn" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-6 rounded-md transition duration-200">
-                Previous
-            </button>
-            <button id="next-question-btn" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-md transition duration-200">
-                Next
-            </button>
-        </div>
-
-        <button id="check-answer-btn" class="fixed bottom-6 left-6 bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-full shadow-lg transition duration-200 opacity-0 pointer-events-none">
-            Check Answer
-        </button>
-
-        <!-- Answer Panel -->
-        <div id="answer-panel" class="fixed inset-y-0 right-0 w-full max-w-md bg-white shadow-xl z-10 p-6 overflow-y-auto">
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="text-2xl font-bold text-gray-800">Answer & Explanation</h2>
-                <button id="close-answer-btn" class="text-gray-500 hover:text-gray-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-            <div id="answer-content" class="space-y-4"></div>
-        </div>
-    </div>
-
-    <!-- Quick Study Interface -->
-    <div id="quick-study-interface" class="interface p-6 max-w-3xl mx-auto w-full">
-        <header class="mb-6">
-            <button id="back-to-home-from-quick-study" class="flex items-center text-blue-500 hover:text-blue-700 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-                </svg>
-                Back to Home
-            </button>
-            <h2 class="text-2xl font-bold text-gray-800">Quick Study: Key Concepts</h2>
-        </header>
-
-        <div id="quick-study-content-area" class="space-y-8"></div>
-    </div>
-
     <!-- Category Selection Dialog -->
-    <div id="category-dialog-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-20 flex items-center justify-center p-4 hidden">
-        <div class="category-dialog glass-card rounded-xl p-6 w-full max-w-md">
-            <h3 class="text-xl font-bold text-gray-800 mb-4">Select Category</h3>
-            <div id="category-list" class="space-y-2"></div>
+    <div class="category-dialog" id="category-dialog">
+        <div class="category-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h3>Select Category</h3>
+                <button id="close-category-dialog" style="background: none; border: none; font-size: 20px; cursor: pointer;">&times;</button>
+            </div>
+            <div class="category-list" id="category-list">
+                <!-- Categories will be populated by JavaScript -->
+            </div>
         </div>
     </div>
+
+    <!-- Help Dialog -->
+    <div class="category-dialog" id="help-dialog">
+        <div class="category-content" style="max-width: 400px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h3>Need Help?</h3>
+                <button id="close-help-dialog" style="background: none; border: none; font-size: 20px; cursor: pointer;">&times;</button>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <p>For any questions or feedback about the app, please contact:</p>
+            </div>
+            <div style="background-color: rgba(66, 133, 244, 0.1); padding: 15px; border-radius: 8px;">
+                <p style="font-weight: 500; margin-bottom: 5px;">Iyiola Adedamola Richard</p>
+                <a href="https://iar-portfolio.netlify.app/" target="_blank" style="color: var(--primary-color); text-decoration: none; font-weight: 500;">Visit Developer Portfolio</a>
+            </div>
+        </div>
+    </div>
+
+    <footer style="width: 100%; text-align: center; padding: 15px; color: var(--dark-gray);">
+        By: Iyiola Adedamola Richard @GES108Revision&copy;2025
+    </footer>
 
     <script src="db.js"></script>
-    <script src="auth.js"></script>
     <script>
         // Global state variables
         let currentCategoryKey = Object.keys(questions)[0];
         let currentQuestionIndex = 0;
         let selectedOption = null;
-        let currentInterface = 'home';
 
         // DOM elements
         const homeInterface = document.getElementById('home-interface');
@@ -280,41 +537,30 @@
         const questionNumberLabel = document.getElementById('question-number-label');
         const questionSearchInput = document.getElementById('question-search-input');
         const categoryDialogTrigger = document.getElementById('category-dialog-trigger');
-        const categoryDialogOverlay = document.getElementById('category-dialog-overlay');
+        const categoryDialog = document.getElementById('category-dialog');
+        const closeCategoryDialog = document.getElementById('close-category-dialog');
         const categoryList = document.getElementById('category-list');
         const quickStudyContentArea = document.getElementById('quick-study-content-area');
-        
-        // New UI elements
-        const appMenuButton = document.getElementById('appMenuButton');
-        const appMenuDialog = document.getElementById('appMenuDialog');
         const helpButton = document.getElementById('helpButton');
-        const helpDialog = document.getElementById('helpDialog');
-        const closeHelpButton = document.getElementById('closeHelpButton');
-        const authContainer = document.getElementById('authContainer');
-        const userProfile = document.getElementById('userProfile');
-        const userAvatar = document.getElementById('userAvatar');
-        const signOutButton = document.getElementById('signOutButton');
-        const signInButton = document.getElementById('signInButton');
+        const helpDialog = document.getElementById('help-dialog');
+        const closeHelpDialog = document.getElementById('close-help-dialog');
 
         // Show interface function
         function showInterface(interfaceName) {
             // Hide all interfaces
-            document.querySelectorAll('.interface').forEach(el => {
+            document.querySelectorAll('.interface-container').forEach(el => {
                 el.classList.remove('active');
             });
 
             // Show the selected interface
             if (interfaceName === 'home') {
                 homeInterface.classList.add('active');
-                currentInterface = 'home';
             } else if (interfaceName === 'revision') {
                 revisionInterface.classList.add('active');
-                currentInterface = 'revision';
                 loadQuestion();
                 hideAnswerPanel();
             } else if (interfaceName === 'quickStudy') {
                 quickStudyInterface.classList.add('active');
-                currentInterface = 'quickStudy';
                 loadQuickStudyContent();
             }
         }
@@ -325,24 +571,23 @@
             const currentQuestion = currentCategory[currentQuestionIndex];
 
             // Update question text
-            questionText.innerHTML = currentQuestion.question;
+            questionText.textContent = currentQuestion.question;
 
             // Clear previous options
             optionsContainer.innerHTML = '';
 
             // Create new option buttons
-            currentQuestion.options.forEach(option => {
+            currentQuestion.options.forEach((option, index) => {
                 const optionBtn = document.createElement('button');
-                optionBtn.className = 'w-full text-left py-3 px-4 border border-gray-300 rounded-md hover:bg-gray-50 transition duration-200';
+                optionBtn.className = 'option';
                 optionBtn.textContent = option;
-                optionBtn.addEventListener('click', () => selectOption(optionBtn));
+                optionBtn.addEventListener('click', () => selectOption(optionBtn, index));
                 optionsContainer.appendChild(optionBtn);
             });
 
             // Reset selected option
             selectedOption = null;
-            checkAnswerBtn.classList.remove('opacity-100', 'pointer-events-auto');
-            checkAnswerBtn.classList.add('opacity-0', 'pointer-events-none');
+            checkAnswerBtn.style.display = 'none';
 
             // Update navigation buttons
             updateNavigationButtons();
@@ -352,19 +597,18 @@
         }
 
         // Select option function
-        function selectOption(selectedButton) {
+        function selectOption(selectedButton, index) {
             // Remove selected class from all options
-            document.querySelectorAll('#options-container button').forEach(btn => {
-                btn.classList.remove('bg-blue-100', 'border-blue-400');
+            document.querySelectorAll('.option').forEach(btn => {
+                btn.classList.remove('selected');
             });
 
             // Add selected class to clicked option
-            selectedButton.classList.add('bg-blue-100', 'border-blue-400');
-            selectedOption = selectedButton.textContent;
+            selectedButton.classList.add('selected');
+            selectedOption = index;
 
             // Show check answer button
-            checkAnswerBtn.classList.remove('opacity-0', 'pointer-events-none');
-            checkAnswerBtn.classList.add('opacity-100', 'pointer-events-auto');
+            checkAnswerBtn.style.display = 'flex';
         }
 
         // Show answer function
@@ -374,45 +618,17 @@
 
             // Populate answer content
             let answerHtml = `
-                <div class="p-4 bg-green-50 rounded-lg border border-green-200">
-                    <p class="font-medium text-green-800">Correct Answer: <span class="font-bold">${currentQuestion.answer}</span></p>
+                <div class="answer-section" style="border-left: 4px solid var(--secondary-color);">
+                    <h4 style="font-weight: 500; margin-bottom: 8px;">Correct Answer</h4>
+                    <p>${currentQuestion.answer}</p>
                 </div>
-                <div class="p-4 bg-blue-50 rounded-lg border border-blue-200">
-                    <p class="font-medium text-blue-800">Explanation:</p>
-                    <p class="mt-2">${currentQuestion.explanation}</p>
+                <div class="answer-section" style="border-left: 4px solid var(--primary-color);">
+                    <h4 style="font-weight: 500; margin-bottom: 8px;">Explanation</h4>
+                    <p>${currentQuestion.explanation}</p>
                 </div>
             `;
 
-            // Add translations if they exist
-            if (currentQuestion.translation && Object.keys(currentQuestion.translation).length > 0) {
-                answerHtml += `
-                    <div class="p-4 bg-purple-50 rounded-lg border border-purple-200">
-                        <p class="font-medium text-purple-800">Key Terms:</p>
-                        <ul class="mt-2 space-y-2">
-                            ${Object.entries(currentQuestion.translation).map(([french, english]) => `
-                                <li class="flex justify-between items-center">
-                                    <span><span class="font-medium">${french}</span>: ${english}</span>
-                                    <button class="pronounce-btn ml-2 text-blue-500 hover:text-blue-700 transition duration-200" data-text="${french}">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd" />
-                                        </svg>
-                                    </button>
-                                </li>
-                            `).join('')}
-                        </ul>
-                    </div>
-                `;
-            }
-
             answerContent.innerHTML = answerHtml;
-
-            // Add event listeners to pronunciation buttons
-            document.querySelectorAll('.pronounce-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const text = btn.getAttribute('data-text');
-                    speakFrench(text);
-                });
-            });
 
             // Show answer panel
             answerPanel.classList.add('active');
@@ -469,14 +685,10 @@
 
         // Toggle category dialog
         function toggleCategoryDialog() {
-            categoryDialogOverlay.classList.toggle('hidden');
-            document.querySelector('.category-dialog').classList.toggle('active');
-        }
-
-        // Hide category dialog
-        function hideCategoryDialog() {
-            categoryDialogOverlay.classList.add('hidden');
-            document.querySelector('.category-dialog').classList.remove('active');
+            categoryDialog.classList.toggle('active');
+            if (categoryDialog.classList.contains('active')) {
+                populateCategoryDialog();
+            }
         }
 
         // Populate category dialog
@@ -485,19 +697,16 @@
             
             Object.keys(questions).forEach(category => {
                 const categoryBtn = document.createElement('button');
-                categoryBtn.className = 'w-full text-left py-2 px-4 hover:bg-gray-100 rounded-md transition duration-200';
+                categoryBtn.className = 'category-item';
                 categoryBtn.textContent = category;
-                categoryBtn.addEventListener('click', () => selectCategory(category));
+                categoryBtn.addEventListener('click', () => {
+                    currentCategoryKey = category;
+                    currentQuestionIndex = 0;
+                    loadQuestion();
+                    toggleCategoryDialog();
+                });
                 categoryList.appendChild(categoryBtn);
             });
-        }
-
-        // Select category
-        function selectCategory(category) {
-            currentCategoryKey = category;
-            currentQuestionIndex = 0;
-            loadQuestion();
-            hideCategoryDialog();
         }
 
         // Load quick study content
@@ -506,154 +715,30 @@
             
             quickStudyData.forEach(item => {
                 const itemElement = document.createElement('div');
-                itemElement.className = 'glass-card rounded-xl p-6';
+                itemElement.className = 'study-item';
                 
                 let itemHtml = `
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">${item.title}</h3>
-                    <p class="text-gray-700 mb-4">${item.explanation}</p>
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 10px; color: var(--primary-color);">${item.title}</h3>
+                    <p style="margin-bottom: 15px;">${item.explanation}</p>
                 `;
                 
                 if (item.details && item.details.length > 0) {
                     itemHtml += `
-                        <div class="space-y-2 mb-4">
-                            ${item.details.map(detail => `<p class="text-gray-700">${detail}</p>`).join('')}
-                        </div>
-                    `;
-                }
-                
-                if (item.keyTerms && Object.keys(item.keyTerms).length > 0) {
-                    itemHtml += `
-                        <div class="mb-4">
-                            <h4 class="font-medium text-gray-800 mb-2">Key Terms:</h4>
-                            <ul class="space-y-1">
-                                ${Object.entries(item.keyTerms).map(([french, english]) => `
-                                    <li class="flex justify-between items-center">
-                                        <span><span class="font-medium">${french}</span>: ${english}</span>
-                                        <button class="pronounce-btn ml-2 text-blue-500 hover:text-blue-700 transition duration-200" data-text="${french}">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                    </li>
-                                `).join('')}
-                            </ul>
-                        </div>
-                    `;
-                }
-                
-                if (item.examples && item.examples.length > 0) {
-                    itemHtml += `
-                        <div>
-                            <h4 class="font-medium text-gray-800 mb-2">Examples:</h4>
-                            <ul class="space-y-2">
-                                ${item.examples.map(example => `
-                                    <li class="flex items-start">
-                                        <span class="mr-2">•</span>
-                                        <div>
-                                            <p>${example}</p>
-                                            <button class="pronounce-btn mt-1 text-blue-500 hover:text-blue-700 transition duration-200 inline-flex items-center" data-text="${example.split('**').filter((_, i) => i % 2 === 1).join('')}">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                                                    <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd" />
-                                                </svg>
-                                                Pronounce
-                                            </button>
-                                        </div>
-                                    </li>
-                                `).join('')}
-                            </ul>
+                        <div style="margin-bottom: 15px;">
+                            ${item.details.map(detail => `<p style="margin-bottom: 8px;">${detail}</p>`).join('')}
                         </div>
                     `;
                 }
                 
                 itemElement.innerHTML = itemHtml;
                 quickStudyContentArea.appendChild(itemElement);
-                
-                // Add event listeners to pronunciation buttons
-                itemElement.querySelectorAll('.pronounce-btn').forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        const text = btn.getAttribute('data-text');
-                        speakFrench(text);
-                    });
-                });
             });
-        }
-
-        // Speak French text
-        function speakFrench(text) {
-            // Remove any formatting markers (**) from the text
-            const cleanText = text.replace(/\*\*/g, '');
-            
-            if ('speechSynthesis' in window) {
-                const utterance = new SpeechSynthesisUtterance(cleanText);
-                utterance.lang = 'fr-FR';
-                
-                // Try to find a French voice
-                const voices = speechSynthesis.getVoices();
-                const frenchVoice = voices.find(voice => voice.lang === 'fr-FR' || voice.lang.startsWith('fr-'));
-                
-                if (frenchVoice) {
-                    utterance.voice = frenchVoice;
-                }
-                
-                speechSynthesis.speak(utterance);
-            } else {
-                alert('Text-to-speech is not supported in your browser.');
-            }
-        }
-
-        // Toggle app menu
-        function toggleAppMenu() {
-            const isActive = appMenuDialog.classList.contains('opacity-100');
-            
-            if (isActive) {
-                appMenuDialog.classList.remove('opacity-100', 'visible');
-                appMenuDialog.classList.add('opacity-0', 'invisible');
-            } else {
-                appMenuDialog.classList.remove('opacity-0', 'invisible');
-                appMenuDialog.classList.add('opacity-100', 'visible');
-            }
         }
 
         // Toggle help dialog
         function toggleHelpDialog() {
-            const isActive = helpDialog.classList.contains('opacity-100');
-            
-            if (isActive) {
-                helpDialog.classList.remove('opacity-100', 'visible');
-                helpDialog.querySelector('div').classList.remove('scale-100');
-                helpDialog.querySelector('div').classList.add('scale-95');
-            } else {
-                helpDialog.classList.remove('opacity-0', 'invisible');
-                helpDialog.classList.add('opacity-100', 'visible');
-                helpDialog.querySelector('div').classList.remove('scale-95');
-                helpDialog.querySelector('div').classList.add('scale-100');
-            }
+            helpDialog.classList.toggle('active');
         }
-
-        // Initialize the app
-        document.addEventListener('DOMContentLoaded', () => {
-            // Load voices for speech synthesis
-            if ('speechSynthesis' in window) {
-                speechSynthesis.onvoiceschanged = () => {
-                    // Voices are loaded
-                };
-            }
-            
-            // Initialize auth
-            initAuth();
-            
-            // Show auth container if not signed in
-            auth.onAuthStateChanged(user => {
-                if (user) {
-                    authContainer.classList.add('hidden');
-                    userProfile.classList.remove('hidden');
-                    userAvatar.src = user.photoURL;
-                } else {
-                    authContainer.classList.remove('hidden');
-                    userProfile.classList.add('hidden');
-                }
-            });
-        });
 
         // Event listeners
         startRevisionBtn.addEventListener('click', () => showInterface('revision'));
@@ -663,37 +748,21 @@
         nextQuestionBtn.addEventListener('click', nextQuestion);
         checkAnswerBtn.addEventListener('click', showAnswer);
         closeAnswerBtn.addEventListener('click', hideAnswerPanel);
-        categoryDialogTrigger.addEventListener('click', () => {
-            populateCategoryDialog();
-            toggleCategoryDialog();
-        });
-        categoryDialogOverlay.addEventListener('click', hideCategoryDialog);
-        appMenuButton.addEventListener('click', toggleAppMenu);
+        categoryDialogTrigger.addEventListener('click', toggleCategoryDialog);
+        closeCategoryDialog.addEventListener('click', toggleCategoryDialog);
         helpButton.addEventListener('click', toggleHelpDialog);
-        closeHelpButton.addEventListener('click', toggleHelpDialog);
-        signOutButton.addEventListener('click', signOut);
-        signInButton.addEventListener('click', signInWithGoogle);
+        closeHelpDialog.addEventListener('click', toggleHelpDialog);
         
-        // Close dialogs when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!appMenuDialog.contains(e.target) && e.target !== appMenuButton) {
-                appMenuDialog.classList.remove('opacity-100', 'visible');
-                appMenuDialog.classList.add('opacity-0', 'invisible');
-            }
-            
-            if (!helpDialog.contains(e.target) && e.target !== helpButton) {
-                helpDialog.classList.remove('opacity-100', 'visible');
-                helpDialog.classList.add('opacity-0', 'invisible');
-                helpDialog.querySelector('div').classList.remove('scale-100');
-                helpDialog.querySelector('div').classList.add('scale-95');
-            }
-        });
-
         questionSearchInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
                 navigateToQuestion(questionSearchInput.value);
                 questionSearchInput.value = '';
             }
+        });
+
+        // Initialize the app
+        document.addEventListener('DOMContentLoaded', () => {
+            showInterface('home');
         });
     </script>
 </body>
