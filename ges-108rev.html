@@ -383,6 +383,25 @@
             }
         }
     </style>
+    <!-- Add this to the style section -->
+<style>
+    /* Pronunciation button styles */
+    .pronounce-btn {
+        background: none;
+        border: none;
+        color: var(--primary-color);
+        cursor: pointer;
+        margin-left: 8px;
+        transition: transform 0.2s ease;
+    }
+    .pronounce-btn:hover {
+        transform: scale(1.1);
+    }
+    .pronounce-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+</style>
 </head>
 <body>
     <header>
@@ -513,6 +532,7 @@
     </footer>
 
     <script src="db.js"></script>
+    <script src="escript.js"></script>
     <script>
         // Global state variables
         let currentCategoryKey = Object.keys(questions)[0];
