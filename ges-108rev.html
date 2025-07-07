@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GES 108 Revision App</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <style>
         /* Custom animations and styles */
         .interface {
@@ -38,9 +42,131 @@
         .pronounce-btn:hover {
             transform: scale(1.1);
         }
+        
+        /* Glass morphism styles */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* Gradient background animation */
+        body {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff9f9 50%, #fff 100%);
+            background-attachment: fixed;
+            background-size: 200% 200%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
     </style>
 </head>
-<body class="font-inter bg-gray-50 min-h-screen flex flex-col">
+<body class="font-inter min-h-screen flex flex-col">
+    <!-- Auth Container (hidden by default) -->
+    <div id="authContainer" class="fixed inset-0 bg-white bg-opacity-95 backdrop-filter backdrop-blur-sm z-50 flex items-center justify-center hidden">
+        <div class="glass-card rounded-xl p-8 max-w-md w-full text-center">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-blue-600">Welcome to GES 108 Revision</h2>
+                <p class="text-gray-600 mt-2">Sign in to track your progress</p>
+            </div>
+            <button id="signInButton" class="flex items-center justify-center w-full bg-white border border-gray-300 rounded-lg py-3 px-4 text-gray-700 font-medium hover:bg-gray-50 transition duration-200">
+                <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                    <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+                    <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+                    <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+                    <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+                </svg>
+                Sign in with Google
+            </button>
+        </div>
+    </div>
+
+    <!-- User Profile (hidden by default) -->
+    <div id="userProfile" class="fixed top-4 right-4 z-40 hidden">
+        <div class="glass-card rounded-full p-2 flex items-center shadow-md">
+            <img id="userAvatar" src="" alt="User" class="w-10 h-10 rounded-full">
+            <button id="signOutButton" class="ml-2 text-sm bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-full transition duration-200">
+                Sign Out
+            </button>
+        </div>
+    </div>
+
+    <!-- App Navigation Menu -->
+    <div class="fixed top-4 right-20 z-40">
+        <button id="appMenuButton" class="glass-card w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-gray-100 transition duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="1"></circle>
+                <circle cx="12" cy="5" r="1"></circle>
+                <circle cx="12" cy="19" r="1"></circle>
+            </svg>
+        </button>
+        
+        <div id="appMenuDialog" class="fixed top-16 right-4 glass-card rounded-xl shadow-xl p-4 w-64 z-50 opacity-0 invisible transition-all duration-300 transform translate-y-2">
+            <h3 class="text-lg font-semibold text-gray-800 mb-3 px-2">My Apps</h3>
+            <ul class="space-y-2">
+                <li>
+                    <a href="https://example.com/app1" class="flex items-center px-3 py-2 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                        </svg>
+                        App 1
+                    </a>
+                </li>
+                <li>
+                    <a href="https://example.com/app2" class="flex items-center px-3 py-2 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        App 2
+                    </a>
+                </li>
+                <li>
+                    <a href="https://example.com/app3" class="flex items-center px-3 py-2 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                        App 3
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Help Button -->
+    <button id="helpButton" class="fixed bottom-6 right-6 glass-card w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-50 transition duration-200 z-40">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12" y2="17"></line>
+        </svg>
+    </button>
+
+    <!-- Help Dialog -->
+    <div id="helpDialog" class="fixed inset-0 bg-black bg-opacity-50 backdrop-filter backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 invisible transition-all duration-300">
+        <div class="glass-card rounded-xl p-6 max-w-md w-full relative transform scale-95 transition-all duration-300">
+            <button id="closeHelpButton" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <h3 class="text-xl font-bold text-blue-600 mb-4">Need Help?</h3>
+            <div class="space-y-4">
+                <p class="text-gray-700">For any questions or feedback about the GES 108 Revision App, please contact:</p>
+                <div class="bg-blue-50 rounded-lg p-4 border border-blue-100">
+                    <p class="font-medium text-blue-800">Iyiola Adedamola Richard</p>
+                    <a href="https://iar-portfolio.netlify.app/" target="_blank" class="text-blue-600 hover:text-blue-800 underline">Visit Developer Portfolio</a>
+                </div>
+                <p class="text-sm text-gray-500">Version 1.0.0</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Home Interface -->
     <div id="home-interface" class="interface active flex flex-col items-center justify-center flex-grow p-6">
         <div class="text-center max-w-md w-full">
@@ -72,7 +198,7 @@
             </button>
         </header>
 
-        <div class="bg-white rounded-xl shadow-md p-6 mb-6 flex-grow">
+        <div class="glass-card rounded-xl p-6 mb-6 flex-grow">
             <div id="question-text" class="text-xl font-medium mb-6"></div>
             <div id="options-container" class="space-y-3"></div>
         </div>
@@ -86,7 +212,7 @@
             </button>
         </div>
 
-        <button id="check-answer-btn" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-full shadow-lg transition duration-200 opacity-0 pointer-events-none">
+        <button id="check-answer-btn" class="fixed bottom-6 left-6 bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-full shadow-lg transition duration-200 opacity-0 pointer-events-none">
             Check Answer
         </button>
 
@@ -121,13 +247,14 @@
 
     <!-- Category Selection Dialog -->
     <div id="category-dialog-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-20 flex items-center justify-center p-4 hidden">
-        <div class="category-dialog bg-white rounded-xl shadow-xl p-6 w-full max-w-md">
+        <div class="category-dialog glass-card rounded-xl p-6 w-full max-w-md">
             <h3 class="text-xl font-bold text-gray-800 mb-4">Select Category</h3>
             <div id="category-list" class="space-y-2"></div>
         </div>
     </div>
 
     <script src="db.js"></script>
+    <script src="auth.js"></script>
     <script>
         // Global state variables
         let currentCategoryKey = Object.keys(questions)[0];
@@ -156,6 +283,18 @@
         const categoryDialogOverlay = document.getElementById('category-dialog-overlay');
         const categoryList = document.getElementById('category-list');
         const quickStudyContentArea = document.getElementById('quick-study-content-area');
+        
+        // New UI elements
+        const appMenuButton = document.getElementById('appMenuButton');
+        const appMenuDialog = document.getElementById('appMenuDialog');
+        const helpButton = document.getElementById('helpButton');
+        const helpDialog = document.getElementById('helpDialog');
+        const closeHelpButton = document.getElementById('closeHelpButton');
+        const authContainer = document.getElementById('authContainer');
+        const userProfile = document.getElementById('userProfile');
+        const userAvatar = document.getElementById('userAvatar');
+        const signOutButton = document.getElementById('signOutButton');
+        const signInButton = document.getElementById('signInButton');
 
         // Show interface function
         function showInterface(interfaceName) {
@@ -367,7 +506,7 @@
             
             quickStudyData.forEach(item => {
                 const itemElement = document.createElement('div');
-                itemElement.className = 'bg-white rounded-xl shadow-md p-6';
+                itemElement.className = 'glass-card rounded-xl p-6';
                 
                 let itemHtml = `
                     <h3 class="text-xl font-bold text-gray-800 mb-3">${item.title}</h3>
@@ -462,6 +601,60 @@
             }
         }
 
+        // Toggle app menu
+        function toggleAppMenu() {
+            const isActive = appMenuDialog.classList.contains('opacity-100');
+            
+            if (isActive) {
+                appMenuDialog.classList.remove('opacity-100', 'visible');
+                appMenuDialog.classList.add('opacity-0', 'invisible');
+            } else {
+                appMenuDialog.classList.remove('opacity-0', 'invisible');
+                appMenuDialog.classList.add('opacity-100', 'visible');
+            }
+        }
+
+        // Toggle help dialog
+        function toggleHelpDialog() {
+            const isActive = helpDialog.classList.contains('opacity-100');
+            
+            if (isActive) {
+                helpDialog.classList.remove('opacity-100', 'visible');
+                helpDialog.querySelector('div').classList.remove('scale-100');
+                helpDialog.querySelector('div').classList.add('scale-95');
+            } else {
+                helpDialog.classList.remove('opacity-0', 'invisible');
+                helpDialog.classList.add('opacity-100', 'visible');
+                helpDialog.querySelector('div').classList.remove('scale-95');
+                helpDialog.querySelector('div').classList.add('scale-100');
+            }
+        }
+
+        // Initialize the app
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load voices for speech synthesis
+            if ('speechSynthesis' in window) {
+                speechSynthesis.onvoiceschanged = () => {
+                    // Voices are loaded
+                };
+            }
+            
+            // Initialize auth
+            initAuth();
+            
+            // Show auth container if not signed in
+            auth.onAuthStateChanged(user => {
+                if (user) {
+                    authContainer.classList.add('hidden');
+                    userProfile.classList.remove('hidden');
+                    userAvatar.src = user.photoURL;
+                } else {
+                    authContainer.classList.remove('hidden');
+                    userProfile.classList.add('hidden');
+                }
+            });
+        });
+
         // Event listeners
         startRevisionBtn.addEventListener('click', () => showInterface('revision'));
         quickStudyBtn.addEventListener('click', () => showInterface('quickStudy'));
@@ -475,21 +668,31 @@
             toggleCategoryDialog();
         });
         categoryDialogOverlay.addEventListener('click', hideCategoryDialog);
+        appMenuButton.addEventListener('click', toggleAppMenu);
+        helpButton.addEventListener('click', toggleHelpDialog);
+        closeHelpButton.addEventListener('click', toggleHelpDialog);
+        signOutButton.addEventListener('click', signOut);
+        signInButton.addEventListener('click', signInWithGoogle);
         
+        // Close dialogs when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!appMenuDialog.contains(e.target) && e.target !== appMenuButton) {
+                appMenuDialog.classList.remove('opacity-100', 'visible');
+                appMenuDialog.classList.add('opacity-0', 'invisible');
+            }
+            
+            if (!helpDialog.contains(e.target) && e.target !== helpButton) {
+                helpDialog.classList.remove('opacity-100', 'visible');
+                helpDialog.classList.add('opacity-0', 'invisible');
+                helpDialog.querySelector('div').classList.remove('scale-100');
+                helpDialog.querySelector('div').classList.add('scale-95');
+            }
+        });
+
         questionSearchInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
                 navigateToQuestion(questionSearchInput.value);
                 questionSearchInput.value = '';
-            }
-        });
-
-        // Initialize the app
-        document.addEventListener('DOMContentLoaded', () => {
-            // Load voices for speech synthesis
-            if ('speechSynthesis' in window) {
-                speechSynthesis.onvoiceschanged = () => {
-                    // Voices are loaded
-                };
             }
         });
     </script>
