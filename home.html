@@ -1681,24 +1681,23 @@ function calculateResults() {
       const userAnswerIndex = state.userAnswers[subject][index];
       if (userAnswerIndex !== null) {
         const selectedOptionText = question.options[userAnswerIndex];
-        // Check if any of the correct answers match the selected option text or its prefix
-        const isAnswerCorrect = question.answers.some(correctAnswerText => {
-          // Attempt to get the prefix (e.g., "A", "B", "C", "I") from the correct answer text
-          const correctAnswerPrefixMatch = correctAnswerText.match(/^([A-Za-z]{1,2})\./);
-          const correctAnswerPrefix = correctAnswerPrefixMatch ? correctAnswerPrefixMatch[1].trim() : '';
-
-          // Attempt to get the prefix from the user's selected option text
-          const userAnswerPrefixMatch = selectedOptionText.match(/^([A-Za-z]{1,2})\./);
-          const userAnswerPrefix = userAnswerPrefixMatch ? userAnswerPrefixMatch[1].trim() : '';
-
-          // Compare prefixes, or if no prefix, compare the full text if it's an exact match
-          if (correctAnswerPrefix && userAnswerPrefix) {
-            return correctAnswerPrefix === userAnswerPrefix;
-          } else {
-            // Fallback: If no clear prefix, check for exact match of the entire option text
-            // This assumes that if there's no "A.", "B.", etc., the option itself is the answer identifier.
-            return selectedOptionText === correctAnswerText;
+        
+        // Get the prefix from the user's selected option (e.g., "I" from "I. 3.14")
+        const userAnswerPrefixMatch = selectedOptionText.match(/^([A-Za-z]{1,2})\.?/);
+        const userAnswerPrefix = userAnswerPrefixMatch ? userAnswerPrefixMatch[1].trim() : '';
+        
+        // Check each correct answer
+        const isAnswerCorrect = question.answers.some(correctAnswer => {
+          // Get prefix from correct answer (might be "II." or just "I")
+          const correctPrefixMatch = correctAnswer.match(/^([A-Za-z]{1,2})\.?/);
+          const correctPrefix = correctPrefixMatch ? correctPrefixMatch[1].trim() : '';
+          
+          // If both have prefixes, compare them
+          if (userAnswerPrefix && correctPrefix) {
+            return userAnswerPrefix === correctPrefix;
           }
+          // If no clear prefix, check if selected option text matches the correct answer text
+          return selectedOptionText === correctAnswer;
         });
 
         if (isAnswerCorrect) {
@@ -1748,27 +1747,31 @@ function showQuestionDetails(subject) {
       const selectedOptionText = question.options[userAnswerIndex];
       userAnswerDisplay = selectedOptionText;
 
-      const isAnswerCorrect = question.answers.some(correctAnswerText => {
-        const correctAnswerPrefixMatch = correctAnswerText.match(/^([A-Za-z]{1,2})\./);
-        const correctAnswerPrefix = correctAnswerPrefixMatch ? correctAnswerPrefixMatch[1].trim() : '';
+      // Get the prefix from the user's selected option
+      const userAnswerPrefixMatch = selectedOptionText.match(/^([A-Za-z]{1,2})\.?/);
+      const userAnswerPrefix = userAnswerPrefixMatch ? userAnswerPrefixMatch[1].trim() : '';
 
-        const userAnswerPrefixMatch = selectedOptionText.match(/^([A-Za-z]{1,2})\./);
-        const userAnswerPrefix = userAnswerPrefixMatch ? userAnswerPrefixMatch[1].trim() : '';
-
-        if (correctAnswerPrefix && userAnswerPrefix) {
-          return correctAnswerPrefix === userAnswerPrefix;
-        } else {
-          return selectedOptionText === correctAnswerText;
+      isCorrect = question.answers.some(correctAnswer => {
+        // Get prefix from correct answer
+        const correctPrefixMatch = correctAnswer.match(/^([A-Za-z]{1,2})\.?/);
+        const correctPrefix = correctPrefixMatch ? correctPrefixMatch[1].trim() : '';
+        
+        // If both have prefixes, compare them
+        if (userAnswerPrefix && correctPrefix) {
+          return userAnswerPrefix === correctPrefix;
         }
+        // If no clear prefix, check if selected option text matches the correct answer text
+        return selectedOptionText === correctAnswer;
       });
-      isCorrect = isAnswerCorrect;
 
-      // Find the explanation for the first correct answer provided in question.answers
-      explanation = question.answers[0].split('. ').slice(1).join('. ');
-
+      // Extract explanation if it exists (text after the prefix)
+      const firstAnswer = question.answers[0];
+      const explanationMatch = firstAnswer.match(/^[A-Za-z]{1,2}\.?\s*(.*)/);
+      explanation = explanationMatch ? explanationMatch[1] : firstAnswer;
     } else {
-      // Show the explanation from the first correct answer if not answered
-      explanation = question.answers[0].split('. ').slice(1).join('. ');
+      // Extract explanation from first correct answer if not answered
+      const explanationMatch = question.answers[0].match(/^[A-Za-z]{1,2}\.?\s*(.*)/);
+      explanation = explanationMatch ? explanationMatch[1] : question.answers[0];
     }
 
     const questionDetail = document.createElement('div');
@@ -1789,7 +1792,10 @@ function showQuestionDetails(subject) {
               </span>` : ''}
           </div>
           <div class="correct-answer">
-            <strong>Correct answer:</strong> ${question.answers.join(' OR ')}
+            <strong>Correct answer:</strong> ${question.answers.map(a => {
+              const match = a.match(/^([A-Za-z]{1,2})\.?\s*(.*)/);
+              return match ? `${match[1]}. ${match[2]}` : a;
+            }).join(' OR ')}
           </div>
           <div class="explanation">
             <strong>Explanation:</strong> ${explanation}
@@ -1801,8 +1807,9 @@ function showQuestionDetails(subject) {
   });
 
   resultsDialog.style.display = 'flex';
-}
-        // Restart the test
+}  
+
+      // Restart the test
         function restartTest() {
             // Reset state
             state.selectedSubjects = [];
